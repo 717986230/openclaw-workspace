@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "skills": {
+    "openclaw-token-optimizer": {
+      "version": "3.0.0",
+      "installedAt": 1772274494690
+    },
+    "agents-skill-security-audit": {
+      "version": "0.1.0",
+      "installedAt": 1772274913880
+    },
+    "lancedb-memory": {
+      "version": "1.0.0",
+      "installedAt": 1772422518503
+    }
+  }
+}
