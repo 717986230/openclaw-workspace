@@ -12,6 +12,18 @@
     "lancedb-memory": {
       "version": "1.0.0",
       "installedAt": 1772422518503
+    },
+    "agent-directory": {
+      "version": "1.2.0",
+      "installedAt": 1772465461857
+    },
+    "ai-agent-helper": {
+      "version": "1.0.0",
+      "installedAt": 1772496519933
+    },
+    "multi-agent-roles": {
+      "version": "1.0.0",
+      "installedAt": 1772496549035
     }
   }
 }

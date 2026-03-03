@@ -1,6 +1,7 @@
 # OpenClaw Gateway Health Check
-# 检查网关状态，只在崩溃时重启
+# 检查网关状态，只在崩溃时重启 - SILENT MODE
 
+$ErrorActionPreference = "SilentlyContinue"
 $port = 18789
 $logFile = "$env:USERPROFILE\.openclaw\logs\gateway-health.log"
 $gatewayCmd = "$env:USERPROFILE\.openclaw\gateway.cmd"
@@ -10,7 +11,6 @@ function Log {
     $timestamp = Get-Date -Format "yyyy-MM-dd HH:mm:ss"
     $logMessage = "[$timestamp] $message"
     Add-Content -Path $logFile -Value $logMessage
-    Write-Host $logMessage
 }
 
 # 检查端口是否在监听
