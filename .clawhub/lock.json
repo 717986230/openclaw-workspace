@@ -24,6 +24,14 @@
     "multi-agent-roles": {
       "version": "1.0.0",
       "installedAt": 1772496549035
+    },
+    "codex-skill": {
+      "version": "1.0.0",
+      "installedAt": 1772517681950
+    },
+    "binance-pro": {
+      "version": "1.0.0",
+      "installedAt": 1772530097395
     }
   }
 }
