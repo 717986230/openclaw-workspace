@@ -32,6 +32,14 @@
     "binance-pro": {
       "version": "1.0.0",
       "installedAt": 1772530097395
+    },
+    "tiangong-notebooklm-cli": {
+      "version": "0.1.1",
+      "installedAt": 1772556693904
+    },
+    "office": {
+      "version": "1.0.0",
+      "installedAt": 1772557445996
     }
   }
 }
