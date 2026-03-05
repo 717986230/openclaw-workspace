@@ -1,0 +1,11 @@
+{
+  "owner": "thomaslwang",
+  "slug": "antivirus",
+  "displayName": "Antivirus",
+  "latest": {
+    "version": "1.1.2",
+    "publishedAt": 1770466525950,
+    "commit": "https://github.com/openclaw/skills/commit/265676e0e956f55f9fca1d373e2461183757c0a2"
+  },
+  "history": []
+}

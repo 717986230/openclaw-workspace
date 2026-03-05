@@ -1,0 +1,11 @@
+{
+  "owner": "tag-assistant",
+  "slug": "golf-tee-times",
+  "displayName": "Golf Tee Times",
+  "latest": {
+    "version": "1.0.0",
+    "publishedAt": 1771341198258,
+    "commit": "https://github.com/openclaw/skills/commit/c7b9978b916b21739771fed61e5d96a567500f10"
+  },
+  "history": []
+}

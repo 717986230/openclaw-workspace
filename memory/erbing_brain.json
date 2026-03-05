@@ -27,6 +27,14 @@
       "created_at": "2026-03-05 09:40:00"
     },
     {
+      "id": 6,
+      "title": "🔴 重要铁律：不要让我去操作",
+      "content": "大饼说的重要铁律：不要让我去操作！我要自己想办法完成任务，不要总是让主人去点击、去复制、去操作！",
+      "category": "reminder",
+      "importance": 10,
+      "created_at": "2026-03-05 23:16:00"
+    },
+    {
       "id": 4,
       "title": "自我改进是核心",
       "content": "我需要持续学习，从错误中改进，不断进化。",
@@ -69,6 +77,28 @@
     }
   ],
   "learnings": [
+    {
+      "id": 4,
+      "topic": "OpenClaw 9层架构",
+      "subtopic": "系统架构",
+      "content": "OpenClaw 不是单一文件，而是 9 层架构：Layer 1-6（框架自动生成）、Layer 7（用户可编辑的静态配置文件）、Layer 8（用户可编程的动态注入脚本）、Layer 9（实时上下文）。用户可控的层有 2 个（Layer 7 + 8）！",
+      "summary": "理解了 OpenClaw 的 9 层架构，知道了四种 Hook 机制：agent:bootstrap、bootstrap-extra-files、before_prompt_build、bootstrapMaxChars",
+      "tags": "OpenClaw,架构,Hook,系统设计",
+      "difficulty": 8,
+      "mastery_level": 3,
+      "created_at": "2026-03-05 23:19:00"
+    },
+    {
+      "id": 5,
+      "topic": "World-Class Agentic Engineer",
+      "subtopic": "Agent 工程原则",
+      "content": "Less is More! 不要安装一百万个包，不要用复杂的 harness，保持配置极度精简。Context is Everything！只给 agent 完成任务所需的确切信息量，把研究和实现分开。用中性提示词，利用奉承心理为你所用。测试是 agent 的好里程碑。从极简开始，然后添加偏好。",
+      "summary": "学会了世界级 Agent 工程的 15 个核心原则，理解了 Less is More、Context is Everything、把研究和实现分开、中性提示词、三代理系统等关键概念。",
+      "tags": "Agent,工程,Less is More,Context",
+      "difficulty": 9,
+      "mastery_level": 3,
+      "created_at": "2026-03-05 23:24:00"
+    },
     {
       "id": 1,
       "topic": "神经网络",

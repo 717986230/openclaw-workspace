@@ -1,0 +1,17 @@
+{
+  "owner": "robb1010",
+  "slug": "personality-switcher",
+  "displayName": "Personality Switcher",
+  "latest": {
+    "version": "0.1.3",
+    "publishedAt": 1770595275247,
+    "commit": "https://github.com/openclaw/skills/commit/87a4751110e2a61c72cb10f6361390f5869eb162"
+  },
+  "history": [
+    {
+      "version": "0.1.0",
+      "publishedAt": 1770583808777,
+      "commit": "https://github.com/openclaw/skills/commit/3d9e5895272f48d81de4939e7bf35bf4882cbf20"
+    }
+  ]
+}

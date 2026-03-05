@@ -1,0 +1,11 @@
+{
+  "owner": "teamtelnyx",
+  "slug": "telnyx-rag",
+  "displayName": "Telnyx Rag",
+  "latest": {
+    "version": "1.0.1",
+    "publishedAt": 1770739903924,
+    "commit": "https://github.com/openclaw/skills/commit/0a70514e18cf478bf002c13cae27e0d6c6697bf4"
+  },
+  "history": []
+}

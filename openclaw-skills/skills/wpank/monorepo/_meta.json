@@ -1,0 +1,11 @@
+{
+  "owner": "wpank",
+  "slug": "monorepo",
+  "displayName": "Monorepo Management",
+  "latest": {
+    "version": "1.0.0",
+    "publishedAt": 1770725835113,
+    "commit": "https://github.com/openclaw/skills/commit/e31e201d3eec7f54a6c5defef872f75a29b70fce"
+  },
+  "history": []
+}

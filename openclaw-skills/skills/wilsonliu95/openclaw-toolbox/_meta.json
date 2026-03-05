@@ -1,0 +1,11 @@
+{
+  "owner": "wilsonliu95",
+  "slug": "openclaw-toolbox",
+  "displayName": "OpenClaw Toolbox",
+  "latest": {
+    "version": "1.0.0",
+    "publishedAt": 1770414272979,
+    "commit": "https://github.com/openclaw/skills/commit/c8ef262e57b73b8e032c60d715d4390df9d7a6c9"
+  },
+  "history": []
+}

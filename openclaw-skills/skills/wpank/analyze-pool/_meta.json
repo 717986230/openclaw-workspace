@@ -1,0 +1,11 @@
+{
+  "owner": "wpank",
+  "slug": "analyze-pool",
+  "displayName": "Uniswap Analyze Pool",
+  "latest": {
+    "version": "0.1.0",
+    "publishedAt": 1770744745518,
+    "commit": "https://github.com/openclaw/skills/commit/0c7add7f977f552c99cac9660e93bc92b6872891"
+  },
+  "history": []
+}

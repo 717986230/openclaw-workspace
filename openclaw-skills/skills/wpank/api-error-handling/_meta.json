@@ -1,0 +1,11 @@
+{
+  "owner": "wpank",
+  "slug": "api-error-handling",
+  "displayName": "API Error Handling",
+  "latest": {
+    "version": "1.0.0",
+    "publishedAt": 1770725347152,
+    "commit": "https://github.com/openclaw/skills/commit/948bbdb12993a405e3f25fbc5ce77ecebcf21724"
+  },
+  "history": []
+}

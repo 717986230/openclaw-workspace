@@ -1,0 +1,11 @@
+{
+  "owner": "thomastrumpp",
+  "slug": "ztp",
+  "displayName": "ztp",
+  "latest": {
+    "version": "2.0.0",
+    "publishedAt": 1771192134776,
+    "commit": "https://github.com/openclaw/skills/commit/9682ed3925341bc7a3aeadc27eecfcde5e0e2ff1"
+  },
+  "history": []
+}

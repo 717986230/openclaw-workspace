@@ -1,0 +1,11 @@
+{
+  "owner": "truongvknnlthao-gif",
+  "slug": "openclaw-gen",
+  "displayName": "OpenClaw Template Generator",
+  "latest": {
+    "version": "0.1.2",
+    "publishedAt": 1770644561394,
+    "commit": "https://github.com/openclaw/skills/commit/abb894326f076a6576f25388043f26654bc33383"
+  },
+  "history": []
+}

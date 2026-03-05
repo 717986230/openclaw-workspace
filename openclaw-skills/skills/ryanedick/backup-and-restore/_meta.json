@@ -1,0 +1,22 @@
+{
+  "owner": "ryanedick",
+  "slug": "backup-and-restore",
+  "displayName": "Backup & Restore",
+  "latest": {
+    "version": "1.3.0",
+    "publishedAt": 1771143436905,
+    "commit": "https://github.com/openclaw/skills/commit/d7b2781e3514c5c833474cef84d20bfe2c824cf2"
+  },
+  "history": [
+    {
+      "version": "1.1.1",
+      "publishedAt": 1771141281007,
+      "commit": "https://github.com/openclaw/skills/commit/a670f266e01426c9665058f91eb63712b74218e9"
+    },
+    {
+      "version": "1.0.0",
+      "publishedAt": 1771136931573,
+      "commit": "https://github.com/openclaw/skills/commit/f96fd15ef66525af0bba21491990e9f165009927"
+    }
+  ]
+}

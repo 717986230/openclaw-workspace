@@ -1,0 +1,57 @@
+{
+  "name": "clawtext-ingest",
+  "version": "1.2.0",
+  "title": "ClawText Ingest — Multi-Source Memory Ingestion",
+  "description": "Lightweight data ingestion tool for OpenClaw agents. Import files, URLs, JSON exports, and raw text into structured memory with automatic YAML headers, SHA1 deduplication, and ClawText cluster integration.",
+  "author": "ragesaq",
+  "license": "MIT",
+  "repository": "https://github.com/ragesaq/clawtext-ingest",
+  "homepage": "https://github.com/ragesaq/clawtext-ingest",
+  "categories": [
+    "memory",
+    "knowledge-management",
+    "data-ingestion",
+    "rag"
+  ],
+  "keywords": [
+    "ingestion",
+    "memory",
+    "deduplication",
+    "rag",
+    "knowledge",
+    "clustering",
+    "data-import",
+    "agent-tools"
+  ],
+  "features": [
+    "Multi-source ingestion (files, URLs, JSON, text)",
+    "Automatic YAML frontmatter generation",
+    "SHA1-based deduplication for idempotency",
+    "Entity extraction and indexing",
+    "ClawText cluster integration",
+    "Batch processing support",
+    "Flexible dedup controls"
+  ],
+  "peerDependencies": {
+    "clawtext": ">=1.0.0"
+  },
+  "documentation": {
+    "quick_start": "https://github.com/ragesaq/clawtext-ingest#quick-start",
+    "api": "https://github.com/ragesaq/clawtext-ingest#api",
+    "examples": "https://github.com/ragesaq/clawtext-ingest#examples",
+    "troubleshooting": "https://github.com/ragesaq/clawtext-ingest#troubleshooting"
+  },
+  "relatedSkills": [
+    "clawtext"
+  ],
+  "tags": [
+    "production-ready",
+    "v1.2.0",
+    "tested",
+    "deduplication",
+    "multi-source"
+  ],
+  "tested": true,
+  "maintained": true,
+  "author_contact": "https://github.com/ragesaq"
+}

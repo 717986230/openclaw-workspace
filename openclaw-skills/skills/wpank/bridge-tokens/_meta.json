@@ -1,0 +1,11 @@
+{
+  "owner": "wpank",
+  "slug": "bridge-tokens",
+  "displayName": "Uniswap Bridge Tokens",
+  "latest": {
+    "version": "0.1.0",
+    "publishedAt": 1770744812590,
+    "commit": "https://github.com/openclaw/skills/commit/ef40f014aa57d7798551a53be0fa0bb785ae1ab7"
+  },
+  "history": []
+}

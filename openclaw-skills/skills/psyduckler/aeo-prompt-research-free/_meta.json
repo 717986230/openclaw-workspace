@@ -1,0 +1,11 @@
+{
+  "owner": "psyduckler",
+  "slug": "aeo-prompt-research-free",
+  "displayName": "AEO Prompt Research (Free)",
+  "latest": {
+    "version": "1.0.0",
+    "publishedAt": 1771171444760,
+    "commit": "https://github.com/openclaw/skills/commit/62e60a2de69b34e501aae72ddd83e309f07b0c8c"
+  },
+  "history": []
+}

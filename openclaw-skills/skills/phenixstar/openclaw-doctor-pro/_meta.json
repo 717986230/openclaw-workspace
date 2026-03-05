@@ -1,0 +1,11 @@
+{
+  "owner": "phenixstar",
+  "slug": "openclaw-doctor-pro",
+  "displayName": "Oc",
+  "latest": {
+    "version": "1.1.0",
+    "publishedAt": 1770517310439,
+    "commit": "https://github.com/openclaw/skills/commit/f72491181400da181650802ef2ede5553445e7fd"
+  },
+  "history": []
+}

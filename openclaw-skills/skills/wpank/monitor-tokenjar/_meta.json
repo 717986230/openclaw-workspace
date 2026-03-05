@@ -1,0 +1,11 @@
+{
+  "owner": "wpank",
+  "slug": "monitor-tokenjar",
+  "displayName": "Uniswap Monitor Tokenjar",
+  "latest": {
+    "version": "0.1.0",
+    "publishedAt": 1770745706111,
+    "commit": "https://github.com/openclaw/skills/commit/f1be73a8376b99bc80d1ce024b4dcc8226d103a4"
+  },
+  "history": []
+}

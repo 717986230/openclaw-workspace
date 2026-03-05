@@ -1,0 +1,11 @@
+{
+  "owner": "xtaq",
+  "slug": "liblib-ai-gen",
+  "displayName": "LiblibAI Image & Video Gen",
+  "latest": {
+    "version": "1.0.0",
+    "publishedAt": 1770558994467,
+    "commit": "https://github.com/openclaw/skills/commit/829e5e3004a645c7c01d27de44efe7ece9dbb11e"
+  },
+  "history": []
+}

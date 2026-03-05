@@ -1,0 +1,11 @@
+{
+  "owner": "vinlic",
+  "slug": "unifuncs-reader",
+  "displayName": "UniFuncs Reader",
+  "latest": {
+    "version": "0.0.1",
+    "publishedAt": 1770779446505,
+    "commit": "https://github.com/openclaw/skills/commit/6c34402cdabbda21c75e5c22a0cd2b634612e31c"
+  },
+  "history": []
+}

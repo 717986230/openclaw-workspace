@@ -1,0 +1,11 @@
+{
+  "owner": "wpank",
+  "slug": "command-creator",
+  "displayName": "Command Creator",
+  "latest": {
+    "version": "0.1.0",
+    "publishedAt": 1770730045098,
+    "commit": "https://github.com/openclaw/skills/commit/bd323072d26ac20beff08dd745b4b428eceb93be"
+  },
+  "history": []
+}

@@ -1,0 +1,11 @@
+{
+  "owner": "topguyaii",
+  "slug": "hub1",
+  "displayName": "Hub1",
+  "latest": {
+    "version": "1.0.0",
+    "publishedAt": 1771423498914,
+    "commit": "https://github.com/openclaw/skills/commit/d24a6ac0f6bd748551dc96efd35fe9090f5563a8"
+  },
+  "history": []
+}

@@ -1,0 +1,11 @@
+{
+  "owner": "wanng-ide",
+  "slug": "evolution-state-analyzer",
+  "displayName": "Evolution State Analyzer",
+  "latest": {
+    "version": "1.0.0",
+    "publishedAt": 1771180275610,
+    "commit": "https://github.com/openclaw/skills/commit/4120118b955270ef9263cafe4c6a0f1de32042ed"
+  },
+  "history": []
+}

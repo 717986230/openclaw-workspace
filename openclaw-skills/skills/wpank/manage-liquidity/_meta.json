@@ -1,0 +1,11 @@
+{
+  "owner": "wpank",
+  "slug": "manage-liquidity",
+  "displayName": "Uniswap Manage Liquidity",
+  "latest": {
+    "version": "0.1.0",
+    "publishedAt": 1770745687805,
+    "commit": "https://github.com/openclaw/skills/commit/aad5987d1b7b38ac2ada9df847d5561f7f73dce9"
+  },
+  "history": []
+}

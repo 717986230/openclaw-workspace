@@ -1,0 +1,11 @@
+{
+  "owner": "wanng-ide",
+  "slug": "critpt-solver",
+  "displayName": "Critpt Solver",
+  "latest": {
+    "version": "1.0.1",
+    "publishedAt": 1771176679999,
+    "commit": "https://github.com/openclaw/skills/commit/d7b1a38eb672c47efca7c59a2d8253a656180b90"
+  },
+  "history": []
+}

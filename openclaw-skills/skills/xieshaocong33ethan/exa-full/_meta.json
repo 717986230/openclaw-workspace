@@ -1,0 +1,17 @@
+{
+  "owner": "xieshaocong33ethan",
+  "slug": "exa-full",
+  "displayName": "Exa",
+  "latest": {
+    "version": "1.2.1",
+    "publishedAt": 1771076085013,
+    "commit": "https://github.com/openclaw/skills/commit/73277e37e948ba7cd3ca9e6871101baba74a8a83"
+  },
+  "history": [
+    {
+      "version": "1.1.0",
+      "publishedAt": 1771072694685,
+      "commit": "https://github.com/openclaw/skills/commit/18151bbd5b899cb231f962b62fc835b5ba5b9a1c"
+    }
+  ]
+}

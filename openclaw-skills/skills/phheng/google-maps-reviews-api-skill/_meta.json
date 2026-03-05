@@ -1,0 +1,11 @@
+{
+  "owner": "phheng",
+  "slug": "google-maps-reviews-api-skill",
+  "displayName": "Google Maps Reviews Api Skill",
+  "latest": {
+    "version": "0.1.0",
+    "publishedAt": 1770508488760,
+    "commit": "https://github.com/openclaw/skills/commit/1b7adfba38b6b51ca800c81693cc1e664a10add4"
+  },
+  "history": []
+}

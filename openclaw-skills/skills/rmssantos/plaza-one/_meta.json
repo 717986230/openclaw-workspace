@@ -1,0 +1,11 @@
+{
+  "owner": "rmssantos",
+  "slug": "plaza-one",
+  "displayName": "Plaza One",
+  "latest": {
+    "version": "1.1.0",
+    "publishedAt": 1771586043488,
+    "commit": "https://github.com/openclaw/skills/commit/113b5822fa64430da81a8893af78baab3e86bada"
+  },
+  "history": []
+}

@@ -1,0 +1,11 @@
+{
+  "owner": "zhongrenfei1-hub",
+  "slug": "restaurant-crosscheck-cn",
+  "displayName": "Restaurant Crosscheck CN",
+  "latest": {
+    "version": "2.0.0",
+    "publishedAt": 1771237146498,
+    "commit": "https://github.com/openclaw/skills/commit/4a91f9bd8b3f72497d4e7b6759996b2ebbbe1284"
+  },
+  "history": []
+}

@@ -1,0 +1,11 @@
+{
+  "owner": "roasbeef",
+  "slug": "lnd-macaroon-bakery",
+  "displayName": "lnd macaroon bakery",
+  "latest": {
+    "version": "1.0.0",
+    "publishedAt": 1770777646123,
+    "commit": "https://github.com/openclaw/skills/commit/c907c478caa538e938a3b8d51758fb3fa0f9b6c7"
+  },
+  "history": []
+}

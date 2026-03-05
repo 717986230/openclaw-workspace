@@ -1,0 +1,11 @@
+{
+  "owner": "olmmlo-cmd",
+  "slug": "4090ctl",
+  "displayName": "4090ctl",
+  "latest": {
+    "version": "1.0.0",
+    "publishedAt": 1771297767884,
+    "commit": "https://github.com/openclaw/skills/commit/0491d30b43cc6290c8742d730702fa9282728dfb"
+  },
+  "history": []
+}

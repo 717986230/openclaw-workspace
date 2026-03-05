@@ -1,0 +1,11 @@
+{
+  "owner": "wpank",
+  "slug": "extraction",
+  "displayName": "Skill Extraction",
+  "latest": {
+    "version": "1.0.0",
+    "publishedAt": 1770727638150,
+    "commit": "https://github.com/openclaw/skills/commit/065ce1aa68a654637d07df97f3038e6fb0dbf0b1"
+  },
+  "history": []
+}

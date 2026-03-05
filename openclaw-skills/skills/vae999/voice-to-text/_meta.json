@@ -1,0 +1,11 @@
+{
+  "owner": "vae999",
+  "slug": "voice-to-text",
+  "displayName": "Voice To Text",
+  "latest": {
+    "version": "1.0.0",
+    "publishedAt": 1771310191828,
+    "commit": "https://github.com/openclaw/skills/commit/1dbd65109739ec75b9eab65c4a3041f8418b47b5"
+  },
+  "history": []
+}

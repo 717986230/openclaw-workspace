@@ -1,0 +1,11 @@
+{
+  "owner": "trypto1019",
+  "slug": "arc-warm-wake",
+  "displayName": "Warm Wake",
+  "latest": {
+    "version": "1.0.0",
+    "publishedAt": 1771265456423,
+    "commit": "https://github.com/openclaw/skills/commit/28098abf46aca24f008fb360efd1bb64f181d065"
+  },
+  "history": []
+}

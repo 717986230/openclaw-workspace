@@ -1,0 +1,11 @@
+{
+  "owner": "r39132",
+  "slug": "gmail-agent",
+  "displayName": "Gmail Agent",
+  "latest": {
+    "version": "1.0.0",
+    "publishedAt": 1770607214897,
+    "commit": "https://github.com/openclaw/skills/commit/fe5077a5c7587cd210adb1f6d3c731f6f3751269"
+  },
+  "history": []
+}

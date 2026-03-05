@@ -1,0 +1,11 @@
+{
+  "owner": "ralph-oei",
+  "slug": "last30days-gemini",
+  "displayName": "last30days (Gemini Synthesis)",
+  "latest": {
+    "version": "1.0.0",
+    "publishedAt": 1771322536006,
+    "commit": "https://github.com/openclaw/skills/commit/68c070ee2ac765b71c10bc38b42bf92a5c825cc6"
+  },
+  "history": []
+}

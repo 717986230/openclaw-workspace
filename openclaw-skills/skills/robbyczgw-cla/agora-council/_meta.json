@@ -1,0 +1,11 @@
+{
+  "owner": "robbyczgw-cla",
+  "slug": "agora-council",
+  "displayName": "Agora — Multi-Agent Debate Council",
+  "latest": {
+    "version": "0.1.0-beta",
+    "publishedAt": 1771350090013,
+    "commit": "https://github.com/openclaw/skills/commit/e13539810c949f3d3e0a49b739dc3c224c16657b"
+  },
+  "history": []
+}

@@ -1,0 +1,11 @@
+{
+  "owner": "uuoov",
+  "slug": "ai-app-lab",
+  "displayName": "Ai App Lab",
+  "latest": {
+    "version": "1.0.0",
+    "publishedAt": 1770813766609,
+    "commit": "https://github.com/openclaw/skills/commit/d969f679c8440059b0a87d5a5cd0843d768a4f29"
+  },
+  "history": []
+}

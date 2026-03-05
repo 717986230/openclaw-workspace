@@ -1,0 +1,17 @@
+{
+  "owner": "therohitdas",
+  "slug": "captions",
+  "displayName": "Captions",
+  "latest": {
+    "version": "1.4.1",
+    "publishedAt": 1770817020660,
+    "commit": "https://github.com/openclaw/skills/commit/18f3cb3e2a11e661619b408005127c47ce15f944"
+  },
+  "history": [
+    {
+      "version": "1.3.2",
+      "publishedAt": 1769930209038,
+      "commit": "https://github.com/clawdbot/skills/commit/64967d6a270ce5af9c13aed89f1aeb14fc1a9315"
+    }
+  ]
+}

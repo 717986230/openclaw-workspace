@@ -1,0 +1,11 @@
+{
+  "owner": "teamtelnyx",
+  "slug": "telnyx-storage-backup",
+  "displayName": "Backup To Telnyx Storage",
+  "latest": {
+    "version": "1.0.0",
+    "publishedAt": 1770739849412,
+    "commit": "https://github.com/openclaw/skills/commit/8246128d0045aac6744ce6f7d7d9838b003c2d72"
+  },
+  "history": []
+}

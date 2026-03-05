@@ -1,0 +1,11 @@
+{
+  "owner": "vittor1o",
+  "slug": "rollbar",
+  "displayName": "Rollbar",
+  "latest": {
+    "version": "1.2.0",
+    "publishedAt": 1771520945827,
+    "commit": "https://github.com/openclaw/skills/commit/d3474897c77a3e7268d38028c13a5ebca97cd6d5"
+  },
+  "history": []
+}

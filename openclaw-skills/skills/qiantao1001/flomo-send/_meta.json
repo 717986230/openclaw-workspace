@@ -1,0 +1,11 @@
+{
+  "owner": "qiantao1001",
+  "slug": "flomo-send",
+  "displayName": "Flomo Send",
+  "latest": {
+    "version": "1.0.0",
+    "publishedAt": 1770536899304,
+    "commit": "https://github.com/openclaw/skills/commit/e5accd32433b5ca90487d98b2f303dfab485646c"
+  },
+  "history": []
+}

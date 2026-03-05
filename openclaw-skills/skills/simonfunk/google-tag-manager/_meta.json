@@ -1,0 +1,11 @@
+{
+  "owner": "simonfunk",
+  "slug": "google-tag-manager",
+  "displayName": "Google Tag Manager",
+  "latest": {
+    "version": "1.0.0",
+    "publishedAt": 1771277336537,
+    "commit": "https://github.com/openclaw/skills/commit/9fd212e97a556c1428e2f61f83e059ecfa26ede4"
+  },
+  "history": []
+}

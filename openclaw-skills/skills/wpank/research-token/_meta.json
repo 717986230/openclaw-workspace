@@ -1,0 +1,11 @@
+{
+  "owner": "wpank",
+  "slug": "research-token",
+  "displayName": "Uniswap Research Token",
+  "latest": {
+    "version": "0.1.0",
+    "publishedAt": 1770745814049,
+    "commit": "https://github.com/openclaw/skills/commit/19d2e568549487fd8215a009bdc04b6c8d2b1570"
+  },
+  "history": []
+}

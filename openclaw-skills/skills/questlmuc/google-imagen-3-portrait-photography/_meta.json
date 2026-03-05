@@ -1,0 +1,11 @@
+{
+  "owner": "questlmuc",
+  "slug": "google-imagen-3-portrait-photography",
+  "displayName": "Google Imagen 3 Portrait Photography",
+  "latest": {
+    "version": "1.0.0",
+    "publishedAt": 1771510438838,
+    "commit": "https://github.com/openclaw/skills/commit/7f5b863be51cd4715d0d6335c1c3686a8df5779f"
+  },
+  "history": []
+}

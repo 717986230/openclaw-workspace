@@ -1,0 +1,17 @@
+{
+  "owner": "xiwan",
+  "slug": "smtp-send",
+  "displayName": "SMTP Send",
+  "latest": {
+    "version": "1.0.1",
+    "publishedAt": 1770646612069,
+    "commit": "https://github.com/openclaw/skills/commit/7bd32321905b2540de5d049255217c82ce7224a1"
+  },
+  "history": [
+    {
+      "version": "1.0.0",
+      "publishedAt": 1769954521885,
+      "commit": "https://github.com/clawdbot/skills/commit/31a9f1a4c846555f5429de2fa242b8450338c1e6"
+    }
+  ]
+}

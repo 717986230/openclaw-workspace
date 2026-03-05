@@ -1,0 +1,11 @@
+{
+  "owner": "smartpeopleconnected",
+  "slug": "tokenoptimizer",
+  "displayName": "Tokenoptimizer",
+  "latest": {
+    "version": "1.0.18",
+    "publishedAt": 1771670907038,
+    "commit": "https://github.com/openclaw/skills/commit/2ffacab09a9090fd08cd53ad8a1a6276d670982c"
+  },
+  "history": []
+}

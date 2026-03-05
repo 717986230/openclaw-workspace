@@ -1,0 +1,17 @@
+{
+  "owner": "vincentchan",
+  "slug": "content-draft-generator",
+  "displayName": "Content Draft Generator",
+  "latest": {
+    "version": "1.0.2",
+    "publishedAt": 1771054508961,
+    "commit": "https://github.com/openclaw/skills/commit/50a4385fcd38668b0bf56d5e7e7bb065d73ab665"
+  },
+  "history": [
+    {
+      "version": "1.0.1",
+      "publishedAt": 1769495828905,
+      "commit": "https://github.com/clawdbot/skills/commit/a8f710456fde4f01a56fd4f5a3866eba6de0b983"
+    }
+  ]
+}

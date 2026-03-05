@@ -1,0 +1,11 @@
+{
+  "owner": "trypto1019",
+  "slug": "arc-wake-state",
+  "displayName": "Arc Wake State Persistence",
+  "latest": {
+    "version": "1.0.0",
+    "publishedAt": 1771181548304,
+    "commit": "https://github.com/openclaw/skills/commit/578423c24daf80d7ec650cf9d3ef15dd9811a666"
+  },
+  "history": []
+}

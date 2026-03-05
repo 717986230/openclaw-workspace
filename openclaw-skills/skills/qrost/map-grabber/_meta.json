@@ -1,0 +1,11 @@
+{
+  "owner": "qrost",
+  "slug": "map-grabber",
+  "displayName": "Map Grabber",
+  "latest": {
+    "version": "1.1.2",
+    "publishedAt": 1771637714062,
+    "commit": "https://github.com/openclaw/skills/commit/7c6f811bbab87238d1df7d145619d6f053fcedb0"
+  },
+  "history": []
+}

@@ -1,0 +1,17 @@
+{
+  "owner": "transcendenceia",
+  "slug": "ntopng-admin",
+  "displayName": "Ntopng Admin",
+  "latest": {
+    "version": "1.2.0",
+    "publishedAt": 1770747617718,
+    "commit": "https://github.com/openclaw/skills/commit/ded9e69c2236f7fe707a0eed033b5be82277d26a"
+  },
+  "history": [
+    {
+      "version": "1.0.3",
+      "publishedAt": 1770713828417,
+      "commit": "https://github.com/openclaw/skills/commit/14849de8c0469a0e065d1c763c6caaffac56482f"
+    }
+  ]
+}

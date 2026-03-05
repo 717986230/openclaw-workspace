@@ -1,0 +1,11 @@
+{
+  "owner": "phenixstar",
+  "slug": "openclaw-whisperer",
+  "displayName": "Openclaw Whisperer",
+  "latest": {
+    "version": "1.2.0",
+    "publishedAt": 1770595068473,
+    "commit": "https://github.com/openclaw/skills/commit/5dcf23d4b0846214062a025d2a82eb3485745c12"
+  },
+  "history": []
+}

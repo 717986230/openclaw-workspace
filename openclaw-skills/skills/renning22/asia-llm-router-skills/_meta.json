@@ -1,0 +1,11 @@
+{
+  "owner": "renning22",
+  "slug": "asia-llm-router-skills",
+  "displayName": "One API key. 70+ models. Route requests to GPT, Claude, Gemini, Qwen, Deepseek, Grok and more.",
+  "latest": {
+    "version": "1.0.0",
+    "publishedAt": 1770766616687,
+    "commit": "https://github.com/openclaw/skills/commit/ffd77e5be414a0a8837edbe006105e294b68d62e"
+  },
+  "history": []
+}

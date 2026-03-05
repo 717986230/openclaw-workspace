@@ -1,0 +1,11 @@
+{
+  "owner": "wpank",
+  "slug": "cross-chain-swap",
+  "displayName": "Uniswap Cross Chain Swap",
+  "latest": {
+    "version": "0.1.0",
+    "publishedAt": 1770745375396,
+    "commit": "https://github.com/openclaw/skills/commit/52b7963537182ed3d2a9249db082aef6a5f6fbec"
+  },
+  "history": []
+}

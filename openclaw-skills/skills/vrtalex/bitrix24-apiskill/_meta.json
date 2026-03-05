@@ -1,0 +1,11 @@
+{
+  "owner": "vrtalex",
+  "slug": "bitrix24-apiskill",
+  "displayName": "Bitrix24 Skill",
+  "latest": {
+    "version": "1.0.0",
+    "publishedAt": 1771095418045,
+    "commit": "https://github.com/openclaw/skills/commit/243baec49b3a84a0c6af44f75ff5dbdee7099e53"
+  },
+  "history": []
+}

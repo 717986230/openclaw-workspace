@@ -1,0 +1,11 @@
+{
+  "owner": "wpank",
+  "slug": "session-handoff",
+  "displayName": "Session Handoff",
+  "latest": {
+    "version": "0.1.0",
+    "publishedAt": 1770730224592,
+    "commit": "https://github.com/openclaw/skills/commit/6515bfe3690a68f599c964615c5c0e77f3bce239"
+  },
+  "history": []
+}

@@ -1,0 +1,11 @@
+{
+  "owner": "tag-assistant",
+  "slug": "merge-check",
+  "displayName": "Merge Check",
+  "latest": {
+    "version": "1.0.0",
+    "publishedAt": 1771341193017,
+    "commit": "https://github.com/openclaw/skills/commit/6d930f04e3c9c7bae5cb00e8707a0ffe62dce075"
+  },
+  "history": []
+}

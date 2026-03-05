@@ -1,0 +1,11 @@
+{
+  "owner": "trypto1019",
+  "slug": "arc-metrics-dashboard",
+  "displayName": "Metrics Dashboard",
+  "latest": {
+    "version": "1.0.0",
+    "publishedAt": 1771193725925,
+    "commit": "https://github.com/openclaw/skills/commit/46db7d000e54f9e8e3afcca63fb2f54f44276604"
+  },
+  "history": []
+}

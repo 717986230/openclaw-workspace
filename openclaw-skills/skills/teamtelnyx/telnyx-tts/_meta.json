@@ -1,0 +1,11 @@
+{
+  "owner": "teamtelnyx",
+  "slug": "telnyx-tts",
+  "displayName": "Telnyx Tts",
+  "latest": {
+    "version": "1.0.0",
+    "publishedAt": 1770739689462,
+    "commit": "https://github.com/openclaw/skills/commit/d93e64febd0a8c8d7fe638b8bcd9a91bdb127c19"
+  },
+  "history": []
+}

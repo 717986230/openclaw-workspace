@@ -1,0 +1,22 @@
+{
+  "owner": "smokealot420",
+  "slug": "ftw",
+  "displayName": "Piv",
+  "latest": {
+    "version": "1.0.3",
+    "publishedAt": 1770618093608,
+    "commit": "https://github.com/openclaw/skills/commit/61501d9863a3d2423f8ec5f511440c3519e2887b"
+  },
+  "history": [
+    {
+      "version": "1.0.2",
+      "publishedAt": 1770568226542,
+      "commit": "https://github.com/openclaw/skills/commit/7d34d58dddba8142f4148d88484b2efcdd4d8a04"
+    },
+    {
+      "version": "1.0.0",
+      "publishedAt": 1770539021969,
+      "commit": "https://github.com/openclaw/skills/commit/34c6b198d238b3d830302dae2532e125f6ed3e4b"
+    }
+  ]
+}

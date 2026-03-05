@@ -1,0 +1,17 @@
+{
+  "owner": "therohitdas",
+  "slug": "subtitles",
+  "displayName": "Subtitles",
+  "latest": {
+    "version": "1.4.1",
+    "publishedAt": 1770817030308,
+    "commit": "https://github.com/openclaw/skills/commit/d1b592348dacb0ed979bc818b5d3a6a1eddd2782"
+  },
+  "history": [
+    {
+      "version": "1.3.2",
+      "publishedAt": 1769930211083,
+      "commit": "https://github.com/clawdbot/skills/commit/1d83b0b4d8f1b71535d1fa83b8332c56bf95394d"
+    }
+  ]
+}

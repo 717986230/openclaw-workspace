@@ -1,0 +1,17 @@
+{
+  "owner": "zacharytgray",
+  "slug": "project-cerebro",
+  "displayName": "Project Cerebro - Control Surface",
+  "latest": {
+    "version": "1.0.2",
+    "publishedAt": 1770830788299,
+    "commit": "https://github.com/openclaw/skills/commit/baa43d9f42f3e13c62a3603acfb52624ffa46227"
+  },
+  "history": [
+    {
+      "version": "1.0.1",
+      "publishedAt": 1770768268108,
+      "commit": "https://github.com/openclaw/skills/commit/54328be76881012c0d83ccdf97934024b81728c4"
+    }
+  ]
+}

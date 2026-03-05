@@ -1,0 +1,17 @@
+{
+  "owner": "sarthib7",
+  "slug": "janitor",
+  "displayName": "Janitor the Cleaner",
+  "latest": {
+    "version": "1.0.3",
+    "publishedAt": 1770514291955,
+    "commit": "https://github.com/openclaw/skills/commit/f31b5e502d5d15c6aef123378f9b8d74a7de657c"
+  },
+  "history": [
+    {
+      "version": "1.0.1",
+      "publishedAt": 1770478706316,
+      "commit": "https://github.com/openclaw/skills/commit/cf662f178143ad800d0e7c7524e5d12b9526910b"
+    }
+  ]
+}

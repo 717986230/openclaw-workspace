@@ -1,0 +1,11 @@
+{
+  "owner": "trondw",
+  "slug": "local-voice",
+  "displayName": "Local Voice (FluidAudio TTS/STT)",
+  "latest": {
+    "version": "1.0.1",
+    "publishedAt": 1770531059119,
+    "commit": "https://github.com/openclaw/skills/commit/018167ab82ba306bc14ad91a534fe09534e8289a"
+  },
+  "history": []
+}

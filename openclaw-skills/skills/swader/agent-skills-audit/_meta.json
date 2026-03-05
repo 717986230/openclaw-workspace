@@ -1,0 +1,11 @@
+{
+  "owner": "swader",
+  "slug": "agent-skills-audit",
+  "displayName": "Audit Code",
+  "latest": {
+    "version": "0.1.0",
+    "publishedAt": 1770643402369,
+    "commit": "https://github.com/openclaw/skills/commit/88828236fdf2631b7fde4a7a808523fa5d802d77"
+  },
+  "history": []
+}

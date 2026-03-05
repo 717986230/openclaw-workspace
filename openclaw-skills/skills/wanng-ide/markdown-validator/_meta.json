@@ -1,0 +1,11 @@
+{
+  "owner": "wanng-ide",
+  "slug": "markdown-validator",
+  "displayName": "Markdown Validator",
+  "latest": {
+    "version": "1.0.0",
+    "publishedAt": 1771195900737,
+    "commit": "https://github.com/openclaw/skills/commit/84096d29d31fe070a758ef83262068e444740f18"
+  },
+  "history": []
+}

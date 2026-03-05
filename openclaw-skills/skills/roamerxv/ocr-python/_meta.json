@@ -1,0 +1,11 @@
+{
+  "owner": "roamerxv",
+  "slug": "ocr-python",
+  "displayName": "OCR with python",
+  "latest": {
+    "version": "1.0.0",
+    "publishedAt": 1771704541669,
+    "commit": "https://github.com/openclaw/skills/commit/b874a9db4cc011409469e03b3a665b1115bd71c5"
+  },
+  "history": []
+}

@@ -1,0 +1,11 @@
+{
+  "owner": "wpank",
+  "slug": "production-readiness",
+  "displayName": "Production Readiness",
+  "latest": {
+    "version": "1.0.0",
+    "publishedAt": 1770729193035,
+    "commit": "https://github.com/openclaw/skills/commit/b78def7a2cbe6cdda012bb3ce6e2bd977379539e"
+  },
+  "history": []
+}

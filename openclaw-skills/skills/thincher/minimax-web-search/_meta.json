@@ -1,0 +1,27 @@
+{
+  "owner": "thincher",
+  "slug": "minimax-web-search",
+  "displayName": "minimax-web-search",
+  "latest": {
+    "version": "1.0.7",
+    "publishedAt": 1772112435593,
+    "commit": "https://github.com/openclaw/skills/commit/a727b975fa926732c5980545af1fd7564350586e"
+  },
+  "history": [
+    {
+      "version": "1.0.2",
+      "publishedAt": 1771917478021,
+      "commit": "https://github.com/openclaw/skills/commit/b95bb0476e64d257aee9592f744771ac9c324307"
+    },
+    {
+      "version": "1.0.1",
+      "publishedAt": 1771769643698,
+      "commit": "https://github.com/openclaw/skills/commit/924b078143465a6a52059893a5ed58062955b296"
+    },
+    {
+      "version": "1.0.0",
+      "publishedAt": 1771336626107,
+      "commit": "https://github.com/openclaw/skills/commit/b46f56dd1dac7613b2d468cc26ee8177c2cc6f16"
+    }
+  ]
+}

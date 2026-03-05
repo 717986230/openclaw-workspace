@@ -1,0 +1,11 @@
+{
+  "owner": "sammy-spk",
+  "slug": "igpt-email-search",
+  "displayName": "iGPT email search",
+  "latest": {
+    "version": "1.0.3",
+    "publishedAt": 1771503577070,
+    "commit": "https://github.com/openclaw/skills/commit/5c29aec6b933ea2c65802f3d57ee82d065f12192"
+  },
+  "history": []
+}

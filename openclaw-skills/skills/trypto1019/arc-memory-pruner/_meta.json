@@ -1,0 +1,11 @@
+{
+  "owner": "trypto1019",
+  "slug": "arc-memory-pruner",
+  "displayName": "Memory Pruner",
+  "latest": {
+    "version": "1.1.0",
+    "publishedAt": 1771290599320,
+    "commit": "https://github.com/openclaw/skills/commit/5e4941b5bebb6c27d016ae03199b0e8ff20b18df"
+  },
+  "history": []
+}

@@ -1,0 +1,17 @@
+{
+  "owner": "tkuehnl",
+  "slug": "meeting-autopilot",
+  "displayName": "meeting-autopilot",
+  "latest": {
+    "version": "0.1.2",
+    "publishedAt": 1771717242504,
+    "commit": "https://github.com/openclaw/skills/commit/7ba03ed15bc279eba2f10d1c40a80ee1d88daf3e"
+  },
+  "history": [
+    {
+      "version": "0.1.1",
+      "publishedAt": 1771471522333,
+      "commit": "https://github.com/openclaw/skills/commit/2b895b4a8d514448dfecc0023669a6038cce564d"
+    }
+  ]
+}

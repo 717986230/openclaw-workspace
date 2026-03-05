@@ -1,0 +1,11 @@
+{
+  "owner": "wpank",
+  "slug": "create-test-pool",
+  "displayName": "Uniswap Create Test Pool",
+  "latest": {
+    "version": "0.1.0",
+    "publishedAt": 1770745264422,
+    "commit": "https://github.com/openclaw/skills/commit/d6408f936662c4e63e151882d402da99c9eb9085"
+  },
+  "history": []
+}

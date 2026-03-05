@@ -1,0 +1,11 @@
+{
+  "owner": "phucanh08",
+  "slug": "google-search-grounding-3",
+  "displayName": "Google Search Grounding 3",
+  "latest": {
+    "version": "1.0.0",
+    "publishedAt": 1770650546088,
+    "commit": "https://github.com/openclaw/skills/commit/5ef13babc9c6774b1b07fd67bef439537d48c560"
+  },
+  "history": []
+}

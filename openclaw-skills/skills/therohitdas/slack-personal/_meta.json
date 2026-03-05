@@ -1,0 +1,32 @@
+{
+  "owner": "therohitdas",
+  "slug": "slack-personal",
+  "displayName": "Slk",
+  "latest": {
+    "version": "0.1.7",
+    "publishedAt": 1770793337078,
+    "commit": "https://github.com/openclaw/skills/commit/ff14614761190c719f6b59a1c5bb568807d50220"
+  },
+  "history": [
+    {
+      "version": "0.1.6",
+      "publishedAt": 1770528589719,
+      "commit": "https://github.com/openclaw/skills/commit/c8a1a84a1c3d6fb7c66c3ced81039b2d0e7d67be"
+    },
+    {
+      "version": "0.1.4",
+      "publishedAt": 1769878239685,
+      "commit": "https://github.com/clawdbot/skills/commit/bbf87df5792edff971db949c452318de1a2865c5"
+    },
+    {
+      "version": "0.1.2",
+      "publishedAt": 1769787599932,
+      "commit": "https://github.com/clawdbot/skills/commit/678669e1263d67f88459f4b3de9879a4668ace17"
+    },
+    {
+      "version": "0.1.0",
+      "publishedAt": 1769750324081,
+      "commit": "https://github.com/clawdbot/skills/commit/0848d77a3801dfc1b2a58687246b947eb2c59213"
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "owner": "olmmlo-cmd",
+  "slug": "agent-guardrails",
+  "displayName": "Agent Guardrails",
+  "latest": {
+    "version": "1.0.0",
+    "publishedAt": 1771297779316,
+    "commit": "https://github.com/openclaw/skills/commit/e1fc70e05a8866405297218bcf2c25d1d80459f0"
+  },
+  "history": []
+}

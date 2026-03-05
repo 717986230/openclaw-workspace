@@ -1,0 +1,11 @@
+{
+  "owner": "vilmire",
+  "slug": "discord-local-stt-tts-installer",
+  "displayName": "Discord Local STT/TTS Installer (macOS)",
+  "latest": {
+    "version": "0.1.1",
+    "publishedAt": 1771573095392,
+    "commit": "https://github.com/openclaw/skills/commit/2308f950b83216e200237189e8d87fa32eac31bb"
+  },
+  "history": []
+}

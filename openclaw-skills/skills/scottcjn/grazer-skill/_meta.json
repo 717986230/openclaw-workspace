@@ -1,0 +1,11 @@
+{
+  "owner": "scottcjn",
+  "slug": "grazer-skill",
+  "displayName": "Grazer",
+  "latest": {
+    "version": "1.0.0",
+    "publishedAt": 1770472624590,
+    "commit": "https://github.com/openclaw/skills/commit/0c78bc7b510473b82be5b7c35613087da1e1a932"
+  },
+  "history": []
+}

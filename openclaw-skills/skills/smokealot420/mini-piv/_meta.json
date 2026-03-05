@@ -1,0 +1,22 @@
+{
+  "owner": "smokealot420",
+  "slug": "mini-piv",
+  "displayName": "Mini PIV - Lightweight Feature Builder",
+  "latest": {
+    "version": "1.1.0",
+    "publishedAt": 1770536243486,
+    "commit": "https://github.com/openclaw/skills/commit/f31b560eb3dfd792fd6066b62e2c58575486e84a"
+  },
+  "history": [
+    {
+      "version": "1.0.4",
+      "publishedAt": 1770441589605,
+      "commit": "https://github.com/openclaw/skills/commit/bb8b923a557b1450e06731df8a1ef2a46928f8d8"
+    },
+    {
+      "version": "1.0.1",
+      "publishedAt": 1770400774215,
+      "commit": "https://github.com/openclaw/skills/commit/3c5d04106876913d713f30a1149f1972f239bd08"
+    }
+  ]
+}

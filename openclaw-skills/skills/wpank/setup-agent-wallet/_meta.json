@@ -1,0 +1,11 @@
+{
+  "owner": "wpank",
+  "slug": "setup-agent-wallet",
+  "displayName": "Uniswap Setup Agent Wallet",
+  "latest": {
+    "version": "0.1.0",
+    "publishedAt": 1770745922046,
+    "commit": "https://github.com/openclaw/skills/commit/a59d652c404cbca20e3b1314d0f5c6ba421fac84"
+  },
+  "history": []
+}

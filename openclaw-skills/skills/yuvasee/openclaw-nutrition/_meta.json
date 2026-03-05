@@ -1,0 +1,11 @@
+{
+  "owner": "yuvasee",
+  "slug": "openclaw-nutrition",
+  "displayName": "Nutrition tracking",
+  "latest": {
+    "version": "1.0.0",
+    "publishedAt": 1771643336183,
+    "commit": "https://github.com/openclaw/skills/commit/4fedb718df1c644097af8bd0cabf9da0fc03f15d"
+  },
+  "history": []
+}

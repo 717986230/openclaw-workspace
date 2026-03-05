@@ -1,0 +1,11 @@
+{
+  "owner": "teamtelnyx",
+  "slug": "telnyx-network",
+  "displayName": "Telnyx Network",
+  "latest": {
+    "version": "1.0.0",
+    "publishedAt": 1770739720770,
+    "commit": "https://github.com/openclaw/skills/commit/1e00c818c68531a891a68295c3b65c5864738653"
+  },
+  "history": []
+}

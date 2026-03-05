@@ -1,0 +1,11 @@
+{
+  "owner": "tianmu",
+  "slug": "openclaw-flowise-skill",
+  "displayName": "Flowise",
+  "latest": {
+    "version": "0.1.0",
+    "publishedAt": 1770784284914,
+    "commit": "https://github.com/openclaw/skills/commit/7fa63a5c266c9da280c5cb331cabccbdd5a51ba0"
+  },
+  "history": []
+}

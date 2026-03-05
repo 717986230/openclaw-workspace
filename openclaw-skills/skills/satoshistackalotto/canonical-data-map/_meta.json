@@ -1,0 +1,11 @@
+{
+  "owner": "satoshistackalotto",
+  "slug": "canonical-data-map",
+  "displayName": "Canonical Data Map",
+  "latest": {
+    "version": "0.1.1",
+    "publishedAt": 1771658319400,
+    "commit": "https://github.com/openclaw/skills/commit/d8dfd513af438bc7b60c41d028bdb3a926d217f4"
+  },
+  "history": []
+}

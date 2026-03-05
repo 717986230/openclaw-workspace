@@ -1,0 +1,11 @@
+{
+  "owner": "wpank",
+  "slug": "portfolio-report",
+  "displayName": "Uniswap Portfolio Report",
+  "latest": {
+    "version": "0.1.0",
+    "publishedAt": 1770745753113,
+    "commit": "https://github.com/openclaw/skills/commit/350a0ff1c79a6ab857c98bd4dd6d281ae7471424"
+  },
+  "history": []
+}

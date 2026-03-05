@@ -1,0 +1,11 @@
+{
+  "owner": "psyduckler",
+  "slug": "aeo-analytics-free",
+  "displayName": "AEO Analytics Free",
+  "latest": {
+    "version": "1.0.0",
+    "publishedAt": 1771176843308,
+    "commit": "https://github.com/openclaw/skills/commit/01633186238023ff0eaa723220034f6c6fed62d9"
+  },
+  "history": []
+}

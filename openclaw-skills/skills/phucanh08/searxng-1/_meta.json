@@ -1,0 +1,11 @@
+{
+  "owner": "phucanh08",
+  "slug": "searxng-1",
+  "displayName": "Searxng 1",
+  "latest": {
+    "version": "1.0.1",
+    "publishedAt": 1770733134803,
+    "commit": "https://github.com/openclaw/skills/commit/230bb96c2b0ef6e15d728a39f7d33373d71d29c1"
+  },
+  "history": []
+}

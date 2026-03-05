@@ -1,0 +1,22 @@
+{
+  "owner": "rmanluo",
+  "slug": "zotero-skill",
+  "displayName": "Zotero",
+  "latest": {
+    "version": "0.1.6",
+    "publishedAt": 1770770021502,
+    "commit": "https://github.com/openclaw/skills/commit/0097f80423d4c06a90ec7be7ce94a241cbea29d0"
+  },
+  "history": [
+    {
+      "version": "0.1.5",
+      "publishedAt": 1770769833158,
+      "commit": "https://github.com/openclaw/skills/commit/5dc35176a864376e18069afb4b80a730adee90e8"
+    },
+    {
+      "version": "0.1.4",
+      "publishedAt": 1770694710386,
+      "commit": "https://github.com/openclaw/skills/commit/d7781644dbe41c19e5efb61836219c9581275430"
+    }
+  ]
+}

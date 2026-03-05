@@ -1,0 +1,11 @@
+{
+  "owner": "seanphan",
+  "slug": "openclaw-remote",
+  "displayName": "Openclaw Remote",
+  "latest": {
+    "version": "0.1.2",
+    "publishedAt": 1770487419494,
+    "commit": "https://github.com/openclaw/skills/commit/de6395f3fcc52cf1aa55e2f29f24473816fa68a1"
+  },
+  "history": []
+}
