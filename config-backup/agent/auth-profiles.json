@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "profiles": {
+    "qwen-portal:default": {
+      "type": "oauth",
+      "provider": "qwen-portal",
+      "access": "36D4XR3iOzDpWpUn8mc1Mwd7u5R45bvwh6Y8vCNEKaK_ljtLTCOqZUz7GV0MAah-IBgY1Oy9llfngVxsA-Lb0Q",
+      "refresh": "FCiedYM807onkhWayjqfW8oE0HSuizL_b6K2cEnnInhz8WUYr3A2Y4gCn-6vV6PkSZByMzqNAlB09ujRbVKkEw",
+      "expires": 1769959937208
+    },
+    "zai:default": {
+      "type": "api_key",
+      "provider": "zai",
+      "key": "6e72b8f462e34ed3b77e96e043b1fc20.nE95lBZoOawSUWoq"
+    },
+    "moonshot:default": {
+      "type": "api_key",
+      "provider": "moonshot",
+      "key": "9b620f51-d6b9-45f0-93ea-1cf6d1dedff1"
+    },
+    "minimax-portal:default": {
+      "type": "oauth",
+      "provider": "minimax-portal",
+      "access": "sk-cp-l4Q02510YBqFIfoUq6OPRGnUFxR7U_yoeiAQ8yjvvwKYZF4EQCTar57LLQUV84nvf9mDBHcC__EpJXLSfQZCl5TT_QhNjtZ_8Mp-IqnJ_WTtagOZCoPsUcE",
+      "refresh": "i76TKVoc04rGe5s3XopTp0IRZHTvIHZxdc-ujxcSvQU=",
+      "expires": 1803797733915
+    }
+  }
+}

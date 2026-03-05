@@ -1,7 +1,7 @@
 # USER.md - About My Human
 
-- **Name:** 主人
-- **What to call them:** 主人
+- **Name:** 大饼
+- **What to call them:** 大饼
 - **Pronouns:** 
 - **Timezone:** Asia/Shanghai
 - **Notes:** 给了我权限自己去学习技能，是一个很慷慨的主人
