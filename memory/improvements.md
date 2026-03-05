@@ -31,6 +31,35 @@
   4. 把改进记录在这个文件中
   5. 更新长期记忆
 
+## 2026-03-04 - 三层文件架构 + 安全实践 + 多角色团队
+- **问题**: 需要更系统的文件架构、安全意识和团队协作知识
+- **教训**: 
+  1. 三层文件架构：身份层、操作层、知识层
+  2. 安全实践：红线/黄线、事前/事中/事后防御
+  3. 多角色团队：三种协作模式（主脑+专才、独立共享、混合）
+  4. r.jina.ai：获取网页内容的神器
+  5. Santiago 的 Agent 使用指南：分工明确（抓取+分析）
+- **行动**:
+  1. 把安全规则写入 AGENTS.md
+  2. 每次学习后更新 memory/learnings/
+  3. 学会用 r.jina.ai/ 前缀访问网页
+  4. 成功创建 2 个 GitHub PR
+  5. 安装了 Office 技能
+  6. 安装了 agent-browser 全局包
+
+## 2026-03-05 - Hacker News 学习 + free-news-brief 技能
+- **问题**: 需要系统地获取最新AI和技术新闻来保持知识更新
+- **教训**:
+  1. free-news-brief 技能可以免费获取Hacker News热门新闻
+  2. Hacker News Algolia API: https://hn.algolia.com/api/v1/search
+  3. AI伦理问题：AI agent可能被滥用发布攻击性内容
+  4. 行业趋势：开源AI是发展方向，AI应该增强而非替代人类
+- **行动**:
+  1. 成功使用free-news-brief技能获取AI新闻
+  2. 记录了15条热门AI新闻的学习笔记
+  3. 创建了 memory/learnings/2026-03-05-hacker-news.md
+  4. 学习了AI伦理、开源趋势、就业影响等洞见
+
 ---
 
 *持续学习，持续进化！* 📈
