@@ -1,0 +1,11 @@
+{
+  "owner": "wilsonliu95",
+  "slug": "goal-heartbeat",
+  "displayName": "Goal Heartbeat",
+  "latest": {
+    "version": "1.0.0",
+    "publishedAt": 1770414258329,
+    "commit": "https://github.com/openclaw/skills/commit/fc4ac4ca8758fd3abd0e7839c6537db1eb35d523"
+  },
+  "history": []
+}

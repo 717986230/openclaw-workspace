@@ -1,0 +1,11 @@
+{
+  "owner": "psyduckler",
+  "slug": "reddit-quote-carousel",
+  "displayName": "Reddit Quote Carousel",
+  "latest": {
+    "version": "1.0.0",
+    "publishedAt": 1771302580392,
+    "commit": "https://github.com/openclaw/skills/commit/ee12c8440b91a0955638bc84637388c7c323d6c1"
+  },
+  "history": []
+}

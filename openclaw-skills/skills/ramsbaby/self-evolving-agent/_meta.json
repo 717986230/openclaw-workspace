@@ -1,0 +1,11 @@
+{
+  "owner": "ramsbaby",
+  "slug": "self-evolving-agent",
+  "displayName": "Self-Evolving Agent 🧠",
+  "latest": {
+    "version": "5.0.0",
+    "publishedAt": 1771391196282,
+    "commit": "https://github.com/openclaw/skills/commit/e3849c91348a148b009f6ccd16ffbfd9c349d707"
+  },
+  "history": []
+}

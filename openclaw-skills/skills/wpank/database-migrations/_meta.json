@@ -1,0 +1,11 @@
+{
+  "owner": "wpank",
+  "slug": "database-migrations",
+  "displayName": "database-migrations",
+  "latest": {
+    "version": "1.0.0",
+    "publishedAt": 1770725312636,
+    "commit": "https://github.com/openclaw/skills/commit/3a74153772d10cbead8d5c60207d1ad939289abc"
+  },
+  "history": []
+}

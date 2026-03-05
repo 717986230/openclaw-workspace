@@ -1,0 +1,11 @@
+{
+  "owner": "qjymary",
+  "slug": "daily-paper-digest",
+  "displayName": "Daily Paper Digest",
+  "latest": {
+    "version": "1.0.0",
+    "publishedAt": 1771587246433,
+    "commit": "https://github.com/openclaw/skills/commit/390f34676cbe0ad6d66431490cbfefd1ab1bd876"
+  },
+  "history": []
+}

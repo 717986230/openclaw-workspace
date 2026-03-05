@@ -1,0 +1,11 @@
+{
+  "owner": "phucanh08",
+  "slug": "search-1",
+  "displayName": "Search 1",
+  "latest": {
+    "version": "1.0.1",
+    "publishedAt": 1770728473608,
+    "commit": "https://github.com/openclaw/skills/commit/f926b125ee7abbc3f6c4956b0e20a0aff47a2e68"
+  },
+  "history": []
+}

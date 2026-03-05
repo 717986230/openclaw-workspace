@@ -1,0 +1,11 @@
+{
+  "owner": "tallman2014",
+  "slug": "manus-monitor",
+  "displayName": "Manus Monitor",
+  "latest": {
+    "version": "1.0.3",
+    "publishedAt": 1770623642908,
+    "commit": "https://github.com/openclaw/skills/commit/9fee17c46459638b21993e1daa3acd0e9b2c21dd"
+  },
+  "history": []
+}

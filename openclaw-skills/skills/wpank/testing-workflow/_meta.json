@@ -1,0 +1,11 @@
+{
+  "owner": "wpank",
+  "slug": "testing-workflow",
+  "displayName": "Testing Workflow",
+  "latest": {
+    "version": "0.1.0",
+    "publishedAt": 1770730023415,
+    "commit": "https://github.com/openclaw/skills/commit/d1a7b590ba39cd0ceb4c0acc460086695e2eb2d6"
+  },
+  "history": []
+}

@@ -1,0 +1,11 @@
+{
+  "owner": "trypto1019",
+  "slug": "arc-agent-lifecycle",
+  "displayName": "Agent Lifecycle",
+  "latest": {
+    "version": "1.0.0",
+    "publishedAt": 1771207362516,
+    "commit": "https://github.com/openclaw/skills/commit/f31325326bd3069e1d55e512da4e54c22fdb68c6"
+  },
+  "history": []
+}

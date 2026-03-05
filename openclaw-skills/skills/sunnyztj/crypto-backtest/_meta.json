@@ -1,0 +1,11 @@
+{
+  "owner": "sunnyztj",
+  "slug": "crypto-backtest",
+  "displayName": "Crypto Backtest",
+  "latest": {
+    "version": "1.0.0",
+    "publishedAt": 1771412270186,
+    "commit": "https://github.com/openclaw/skills/commit/ca5b0fa652aeafd64a2cc1680bd99d460e8151ff"
+  },
+  "history": []
+}

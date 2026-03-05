@@ -1,0 +1,17 @@
+{
+  "owner": "theashbhat",
+  "slug": "promptlayer",
+  "displayName": "PromptLayer",
+  "latest": {
+    "version": "1.2.0",
+    "publishedAt": 1771395493968,
+    "commit": "https://github.com/openclaw/skills/commit/afbcc0fc44f90cd56ea08ece1b34d1963d990d80"
+  },
+  "history": [
+    {
+      "version": "1.0.0",
+      "publishedAt": 1771392331734,
+      "commit": "https://github.com/openclaw/skills/commit/a2cc296d8427a946bc608a386cb03531f521db4f"
+    }
+  ]
+}

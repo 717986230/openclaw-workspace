@@ -1,0 +1,11 @@
+{
+  "owner": "teamtelnyx",
+  "slug": "telnyx-voice-sip",
+  "displayName": "Sip Voice Call Control",
+  "latest": {
+    "version": "1.0.0",
+    "publishedAt": 1770739857646,
+    "commit": "https://github.com/openclaw/skills/commit/34ccd05c039063b731a7a30b3f74f9a5ec791ebb"
+  },
+  "history": []
+}

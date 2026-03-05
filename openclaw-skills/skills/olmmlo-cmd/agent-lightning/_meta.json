@@ -1,0 +1,11 @@
+{
+  "owner": "olmmlo-cmd",
+  "slug": "agent-lightning",
+  "displayName": "Agent Lightning",
+  "latest": {
+    "version": "1.0.0",
+    "publishedAt": 1771297784735,
+    "commit": "https://github.com/openclaw/skills/commit/82f64a508e0478308c551c5e4f5983370d9481ed"
+  },
+  "history": []
+}

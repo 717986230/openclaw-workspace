@@ -1,0 +1,11 @@
+{
+  "owner": "teeclaw",
+  "slug": "openclaw-basecred-sdk",
+  "displayName": "OpenClaw BaseCred SDK",
+  "latest": {
+    "version": "1.0.4",
+    "publishedAt": 1770795773727,
+    "commit": "https://github.com/openclaw/skills/commit/f3902e048b920c1dc9ced1ec573372acd0dd5065"
+  },
+  "history": []
+}

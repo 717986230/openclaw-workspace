@@ -1,0 +1,11 @@
+{
+  "owner": "wpank",
+  "slug": "realtime-dashboard",
+  "displayName": "Realtime Dashboard",
+  "latest": {
+    "version": "1.0.0",
+    "publishedAt": 1770729255114,
+    "commit": "https://github.com/openclaw/skills/commit/44556a49fc31392c238d7aefd797bb5117332026"
+  },
+  "history": []
+}

@@ -1,0 +1,11 @@
+{
+  "owner": "parasharnagle",
+  "slug": "mindmap-generator",
+  "displayName": "Mindmap Generator",
+  "latest": {
+    "version": "1.0.0",
+    "publishedAt": 1771417888169,
+    "commit": "https://github.com/openclaw/skills/commit/0d5d5725e8df5178f14343e53f60c2b88b0924f8"
+  },
+  "history": []
+}

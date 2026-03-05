@@ -1,0 +1,11 @@
+{
+  "owner": "openclaw-consensus-bot",
+  "slug": "safe-multisig-skill",
+  "displayName": "Safe Multisig Skill",
+  "latest": {
+    "version": "2.1.0",
+    "publishedAt": 1770615689367,
+    "commit": "https://github.com/openclaw/skills/commit/295fdf8350d87adbb58fc8785f80daa9a1e5a8f2"
+  },
+  "history": []
+}

@@ -1,0 +1,11 @@
+{
+  "owner": "zhongrenfei1-hub",
+  "slug": "clean-skill",
+  "displayName": "Clean Skill",
+  "latest": {
+    "version": "1.1.0",
+    "publishedAt": 1771218861551,
+    "commit": "https://github.com/openclaw/skills/commit/c45df52929beb02d7ae5dfcd786d72a00ef01756"
+  },
+  "history": []
+}

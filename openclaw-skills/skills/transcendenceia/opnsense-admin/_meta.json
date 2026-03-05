@@ -1,0 +1,17 @@
+{
+  "owner": "transcendenceia",
+  "slug": "opnsense-admin",
+  "displayName": "Opnsense Admin Skill",
+  "latest": {
+    "version": "1.0.3",
+    "publishedAt": 1770713824476,
+    "commit": "https://github.com/openclaw/skills/commit/80f74176feea1b84f1455cc30a327422807c4e60"
+  },
+  "history": [
+    {
+      "version": "1.0.1",
+      "publishedAt": 1770712483801,
+      "commit": "https://github.com/openclaw/skills/commit/e0b817e6d977f6e58357d6e1394dad3e4a66c632"
+    }
+  ]
+}

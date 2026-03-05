@@ -1,0 +1,11 @@
+{
+  "owner": "simonfunk",
+  "slug": "coda-io",
+  "displayName": "Coda.io",
+  "latest": {
+    "version": "1.2.0",
+    "publishedAt": 1771273463818,
+    "commit": "https://github.com/openclaw/skills/commit/f808be99593510e68c66b7f6b2c8758d247acc44"
+  },
+  "history": []
+}

@@ -1,0 +1,17 @@
+{
+  "owner": "parker-xferops",
+  "slug": "flower",
+  "displayName": "Flower",
+  "latest": {
+    "version": "1.0.4",
+    "publishedAt": 1771629067575,
+    "commit": "https://github.com/openclaw/skills/commit/bf1bfd8c6792c5f393eb5f7549496c23decc057f"
+  },
+  "history": [
+    {
+      "version": "1.0.3",
+      "publishedAt": 1771465564452,
+      "commit": "https://github.com/openclaw/skills/commit/3d21a5b8f824071f44653560c53efc9d73b77003"
+    }
+  ]
+}

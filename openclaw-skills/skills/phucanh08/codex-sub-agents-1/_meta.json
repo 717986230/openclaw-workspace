@@ -1,0 +1,17 @@
+{
+  "owner": "phucanh08",
+  "slug": "codex-sub-agents-1",
+  "displayName": "Codex Sub Agents 1",
+  "latest": {
+    "version": "1.0.1",
+    "publishedAt": 1770727952474,
+    "commit": "https://github.com/openclaw/skills/commit/8c9b597b7d4914dc1e2daebce8a4dd2299287780"
+  },
+  "history": [
+    {
+      "version": "1.0.0",
+      "publishedAt": 1770651724363,
+      "commit": "https://github.com/openclaw/skills/commit/aa76b49caa5223bba80c6f1b813da1e10f2dee59"
+    }
+  ]
+}

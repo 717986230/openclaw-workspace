@@ -1,0 +1,11 @@
+{
+  "owner": "wpank",
+  "slug": "execute-swap",
+  "displayName": "Uniswap Execute Swap",
+  "latest": {
+    "version": "0.1.0",
+    "publishedAt": 1770745497837,
+    "commit": "https://github.com/openclaw/skills/commit/5c5acd756b2205fd3225f967a631d4cd03228fe3"
+  },
+  "history": []
+}

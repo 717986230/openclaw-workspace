@@ -1,0 +1,11 @@
+{
+  "owner": "teeclaw",
+  "slug": "openclaw-social-post",
+  "displayName": "OpenClaw Social Post",
+  "latest": {
+    "version": "1.5.0",
+    "publishedAt": 1770781472336,
+    "commit": "https://github.com/openclaw/skills/commit/fffda46c1b0005b5ff167059145e1b93638c557f"
+  },
+  "history": []
+}

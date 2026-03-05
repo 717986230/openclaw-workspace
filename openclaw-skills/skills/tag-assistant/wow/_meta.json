@@ -1,0 +1,11 @@
+{
+  "owner": "tag-assistant",
+  "slug": "wow",
+  "displayName": "WoW Lookup",
+  "latest": {
+    "version": "1.0.0",
+    "publishedAt": 1771341182549,
+    "commit": "https://github.com/openclaw/skills/commit/cdc1e6aa4caf702984fd9e343fb03633524b79be"
+  },
+  "history": []
+}

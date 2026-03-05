@@ -1,0 +1,11 @@
+{
+  "owner": "tag-assistant",
+  "slug": "pi",
+  "displayName": "People Investigation",
+  "latest": {
+    "version": "1.0.0",
+    "publishedAt": 1771341189091,
+    "commit": "https://github.com/openclaw/skills/commit/ec75e4c15b9307d06dc23450cdfb4a36588f359f"
+  },
+  "history": []
+}

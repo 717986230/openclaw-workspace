@@ -1,0 +1,11 @@
+{
+  "owner": "ricardotrevisan",
+  "slug": "garmin-tracker",
+  "displayName": "Garmin Tracker",
+  "latest": {
+    "version": "1.0.2",
+    "publishedAt": 1771276613468,
+    "commit": "https://github.com/openclaw/skills/commit/16e3ffc09417ebcdeacef515e9ea4b653db55395"
+  },
+  "history": []
+}

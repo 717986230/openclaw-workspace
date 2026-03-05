@@ -1,0 +1,11 @@
+{
+  "owner": "runeweaverstudios",
+  "slug": "friday-router",
+  "displayName": "Friday Router",
+  "latest": {
+    "version": "1.6.2",
+    "publishedAt": 1771236743674,
+    "commit": "https://github.com/openclaw/skills/commit/d5ec7107f49c745872b64e00962eae15139b4857"
+  },
+  "history": []
+}

@@ -1,0 +1,11 @@
+{
+  "owner": "wpank",
+  "slug": "quality-gates",
+  "displayName": "Quality Gates",
+  "latest": {
+    "version": "0.1.0",
+    "publishedAt": 1770729954347,
+    "commit": "https://github.com/openclaw/skills/commit/e7b13ee9e3493f6268b66e36c38140eede73de72"
+  },
+  "history": []
+}

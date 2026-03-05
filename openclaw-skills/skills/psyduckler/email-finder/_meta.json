@@ -1,0 +1,11 @@
+{
+  "owner": "psyduckler",
+  "slug": "email-finder",
+  "displayName": "Email Finder",
+  "latest": {
+    "version": "1.0.1",
+    "publishedAt": 1771171696337,
+    "commit": "https://github.com/openclaw/skills/commit/1ac2ca0221999299eafa453ee798f73ca55c9ab9"
+  },
+  "history": []
+}

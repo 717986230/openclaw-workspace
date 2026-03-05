@@ -1,0 +1,11 @@
+{
+  "owner": "shaharsha",
+  "slug": "tavily-search-pro",
+  "displayName": "Tavily Search Pro",
+  "latest": {
+    "version": "1.0.0",
+    "publishedAt": 1770481308912,
+    "commit": "https://github.com/openclaw/skills/commit/7c907638c02746d4cdc5504cbe2816f52f6107ae"
+  },
+  "history": []
+}

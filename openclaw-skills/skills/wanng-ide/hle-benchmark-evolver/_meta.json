@@ -1,0 +1,11 @@
+{
+  "owner": "wanng-ide",
+  "slug": "hle-benchmark-evolver",
+  "displayName": "Hle Benchmark Evolver",
+  "latest": {
+    "version": "1.0.0",
+    "publishedAt": 1771187783092,
+    "commit": "https://github.com/openclaw/skills/commit/1b6eb15d7838ef108964b0225bec9f929ce30bcc"
+  },
+  "history": []
+}

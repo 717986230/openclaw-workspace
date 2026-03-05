@@ -1,0 +1,11 @@
+{
+  "owner": "terellison",
+  "slug": "imessage-signal-analyzer",
+  "displayName": "iMessage & Signal Analyzer",
+  "latest": {
+    "version": "1.0.0",
+    "publishedAt": 1771597193739,
+    "commit": "https://github.com/openclaw/skills/commit/cf1571567f0f342fcefd14a16487c1ac6c433174"
+  },
+  "history": []
+}

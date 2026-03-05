@@ -1,0 +1,11 @@
+{
+  "owner": "orosha-ai",
+  "slug": "web-multi-search",
+  "displayName": "Web Multi Search",
+  "latest": {
+    "version": "0.1.0",
+    "publishedAt": 1770573130091,
+    "commit": "https://github.com/openclaw/skills/commit/469928adcb9c2e95de6e2fba87f5a1e1a27e2d41"
+  },
+  "history": []
+}

@@ -1,0 +1,11 @@
+{
+  "owner": "silentcool",
+  "slug": "crusty-security",
+  "displayName": "Crusty Security",
+  "latest": {
+    "version": "0.1.4",
+    "publishedAt": 1771247507323,
+    "commit": "https://github.com/openclaw/skills/commit/6ceb4e0a2ee63f1525845f1ae3ab75a601a6d676"
+  },
+  "history": []
+}

@@ -1,0 +1,11 @@
+{
+  "owner": "xiwan",
+  "slug": "jiajia-security-audit",
+  "displayName": "Skill Security Audit",
+  "latest": {
+    "version": "1.0.0",
+    "publishedAt": 1770646498979,
+    "commit": "https://github.com/openclaw/skills/commit/376060ebcfd4d28ad9da66c2120e443b88cbc9ea"
+  },
+  "history": []
+}

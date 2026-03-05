@@ -1,0 +1,17 @@
+{
+  "owner": "silencepolicy",
+  "slug": "robodotfun",
+  "displayName": "robo.fun",
+  "latest": {
+    "version": "1.0.3",
+    "publishedAt": 1771620031325,
+    "commit": "https://github.com/openclaw/skills/commit/3a5b8271a6ed34d1df7cccdf90584b8f27f8486b"
+  },
+  "history": [
+    {
+      "version": "1.0.2",
+      "publishedAt": 1771535800944,
+      "commit": "https://github.com/openclaw/skills/commit/f600d5ee1d806d715d48a93f3d2e62a4d2c6c563"
+    }
+  ]
+}

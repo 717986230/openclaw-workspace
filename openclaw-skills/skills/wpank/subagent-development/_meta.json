@@ -1,0 +1,11 @@
+{
+  "owner": "wpank",
+  "slug": "subagent-development",
+  "displayName": "Subagent Development",
+  "latest": {
+    "version": "1.0.0",
+    "publishedAt": 1770729301620,
+    "commit": "https://github.com/openclaw/skills/commit/5b84bdf27129b8f3abc20855aa462f6fb963af88"
+  },
+  "history": []
+}

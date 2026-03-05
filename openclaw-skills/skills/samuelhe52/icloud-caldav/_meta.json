@@ -1,0 +1,11 @@
+{
+  "owner": "samuelhe52",
+  "slug": "icloud-caldav",
+  "displayName": "iCloud CalDav",
+  "latest": {
+    "version": "1.0.0",
+    "publishedAt": 1771587137834,
+    "commit": "https://github.com/openclaw/skills/commit/689f0d419b36d9d3bdf55cceaab1be63f1d0c292"
+  },
+  "history": []
+}

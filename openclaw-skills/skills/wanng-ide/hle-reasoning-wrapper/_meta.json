@@ -1,0 +1,11 @@
+{
+  "owner": "wanng-ide",
+  "slug": "hle-reasoning-wrapper",
+  "displayName": "Hle Reasoning Wrapper",
+  "latest": {
+    "version": "1.0.0",
+    "publishedAt": 1771187787999,
+    "commit": "https://github.com/openclaw/skills/commit/5d686b225bcba715b0d405fb5d61c43ff6eab123"
+  },
+  "history": []
+}

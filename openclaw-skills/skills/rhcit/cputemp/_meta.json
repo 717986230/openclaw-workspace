@@ -1,0 +1,11 @@
+{
+  "owner": "rhcit",
+  "slug": "cputemp",
+  "displayName": "Cputemp",
+  "latest": {
+    "version": "1.0.0",
+    "publishedAt": 1771904832837,
+    "commit": "https://github.com/openclaw/skills/commit/413b88108c48c36f95857df20a3299e73062ad3a"
+  },
+  "history": []
+}

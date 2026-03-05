@@ -1,0 +1,11 @@
+{
+  "owner": "xiaoyaner0201",
+  "slug": "google-ai-usage-monitor",
+  "displayName": "Google AI Usage Monitor",
+  "latest": {
+    "version": "1.0.0",
+    "publishedAt": 1770455158853,
+    "commit": "https://github.com/openclaw/skills/commit/e51f44b3e619cc56f9610595733ad9cb89024f4b"
+  },
+  "history": []
+}

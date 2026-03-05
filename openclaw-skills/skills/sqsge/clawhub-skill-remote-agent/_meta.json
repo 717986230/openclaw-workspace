@@ -1,0 +1,11 @@
+{
+  "owner": "sqsge",
+  "slug": "clawhub-skill-remote-agent",
+  "displayName": "clawhub-skill-remote-agent",
+  "latest": {
+    "version": "1.0.1",
+    "publishedAt": 1770578016730,
+    "commit": "https://github.com/openclaw/skills/commit/5fa5078315495187ddab8bc8aab00422b17a113e"
+  },
+  "history": []
+}

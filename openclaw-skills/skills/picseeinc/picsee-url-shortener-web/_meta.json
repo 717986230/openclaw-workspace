@@ -1,0 +1,11 @@
+{
+  "owner": "picseeinc",
+  "slug": "picsee-url-shortener-web",
+  "displayName": "PicSee URL Shortener & QR Codes (Web)",
+  "latest": {
+    "version": "1.0.0",
+    "publishedAt": 1771321973270,
+    "commit": "https://github.com/openclaw/skills/commit/c01a1f966a9bae22e1ab7d860cd2291f1cccf683"
+  },
+  "history": []
+}

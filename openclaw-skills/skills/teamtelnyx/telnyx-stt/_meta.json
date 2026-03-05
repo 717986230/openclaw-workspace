@@ -1,0 +1,11 @@
+{
+  "owner": "teamtelnyx",
+  "slug": "telnyx-stt",
+  "displayName": "Telnyx Stt",
+  "latest": {
+    "version": "1.0.1",
+    "publishedAt": 1770739679608,
+    "commit": "https://github.com/openclaw/skills/commit/75d04d3f0777141ca15822b094fe7c20a3245843"
+  },
+  "history": []
+}

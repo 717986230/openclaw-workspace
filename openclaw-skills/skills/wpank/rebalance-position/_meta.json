@@ -1,0 +1,11 @@
+{
+  "owner": "wpank",
+  "slug": "rebalance-position",
+  "displayName": "Uniswap Rebalance Position",
+  "latest": {
+    "version": "0.1.0",
+    "publishedAt": 1770745776899,
+    "commit": "https://github.com/openclaw/skills/commit/6204c3722030469616f6a246554eb2875db70e60"
+  },
+  "history": []
+}

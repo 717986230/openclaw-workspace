@@ -1,0 +1,11 @@
+{
+  "owner": "rizkydwicmt",
+  "slug": "yfinance-mcp-server",
+  "displayName": "Yfinance",
+  "latest": {
+    "version": "0.1.2",
+    "publishedAt": 1771314284097,
+    "commit": "https://github.com/openclaw/skills/commit/71e949b75915dddc50c855834c7115de104febc8"
+  },
+  "history": []
+}

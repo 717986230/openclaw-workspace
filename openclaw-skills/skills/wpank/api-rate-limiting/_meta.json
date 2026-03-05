@@ -1,0 +1,11 @@
+{
+  "owner": "wpank",
+  "slug": "api-rate-limiting",
+  "displayName": "API Rate Limiting",
+  "latest": {
+    "version": "1.0.0",
+    "publishedAt": 1770725372249,
+    "commit": "https://github.com/openclaw/skills/commit/40cd047576ebfffd1a356d6fd0d9e1613d602521"
+  },
+  "history": []
+}

@@ -1,0 +1,11 @@
+{
+  "owner": "suryast",
+  "slug": "skill-security",
+  "displayName": "Skill Security Scanner",
+  "latest": {
+    "version": "1.0.1",
+    "publishedAt": 1771755991016,
+    "commit": "https://github.com/openclaw/skills/commit/075f20f3daa47d5bc3f6fc8fcf1d1536e7892231"
+  },
+  "history": []
+}

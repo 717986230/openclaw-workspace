@@ -1,0 +1,11 @@
+{
+  "owner": "sharbelayy",
+  "slug": "agent-audit",
+  "displayName": "Agent Audit",
+  "latest": {
+    "version": "1.0.0",
+    "publishedAt": 1771411989194,
+    "commit": "https://github.com/openclaw/skills/commit/5062492cfede8daa1f753141f27fb743b726c20d"
+  },
+  "history": []
+}

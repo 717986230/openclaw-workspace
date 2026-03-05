@@ -1,0 +1,11 @@
+{
+  "owner": "wpank",
+  "slug": "track-performance",
+  "displayName": "Uniswap Track Performance",
+  "latest": {
+    "version": "0.1.0",
+    "publishedAt": 1770746007966,
+    "commit": "https://github.com/openclaw/skills/commit/b11fa676318763d1cc40b5e18a827b20fa081fe5"
+  },
+  "history": []
+}

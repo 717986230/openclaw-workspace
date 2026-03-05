@@ -1,0 +1,11 @@
+{
+  "owner": "wpank",
+  "slug": "workflow-patterns",
+  "displayName": "Workflow Patterns",
+  "latest": {
+    "version": "1.0.0",
+    "publishedAt": 1770729328791,
+    "commit": "https://github.com/openclaw/skills/commit/33dcdc6e62bf1b75a9255e8ce4bd6e48e6e3509d"
+  },
+  "history": []
+}

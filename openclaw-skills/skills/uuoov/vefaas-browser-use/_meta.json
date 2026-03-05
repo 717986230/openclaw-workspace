@@ -1,0 +1,11 @@
+{
+  "owner": "uuoov",
+  "slug": "vefaas-browser-use",
+  "displayName": "Vefaas Browser Use",
+  "latest": {
+    "version": "1.0.0",
+    "publishedAt": 1770813772855,
+    "commit": "https://github.com/openclaw/skills/commit/abb69ac1dcb9e3ac4a49c69f44dbf19558436357"
+  },
+  "history": []
+}

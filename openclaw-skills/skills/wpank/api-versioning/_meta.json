@@ -1,0 +1,11 @@
+{
+  "owner": "wpank",
+  "slug": "api-versioning",
+  "displayName": "api-versioning",
+  "latest": {
+    "version": "1.0.0",
+    "publishedAt": 1770725180443,
+    "commit": "https://github.com/openclaw/skills/commit/2fbaae8627eba2696960c31811620984b0848d10"
+  },
+  "history": []
+}

@@ -1,0 +1,17 @@
+{
+  "owner": "weapon3k",
+  "slug": "github-release-workflow",
+  "displayName": "GitHub Release Workflow",
+  "latest": {
+    "version": "1.1.0",
+    "publishedAt": 1771744486388,
+    "commit": "https://github.com/openclaw/skills/commit/d3f77d0f48e544ae9843cce092466d446355db10"
+  },
+  "history": [
+    {
+      "version": "1.0.0",
+      "publishedAt": 1771693376110,
+      "commit": "https://github.com/openclaw/skills/commit/37b63b90f25ef341dd992ce6c3ac1375bc2d228a"
+    }
+  ]
+}

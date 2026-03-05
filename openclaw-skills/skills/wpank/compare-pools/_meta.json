@@ -1,0 +1,11 @@
+{
+  "owner": "wpank",
+  "slug": "compare-pools",
+  "displayName": "Uniswap Compare Pools",
+  "latest": {
+    "version": "0.1.0",
+    "publishedAt": 1770744850048,
+    "commit": "https://github.com/openclaw/skills/commit/1fd8657dd9718a1dfe01659d191abd727065040c"
+  },
+  "history": []
+}

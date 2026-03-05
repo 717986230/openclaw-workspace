@@ -1,0 +1,11 @@
+{
+  "owner": "phenixstar",
+  "slug": "skill-hub",
+  "displayName": "Skill Hub",
+  "latest": {
+    "version": "1.0.0",
+    "publishedAt": 1770595049335,
+    "commit": "https://github.com/openclaw/skills/commit/da14bb5ac5c7bddece48243b1f301585cc68b513"
+  },
+  "history": []
+}

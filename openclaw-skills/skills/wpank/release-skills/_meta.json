@@ -1,0 +1,11 @@
+{
+  "owner": "wpank",
+  "slug": "release-skills",
+  "displayName": "Release Skills",
+  "latest": {
+    "version": "0.1.0",
+    "publishedAt": 1770730203970,
+    "commit": "https://github.com/openclaw/skills/commit/c5dfcb32eb917fe03867c2d750d0ef5ae36c633f"
+  },
+  "history": []
+}

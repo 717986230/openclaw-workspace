@@ -1,0 +1,11 @@
+{
+  "owner": "upsurge911-lgtm",
+  "slug": "upsurge-searxng",
+  "displayName": "SearXNG Search engine For OpenClaw by Upsurge.ae",
+  "latest": {
+    "version": "1.4.0",
+    "publishedAt": 1771758679884,
+    "commit": "https://github.com/openclaw/skills/commit/b863b0b171df953e947fe0bbccd79ea57922e03c"
+  },
+  "history": []
+}

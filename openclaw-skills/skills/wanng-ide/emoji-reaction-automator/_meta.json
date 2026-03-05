@@ -1,0 +1,11 @@
+{
+  "owner": "wanng-ide",
+  "slug": "emoji-reaction-automator",
+  "displayName": "Emoji Reaction Automator",
+  "latest": {
+    "version": "1.0.0",
+    "publishedAt": 1771180264994,
+    "commit": "https://github.com/openclaw/skills/commit/e068732a6220fed6e68ff9f11c50dbdd53de1be1"
+  },
+  "history": []
+}

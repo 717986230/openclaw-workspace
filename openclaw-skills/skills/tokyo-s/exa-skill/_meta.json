@@ -1,0 +1,11 @@
+{
+  "owner": "tokyo-s",
+  "slug": "exa-skill",
+  "displayName": "Exa tools",
+  "latest": {
+    "version": "1.0.0",
+    "publishedAt": 1771595645276,
+    "commit": "https://github.com/openclaw/skills/commit/31e7f03c149f1e6732436de21701079ad184756a"
+  },
+  "history": []
+}

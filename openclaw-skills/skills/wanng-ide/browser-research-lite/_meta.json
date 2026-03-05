@@ -1,0 +1,11 @@
+{
+  "owner": "wanng-ide",
+  "slug": "browser-research-lite",
+  "displayName": "Browser Research Lite",
+  "latest": {
+    "version": "1.0.0",
+    "publishedAt": 1771173070203,
+    "commit": "https://github.com/openclaw/skills/commit/c83d6321dbd014e6599e7fef559093ad3ec3fc75"
+  },
+  "history": []
+}

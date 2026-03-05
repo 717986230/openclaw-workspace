@@ -1,0 +1,11 @@
+{
+  "owner": "psyduckler",
+  "slug": "instagram-photo-find",
+  "displayName": "Instagram Photo Find",
+  "latest": {
+    "version": "1.0.0",
+    "publishedAt": 1771202916257,
+    "commit": "https://github.com/openclaw/skills/commit/8aebb6c9e5babf03c2c34809064befb170afc5f1"
+  },
+  "history": []
+}

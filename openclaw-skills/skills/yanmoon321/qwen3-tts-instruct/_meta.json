@@ -1,0 +1,11 @@
+{
+  "owner": "yanmoon321",
+  "slug": "qwen3-tts-instruct",
+  "displayName": "Qwen3 TTS Instruct",
+  "latest": {
+    "version": "1.0.0",
+    "publishedAt": 1770666114511,
+    "commit": "https://github.com/openclaw/skills/commit/147e7468cfb36c4008c5b31a631f75c8fd40a6c2"
+  },
+  "history": []
+}

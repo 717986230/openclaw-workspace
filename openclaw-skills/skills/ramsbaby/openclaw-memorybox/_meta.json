@@ -1,0 +1,11 @@
+{
+  "owner": "ramsbaby",
+  "slug": "openclaw-memorybox",
+  "displayName": "MemoryBox",
+  "latest": {
+    "version": "2.0.0",
+    "publishedAt": 1770703919627,
+    "commit": "https://github.com/openclaw/skills/commit/48bc0f9a7fc0b1ae2622c30dff5965fdd392c733"
+  },
+  "history": []
+}

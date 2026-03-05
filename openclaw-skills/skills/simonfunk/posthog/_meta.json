@@ -1,0 +1,11 @@
+{
+  "owner": "simonfunk",
+  "slug": "posthog",
+  "displayName": "PostHog",
+  "latest": {
+    "version": "1.0.0",
+    "publishedAt": 1771273448266,
+    "commit": "https://github.com/openclaw/skills/commit/b4b54ce746e0c6fdee58b36c318e9f369b6ac14f"
+  },
+  "history": []
+}

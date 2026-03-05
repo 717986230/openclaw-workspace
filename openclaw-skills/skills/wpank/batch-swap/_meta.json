@@ -1,0 +1,11 @@
+{
+  "owner": "wpank",
+  "slug": "batch-swap",
+  "displayName": "Uniswap Batch Swap",
+  "latest": {
+    "version": "0.1.0",
+    "publishedAt": 1770744792552,
+    "commit": "https://github.com/openclaw/skills/commit/dd4ee5c20a5cd7e46a375e1aa1d681d8e7efff01"
+  },
+  "history": []
+}

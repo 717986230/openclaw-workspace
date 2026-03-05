@@ -1,0 +1,11 @@
+{
+  "owner": "teamtelnyx",
+  "slug": "telnyx-10dlc",
+  "displayName": "10dlc Registration",
+  "latest": {
+    "version": "1.0.0",
+    "publishedAt": 1770739842609,
+    "commit": "https://github.com/openclaw/skills/commit/cb582580422772a2a842fcf62f6da1944835661f"
+  },
+  "history": []
+}

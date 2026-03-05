@@ -1,0 +1,17 @@
+{
+  "owner": "schwartzdev",
+  "slug": "stealth",
+  "displayName": "Stealth",
+  "latest": {
+    "version": "0.3.0",
+    "publishedAt": 1771988808879,
+    "commit": "https://github.com/openclaw/skills/commit/931daf970de4d91767765771f4b5bbeedeff0738"
+  },
+  "history": [
+    {
+      "version": "0.1.0",
+      "publishedAt": 1771988031387,
+      "commit": "https://github.com/openclaw/skills/commit/24ebb76abdfd4b48826807ecf29b8028ccb109e3"
+    }
+  ]
+}

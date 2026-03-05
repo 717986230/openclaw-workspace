@@ -1,0 +1,11 @@
+{
+  "owner": "patrob",
+  "slug": "repo-pr-triage",
+  "displayName": "Repo PR Triage",
+  "latest": {
+    "version": "1.0.0",
+    "publishedAt": 1771259768951,
+    "commit": "https://github.com/openclaw/skills/commit/55117a9c2da523869ddfb84d3dacd59cf344c076"
+  },
+  "history": []
+}

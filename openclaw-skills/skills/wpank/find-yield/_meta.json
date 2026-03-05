@@ -1,0 +1,11 @@
+{
+  "owner": "wpank",
+  "slug": "find-yield",
+  "displayName": "Uniswap Find Yield",
+  "latest": {
+    "version": "0.1.0",
+    "publishedAt": 1770745526675,
+    "commit": "https://github.com/openclaw/skills/commit/a11a96917c5e6516c7adff2901473292435725c1"
+  },
+  "history": []
+}

@@ -1,0 +1,11 @@
+{
+  "owner": "patrykszczypkowski",
+  "slug": "home-assistant-patryk",
+  "displayName": "Home Assistant (Patryk)",
+  "latest": {
+    "version": "1.0.0",
+    "publishedAt": 1771337489245,
+    "commit": "https://github.com/openclaw/skills/commit/80407bd7ced100dcb62c88068a7f16df30a22c14"
+  },
+  "history": []
+}

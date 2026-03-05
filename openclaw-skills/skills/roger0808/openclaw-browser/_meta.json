@@ -1,0 +1,11 @@
+{
+  "owner": "roger0808",
+  "slug": "openclaw-browser",
+  "displayName": "OpenClaw Browser",
+  "latest": {
+    "version": "1.0.0",
+    "publishedAt": 1771162646058,
+    "commit": "https://github.com/openclaw/skills/commit/26b18a6af1f42543017f737f6af246464e309663"
+  },
+  "history": []
+}

@@ -1,0 +1,22 @@
+{
+  "owner": "smokealot420",
+  "slug": "piv",
+  "displayName": "PIV - Plan Implement Validate",
+  "latest": {
+    "version": "1.1.0",
+    "publishedAt": 1770536233589,
+    "commit": "https://github.com/openclaw/skills/commit/e5adcc7f615453cfc5be15e2e7532e2956de8574"
+  },
+  "history": [
+    {
+      "version": "1.0.4",
+      "publishedAt": 1770441577423,
+      "commit": "https://github.com/openclaw/skills/commit/c55ef5798d1f9c9db5d367cf26ebc4b36e7d8f4d"
+    },
+    {
+      "version": "1.0.1",
+      "publishedAt": 1770400765748,
+      "commit": "https://github.com/openclaw/skills/commit/34a66e9aebef9d06e707fdf1ff327679cbf0af70"
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "owner": "vacinc",
+  "slug": "perplexity-wrapped",
+  "displayName": "Perplexity Wrapped Search",
+  "latest": {
+    "version": "2.1.2",
+    "publishedAt": 1770669583607,
+    "commit": "https://github.com/openclaw/skills/commit/1e35df8d47cd79d0e6d7b185abb9a9cd30932c51"
+  },
+  "history": [
+    {
+      "version": "0.1.0",
+      "publishedAt": 1770428991143,
+      "commit": "https://github.com/openclaw/skills/commit/86bce315b54d5b32a56f6426d98be118bf567fb8"
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "owner": "uuoov",
+  "slug": "creator-intel-v5",
+  "displayName": "Creator Intel V5",
+  "latest": {
+    "version": "1.0.0",
+    "publishedAt": 1770801251727,
+    "commit": "https://github.com/openclaw/skills/commit/e663fb64aaafe7a0d5b0e63302b7ffd9bbd0bc7e"
+  },
+  "history": []
+}

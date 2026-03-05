@@ -1,0 +1,11 @@
+{
+  "owner": "xuzhiwei0217-doctor",
+  "slug": "automation-workflow",
+  "displayName": "Automation Workflow",
+  "latest": {
+    "version": "1.0.0",
+    "publishedAt": 1771603396243,
+    "commit": "https://github.com/openclaw/skills/commit/9aa55b1f0e4651213fb99c5e7b6b311243a89595"
+  },
+  "history": []
+}

@@ -1,0 +1,11 @@
+{
+  "owner": "vinlic",
+  "slug": "unifuncs-search",
+  "displayName": "UniFuncs Search",
+  "latest": {
+    "version": "0.0.1",
+    "publishedAt": 1770779390151,
+    "commit": "https://github.com/openclaw/skills/commit/3646eb57faf9521ded7bfa3d9209f838940be198"
+  },
+  "history": []
+}

@@ -1,0 +1,17 @@
+{
+  "owner": "tolibear",
+  "slug": "blinko",
+  "displayName": "Blinko",
+  "latest": {
+    "version": "1.1.1",
+    "publishedAt": 1770784817836,
+    "commit": "https://github.com/openclaw/skills/commit/c95c834d584c9b357b932bc33e899e7dcb0a3e48"
+  },
+  "history": [
+    {
+      "version": "1.0.0",
+      "publishedAt": 1770752747917,
+      "commit": "https://github.com/openclaw/skills/commit/6b891e2a3fbf9033bb5fa18c5963cc5b8225a041"
+    }
+  ]
+}

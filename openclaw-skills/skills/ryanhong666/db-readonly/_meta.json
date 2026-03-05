@@ -1,0 +1,11 @@
+{
+  "owner": "ryanhong666",
+  "slug": "db-readonly",
+  "displayName": "DB Readonly",
+  "latest": {
+    "version": "1.0.0",
+    "publishedAt": 1770692551392,
+    "commit": "https://github.com/openclaw/skills/commit/06917e683fa5754069baa86a7196947d672178a6"
+  },
+  "history": []
+}

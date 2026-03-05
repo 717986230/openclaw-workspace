@@ -1,0 +1,11 @@
+{
+  "owner": "wpank",
+  "slug": "prometheus-devops",
+  "displayName": "Prometheus",
+  "latest": {
+    "version": "1.0.0",
+    "publishedAt": 1770727486856,
+    "commit": "https://github.com/openclaw/skills/commit/847640f332e7dc324c4eb047deca32d26db94fb2"
+  },
+  "history": []
+}

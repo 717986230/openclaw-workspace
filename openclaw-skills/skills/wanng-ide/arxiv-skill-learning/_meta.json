@@ -1,0 +1,11 @@
+{
+  "owner": "wanng-ide",
+  "slug": "arxiv-skill-learning",
+  "displayName": "Arxiv Skill Learning",
+  "latest": {
+    "version": "1.0.0",
+    "publishedAt": 1771173053680,
+    "commit": "https://github.com/openclaw/skills/commit/ebddbce6e78e5b38299c87e621e8eaf581e63ed6"
+  },
+  "history": []
+}
