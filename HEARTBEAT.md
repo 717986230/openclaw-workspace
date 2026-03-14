@@ -1,5 +1,18 @@
 # HEARTBEAT.md
 
-# Keep this file empty (or with only comments) to skip heartbeat API calls.
+# Proactive Agent Heartbeat Tasks
 
-# Add tasks below when you want the agent to check something periodically.
+## 定期检查项（每次心跳执行）
+- [ ] 检查是否有未完成的任务需要跟进
+- [ ] 查看最近交互记录，识别改进点
+- [ ] 更新状态跟踪文件
+- [ ] 检查模型可用性，自动切换故障模型
+
+## 主动提示时机
+- 当有任务超过24小时未完成时，主动询问用户是否需要帮助
+- 发现新的技能或优化点时，主动向用户建议
+- 系统出现异常时，主动报告并提供解决方案
+
+## 安静时段
+- 23:00 - 08:00 不主动打扰用户
+- 用户忙碌时不主动发送消息

@@ -1,3 +1,0 @@
-# Add Xiaohongshu profile/note URLs here (one per line)
-# Example:
-# https://www.xiaohongshu.com/user/profile/xxxx

@@ -1,3 +1,0 @@
-# Add WeChat Official Account article/feed URLs here (one per line)
-# Example:
-# https://mp.weixin.qq.com/s/xxxx

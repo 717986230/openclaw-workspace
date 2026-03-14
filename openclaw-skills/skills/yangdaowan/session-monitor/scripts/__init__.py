@@ -1,1 +1,0 @@
-# Session Monitor - Empty init file

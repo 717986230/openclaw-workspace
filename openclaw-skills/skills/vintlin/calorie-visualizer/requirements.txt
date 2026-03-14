@@ -1,2 +1,0 @@
-html2image>=2.0.4
-Pillow>=10.0.0
