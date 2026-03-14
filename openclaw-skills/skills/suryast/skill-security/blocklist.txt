@@ -1,3 +1,0 @@
-# Skill Security Blocklist
-# Format: skill-name:date:reason
-

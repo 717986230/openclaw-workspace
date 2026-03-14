@@ -1,7 +1,0 @@
-textual
-rich
-pandas
-openpyxl
-pydantic
-pillow
-python-dotenv

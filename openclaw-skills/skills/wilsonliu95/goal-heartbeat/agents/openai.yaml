@@ -1,3 +1,0 @@
-interface:
-  display_name: "Goal Heartbeat Engine"
-  short_description: "多目标轮转心跳引擎，AI 自动调用"
