@@ -1,0 +1,3 @@
+display_name: Market News
+short_description: Latest market and futures headlines
+default_prompt: Use the market-news tools to gather the freshest relevant headlines, then summarize them with source names and absolute timestamps.
