@@ -1,18 +1,18 @@
 {
-  "timestamp": "2026-03-25T02:21:46.093698",
+  "timestamp": "2026-03-25T03:13:35.360341",
   "source": "researcher",
   "type": "optimization_knowledge",
-  "total_knowledge": 35,
+  "total_knowledge": 41,
   "high_quality_count": 10,
   "best": {
-    "bee": "采蜜蜂1",
+    "bee": "采蜜蜂7",
     "data": {
-      "title": "Super-Fast SSDs And High Bandwidth Memory Accelerate AI",
-      "source": "Forbes",
-      "url": "https://www.forbes.com/sites/tomcoughlin/2026/03/23/super-fast-ssds-and-high-ban"
+      "title": "Forget Generative AI: Agentic AI Is the Next Big Trend to Buy",
+      "source": "The Motley Fool",
+      "url": "https://www.fool.com/investing/2025/12/09/forget-generative-ai-agentic-ai-next-t"
     },
     "category": "记忆优化",
     "quality": 1.0
   },
-  "summary": "处理35条,10个可落地方案"
+  "summary": "处理41条,10个可落地方案"
 }

@@ -1,0 +1,258 @@
+{
+  "timestamp": "2026-03-25T03:16:17.646196",
+  "count": 28,
+  "skills": [
+    {
+      "name": "技能_记忆优化_44",
+      "description": "从Micron (MU) Q2 2026 Earnings C提炼",
+      "category": "记忆优化",
+      "source": "Motley Fool· via Yahoo Finance",
+      "status": "pending",
+      "timestamp": "2026-03-25T03:16:17.629621",
+      "type": "general"
+    },
+    {
+      "name": "技能_记忆优化_80",
+      "description": "从NVIDIA GTC Keynote: Huang Unve提炼",
+      "category": "记忆优化",
+      "source": "MarketBeat· via Yahoo Finance",
+      "status": "pending",
+      "timestamp": "2026-03-25T03:16:17.630565",
+      "type": "general"
+    },
+    {
+      "name": "增强记忆系统",
+      "description": "基于最新RAG/记忆方案优化",
+      "category": "记忆优化",
+      "source": "Geeky Gadgets",
+      "status": "pending",
+      "timestamp": "2026-03-25T03:16:17.631406",
+      "type": "improvement"
+    },
+    {
+      "name": "增强记忆系统",
+      "description": "基于最新RAG/记忆方案优化",
+      "category": "记忆优化",
+      "source": "Markets Insider",
+      "status": "pending",
+      "timestamp": "2026-03-25T03:16:17.632055",
+      "type": "improvement"
+    },
+    {
+      "name": "技能_记忆优化_61",
+      "description": "从Forget Generative AI: Agentic 提炼",
+      "category": "记忆优化",
+      "source": "The Motley Fool",
+      "status": "pending",
+      "timestamp": "2026-03-25T03:16:17.632561",
+      "type": "general"
+    },
+    {
+      "name": "增强记忆系统",
+      "description": "基于最新RAG/记忆方案优化",
+      "category": "记忆优化",
+      "source": "MSN",
+      "status": "pending",
+      "timestamp": "2026-03-25T03:16:17.632983",
+      "type": "improvement"
+    },
+    {
+      "name": "多Agent协作",
+      "description": "多Agent系统架构",
+      "category": "Agent进化",
+      "source": "NextBigFuture",
+      "status": "pending",
+      "timestamp": "2026-03-25T03:16:17.633396",
+      "type": "capability"
+    },
+    {
+      "name": "多Agent协作",
+      "description": "多Agent系统架构",
+      "category": "Agent进化",
+      "source": "AEC Magazine",
+      "status": "pending",
+      "timestamp": "2026-03-25T03:16:17.633826",
+      "type": "capability"
+    },
+    {
+      "name": "多Agent协作",
+      "description": "多Agent系统架构",
+      "category": "Agent进化",
+      "source": "Forbes",
+      "status": "pending",
+      "timestamp": "2026-03-25T03:16:17.634751",
+      "type": "capability"
+    },
+    {
+      "name": "多Agent协作",
+      "description": "多Agent系统架构",
+      "category": "Agent进化",
+      "source": "USA Today",
+      "status": "pending",
+      "timestamp": "2026-03-25T03:16:17.635470",
+      "type": "capability"
+    },
+    {
+      "name": "多Agent协作",
+      "description": "多Agent系统架构",
+      "category": "Agent进化",
+      "source": "N/A",
+      "status": "pending",
+      "timestamp": "2026-03-25T03:16:17.635907",
+      "type": "capability"
+    },
+    {
+      "name": "技能_自动化_80",
+      "description": "从Logile's Connected Workforce P提炼",
+      "category": "自动化",
+      "source": "Yahoo Finance",
+      "status": "pending",
+      "timestamp": "2026-03-25T03:16:17.636312",
+      "type": "general"
+    },
+    {
+      "name": "工作流自动化",
+      "description": "自动化任务处理",
+      "category": "自动化",
+      "source": "BizTech Magazine",
+      "status": "pending",
+      "timestamp": "2026-03-25T03:16:17.636742",
+      "type": "automation"
+    },
+    {
+      "name": "技能_自动化_12",
+      "description": "从⏰ 定时任务 暂无新数据提炼",
+      "category": "自动化",
+      "source": "N/A",
+      "status": "pending",
+      "timestamp": "2026-03-25T03:16:17.637138",
+      "type": "general"
+    },
+    {
+      "name": "技能_自动化_80",
+      "description": "从AI Agents: Bubble Or Truth? Th提炼",
+      "category": "自动化",
+      "source": "Forbes",
+      "status": "pending",
+      "timestamp": "2026-03-25T03:16:17.637561",
+      "type": "general"
+    },
+    {
+      "name": "技能_自动化_80",
+      "description": "从JPLoft Emerges as a Leading AI提炼",
+      "category": "自动化",
+      "source": "The Indianapolis Star",
+      "status": "pending",
+      "timestamp": "2026-03-25T03:16:17.637981",
+      "type": "general"
+    },
+    {
+      "name": "技能_最佳实践_75",
+      "description": "从OpenClaw can bypass your EDR, 提炼",
+      "category": "最佳实践",
+      "source": "VentureBeat",
+      "status": "pending",
+      "timestamp": "2026-03-25T03:16:17.638382",
+      "type": "general"
+    },
+    {
+      "name": "技能_最佳实践_69",
+      "description": "从OpenClaw AI agents targeted by提炼",
+      "category": "最佳实践",
+      "source": "TechRadar",
+      "status": "pending",
+      "timestamp": "2026-03-25T03:16:17.639288",
+      "type": "general"
+    },
+    {
+      "name": "技能_最佳实践_80",
+      "description": "从New from OpenAI Codex in ChatG提炼",
+      "category": "最佳实践",
+      "source": "Geeky Gadgets",
+      "status": "pending",
+      "timestamp": "2026-03-25T03:16:17.640052",
+      "type": "general"
+    },
+    {
+      "name": "技能_最佳实践_61",
+      "description": "从What is an AI generalist—and w提炼",
+      "category": "最佳实践",
+      "source": "Stacker· via Yahoo Finance",
+      "status": "pending",
+      "timestamp": "2026-03-25T03:16:17.640614",
+      "type": "general"
+    },
+    {
+      "name": "技能_最佳实践_80",
+      "description": "从Anthropic says Claude Code tra提炼",
+      "category": "最佳实践",
+      "source": "VentureBeat",
+      "status": "pending",
+      "timestamp": "2026-03-25T03:16:17.641122",
+      "type": "general"
+    },
+    {
+      "name": "技能_最佳实践_60",
+      "description": "从36 Genius Claude Code Tips & T提炼",
+      "category": "最佳实践",
+      "source": "Geeky Gadgets",
+      "status": "pending",
+      "timestamp": "2026-03-25T03:16:17.641865",
+      "type": "general"
+    },
+    {
+      "name": "技能_社交媒体_70",
+      "description": "从Users Quit ChatGPT For Claude 提炼",
+      "category": "社交媒体",
+      "source": "Forbes",
+      "status": "pending",
+      "timestamp": "2026-03-25T03:16:17.642536",
+      "type": "general"
+    },
+    {
+      "name": "技能_社交媒体_80",
+      "description": "从ChatGPT, Claude, Gemini, and G提炼",
+      "category": "社交媒体",
+      "source": "Nieman Journalism Lab",
+      "status": "pending",
+      "timestamp": "2026-03-25T03:16:17.642930",
+      "type": "general"
+    },
+    {
+      "name": "技能_社交媒体_67",
+      "description": "从The machine learning revolutio提炼",
+      "category": "社交媒体",
+      "source": "Que.com on MSN",
+      "status": "pending",
+      "timestamp": "2026-03-25T03:16:17.643637",
+      "type": "general"
+    },
+    {
+      "name": "技能_社交媒体_78",
+      "description": "从Google boosts Gemini 3 Deep Th提炼",
+      "category": "社交媒体",
+      "source": "Digital Trends· via Yahoo Tech",
+      "status": "pending",
+      "timestamp": "2026-03-25T03:16:17.644284",
+      "type": "general"
+    },
+    {
+      "name": "技能_社交媒体_70",
+      "description": "从Blizzard snow wreaks havoc in 提炼",
+      "category": "社交媒体",
+      "source": "Delaware Online | The News Journal· via Yahoo News",
+      "status": "pending",
+      "timestamp": "2026-03-25T03:16:17.645028",
+      "type": "general"
+    },
+    {
+      "name": "技能_社交媒体_80",
+      "description": "从Meet Jay Graber, who is steppi提炼",
+      "category": "社交媒体",
+      "source": "Business Insider· via Yahoo Finance",
+      "status": "pending",
+      "timestamp": "2026-03-25T03:16:17.645443",
+      "type": "general"
+    }
+  ]
+}
