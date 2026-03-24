@@ -38,3 +38,15 @@ Skills are shared. Your setup is yours. Keeping them apart means you can update 
 ---
 
 Add whatever helps you do your job. This is your cheat sheet.
+
+### Local AI Routing
+
+- Default local delegation tool: `ask_local_ai_routed`
+- Default mode: `claude_only`
+- Preferred path: Claude Code first, because it is faster and already tuned to the local NVIDIA-backed setup
+- Use `claude_then_codex_review` only when the task needs a second opinion, risk review, or validation
+- Use `codex_only` only when the user explicitly asks for Codex or wants a non-Claude second opinion
+- Avoid calling `ask_claude_code` and `ask_codex_local` separately when `ask_local_ai_routed` can do the job
+- Before relying on the bridge after upgrades or config changes, run `ai_bridge_selftest`
+- For "继续写小说项目" style requests, call `ask_claude_code` with `cwd: D:\OPP\novel-ai`
+- Do not open Claude via interactive `exec` for resume-style coding requests unless the user explicitly asks for an interactive shell session
