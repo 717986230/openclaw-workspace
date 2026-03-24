@@ -1,19 +1,7 @@
 {
-  "timestamp": "2026-03-25T02:21:46.092493",
+  "timestamp": "2026-03-25T03:13:35.359202",
   "count": 10,
   "suggestions": [
-    {
-      "source": "记忆优化",
-      "title": "Super-Fast SSDs And High Bandwidth Memory Accelerate AI",
-      "quality": 1.0,
-      "action": "评估后可尝试落地"
-    },
-    {
-      "source": "记忆优化",
-      "title": "The AI Database Myth: Why Automation Hasn't Replaced Human Judgment",
-      "quality": 1.0,
-      "action": "评估后可尝试落地"
-    },
     {
       "source": "记忆优化",
       "title": "Forget Generative AI: Agentic AI Is the Next Big Trend to Buy",
@@ -34,7 +22,7 @@
     },
     {
       "source": "Agent进化",
-      "title": "AI Agents Meet Blockchain At ETHDenver 2026: What Leaders Must Know",
+      "title": "Andrej Karpathy on Code Agents, AutoResearch and the Self Improvement Loopy Era ",
       "quality": 1.0,
       "action": "评估后可尝试落地"
     },
@@ -46,7 +34,19 @@
     },
     {
       "source": "记忆优化",
-      "title": "SurrealDB raises $23M to expand AI-native multimodel database",
+      "title": "Micron (MU) Q2 2026 Earnings Call Transcript",
+      "quality": 0.6000000000000001,
+      "action": "评估后可尝试落地"
+    },
+    {
+      "source": "记忆优化",
+      "title": "NVIDIA GTC Keynote: Huang Unveils “AI Factories,” Blackwell-Rubin Roadmap, and $",
+      "quality": 0.6000000000000001,
+      "action": "评估后可尝试落地"
+    },
+    {
+      "source": "记忆优化",
+      "title": "3 Storage Devices Stocks to Focus on From a Prospering Industry",
       "quality": 0.6000000000000001,
       "action": "评估后可尝试落地"
     },
