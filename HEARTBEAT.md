@@ -1,22 +1,5 @@
-# HEARTBEAT.md - 定时任务
+# HEARTBEAT.md
 
-# 每1小时进化总结反馈
+# Keep this file empty (or with only comments) to skip heartbeat API calls.
 
-## 定时任务
-
-### 进化总结 (每小时)
-- 类型：定时提醒
-- 间隔：1小时
-- 内容：
-  1. 汇报最近学习到的知识
-  2. 总结市场最新动态
-  3. 记录新安装的技能/工具
-  4. 反思需要改进的地方
-
-### 市场监控 (每小时)
-- 类型：定时提醒  
-- 间隔：1小时
-- 内容：
-  1. 获取期货市场最新快讯
-  2. 关注黄金、白银、原油、有色金属
-  3. 记录重要市场变化
+# Add tasks below when you want the agent to check something periodically.

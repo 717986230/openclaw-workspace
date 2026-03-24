@@ -1,0 +1,18 @@
+{
+  "timestamp": "2026-03-25T02:21:46.093698",
+  "source": "researcher",
+  "type": "optimization_knowledge",
+  "total_knowledge": 35,
+  "high_quality_count": 10,
+  "best": {
+    "bee": "采蜜蜂1",
+    "data": {
+      "title": "Super-Fast SSDs And High Bandwidth Memory Accelerate AI",
+      "source": "Forbes",
+      "url": "https://www.forbes.com/sites/tomcoughlin/2026/03/23/super-fast-ssds-and-high-ban"
+    },
+    "category": "记忆优化",
+    "quality": 1.0
+  },
+  "summary": "处理35条,10个可落地方案"
+}
