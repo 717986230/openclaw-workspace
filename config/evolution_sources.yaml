@@ -1,0 +1,94 @@
+# 进化来源配置 - 可落地项目
+
+evolution_sources:
+  # 最高优先级 - 已集成
+  openclaw:
+    name: "OpenClaw"
+    stars: 344169
+    focus: "基础系统优化"
+    priority: 0
+    integrated: true
+    evolution_points:
+      - gateway_optimization
+      - channel_management
+      - skill_system
+    config_file: "config/openclaw_evolution.yaml"
+
+  # 高优先级 - 自主性
+  autogpt:
+    name: "AutoGPT"
+    stars: 183020
+    focus: "自主任务执行"
+    priority: 1
+    evolution_points:
+      - task_decomposition
+      - self_reflection
+      - goal_driven_execution
+    scripts_to_create:
+      - "scripts/autogpt_task_decomposer.py"
+      - "scripts/autogpt_reflection_loop.py"
+
+  # 高优先级 - 工作流
+  langflow:
+    name: "Langflow"
+    stars: 146460
+    focus: "可视化配置"
+    priority: 1
+    evolution_points:
+      - visual_workflow
+      - no_code_config
+      - drag_drop_builder
+
+  # 中优先级 - 生产化
+  dify:
+    name: "Dify"
+    stars: 135336
+    focus: "生产级部署"
+    priority: 2
+    evolution_points:
+      - api_service
+      - monitoring
+      - production_ready
+
+  # 中优先级 - 编排
+  langchain:
+    name: "LangChain"
+    stars: 131925
+    focus: "Agent编排"
+    priority: 2
+    evolution_points:
+      - chain_orchestration
+      - memory_systems
+      - tool_integration
+
+integration_schedule:
+  week_1:
+    - autogpt_task_decomposer
+    - langchain_chain_orchestrator
+  week_2:
+    - autogpt_reflection_loop
+    - dify_monitoring
+  week_3:
+    - langflow_visual_config
+    - dify_api_service
+  month_1:
+    - full_autonomous_loop
+    - visual_workflow_builder
+
+expected_improvements:
+  autonomy:
+    current: 60
+    target: 90
+    unit: "%"
+  efficiency:
+    current: 70
+    target: 85
+    unit: "%"
+  error_recovery:
+    current: 50
+    target: 80
+    unit: "%"
+  configurability:
+    current: 40
+    target: 75
+    unit: "%"

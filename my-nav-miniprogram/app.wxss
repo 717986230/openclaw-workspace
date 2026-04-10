@@ -1,0 +1,106 @@
+/**app.wxss**/
+page {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  padding: 20rpx;
+}
+
+.container {
+  padding: 20rpx;
+}
+
+.header {
+  text-align: center;
+  color: white;
+  margin-bottom: 40rpx;
+}
+
+.header .title {
+  font-size: 48rpx;
+  font-weight: bold;
+  margin-bottom: 16rpx;
+}
+
+.header .subtitle {
+  font-size: 28rpx;
+  opacity: 0.9;
+}
+
+.search-box {
+  background: white;
+  border-radius: 50rpx;
+  padding: 20rpx 30rpx;
+  margin-bottom: 30rpx;
+  display: flex;
+  align-items: center;
+}
+
+.search-box input {
+  flex: 1;
+  margin-left: 20rpx;
+}
+
+.category-section {
+  margin-bottom: 30rpx;
+}
+
+.category-title {
+  color: white;
+  font-size: 32rpx;
+  font-weight: bold;
+  margin-bottom: 20rpx;
+  padding-left: 10rpx;
+}
+
+.link-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20rpx;
+}
+
+.link-card {
+  background: white;
+  border-radius: 16rpx;
+  padding: 24rpx;
+  width: calc(50% - 10rpx);
+  display: flex;
+  align-items: center;
+  box-shadow: 0 4rpx 12rpx rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+}
+
+.link-card:active {
+  transform: scale(0.95);
+}
+
+.link-icon {
+  width: 48rpx;
+  height: 48rpx;
+  margin-right: 16rpx;
+  font-size: 48rpx;
+}
+
+.link-info {
+  flex: 1;
+}
+
+.link-title {
+  font-size: 28rpx;
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 8rpx;
+}
+
+.link-desc {
+  font-size: 24rpx;
+  color: #999;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 100rpx 0;
+  color: rgba(255, 255, 255, 0.8);
+}

@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>uuoo.site - AI 工具一键部署教程</title>
+    <meta name="description" content="提供 AI 工具环境配置教程，帮助小白用户快速部署 OpenClaw、Ollama 等工具">
+    <meta name="keywords" content="AI工具部署,OpenClaw,Ollama,环境配置,一键部署">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        header {
+            text-align: center;
+            color: white;
+            padding: 40px 20px;
+        }
+        
+        header h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+        }
+        
+        header p {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+        
+        .warning-banner {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+            color: #856404;
+        }
+        
+        .warning-banner h3 {
+            margin-bottom: 10px;
+        }
+        
+        .tabs {
+            display: flex;
+            gap: 10px;
+            margin: 30px 0;
+            flex-wrap: wrap;
+        }
+        
+        .tab {
+            background: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 30px;
+            cursor: pointer;
+            font-size: 1em;
+            font-weight: 500;
+            transition: all 0.3s;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .tab:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+        
+        .tab.active {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+        
+        .content {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+        }
+        
+        .tab-content {
+            display: none;
+        }
+        
+        .tab-content.active {
+            display: block;
+        }
+        
+        .tool-card {
+            background: #f8f9fa;
+            border-radius: 12px;
+            padding: 25px;
+            margin-bottom: 20px;
+            border-left: 4px solid #667eea;
+        }
+        
+        .tool-card h3 {
+            color: #333;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .tool-card .tags {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 15px;
+            flex-wrap: wrap;
+        }
+        
+        .tool-card .tag {
+            background: #e9ecef;
+            padding: 5px 12px;
+            border-radius: 15px;
+            font-size: 0.85em;
+            color: #495057;
+        }
+        
+        .tool-card .actions {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+        
+        .btn {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1em;
+            transition: all 0.3s;
+        }
+        
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+        }
+        
+        .btn-secondary {
+            background: #6c757d;
+        }
+        
+        .script-box {
+            background: #1e1e1e;
+            color: #d4d4d4;
+            padding: 20px;
+            border-radius: 8px;
+            overflow-x: auto;
+            font-family: 'Courier New', monospace;
+            margin: 15px 0;
+            position: relative;
+        }
+        
+        .script-box code {
+            display: block;
+            white-space: pre;
+        }
+        
+        .copy-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: #444;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 0.85em;
+        }
+        
+        .copy-btn:hover {
+            background: #555;
+        }
+        
+        .config-section {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+        
+        .config-section h4 {
+            color: #495057;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #667eea;
+            padding-bottom: 10px;
+        }
+        
+        .model-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 15px;
+            margin: 15px 0;
+        }
+        
+        .model-item {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            border: 1px solid #dee2e6;
+        }
+        
+        .model-item code {
+            background: #e9ecef;
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-size: 0.9em;
+        }
+        
+        .tutorial-step {
+            display: flex;
+            gap: 20px;
+            margin: 20px 0;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 8px;
+        }
+        
+        .step-number {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            flex-shrink: 0;
+        }
+        
+        .step-content h4 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+        
+        footer {
+            text-align: center;
+            color: white;
+            padding: 40px 20px;
+            margin-top: 40px;
+        }
+        
+        footer p {
+            opacity: 0.8;
+            font-size: 0.9em;
+        }
+        
+        .disclaimer {
+            background: #f8d7da;
+            border: 1px solid #f5c6cb;
+            color: #721c24;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 30px 0;
+        }
+        
+        .disclaimer h3 {
+            margin-bottom: 15px;
+        }
+        
+        .disclaimer ul {
+            margin-left: 20px;
+        }
+        
+        .disclaimer li {
+            margin: 8px 0;
+        }
+        
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2em;
+            }
+            
+            .tabs {
+                justify-content: center;
+            }
+            
+            .tab {
+                padding: 12px 20px;
+                font-size: 0.9em;
+            }
+            
+            .content {
+                padding: 20px;
+            }
+            
+            .tutorial-step {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🦞 uuoo.site</h1>
+            <p>AI 工具一键部署教程 · 环境配置 · 合规使用</p>
+        </header>
+        
+        <div class="warning-banner">
+            <h3>⚠️ 重要提示</h3>
+            <p>本站仅提供技术教程和环境配置指导。所有脚本均从官方源下载，不提供任何违规工具或服务。请遵守各平台服务条款，合规使用 AI 工具。</p>
+        </div>
+        
+        <div class="tabs">
+            <button class="tab active" onclick="showTab('env')">环境配置</button>
+            <button class="tab" onclick="showTab('tools')">AI 工具</button>
+            <button class="tab" onclick="showTab('tutorial')">配置教程</button>
+            <button class="tab" onclick="showTab('faq')">常见问题</button>
+        </div>
+        
+        <div class="content">
+            <!-- 环境配置 Tab -->
+            <div id="env" class="tab-content active">
+                <h2>🔧 环境自动配置</h2>
+                <p style="color: #6c757d; margin-bottom: 30px;">自动安装 Node.js、Git 等必要环境，仅从官方源下载</p>
+                
+                <div class="tool-card">
+                    <h3>📥 Windows 环境配置</h3>
+                    <div class="tags">
+                        <span class="tag">✅ 官方源</span>
+                        <span class="tag">✅ 自动安装</span>
+                        <span class="tag">⚠️ 需管理员权限</span>
+                    </div>
+                    <p style="margin-bottom: 15px;">自动检测并安装：</p>
+                    <ul style="margin-left: 20px; margin-bottom: 20px;">
+                        <li>Node.js (官方 LTS 版本)</li>
+                        <li>Git (官方版本)</li>
+                        <li>自动配置环境变量</li>
+                        <li>验证安装结果</li>
+                    </ul>
+                    <div class="actions">
+                        <button class="btn" onclick="downloadScript('env')">下载脚本</button>
+                        <button class="btn btn-secondary" onclick="showScript('env')">查看内容</button>
+                    </div>
+                </div>
+                
+                <div class="tool-card" style="border-left-color: #28a745;">
+                    <h3>🐧 WSL 环境（推荐）</h3>
+                    <div class="tags">
+                        <span class="tag">✅ 完全隔离</span>
+                        <span class="tag">✅ 零风险</span>
+                        <span class="tag">⭐ 推荐使用</span>
+                    </div>
+                    <p style="margin-bottom: 15px;">在 WSL 中运行，不影响 Windows 主系统：</p>
+                    <ul style="margin-left: 20px; margin-bottom: 20px;">
+                        <li>完全隔离的环境</li>
+                        <li>易于卸载和重置</li>
+                        <li>更接近生产环境</li>
+                        <li>风险更可控</li>
+                    </ul>
+                    <div class="actions">
+                        <button class="btn" onclick="downloadScript('wsl')">下载脚本</button>
+                        <button class="btn btn-secondary" onclick="showScript('wsl')">查看内容</button>
+                    </div>
+                </div>
+                
+                <div class="disclaimer">
+                    <h3>📋 安装前必读</h3>
+                    <ul>
+                        <li><strong>潜在风险：</strong>将修改系统环境变量，需要管理员权限</li>
+                        <li><strong>建议操作：</strong>先备份重要数据，创建系统还原点</li>
+                        <li><strong>推荐方案：</strong>使用 WSL 获得更好的隔离性</li>
+                        <li><strong>合规说明：</strong>所有软件均从官方源下载，不包含任何破解或绕过内容</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- AI 工具 Tab -->
+            <div id="tools" class="tab-content">
+                <h2>🤖 AI 工具一键部署</h2>
+                <p style="color: #6c757d; margin-bottom: 30px;">一键部署脚本，包含环境配置和依赖安装</p>
+                
+                <div class="tool-card">
+                    <h3>🦞 OpenClaw</h3>
+                    <div class="tags">
+                        <span class="tag">✅ 合规</span>
+                        <span class="tag">✅ 环境自动配置</span>
+                        <span class="tag">✅ 可选免费体验</span>
+                    </div>
+                    <p style="margin-bottom: 15px;"><strong>功能：</strong></p>
+                    <ul style="margin-left: 20px; margin-bottom: 20px;">
+                        <li>自动安装 Node.js 和 Git</li>
+                        <li>自动克隆官方仓库</li>
+                        <li>自动安装项目依赖</li>
+                        <li>创建配置文件模板</li>
+                        <li>提供多种 API 配置选项</li>
+                    </ul>
+                    <p style="margin-bottom: 15px; color: #28a745;"><strong>✅ 合规说明：</strong></p>
+                    <ul style="margin-left: 20px; margin-bottom: 20px; color: #6c757d;">
+                        <li>所有软件从官方源下载</li>
+                        <li>不提供共享 API Key</li>
+                        <li>用户需自行从官方获取 API Key</li>
+                        <li>遵守各平台服务条款</li>
+                    </ul>
+                    <div class="actions">
+                        <button class="btn" onclick="downloadScript('openclaw')">下载部署脚本</button>
+                        <button class="btn btn-secondary" onclick="showScript('openclaw')">查看详细教程</button>
+                    </div>
+                </div>
+                
+                <div class="tool-card" style="border-left-color: #ff6b6b;">
+                    <h3>🦙 Ollama 本地部署</h3>
+                    <div class="tags">
+                        <span class="tag">✅ 完全离线</span>
+                        <span class="tag">✅ 免费</span>
+                        <span class="tag">✅ 无需 API</span>
+                    </div>
+                    <p style="margin-bottom: 15px;"><strong>特点：</strong></p>
+                    <ul style="margin-left: 20px; margin-bottom: 20px;">
+                        <li>完全本地运行，无需联网</li>
+                        <li>自动下载模型</li>
+                        <li>无需 API Key</li>
+                        <li>支持多种开源模型</li>
+                    </ul>
+                    <div class="actions">
+                        <button class="btn" onclick="downloadScript('ollama')">下载脚本</button>
+                        <button class="btn btn-secondary" onclick="showScript('ollama')">查看教程</button>
+                    </div>
+                </div>
+                
+                <div class="config-section">
+                    <h4>🎯 API 配置选项说明</h4>
+                    <p style="margin-bottom: 15px;">脚本运行时可选择以下配置方式：</p>
+                    <table style="width: 100%; border-collapse: collapse;">
+                        <tr style="background: #e9ecef;">
+                            <th style="padding: 12px; text-align: left;">选项</th>
+                            <th style="padding: 12px; text-align: left;">说明</th>
+                            <th style="padding: 12px; text-align: left;">合规性</th>
+                        </tr>
+                        <tr>
+                            <td style="padding: 12px; border-bottom: 1px solid #dee2e6;">免费体验</td>
+                            <td style="padding: 12px; border-bottom: 1px solid #dee2e6;">使用官方免费额度（有限）</td>
+                            <td style="padding: 12px; border-bottom: 1px solid #dee2e6; color: #28a745;">✅ 合规</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 12px; border-bottom: 1px solid #dee2e6;">DeepSeek</td>
+                            <td style="padding: 12px; border-bottom: 1px solid #dee2e6;">国内可用，价格便宜</td>
+                            <td style="padding: 12px; border-bottom: 1px solid #dee2e6; color: #28a745;">✅ 合规</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 12px; border-bottom: 1px solid #dee2e6;">Groq</td>
+                            <td style="padding: 12px; border-bottom: 1px solid #dee2e6;">免费额度，速度极快</td>
+                            <td style="padding: 12px; border-bottom: 1px solid #dee2e6; color: #28a745;">✅ 合规</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 12px;">自定义</td>
+                            <td style="padding: 12px;">使用自己的 API Key</td>
+                            <td style="padding: 12px; color: #28a745;">✅ 合规</td>
+                        </tr>
+                    </table>
+                    <p style="margin-top: 15px; color: #6c757d; font-size: 0.9em;">
+                        <strong>注意：</strong

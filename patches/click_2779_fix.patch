@@ -1,0 +1,69 @@
+# Fix for pallets/click issue #2779
+# Problem: When passing a wrong multicharacter short option like `-dbgwrong`,
+# the error displays "No such option: -d" instead of the full option "-dbgwrong"
+
+# Analysis:
+# In _match_short_opt(), the function iterates through each character of the
+# argument and raises NoSuchOption with just the first invalid character.
+# This is misleading for multicharacter short options.
+
+# The fix should:
+# 1. Track the full original argument
+# 2. Only raise the error for the full option, not individual characters
+# OR
+# 3. Provide better context in the error message
+
+# Current problematic code in parser.py:
+```python
+def _match_short_opt(self, arg: str, state: _ParsingState) -> None:
+    stop = False
+    i = 1
+    prefix = arg[0]
+    unknown_options = []
+    for ch in arg[1:]:
+        opt = _normalize_opt(f"{prefix}{ch}", self.ctx)
+        option = self._short_opt.get(opt)
+        i += 1
+        if not option:
+            if self.ignore_unknown_options:
+                unknown_options.append(ch)
+                continue
+            raise NoSuchOption(opt, ctx=self.ctx)  # <-- Problem: only shows single char
+```
+
+# Proposed fix:
+# Instead of raising immediately when a single character doesn't match,
+# we should collect all unknown characters and report them together,
+# OR report the original full argument.
+
+# Option 1: Report full original argument
+```python
+def _match_short_opt(self, arg: str, state: _ParsingState) -> None:
+    stop = False
+    i = 1
+    prefix = arg[0]
+    unknown_options = []
+    for ch in arg[1:]:
+        opt = _normalize_opt(f"{prefix}{ch}", self.ctx)
+        option = self._short_opt.get(opt)
+        i += 1
+        if not option:
+            if self.ignore_unknown_options:
+                unknown_options.append(ch)
+                continue
+            # FIX: Report the full original option, not just single char
+            raise NoSuchOption(_normalize_opt(arg, self.ctx), ctx=self.ctx)
+```
+
+# Option 2: More informative error showing both
+# (requires changes to NoSuchOption exception class)
+
+# Testing:
+# Input: -dbgwrong
+# Current: "No such option: -d"
+# Fixed: "No such option: -dbgwrong"
+
+# Notes:
+# - This is a breaking change in error message format
+# - May affect tests that check for specific error messages
+# - Need to update tests/test_options.py if tests rely on current behavior

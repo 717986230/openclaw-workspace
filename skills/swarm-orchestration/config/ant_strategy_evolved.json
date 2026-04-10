@@ -1,0 +1,72 @@
+{
+  "timestamp": "2026-04-01T10:56:50.717868",
+  "strategies": {
+    "exploration": {
+      "name": "探索策略",
+      "weight": 0.30453891147060747,
+      "actions": [
+        "random_walk",
+        "breadth_first",
+        "diversify_sources"
+      ]
+    },
+    "exploitation": {
+      "name": "开发策略",
+      "weight": 0.459129412129112,
+      "actions": [
+        "follow_pheromone",
+        "deep_dive",
+        "quality_focus"
+      ]
+    },
+    "balanced": {
+      "name": "平衡策略",
+      "weight": 0.23633167640028044,
+      "actions": [
+        "hybrid_search",
+        "adaptive_routing",
+        "dynamic_priority"
+      ]
+    }
+  },
+  "pheromones": {
+    "quality": {
+      "strength": 1.0,
+      "decay": 0.095,
+      "boost": 0.2999929341892159
+    },
+    "trail": {
+      "strength": 0.7,
+      "decay": 0.2,
+      "boost": 0.2055107274027007
+    },
+    "alarm": {
+      "strength": 0.5,
+      "decay": 0.525,
+      "boost": 0.09967248429933213
+    }
+  },
+  "performance_history": [
+    [
+      {
+        "success_rate": 0.8274621150759849,
+        "novelty_score": 0.6928728353369107,
+        "efficiency": 0.4301978491895022
+      }
+    ],
+    [
+      {
+        "success_rate": 0.7922152674747386,
+        "quality_score": 0.902933987003284,
+        "efficiency": 0.6129356285038969
+      }
+    ],
+    [
+      {
+        "success_rate": 0.8680317221905206,
+        "balance_score": 0.792222338428547,
+        "efficiency": 0.6869673568805884
+      }
+    ]
+  ]
+}
