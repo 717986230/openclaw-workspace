@@ -1,20 +1,56 @@
-# 数据库文件（包含敏感信息）
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+dist/
+build/
+
+# Secrets and tokens
+*_token*.py
+*api_key*.py
+*secret*.py
+verify_deployment.py
+push_to_github.py
+
+# Free token manager scripts (may contain API keys)
+skills/free-token-manager/scripts/*.py
+
+# Config files with secrets
+config-backup/
+*.env
+.env.*
+
+# Logs
+logs/
+*.log
+
+# Database files
 *.db
 *.sqlite
 *.sqlite3
 memory/database/*.db
-lancedb/
 
-# Python 缓存
-__pycache__/
-*.pyc
+# Test files
+test_*.py
+check_*.py
 
-# Node modules
-node_modules/
+# Deployment scripts with tokens
+deploy_*.py
 
-# OpenClaw 状态
-.openclaw/
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
 
-# 临时文件
-*.tmp
-*.log
+# OS
+.DS_Store
+Thumbs.db
+
+# Submodule git repos
+claude-code-analysis/
+my-nav-admin/
+my-nav-site/
