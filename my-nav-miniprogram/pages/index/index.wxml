@@ -1,0 +1,51 @@
+<view class="container">
+  <view class="header">
+    <view class="title">🧭 我的导航</view>
+    <view class="subtitle">一键直达常用网站</view>
+  </view>
+
+  <!-- 搜索框 -->
+  <view class="search-box">
+    <text>🔍</text>
+    <input
+      placeholder="搜索链接..."
+      value="{{searchText}}"
+      bindinput="onSearch"
+    />
+  </view>
+
+  <!-- 链接列表 -->
+  <view wx:if="{{filteredLinks.length > 0}}">
+    <view class="category-section" wx:for="{{categories}}" wx:key="id">
+      <view class="category-title">{{item.icon}} {{item.name}}</view>
+      <view class="link-grid">
+        <view
+          class="link-card"
+          wx:for="{{filteredLinks}}"
+          wx:for-item="link"
+          wx:if="{{link.category === item.name || !item.name}}"
+          wx:key="id"
+          bindtap="onLinkTap"
+          data-link="{{link}}"
+        >
+          <image
+            wx:if="{{link.icon}}"
+            class="link-icon"
+            src="{{link.icon}}"
+            mode="aspectFit"
+          />
+          <text wx:else class="link-icon">🔗</text>
+          <view class="link-info">
+            <view class="link-title">{{link.title}}</view>
+            <view class="link-desc">{{link.description || link.url}}</view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 空状态 -->
+  <view wx:else class="empty-state">
+    <view>暂无链接</view>
+  </view>
+</view>

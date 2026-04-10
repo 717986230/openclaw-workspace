@@ -1,0 +1,75 @@
+{
+  "categories": [
+    {"id": "1", "name": "搜索引擎", "icon": "🔍", "sort": 1},
+    {"id": "2", "name": "社交媒体", "icon": "📱", "sort": 2},
+    {"id": "3", "name": "开发工具", "icon": "🔧", "sort": 3},
+    {"id": "4", "name": "设计资源", "icon": "🎨", "sort": 4},
+    {"id": "5", "name": "学习平台", "icon": "📚", "sort": 5},
+    {"id": "6", "name": "效率工具", "icon": "⚡", "sort": 6},
+    {"id": "7", "name": "视频娱乐", "icon": "🎬", "sort": 7},
+    {"id": "8", "name": "新闻资讯", "icon": "📰", "sort": 8},
+    {"id": "9", "name": "购物比价", "icon": "🛒", "sort": 9},
+    {"id": "10", "name": "实用查询", "icon": "🔎", "sort": 10}
+  ],
+  "links": [
+    {"id": "1", "title": "Google", "url": "https://www.google.com", "icon": "🌐", "category": "搜索引擎", "description": "全球最大的搜索引擎", "clicks": 0},
+    {"id": "2", "title": "百度", "url": "https://www.baidu.com", "icon": "🐼", "category": "搜索引擎", "description": "全球最大的中文搜索引擎", "clicks": 0},
+    {"id": "3", "title": "Bing", "url": "https://www.bing.com", "icon": "🔍", "category": "搜索引擎", "description": "微软搜索引擎", "clicks": 0},
+    {"id": "4", "title": "DuckDuckGo", "url": "https://duckduckgo.com", "icon": "🦆", "category": "搜索引擎", "description": "注重隐私的搜索引擎", "clicks": 0},
+
+    {"id": "5", "title": "Twitter/X", "url": "https://twitter.com", "icon": "🐦", "category": "社交媒体", "description": "全球社交网络", "clicks": 0},
+    {"id": "6", "title": "微博", "url": "https://weibo.com", "icon": "💬", "category": "社交媒体", "description": "中国社交平台", "clicks": 0},
+    {"id": "7", "title": "知乎", "url": "https://www.zhihu.com", "icon": "💡", "category": "社交媒体", "description": "中文问答社区", "clicks": 0},
+    {"id": "8", "title": "豆瓣", "url": "https://www.douban.com", "icon": "📖", "category": "社交媒体", "description": "书影音评论社区", "clicks": 0},
+    {"id": "9", "title": "小红书", "url": "https://www.xiaohongshu.com", "icon": "📕", "category": "社交媒体", "description": "生活方式分享平台", "clicks": 0},
+
+    {"id": "10", "title": "GitHub", "url": "https://github.com", "icon": "🐙", "category": "开发工具", "description": "全球最大的代码托管平台", "clicks": 0},
+    {"id": "11", "title": "Stack Overflow", "url": "https://stackoverflow.com", "icon": "📚", "category": "开发工具", "description": "程序员问答社区", "clicks": 0},
+    {"id": "12", "title": "MDN", "url": "https://developer.mozilla.org", "icon": "📖", "category": "开发工具", "description": "Web开发文档", "clicks": 0},
+    {"id": "13", "title": "npm", "url": "https://www.npmjs.com", "icon": "📦", "category": "开发工具", "description": "Node.js包管理器", "clicks": 0},
+    {"id": "14", "title": "CodePen", "url": "https://codepen.io", "icon": "✏️", "category": "开发工具", "description": "前端代码演示平台", "clicks": 0},
+    {"id": "15", "title": "LeetCode", "url": "https://leetcode.com", "icon": "💻", "category": "开发工具", "description": "算法刷题平台", "clicks": 0},
+
+    {"id": "16", "title": "Dribbble", "url": "https://dribbble.com", "icon": "🎨", "category": "设计资源", "description": "设计师作品展示", "clicks": 0},
+    {"id": "17", "title": "Behance", "url": "https://www.behance.net", "icon": "🖼️", "category": "设计资源", "description": "Adobe设计社区", "clicks": 0},
+    {"id": "18", "title": "Figma", "url": "https://www.figma.com", "icon": "🎯", "category": "设计资源", "description": "协作设计工具", "clicks": 0},
+    {"id": "19", "title": "Canva", "url": "https://www.canva.com", "icon": "✨", "category": "设计资源", "description": "在线设计平台", "clicks": 0},
+    {"id": "20", "title": "Unsplash", "url": "https://unsplash.com", "icon": "📸", "category": "设计资源", "description": "免费高清图片", "clicks": 0},
+
+    {"id": "21", "title": "Coursera", "url": "https://www.coursera.org", "icon": "🎓", "category": "学习平台", "description": "全球在线课程平台", "clicks": 0},
+    {"id": "22", "title": "Udemy", "url": "https://www.udemy.com", "icon": "📚", "category": "学习平台", "description": "在线学习市场", "clicks": 0},
+    {"id": "23", "title": "edX", "url": "https://www.edx.org", "icon": "🏫", "category": "学习平台", "description": "大学在线课程", "clicks": 0},
+    {"id": "24", "title": "Khan Academy", "url": "https://www.khanacademy.org", "icon": "📖", "category": "学习平台", "description": "免费教育资源", "clicks": 0},
+    {"id": "25", "title": "慕课网", "url": "https://www.imooc.com", "icon": "🎥", "category": "学习平台", "description": "IT技能学习平台", "clicks": 0},
+
+    {"id": "26", "title": "Notion", "url": "https://www.notion.so", "icon": "📝", "category": "效率工具", "description": "全能笔记工具", "clicks": 0},
+    {"id": "27", "title": "Trello", "url": "https://trello.com", "icon": "📋", "category": "效率工具", "description": "项目管理看板", "clicks": 0},
+    {"id": "28", "title": "Todoist", "url": "https://todoist.com", "icon": "✅", "category": "效率工具", "description": "任务管理工具", "clicks": 0},
+    {"id": "29", "title": "石墨文档", "url": "https://shimo.im", "icon": "📄", "category": "效率工具", "description": "在线协作文档", "clicks": 0},
+    {"id": "30", "title": "飞书", "url": "https://www.feishu.cn", "icon": "🚀", "category": "效率工具", "description": "企业协作平台", "clicks": 0},
+
+    {"id": "31", "title": "YouTube", "url": "https://www.youtube.com", "icon": "📺", "category": "视频娱乐", "description": "全球视频平台", "clicks": 0},
+    {"id": "32", "title": "Bilibili", "url": "https://www.bilibili.com", "icon": "🎬", "category": "视频娱乐", "description": "弹幕视频网站", "clicks": 0},
+    {"id": "33", "title": "Netflix", "url": "https://www.netflix.com", "icon": "🎥", "category": "视频娱乐", "description": "流媒体平台", "clicks": 0},
+    {"id": "34", "title": "爱奇艺", "url": "https://www.iqiyi.com", "icon": "🎭", "category": "视频娱乐", "description": "在线视频平台", "clicks": 0},
+    {"id": "35", "title": "腾讯视频", "url": "https://v.qq.com", "icon": "📡", "category": "视频娱乐", "description": "视频播放平台", "clicks": 0},
+
+    {"id": "36", "title": "BBC News", "url": "https://www.bbc.com/news", "icon": "📰", "category": "新闻资讯", "description": "英国广播公司", "clicks": 0},
+    {"id": "37", "title": "CNN", "url": "https://www.cnn.com", "icon": "📡", "category": "新闻资讯", "description": "美国新闻网", "clicks": 0},
+    {"id": "38", "title": "今日头条", "url": "https://www.toutiao.com", "icon": "📱", "category": "新闻资讯", "description": "个性化资讯推荐", "clicks": 0},
+    {"id": "39", "title": "36氪", "url": "https://36kr.com", "icon": "💡", "category": "新闻资讯", "description": "科技创业媒体", "clicks": 0},
+    {"id": "40", "title": "虎嗅网", "url": "https://www.huxiu.com", "icon": "🐅", "category": "新闻资讯", "description": "商业科技资讯", "clicks": 0},
+
+    {"id": "41", "title": "淘宝", "url": "https://www.taobao.com", "icon": "🛍️", "category": "购物比价", "description": "网上购物平台", "clicks": 0},
+    {"id": "42", "title": "京东", "url": "https://www.jd.com", "icon": "📦", "category": "购物比价", "description": "电商平台", "clicks": 0},
+    {"id": "43", "title": "拼多多", "url": "https://www.pinduoduo.com", "icon": "🛒", "category": "购物比价", "description": "社交电商平台", "clicks": 0},
+    {"id": "44", "title": "亚马逊", "url": "https://www.amazon.com", "icon": "📦", "category": "购物比价", "description": "全球电商平台", "clicks": 0},
+    {"id": "45", "title": "什么值得买", "url": "https://www.smzdm.com", "icon": "💰", "category": "购物比价", "description": "购物推荐平台", "clicks": 0},
+
+    {"id": "46", "title": "天气通", "url": "https://www.tianqitong.com", "icon": "🌤️", "category": "实用查询", "description": "天气预报查询", "clicks": 0},
+    {"id": "47", "title": "快递100", "url": "https://www.kuaidi100.com", "icon": "📦", "category": "实用查询", "description": "快递查询", "clicks": 0},
+    {"id": "48", "title": "车票查询", "url": "https://www.12306.cn", "icon": "🚄", "category": "实用查询", "description": "火车票购买", "clicks": 0},
+    {"id": "49", "title": "汇率查询", "url": "https://www.xe.com", "icon": "💹", "category": "实用查询", "description": "货币汇率转换", "clicks": 0},
+    {"id": "50", "title": "翻译", "url": "https://translate.google.com", "icon": "🌍", "category": "实用查询", "description": "多语言翻译", "clicks": 0}
+  ]
+}

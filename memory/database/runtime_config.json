@@ -1,0 +1,93 @@
+{
+  "workspace_root": "C:\\Users\\Administrator\\.openclaw\\workspace",
+  "sqlite_db": "C:\\Users\\Administrator\\.openclaw\\workspace\\memory\\database\\xiaozhi_memory.db",
+  "secure_db": "C:\\Users\\Administrator\\.openclaw\\workspace\\memory\\database\\xiaozhi_secure.db",
+  "lancedb_dir": "C:\\Users\\Administrator\\.openclaw\\workspace\\memory\\database\\lancedb",
+  "mysql": {
+    "host": "127.0.0.1",
+    "port": 3306,
+    "user": "root",
+    "password": "111111",
+    "database": "erbing_brain"
+  },
+  "swarm": {
+    "ant_colony": {
+      "enabled_tasks": [
+        "news",
+        "futures",
+        "tech",
+        "clouds"
+      ],
+      "modes": {
+        "all": [
+          "news",
+          "futures",
+          "tech"
+        ],
+        "morning": [
+          "news",
+          "futures"
+        ],
+        "watch": []
+      },
+      "tasks": {
+        "news": {
+          "name": "新闻蚂蚁",
+          "desc": "抓取每日要闻",
+          "script": "ant_news.py"
+        },
+        "futures": {
+          "name": "期货蚂蚁",
+          "desc": "跟踪期货市场动态",
+          "script": "ant_futures.py"
+        },
+        "tech": {
+          "name": "技术蚂蚁",
+          "desc": "关注 AI / 科技新动态",
+          "script": "ant_tech.py"
+        },
+        "clouds": {
+          "name": "云端蚂蚁",
+          "desc": "监控 ClawHub 新技能",
+          "script": "ant_skills.py"
+        }
+      }
+    },
+    "bee_colony": {
+      "food_sources": 5,
+      "role_distribution": {
+        "scout": 2,
+        "employed": 5,
+        "onlooker": 3
+      }
+    },
+    "hybrid_swarm": {
+      "pso_count": 10,
+      "aco_count": 5,
+      "abc_count": 10,
+      "particle_dim": 3,
+      "pso_iterations": 10,
+      "aco_nodes": [
+        "节点A",
+        "节点B",
+        "节点C",
+        "节点D"
+      ],
+      "target_position": [
+        0,
+        0,
+        0
+      ],
+      "pso_params": {
+        "w": 0.7,
+        "c1": 1.5,
+        "c2": 1.5
+      },
+      "hybrid_weights": {
+        "pso": 0.4,
+        "aco": 0.3,
+        "abc": 0.3
+      }
+    }
+  }
+}
