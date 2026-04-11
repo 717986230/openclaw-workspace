@@ -1,16 +1,21 @@
 {
   "name": "memory-system-complete",
-  "version": "1.2.1",
-  "description": "Complete memory system with SQLite left brain and LanceDB right brain",
+  "version": "2.0.0",
+  "description": "Complete memory system with causal graph, knowledge graph, auto-detection, and evolution features",
   "author": "Erbing",
   "license": "MIT",
   "keywords": [
     "memory",
     "sqlite",
     "lancedb",
+    "causal-graph",
+    "knowledge-graph",
+    "auto-detection",
+    "evolution",
     "rag",
     "database",
-    "persistence"
+    "persistence",
+    "vector-search"
   ],
   "category": "productivity"
 }
