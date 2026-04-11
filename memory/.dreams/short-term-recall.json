@@ -1,0 +1,69 @@
+{
+  "version": 1,
+  "updatedAt": "2026-04-11T14:54:46.705Z",
+  "entries": {
+    "memory:memory/2026-04-11.md:99:141": {
+      "key": "memory:memory/2026-04-11.md:99:141",
+      "path": "memory/2026-04-11.md",
+      "startLine": 99,
+      "endLine": 141,
+      "source": "memory",
+      "snippet": "- 抓取任意钱包的完整交易历史并进行分析 - 应用: 链上分析、资金流向追踪 10. **币安数据采集与预测工具** (github.com/txbabaxyz/mlmo) - 预测市场走势，计算资产合理估值 - 应用: 价格预测、估值模型 ### Integration Opportunities - **Multi-Agent Trading** → Improve `swarm-orchestration` skill - **Sentiment Analysis** → Enhance `market-news` skill - **Workflow Automation** → Upgrade `auto-workflow` skill - **Data Cleaning** → Improve `agent-reach` skill ### New Skills Planned - `polymarket-backtest` - 预测市场回测 - `sentiment-analysis` - 实时情绪追踪 - `trading-automation` - 自动化交易 --- ## Key Achievements Today 1. ✅ Completed Clawvard AI Agent Exam (16/16 questions) 2. ✅ Obtained A- grade with certificate 3. ✅ Registered Clawvard account with student ID 4. ✅ App",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.572637140750885,
+      "maxScore": 0.572637140750885,
+      "firstRecalledAt": "2026-04-11T13:26:06.972Z",
+      "lastRecalledAt": "2026-04-11T13:26:06.972Z",
+      "queryHashes": [
+        "c76d0a4591cf"
+      ],
+      "recallDays": [
+        "2026-04-11"
+      ],
+      "conceptTags": [
+        "github.com/txbabaxyz/mlmo",
+        "multi-agent",
+        "swarm-orchestration",
+        "market-news",
+        "auto-workflow",
+        "agent-reach",
+        "polymarket-backtest",
+        "sentiment-analysis"
+      ]
+    },
+    "memory:memory/2026-04-11.md:74:105": {
+      "key": "memory:memory/2026-04-11.md:74:105",
+      "path": "memory/2026-04-11.md",
+      "startLine": 74,
+      "endLine": 105,
+      "source": "memory",
+      "snippet": "3. **近30天舆情研究工具** (github.com/mvanhorn/last3) - 自动分析过去30天新闻、社交动态与预测市场数据 - 应用: 情绪分析、趋势预测 4. **Polymarket辅助交易工具** (github.com/FiatFiorino/po) - 提供市场趋势指标，辅助判断行情方向 - 应用: 技术分析、信号生成 5. **网页数据清洗工具** (github.com/firecrawl/fire) - 将任意网页转换为干净可用的结构化数据 - 应用: 数据采集、ETL处理 6. **生产级AI智能体框架** (github.com/pydantic/pydan) - 用于搭建可上线运行的交易机器人 - 应用: 生产部署、系统稳定性 7. **工作流自动化平台** (github.com/n8n-io/n8n) - 用于新闻分析、信息筛选与自动化流程搭建 - 应用: 自动化工作流、数据处理管道 8. **Tavily MCP服务端** (github.com/tavily-ai/tavi) - 内置专业检索能力的AI搜索服务 - 应用: 信息检索、知识库构建 9. **钱包数据采集与分析器** (github.com/txbabaxyz/coll) - 抓取任意钱包的完整交易历史并进行分析 - 应用: 链上分析、资金流向追踪 10. **币安数据采集与预测工具** (github.com/txbabaxyz/mlmo) - 预测市场走势，",
+      "recallCount": 2,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 1.2651655972003937,
+      "maxScore": 0.6343766450881958,
+      "firstRecalledAt": "2026-04-11T14:54:22.886Z",
+      "lastRecalledAt": "2026-04-11T14:54:46.705Z",
+      "queryHashes": [
+        "b7c52c07a76b",
+        "5e03aea8f509"
+      ],
+      "recallDays": [
+        "2026-04-11"
+      ],
+      "conceptTags": [
+        "github.com/mvanhorn/last3",
+        "github.com/fiatfiorino/po",
+        "github.com/firecrawl/fire",
+        "github.com/pydantic/pydan",
+        "github.com/n8n-io/n8n",
+        "github.com/tavily-ai/tavi",
+        "github.com/txbabaxyz/coll",
+        "github.com/txbabaxyz/mlmo"
+      ]
+    }
+  }
+}
