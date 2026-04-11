@@ -61,7 +61,10 @@ class HybridMemory:
         results = [dict(row) for row in cursor.fetchall()]
         for row in results:
             if row["tags"]:
-                row["tags"] = json.loads(row["tags"])
+                try:
+                    row["tags"] = json.loads(row["tags"])
+                except:
+                    row["tags"] = []
         return results
 
     def get_stats(self) -> Dict:
