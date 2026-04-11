@@ -1,0 +1,10 @@
+{
+  "total": 126,
+  "by_category": {
+    "architecture": 8,
+    "code": 6,
+    "retrieval": 8,
+    "knowledge": 100,
+    "conversation": 4
+  }
+}
