@@ -7,7 +7,7 @@ class ErbingAutoEvolution:
     def __init__(self, db_path='erbing_virtual_world.db'):
         self.world = ErbingVirtualWorld(db_path)
         self.actions = ['explore', 'learn', 'practice', 'rest']
-        self.domains = ['Coding', 'AI Tech', 'Security', 'Deployment', 'Tool Use', 'Problem Solving', 'Communication', 'Collaboration', 'Dark Web', 'Code Intelligence']
+        self.domains = ['Coding', 'AI Tech', 'Security', 'Deployment', 'Tool Use', 'Problem Solving', 'Communication', 'Collaboration', 'Dark Web', 'Code Intelligence', 'AI Agent', 'Advanced Coding', 'Advanced AI', 'Advanced Security', 'Advanced Data']
         self.topics = ['Python', 'JavaScript', 'Machine Learning', 'Deep Learning', 'NLP', 'Computer Vision', 'Web Development', 'API Design', 'Database', 'Cloud Computing', 'DevOps', 'Testing', 'Security', 'Optimization', 'Architecture',
                        # LLM Knowledge
                        'Transformer Architecture', 'GPT Series', 'Claude Series', 'Gemini Series', 'Llama Series', 'Mistral Series', 'Qwen Series', 'DeepSeek Series',
@@ -33,7 +33,17 @@ class ErbingAutoEvolution:
                        'CLI Commands', '16 MCP Tools', 'Resources',
                        'Agent Skills', 'Multi-Repo Architecture', 'LadybugDB',
                        'Enterprise Features', 'Web UI', 'Bridge Mode',
-                       'Community Integrations', 'Safety Features']
+                       'Community Integrations', 'Safety Features',
+                       # AI Agent Knowledge
+                       'Prompt Engineering', 'Agent Architecture', 'Tool Use Mastery', 'Memory Systems',
+                       # Advanced Coding Knowledge
+                       'Design Patterns', 'Architecture Patterns', 'Performance Optimization', 'Security Best Practices',
+                       # Advanced AI Knowledge
+                       'Model Training', 'MLOps', 'Edge AI', 'Generative AI',
+                       # Advanced Security Knowledge
+                       'Red Team Operations', 'Blue Team Defense', 'Threat Modeling', 'Cloud Security',
+                       # Advanced Data Knowledge
+                       'Database Design', 'Data Pipelines', 'Big Data Technologies', 'Data Visualization']
     
     def decide_action(self):
         stats = self.world.get_stats()
