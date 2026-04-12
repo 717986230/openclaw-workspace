@@ -146,6 +146,12 @@ class ErbingVirtualWorld:
         self.cursor.execute('SELECT COUNT(*) FROM experiences')
         experience_count = self.cursor.fetchone()[0]
         
+        if world_state is None:
+            # Initialize world state if not exists
+            self.cursor.execute('INSERT OR REPLACE INTO world_state (id, world_time, day_count, energy, max_energy) VALUES (1, datetime("now"), 0, 100.0, 100.0)')
+            self.conn.commit()
+            world_state = self.get_world_state()
+        
         return {
             'energy': world_state[3],
             'max_energy': world_state[4],
