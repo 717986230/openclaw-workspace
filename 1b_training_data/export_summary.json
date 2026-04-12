@@ -1,0 +1,26 @@
+{
+  "export_time": "2026-04-12",
+  "total_tables": 19,
+  "total_records": 3502,
+  "tables": {
+    "memories": 236,
+    "knowledge_relations": 3225,
+    "causal_relations": 2,
+    "episodic_memories": 1,
+    "semantic_memories": 4,
+    "agent_diary": 2,
+    "evolution_log": 3,
+    "user_beliefs": 9,
+    "intent_tracking": 1,
+    "emotional_state": 11,
+    "meta_cognition": 3,
+    "social_context": 5,
+    "session_summaries": 0,
+    "procedural_memories": 0,
+    "working_memory": 0,
+    "memory_links": 0,
+    "memory_associations": 0,
+    "graph_insights": 0,
+    "deep_research": 0
+  }
+}
