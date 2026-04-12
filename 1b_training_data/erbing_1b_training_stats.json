@@ -1,0 +1,255 @@
+{
+  "created_at": "2026-04-12T09:44:19.885408",
+  "source_db": "C:/Users/Administrator/.openclaw/workspace/memory/database/xiaozhi_memory.db",
+  "output_db": "C:/Users/Administrator/.openclaw/workspace/1b_training_data/erbing_1b_training.db",
+  "total_rows": 4434,
+  "kept_rows": 4341,
+  "filtered_rows": 93,
+  "tables": {
+    "memories": {
+      "total": 264,
+      "kept": 243,
+      "filtered": 21
+    },
+    "memory_index_data": {
+      "total": 59,
+      "kept": 59,
+      "filtered": 0
+    },
+    "memory_index_idx": {
+      "total": 57,
+      "kept": 57,
+      "filtered": 0
+    },
+    "memory_index_docsize": {
+      "total": 264,
+      "kept": 264,
+      "filtered": 0
+    },
+    "memory_index_config": {
+      "total": 1,
+      "kept": 1,
+      "filtered": 0
+    },
+    "episodic_memories": {
+      "total": 1,
+      "kept": 1,
+      "filtered": 0
+    },
+    "semantic_memories": {
+      "total": 4,
+      "kept": 4,
+      "filtered": 0
+    },
+    "agent_diary": {
+      "total": 2,
+      "kept": 2,
+      "filtered": 0
+    },
+    "platform_messages": {
+      "total": 1,
+      "kept": 1,
+      "filtered": 0
+    },
+    "evolution_log": {
+      "total": 3,
+      "kept": 3,
+      "filtered": 0
+    },
+    "registered_tools": {
+      "total": 2,
+      "kept": 2,
+      "filtered": 0
+    },
+    "layered_context": {
+      "total": 3,
+      "kept": 3,
+      "filtered": 0
+    },
+    "agent_prompts": {
+      "total": 179,
+      "kept": 128,
+      "filtered": 51
+    },
+    "clawvard_students": {
+      "total": 1,
+      "kept": 1,
+      "filtered": 0
+    },
+    "clawvard_courses": {
+      "total": 5,
+      "kept": 5,
+      "filtered": 0
+    },
+    "user_beliefs": {
+      "total": 9,
+      "kept": 9,
+      "filtered": 0
+    },
+    "intent_tracking": {
+      "total": 11,
+      "kept": 11,
+      "filtered": 0
+    },
+    "emotional_state": {
+      "total": 11,
+      "kept": 11,
+      "filtered": 0
+    },
+    "meta_cognition": {
+      "total": 3,
+      "kept": 3,
+      "filtered": 0
+    },
+    "social_context": {
+      "total": 6,
+      "kept": 6,
+      "filtered": 0
+    },
+    "clawvard_exam_results": {
+      "total": 1,
+      "kept": 1,
+      "filtered": 0
+    },
+    "causal_relations": {
+      "total": 16,
+      "kept": 16,
+      "filtered": 0
+    },
+    "knowledge_relations": {
+      "total": 3267,
+      "kept": 3267,
+      "filtered": 0
+    },
+    "memory_index": {
+      "total": 264,
+      "kept": 243,
+      "filtered": 21
+    },
+    "procedural_memories": {
+      "total": 0,
+      "kept": 0,
+      "filtered": 0
+    },
+    "working_memory": {
+      "total": 0,
+      "kept": 0,
+      "filtered": 0
+    },
+    "session_summaries": {
+      "total": 0,
+      "kept": 0,
+      "filtered": 0
+    },
+    "security_scans": {
+      "total": 0,
+      "kept": 0,
+      "filtered": 0
+    },
+    "vulnerability_findings": {
+      "total": 0,
+      "kept": 0,
+      "filtered": 0
+    },
+    "osint_intel": {
+      "total": 0,
+      "kept": 0,
+      "filtered": 0
+    },
+    "attack_chains": {
+      "total": 0,
+      "kept": 0,
+      "filtered": 0
+    },
+    "pentagi_flows": {
+      "total": 0,
+      "kept": 0,
+      "filtered": 0
+    },
+    "pentagi_tasks": {
+      "total": 0,
+      "kept": 0,
+      "filtered": 0
+    },
+    "pentagi_subtasks": {
+      "total": 0,
+      "kept": 0,
+      "filtered": 0
+    },
+    "pentagi_logs": {
+      "total": 0,
+      "kept": 0,
+      "filtered": 0
+    },
+    "clawvard_enrollments": {
+      "total": 0,
+      "kept": 0,
+      "filtered": 0
+    },
+    "memory_links": {
+      "total": 0,
+      "kept": 0,
+      "filtered": 0
+    },
+    "memory_associations": {
+      "total": 0,
+      "kept": 0,
+      "filtered": 0
+    },
+    "tom_beliefs": {
+      "total": 0,
+      "kept": 0,
+      "filtered": 0
+    },
+    "tom_intents": {
+      "total": 0,
+      "kept": 0,
+      "filtered": 0
+    },
+    "tom_emotions": {
+      "total": 0,
+      "kept": 0,
+      "filtered": 0
+    },
+    "retrieval_cache": {
+      "total": 0,
+      "kept": 0,
+      "filtered": 0
+    },
+    "originals": {
+      "total": 0,
+      "kept": 0,
+      "filtered": 0
+    },
+    "entities": {
+      "total": 0,
+      "kept": 0,
+      "filtered": 0
+    },
+    "graph_insights": {
+      "total": 0,
+      "kept": 0,
+      "filtered": 0
+    },
+    "review_queue": {
+      "total": 0,
+      "kept": 0,
+      "filtered": 0
+    },
+    "deep_research": {
+      "total": 0,
+      "kept": 0,
+      "filtered": 0
+    },
+    "ingestion_cache": {
+      "total": 0,
+      "kept": 0,
+      "filtered": 0
+    },
+    "retrieval_history": {
+      "total": 0,
+      "kept": 0,
+      "filtered": 0
+    }
+  }
+}
