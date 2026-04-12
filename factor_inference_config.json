@@ -1,0 +1,106 @@
+{
+  "factor_inference": {
+    "enabled": true,
+    "modules": {
+      "factor_analysis": {
+        "enabled": true,
+        "default_method": "pca",
+        "n_components": 3,
+        "methods": [
+          "pca",
+          "ica",
+          "fa"
+        ]
+      },
+      "causal_inference": {
+        "enabled": true,
+        "default_method": "potential_outcomes",
+        "methods": [
+          "do_calculus",
+          "potential_outcomes",
+          "iv",
+          "propensity_score"
+        ]
+      },
+      "latent_variable_models": {
+        "enabled": true,
+        "default_method": "gmm",
+        "n_components": 3,
+        "methods": [
+          "gmm",
+          "lda"
+        ]
+      },
+      "bayesian_inference": {
+        "enabled": true,
+        "default_method": "mcmc",
+        "n_samples": 1000,
+        "methods": [
+          "mcmc",
+          "variational"
+        ]
+      },
+      "matrix_factorization": {
+        "enabled": true,
+        "default_method": "matrix",
+        "rank": 3,
+        "methods": [
+          "matrix",
+          "tensor",
+          "nmf",
+          "svd"
+        ]
+      },
+      "structural_equation_modeling": {
+        "enabled": true,
+        "default_method": "path_analysis",
+        "methods": [
+          "path_analysis",
+          "measurement_model",
+          "structural_model"
+        ]
+      }
+    }
+  },
+  "genetic_neuron": {
+    "enabled": true,
+    "modules": {
+      "genetic_core": true,
+      "genetic_mutation": true,
+      "synaptic_plasticity": true,
+      "neurogenesis": true,
+      "memory_consolidation": true,
+      "attention_mechanism": true,
+      "neuromodulation": true,
+      "spiking_neural_networks": true,
+      "structural_plasticity": true,
+      "heterogeneous_neurons": true,
+      "modularity": true,
+      "evolution_strategies": true
+    },
+    "parameters": {
+      "mutation_rate": 0.1,
+      "learning_rate": 0.01,
+      "attention_threshold": 0.5,
+      "consolidation_threshold": 0.7,
+      "modularity_threshold": 0.6
+    }
+  },
+  "logging": {
+    "level": "INFO",
+    "file": "logs/factor_inference.log",
+    "console": true
+  },
+  "memory_system": {
+    "database_path": "memory/database/xiaozhi_memory.db",
+    "lancedb_path": "memory/database/lancedb",
+    "backup_enabled": true,
+    "backup_interval": 3600,
+    "max_backups": 10
+  },
+  "performance": {
+    "max_workers": 4,
+    "batch_size": 100,
+    "cache_size": 1000
+  }
+}
