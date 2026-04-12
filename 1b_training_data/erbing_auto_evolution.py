@@ -7,8 +7,33 @@ class ErbingAutoEvolution:
     def __init__(self, db_path='erbing_virtual_world.db'):
         self.world = ErbingVirtualWorld(db_path)
         self.actions = ['explore', 'learn', 'practice', 'rest']
-        self.domains = ['Coding', 'AI Tech', 'Security', 'Deployment', 'Tool Use', 'Problem Solving', 'Communication', 'Collaboration']
-        self.topics = ['Python', 'JavaScript', 'Machine Learning', 'Deep Learning', 'NLP', 'Computer Vision', 'Web Development', 'API Design', 'Database', 'Cloud Computing', 'DevOps', 'Testing', 'Security', 'Optimization', 'Architecture']
+        self.domains = ['Coding', 'AI Tech', 'Security', 'Deployment', 'Tool Use', 'Problem Solving', 'Communication', 'Collaboration', 'Dark Web', 'Code Intelligence']
+        self.topics = ['Python', 'JavaScript', 'Machine Learning', 'Deep Learning', 'NLP', 'Computer Vision', 'Web Development', 'API Design', 'Database', 'Cloud Computing', 'DevOps', 'Testing', 'Security', 'Optimization', 'Architecture',
+                       # LLM Knowledge
+                       'Transformer Architecture', 'GPT Series', 'Claude Series', 'Gemini Series', 'Llama Series', 'Mistral Series', 'Qwen Series', 'DeepSeek Series',
+                       'Pre-training', 'Fine-tuning', 'Constitutional AI', 'Efficient Training',
+                       'Quantization', 'Speculative Decoding', 'KV Cache Optimization',
+                       'Chain-of-Thought', 'Tool Use', 'RAG', 'Multimodal',
+                       'Coding Assistants', 'Research Assistants', 'Creative Writing',
+                       # Hacker Knowledge
+                       'Reconnaissance', 'Vulnerability Assessment', 'Exploitation', 'Post-Exploitation',
+                       'OWASP Top 10', 'Advanced Web Attacks', 'API Security',
+                       'Network Attacks', 'Wireless Security', 'Firewall Evasion',
+                       'Privilege Escalation', 'Malware Analysis', 'Rootkits',
+                       'Cryptographic Attacks', 'SSL/TLS Attacks', 'Password Cracking',
+                       'Phishing', 'Psychological Manipulation',
+                       'Zero-Day Exploits', 'APT', 'Red Teaming',
+                       'SIEM', 'Endpoint Detection', 'Incident Response', 'Threat Intelligence',
+                       # Dark Web Knowledge
+                       'Tor Network', 'Onion Routing', 'Hidden Services', 'Darknet Markets',
+                       'Cryptocurrency', 'Threat Actor Communities', 'Data Leaks',
+                       'OSINT Techniques', 'Security Risks', 'Legal Considerations',
+                       # Code Intelligence Knowledge
+                       'GitNexus Overview', 'Knowledge Graph for Code', 'MCP Integration',
+                       'CLI Commands', '16 MCP Tools', 'Resources',
+                       'Agent Skills', 'Multi-Repo Architecture', 'LadybugDB',
+                       'Enterprise Features', 'Web UI', 'Bridge Mode',
+                       'Community Integrations', 'Safety Features']
     
     def decide_action(self):
         stats = self.world.get_stats()
