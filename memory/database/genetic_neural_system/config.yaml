@@ -1,0 +1,125 @@
+# 基因神经元记忆系统配置文件
+
+# 数据库配置
+database:
+  path: "C:/Users/Administrator/.openclaw/workspace/memory/database/xiaozhi_memory.db"
+  backup_path: "C:/Users/Administrator/.openclaw/workspace/memory/database/backups/"
+
+# 基因配置
+gene:
+  # 默认基因参数
+  default_activation_threshold: 0.5
+  default_decay_rate: 0.05
+  default_plasticity: 0.8
+  default_strengthening_rate: 0.1
+  default_weakening_rate: 0.15
+
+  # 突变配置
+  mutation_rate: 0.01
+  mutation_range: 0.05
+
+  # 适应度权重
+  fitness_weights:
+    success_rate: 0.6
+    access_count: 0.2
+    consolidation_level: 0.2
+
+# 记忆巩固配置
+consolidation:
+  # L0 (Raw, 72h)
+  l0:
+    max_age_hours: 72
+    min_access_count: 3
+
+  # L1 (Sprint, 90d)
+  l1:
+    max_age_days: 90
+    min_access_count: 10
+
+  # L2 (Monthly, 365d)
+  l2:
+    max_age_days: 365
+    min_success_rate: 0.8
+
+  # L3 (Permanent)
+  l3:
+    min_success_rate: 0.6  # 低于此值降级
+
+# 突触配置
+synapse:
+  # 最大权重
+  max_weight: 1.0
+  # 最小权重
+  min_weight: 0.0
+  # 默认权重
+  default_weight: 0.0
+
+# 传播激活配置
+spreading_activation:
+  # 最大深度
+  max_depth: 3
+  # 激活阈值
+  activation_threshold: 0.1
+  # 衰减系数
+  decay_factor: 0.8
+
+# 突触权重计算配置
+synaptic_weight:
+  # 5轴权重
+  weights:
+    relevance: 0.55
+    importance: 0.15
+    recency: 0.20
+    vitality: 0.10
+    context: 0.0
+
+  # 相关性阈值
+  relevance_threshold: 0.1
+
+# 进化配置
+evolution:
+  # 选择阈值（低于此值淘汰）
+  selection_threshold: 0.3
+  # 繁殖阈值（高于此值繁殖）
+  reproduction_threshold: 0.8
+  # 进化间隔（小时）
+  evolution_interval_hours: 24
+
+# 搜索配置
+search:
+  # 默认返回数量
+  default_top_k: 10
+  # 是否使用传播激活
+  use_spreading_activation: true
+  # 最小权重
+  min_weight: 0.1
+
+# 性能配置
+performance:
+  # 批量操作大小
+  batch_size: 100
+  # 缓存大小
+  cache_size: 1000
+  # 并发线程数
+  max_workers: 4
+
+# 日志配置
+logging:
+  # 日志级别
+  level: "INFO"
+  # 日志文件
+  file: "C:/Users/Administrator/.openclaw/workspace/memory/database/genetic_neural_system.log"
+  # 是否输出到控制台
+  console: true
+
+# 监控配置
+monitoring:
+  # 是否启用监控
+  enabled: true
+  # 统计间隔（秒）
+  stats_interval_seconds: 3600
+  # 告警阈值
+  alert_thresholds:
+    low_success_rate: 0.3
+    high_failure_rate: 0.7
+    low_fitness: 0.2
