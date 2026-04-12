@@ -54,3 +54,11 @@ Thumbs.db
 claude-code-analysis/
 my-nav-admin/
 my-nav-site/
+
+*.db-journal# Sanitization reports
+SANITIZATION_REPORT.json
+
+# Temporary files
+*.tmp
+*.temp
+*.log
