@@ -320,11 +320,18 @@ class ErbingKnowledgeGraph:
     
     def get_stats(self) -> Dict:
         """获取图谱统计信息"""
+        node_types = {}
+        for node in self.graph.nodes:
+            node_type = self.graph.nodes[node].get('type', 'unknown')
+            node_types[node_type] = node_types.get(node_type, 0) + 1
+        
+        relation_types = list(set(nx.get_edge_attributes(self.graph, 'relation').values())) if self.graph.number_of_edges() > 0 else []
+        
         return {
             'total_nodes': self.graph.number_of_nodes(),
             'total_edges': self.graph.number_of_edges(),
-            'node_types': dict(nx.get_node_attributes(self.graph, 'type').values()),
-            'relation_types': list(set(nx.get_edge_attributes(self.graph, 'relation').values())),
+            'node_types': node_types,
+            'relation_types': relation_types,
             'density': nx.density(self.graph),
             'avg_degree': sum(dict(self.graph.degree()).values()) / self.graph.number_of_nodes() if self.graph.number_of_nodes() > 0 else 0
         }
