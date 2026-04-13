@@ -1,0 +1,79 @@
+{
+  "evolution_time": "2026-04-12T13:38:23.467103",
+  "source": "virtual_world",
+  "statistics": {
+    "total_nodes": 48579,
+    "total_edges": 48470,
+    "node_types": {
+      "memory": 1,
+      "knowledge": 48477,
+      "skill": 1,
+      "experience": 100
+    },
+    "density": 2.0539261231766607e-05,
+    "avg_degree": 1.9955124642335165
+  },
+  "knowledge_domains": [
+    "Security",
+    "Deployment",
+    "Communication",
+    "AI Tech",
+    "Collaboration",
+    "Coding",
+    "Problem Solving",
+    "Tool Use"
+  ],
+  "skills_evolved": [],
+  "top_relations": [
+    {
+      "source": "mem_1",
+      "target": "know_1",
+      "type": "references"
+    },
+    {
+      "source": "skill_1",
+      "target": "know_1",
+      "type": "depends_on"
+    },
+    {
+      "source": "knowledge_1",
+      "target": "knowledge_8",
+      "type": "related_to"
+    },
+    {
+      "source": "knowledge_2",
+      "target": "knowledge_5",
+      "type": "related_to"
+    },
+    {
+      "source": "knowledge_3",
+      "target": "knowledge_10",
+      "type": "related_to"
+    },
+    {
+      "source": "knowledge_4",
+      "target": "knowledge_19",
+      "type": "related_to"
+    },
+    {
+      "source": "knowledge_5",
+      "target": "knowledge_12",
+      "type": "related_to"
+    },
+    {
+      "source": "knowledge_6",
+      "target": "knowledge_14",
+      "type": "related_to"
+    },
+    {
+      "source": "knowledge_7",
+      "target": "knowledge_20",
+      "type": "related_to"
+    },
+    {
+      "source": "knowledge_8",
+      "target": "knowledge_11",
+      "type": "related_to"
+    }
+  ]
+}
