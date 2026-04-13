@@ -22,7 +22,7 @@
   ],
   "category": "productivity",
   "requires": {
-    "python": >= 3.6,
+    "python": ">= 3.6",
     "sqlite3": "standard"
   },
   "minOpenClawVersion": "1.0.0",
