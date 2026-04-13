@@ -1,5 +1,5 @@
 {
-  "name": "memory",
+  "name": "memory-complete",
   "version": "4.0.0",
   "description": "Complete Memory System - Unified integration of all memory features",
   "main": "scripts/complete_memory_system.py",
