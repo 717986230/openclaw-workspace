@@ -212,7 +212,11 @@ class EnhancedStrategyEngine:
             metadata={
                 'factor_metadata': factor_metadata,
                 'mtf_metadata': mtf_metadata,
-                'ml_probabilities': ml_prediction.probabilities if ml_prediction else {},
+                'ml_probabilities': {
+                    'up': ml_prediction.probability_up,
+                    'down': ml_prediction.probability_down,
+                    'neutral': ml_prediction.probability_neutral,
+                } if ml_prediction else {},
                 'trendline': trendline,
                 'volatility': vol_analysis if check_volatility else None,
                 'time_score': self.time_filter.calculate_trade_score(symbol) if check_time else 100,
