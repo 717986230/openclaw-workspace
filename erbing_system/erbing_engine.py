@@ -11,6 +11,14 @@ import random
 import logging
 from datetime import datetime
 
+from erbing_system.mental_models import (
+    MentalLoop,
+    TreeOfThoughts,
+    MetaController,
+    create_meta_controller,
+    simulate_decision
+)
+
 logger = logging.getLogger(__name__)
 
 
@@ -77,6 +85,11 @@ class ErbingBrain:
         }
         self.learning_rate = 0.1
         self.experience_level = 0.0
+        
+        # 心智模型
+        self.mental_loop = MentalLoop()
+        self.tree_of_thoughts = TreeOfThoughts()
+        self.meta_controller = MetaController()
 
     def add_memory(self, content: str, importance: float = 0.5) -> ErbingMemory:
         """添加记忆"""
@@ -119,11 +132,27 @@ class ErbingBrain:
         # 检索相关记忆
         relevant_memories = self.retrieve_memory(input_text, top_k=3)
 
+        # 使用元控制器处理
+        context = {
+            'experience': self.experience_level,
+            'memories': relevant_memories,
+        }
+        
+        meta_result = self.meta_controller.process(input_text, context)
+
         # 生成思维
         thought_content = self._generate_thought(input_text, relevant_memories)
+        
+        # 结合元控制器的结果
+        if meta_result['best_solution']:
+            thought_content += f" | 最佳方案: {meta_result['best_solution']}"
 
         # 计算置信度
         confidence = self._calculate_confidence(input_text, relevant_memories)
+        
+        # 结合元控制器的置信度
+        if meta_result['simulation']:
+            confidence = (confidence + meta_result['simulation']['confidence']) / 2
 
         # 计算优先级
         priority = self._calculate_priority(input_text, confidence)
@@ -255,6 +284,13 @@ class ErbingBrain:
 
         # 调整个性特征
         self._adjust_personality(experience, success)
+        
+        # 心智循环学习
+        self.mental_loop.learn(outcome, success)
+        
+        # 元控制器更新性能
+        efficiency = 1.0 if success else 0.5
+        self.meta_controller.update_performance(success, efficiency)
 
         logger.info(f"Learned: {experience[:50]}... (Success: {success})")
 
@@ -278,6 +314,11 @@ class ErbingBrain:
             'actions_count': len(self.actions),
             'experience_level': self.experience_level,
             'personality_traits': {t.value: v for t, v in self.personality_traits.items()},
+            'mental_models': {
+                'mental_loop_history': len(self.mental_loop.simulation_history),
+                'tree_depth': self.tree_of_thoughts.max_depth,
+                'meta_controller_decisions': len(self.meta_controller.decision_history),
+            },
         }
 
 
