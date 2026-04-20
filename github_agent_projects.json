@@ -1,0 +1,76 @@
+{
+  "search_time": "2026-04-21T02:22:08.195013",
+  "total_results": 10,
+  "results": [
+    {
+      "name": "microsoft/prompt-engine",
+      "url": "https://github.com/microsoft/prompt-engine",
+      "description": "Microsoft's prompt engineering library",
+      "language": "TypeScript",
+      "stars": "N/A"
+    },
+    {
+      "name": "dair-ai/Prompt-Engineering-Guide",
+      "url": "https://github.com/dair-ai/Prompt-Engineering-Guide",
+      "description": "Comprehensive prompt engineering guide",
+      "language": "Markdown",
+      "stars": "N/A"
+    },
+    {
+      "name": "f/awesome-chatgpt-prompts",
+      "url": "https://github.com/f/awesome-chatgpt-prompts",
+      "description": "Awesome ChatGPT prompts collection",
+      "language": "Markdown",
+      "stars": "N/A"
+    },
+    {
+      "name": "microsoft/semantic-kernel",
+      "url": "https://github.com/microsoft/semantic-kernel",
+      "description": "Microsoft's AI orchestration SDK",
+      "language": "Python",
+      "stars": "N/A"
+    },
+    {
+      "name": "langchain-ai/langchain",
+      "url": "https://github.com/langchain-ai/langchain",
+      "description": "LangChain framework for LLM applications",
+      "language": "Python",
+      "stars": "N/A"
+    },
+    {
+      "name": "openai/openai-cookbook",
+      "url": "https://github.com/openai/openai-cookbook",
+      "description": "OpenAI cookbook with examples",
+      "language": "Python",
+      "stars": "N/A"
+    },
+    {
+      "name": "anthropics/anthropic-cookbook",
+      "url": "https://github.com/anthropics/anthropic-cookbook",
+      "description": "Anthropic cookbook with examples",
+      "language": "Python",
+      "stars": "N/A"
+    },
+    {
+      "name": "deepseek-ai/DeepSeek-Coder",
+      "url": "https://github.com/deepseek-ai/DeepSeek-Coder",
+      "description": "DeepSeek code generation models",
+      "language": "Python",
+      "stars": "N/A"
+    },
+    {
+      "name": "QwenLM/Qwen-Agent",
+      "url": "https://github.com/QwenLM/Qwen-Agent",
+      "description": "Qwen agent framework",
+      "language": "Python",
+      "stars": "N/A"
+    },
+    {
+      "name": "THUDM/ChatGLM",
+      "url": "https://github.com/THUDM/ChatGLM",
+      "description": "ChatGLM language models",
+      "language": "Python",
+      "stars": "N/A"
+    }
+  ]
+}
