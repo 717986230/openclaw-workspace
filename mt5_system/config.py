@@ -12,10 +12,10 @@ SYSTEM_CONFIG = {
 
 # MT5 连接配置
 MT5_CONFIG = {
-    'login': None,  # MT5 账号
-    'password': None,  # MT5 密码
-    'server': None,  # MT5 服务器
-    'path': None,  # MT5 终端路径
+    'login': 2046664504,  # MT5 账号
+    'password': '54*O^-c!',  # MT5 密码
+    'server': 'Dukascopy-demo-mt5-1',  # MT5 服务器
+    'path': r'C:\Program Files\MetaTrader 5\terminal64.exe',  # MT5 终端路径
 }
 
 # 交易品种配置
@@ -24,8 +24,8 @@ SYMBOLS_CONFIG = {
         'EURUSD',
         'GBPUSD',
         'USDJPY',
-        'XAUUSD',  # 黄金
-        'XAGUSD',  # 白银
+        'XAUUSD',  # Gold
+        'XAGUSD',  # Silver
     ],
     'timeframes': {
         'EURUSD': 'H1',
@@ -41,7 +41,7 @@ RISK_CONFIG = {
     'max_position_size': 0.02,  # 最大仓位比例 (2%)
     'max_daily_loss': 0.05,  # 最大日亏损比例 (5%)
     'max_drawdown': 0.15,  # 最大回撤比例 (15%)
-    'risk_reward_ratio': 2.0,  # 风险收益比
+    'risk_reward_ratio': 1.49,  # 风险收益比
     'max_positions': 5,  # 最大持仓数
     'max_correlation': 0.7,  # 最大相关性
     'min_confidence': 0.6,  # 最小信号置信度
@@ -83,6 +83,7 @@ SIGNAL_CONFIG = {
 # 订单执行配置
 ORDER_CONFIG = {
     'default_type': 'MARKET',  # 默认订单类型
+    'dry_run': True,  # 测试模式：只构造订单请求，不发送真实订单
     'slippage': 20,  # 滑点容忍度
     'timeout': 30,  # 订单超时时间（秒）
     'magic_number': 123456,  # 魔术数字

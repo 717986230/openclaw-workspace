@@ -4,6 +4,18 @@
     "discord-chat": {
       "version": "1.0.0",
       "installedAt": 1775541420964
+    },
+    "douyin-video-publish": {
+      "version": "1.0.0",
+      "installedAt": 1776223711534
+    },
+    "web-crawler": {
+      "version": "1.0.0",
+      "installedAt": 1776300486688
+    },
+    "smart-crawler": {
+      "version": "1.0.0",
+      "installedAt": 1776300506764
     }
   }
 }

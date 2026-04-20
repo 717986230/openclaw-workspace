@@ -177,7 +177,7 @@ class HighConcurrencyConfig:
         """获取统计信息"""
         return {
             "connection_pool_size": self.connection_pool_size,
-            "active_connections": self.session.connector.total if self.session else 0,
+            "active_connections": len(self.session.connector._conns) if self.session and hasattr(self.session.connector, '_conns') else 0,
             "thread_pool_size": self.thread_pool_size,
             "active_threads": self.thread_pool._threads if self.thread_pool else 0,
             "process_pool_size": self.process_pool_size,

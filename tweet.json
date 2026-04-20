@@ -1,0 +1,139 @@
+{
+  "code": 200,
+  "message": "OK",
+  "tweet": {
+    "url": "https://x.com/GitTrend0x/status/2045142797439922337",
+    "id": "2045142797439922337",
+    "text": "Hermes 一丢 Agent，全网程序员集体进化了！\n\nNous Research 扔出 hermes-agent（90k+ stars），核心就一个词：自我进化。它不是玩具，而是带持久记忆、自动提炼技能、跨会话成长的底层骨架。\n\n结果？社区直接把它当 DNA，短短几周卷出 80+ 进化体，生态总星 10 万+。这才是开源的最高境界：一个 Agent，变成全世界的进化树。\n\n我挑了 4 个正在 X 上刷屏的 “Hermes 系进化体”，AI 玩家看了会沉默，爱好者看了会狂喜：\n\n1️⃣ Hermes Ecosystem Map / Hermes Atlas（https://github.com/ksimback/hermes-ecosystem + https://hermesatlas.com/）\n\nKevin 用 Hermes Agent 自己刮全网，做出 80+ 项目安全审查地图 + RAG 聊天机器人。\n\n还能生成《State of Hermes》报告，社区 PR 狂冲，官方都点赞了。\n\n2️⃣ Hermes-Wiki（https://github.com/cclank/Hermes-Wiki）\n\n喂它自己源码，它就自动生成并维护完整项目 Wiki。\n\nRAG 哭晕，Agent 自己给自己立传、太 meta 了。\n\n3️⃣ hermes-hud（https://github.com/joeynyc/hermes-hud）\n\nTUI 仪表盘进化成浏览器 Web HUD，实时监控 Agent 灵魂状态 + 持久记忆。\n\n生态地图直接收录，玩家直呼终于看到 Agent 在思考。\n\n4️⃣ hermes-control-interface （https://github.com/xaspx/hermes-control-interface）\n\n自托管 Dashboard，一键管多 Agent、进程、记忆和调度。\n\n“把玩具 Agent 进化成生产基础设施”的代表作。\n\n🟢\n\n为什么 Hermes 系这么爆？\n\n它从不给你黑箱，它给的是可读、可 hack、可自我改进的底层循环。你 fork 它，不是在抄，而是在和 Agent 一起递归自我改进。\n\n这才是 2026 年开源 Agent 的正确打开方式。",
+    "raw_text": {
+      "text": "Hermes 一丢 Agent，全网程序员集体进化了！\n\nNous Research 扔出 hermes-agent（90k+ stars），核心就一个词：自我进化。它不是玩具，而是带持久记忆、自动提炼技能、跨会话成长的底层骨架。\n\n结果？社区直接把它当 DNA，短短几周卷出 80+ 进化体，生态总星 10 万+。这才是开源的最高境界：一个 Agent，变成全世界的进化树。\n\n我挑了 4 个正在 X 上刷屏的 “Hermes 系进化体”，AI 玩家看了会沉默，爱好者看了会狂喜：\n\n1️⃣ Hermes Ecosystem Map / Hermes Atlas（https://t.co/3wVPdY9cFg + https://t.co/L5UNrkxP1N）\n\nKevin 用 Hermes Agent 自己刮全网，做出 80+ 项目安全审查地图 + RAG 聊天机器人。\n\n还能生成《State of Hermes》报告，社区 PR 狂冲，官方都点赞了。\n\n2️⃣ Hermes-Wiki（https://t.co/gTncSju9b0）\n\n喂它自己源码，它就自动生成并维护完整项目 Wiki。\n\nRAG 哭晕，Agent 自己给自己立传、太 meta 了。\n\n3️⃣ hermes-hud（https://t.co/DivT37Yf9r）\n\nTUI 仪表盘进化成浏览器 Web HUD，实时监控 Agent 灵魂状态 + 持久记忆。\n\n生态地图直接收录，玩家直呼终于看到 Agent 在思考。\n\n4️⃣ hermes-control-interface （https://t.co/khcp2KHgly）\n\n自托管 Dashboard，一键管多 Agent、进程、记忆和调度。\n\n“把玩具 Agent 进化成生产基础设施”的代表作。\n\n🟢\n\n为什么 Hermes 系这么爆？\n\n它从不给你黑箱，它给的是可读、可 hack、可自我改进的底层循环。你 fork 它，不是在抄，而是在和 Agent 一起递归自我改进。\n\n这才是 2026 年开源 Agent 的正确打开方式。",
+      "display_text_range": [
+        0,
+        892
+      ],
+      "facets": [
+        {
+          "type": "url",
+          "indices": [
+            283,
+            306
+          ],
+          "original": "https://t.co/3wVPdY9cFg",
+          "replacement": "https://github.com/ksimback/hermes-ecosystem",
+          "display": "github.com/ksimback/herme…"
+        },
+        {
+          "type": "url",
+          "indices": [
+            309,
+            332
+          ],
+          "original": "https://t.co/L5UNrkxP1N",
+          "replacement": "https://hermesatlas.com/",
+          "display": "hermesatlas.com"
+        },
+        {
+          "type": "url",
+          "indices": [
+            450,
+            473
+          ],
+          "original": "https://t.co/gTncSju9b0",
+          "replacement": "https://github.com/cclank/Hermes-Wiki",
+          "display": "github.com/cclank/Hermes-…"
+        },
+        {
+          "type": "url",
+          "indices": [
+            551,
+            574
+          ],
+          "original": "https://t.co/DivT37Yf9r",
+          "replacement": "https://github.com/joeynyc/hermes-hud",
+          "display": "github.com/joeynyc/hermes…"
+        },
+        {
+          "type": "url",
+          "indices": [
+            684,
+            707
+          ],
+          "original": "https://t.co/khcp2KHgly",
+          "replacement": "https://github.com/xaspx/hermes-control-interface",
+          "display": "github.com/xaspx/hermes-c…"
+        }
+      ]
+    },
+    "author": {
+      "screen_name": "GitTrend0x",
+      "url": "https://x.com/GitTrend0x",
+      "id": "1536620289123295232",
+      "followers": 17036,
+      "following": 4220,
+      "likes": 55415,
+      "media_count": 1787,
+      "name": "GitTrend",
+      "description": "by @0xKingsKuan\n🟣 价值发现赏金平台 https://t.me/signformoney\n🔴 每日分享 GitHub & AI 趋势 & 开源省钱神器 \n🟢 SlithKing 合约审计 - 提前防止 Rug\n🟡 自研 Claude 大神 Bot，智能 & 安全；一切掌握在你手里，已开源👇",
+      "raw_description": {
+        "text": "by @0xKingsKuan\n🟣 价值发现赏金平台 https://t.co/X8OxqYixHq\n🔴 每日分享 GitHub & AI 趋势 & 开源省钱神器 \n🟢 SlithKing 合约审计 - 提前防止 Rug\n🟡 自研 Claude 大神 Bot，智能 & 安全；一切掌握在你手里，已开源👇",
+        "facets": [
+          {
+            "type": "url",
+            "indices": [
+              27,
+              50
+            ],
+            "original": "https://t.co/X8OxqYixHq",
+            "replacement": "https://t.me/signformoney",
+            "display": "t.me/signformoney"
+          }
+        ]
+      },
+      "location": "World of AI",
+      "banner_url": "https://pbs.twimg.com/profile_banners/1536620289123295232/1772163109",
+      "avatar_url": "https://pbs.twimg.com/profile_images/2027224265200902144/BG6LQpAG_200x200.jpg",
+      "joined": "Tue Jun 14 08:03:33 +0000 2022",
+      "protected": false,
+      "website": {
+        "url": "https://github.com/kingskuan/Claudebot-vibe",
+        "display_url": "github.com/kingskuan/Clau…"
+      },
+      "verification": {
+        "verified": true,
+        "verified_at": null,
+        "type": "individual"
+      },
+      "tweets": 39782,
+      "avatar_color": null
+    },
+    "replies": 21,
+    "retweets": 141,
+    "likes": 729,
+    "bookmarks": 1055,
+    "quotes": 3,
+    "created_at": "Fri Apr 17 14:10:14 +0000 2026",
+    "created_timestamp": 1776435014,
+    "views": 73628,
+    "is_note_tweet": true,
+    "community_note": null,
+    "lang": "zh",
+    "replying_to": null,
+    "replying_to_status": null,
+    "source": "Twitter for iPhone",
+    "card": {
+      "url": "https://github.com/ksimback/hermes-ecosystem",
+      "title": "GitHub - ksimback/hermes-ecosystem: 🗺️ Hermes Atlas — the community map of every tool, skill, and...",
+      "description": "🗺️ Hermes Atlas — the community map of every tool, skill, and integration for Hermes Agent by Nous Research. Live at hermesatlas.com - ksimback/hermes-ecosystem",
+      "domain": "github.com",
+      "image": {
+        "width": 800,
+        "height": 419,
+        "url": "https://pbs.twimg.com/card_img/2044474720007897088/BazmL_OF?format=jpg&name=800x419"
+      }
+    },
+    "twitter_card": "tweet",
+    "color": null,
+    "provider": "twitter",
+    "reposted_by": null
+  }
+}

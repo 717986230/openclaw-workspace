@@ -1,463 +1,454 @@
 #!/usr/bin/env python3
+# -*- coding: utf-8 -*-
 """
-Erbing Cross-Reference - 交叉引用系统
+Cross-Reference Back-Links System
+交叉引用反向链接系统 - GBrain 铁律实现
 
-这是 GBrain 的铁律：每个实体页面必须链接到所有引用它的其他页面。
+核心原则:
+每个实体页面必须链接到所有引用它的其他页面
 
-功能：
-1. 查找所有提及某个实体的其他页面
+功能:
+1. 自动检测实体引用
 2. 添加反向链接
 3. 维护引用完整性
+4. 生成引用报告
 """
 
-import sqlite3
-from pathlib import Path
-import json
-from typing import List, Dict, Any, Set
+import os
+import sys
 import re
-import logging
+import sqlite3
+from datetime import datetime
+from pathlib import Path
+from typing import List, Dict, Any, Optional, Tuple
+from dataclasses import dataclass
+import json
 
-# 配置日志
-logging.basicConfig(
-    level=logging.INFO,
-    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s'
-)
-logger = logging.getLogger(__name__)
+# 添加项目路径
+sys.path.insert(0, str(Path(__file__).parent.parent.parent))
 
 
-class ErbingCrossReference:
-    """交叉引用系统"""
+@dataclass
+class BackLink:
+    """反向链接数据结构"""
+    source_page: str
+    source_title: str
+    source_path: str
+    mention_context: str
+    timestamp: str
 
+
+class CrossReferenceEngine:
+    """交叉引用引擎"""
+    
     def __init__(self, db_path: str = None):
-        """初始化交叉引用系统
-
-        Args:
-            db_path: SQLite数据库路径
-        """
+        """初始化交叉引用引擎"""
         if db_path is None:
-            db_path = Path(__file__).parent / "xiaozhi_memory.db"
-
-        self.db_path = Path(db_path)
-
-        logger.info(f"🔗 Cross-Reference initialized with database: {self.db_path}")
-
-    def find_mentions(self, entity: str) -> List[Dict[str, Any]]:
-        """查找所有提及某个实体的其他页面
-
-        Args:
-            entity: 实体名称
-
-        Returns:
-            提及该实体的页面列表
-        """
+            db_path = str(Path(__file__).parent / "xiaozhi_memory.db")
+        
+        self.db_path = db_path
+        self._init_tables()
+    
+    def _init_tables(self):
+        """初始化交叉引用表"""
         conn = sqlite3.connect(self.db_path)
         cursor = conn.cursor()
-
+        
+        # 创建交叉引用表
+        cursor.execute("""
+            CREATE TABLE IF NOT EXISTS cross_references (
+                id INTEGER PRIMARY KEY AUTOINCREMENT,
+                source_id TEXT NOT NULL,
+                target_entity TEXT NOT NULL,
+                mention_context TEXT,
+                created_at TEXT NOT NULL,
+                UNIQUE(source_id, target_entity)
+            )
+        """)
+        
+        # 创建索引
+        cursor.execute("""
+            CREATE INDEX IF NOT EXISTS idx_cross_ref_target
+            ON cross_references(target_entity)
+        """)
+        
+        cursor.execute("""
+            CREATE INDEX IF NOT EXISTS idx_cross_ref_source
+            ON cross_references(source_id)
+        """)
+        
+        conn.commit()
+        conn.close()
+    
+    def update_entity_page(self, entity: str, new_info: str) -> Dict[str, Any]:
+        """
+        更新实体页面并添加反向链接
+        
+        Args:
+            entity: 实体名称
+            new_info: 新信息
+        
+        Returns:
+            更新结果
+        """
+        result = {
+            "entity": entity,
+            "backlinks_added": 0,
+            "backlinks": []
+        }
+        
         try:
-            # 查询所有提及该实体的记忆
+            conn = sqlite3.connect(self.db_path)
+            cursor = conn.cursor()
+            
+            # 1. 查找所有提及此实体的其他页面
+            mentions = self.find_mentions(entity)
+            
+            # 2. 为每个提及添加反向链接
+            for mention in mentions:
+                backlink_added = self.add_backlink(
+                    target_entity=entity,
+                    source_id=mention["id"],
+                    source_title=mention["title"],
+                    mention_context=mention.get("context", "")
+                )
+                
+                if backlink_added:
+                    result["backlinks_added"] += 1
+                    result["backlinks"].append(mention["title"])
+            
+            # 3. 更新实体页面的反向链接部分
+            self.update_page_backlinks_section(entity, result["backlinks"])
+            
+            conn.close()
+            
+        except Exception as e:
+            result["error"] = str(e)
+        
+        return result
+    
+    def find_mentions(self, entity: str) -> List[Dict[str, Any]]:
+        """
+        查找所有提及某实体的页面
+        
+        Args:
+            entity: 实体名称
+        
+        Returns:
+            提及列表
+        """
+        mentions = []
+        
+        try:
+            conn = sqlite3.connect(self.db_path)
+            cursor = conn.cursor()
+            
+            # 搜索标题或内容中包含实体的记录
             cursor.execute("""
-                SELECT id, type, title, content, category, tags, importance, created_at
+                SELECT id, type, title, content, created_at
                 FROM memories
-                WHERE content LIKE ?
-                   OR title LIKE ?
+                WHERE (title LIKE ? OR content LIKE ?)
+                AND title != ?
                 ORDER BY created_at DESC
-            """, (f"%{entity}%", f"%{entity}%"))
-
-            mentions = []
+            """, (f"%{entity}%", f"%{entity}%", entity))
+            
             for row in cursor.fetchall():
+                # 提取上下文（包含实体的部分内容）
+                content = row[3] or ""
+                context = self._extract_context(content, entity)
+                
                 mentions.append({
                     "id": row[0],
                     "type": row[1],
                     "title": row[2],
-                    "content": row[3],
-                    "category": row[4],
-                    "tags": json.loads(row[5]) if row[5] else [],
-                    "importance": row[6],
-                    "created_at": row[7]
+                    "created_at": row[4],
+                    "context": context
                 })
-
-            logger.info(f"🔍 Found {len(mentions)} mentions of '{entity}'")
-            return mentions
-
-        finally:
+            
             conn.close()
-
-    def add_backlink(self, entity: str, mention: Dict[str, Any], summary: str):
-        """添加反向链接
-
+            
+        except Exception as e:
+            print(f"Error finding mentions: {e}")
+        
+        return mentions
+    
+    def _extract_context(self, content: str, entity: str, context_length: int = 100) -> str:
+        """提取包含实体的上下文"""
+        try:
+            idx = content.lower().find(entity.lower())
+            if idx == -1:
+                return ""
+            
+            start = max(0, idx - context_length // 2)
+            end = min(len(content), idx + len(entity) + context_length // 2)
+            
+            context = content[start:end]
+            if start > 0:
+                context = "..." + context
+            if end < len(content):
+                context = context + "..."
+            
+            return context
+            
+        except Exception:
+            return ""
+    
+    def add_backlink(self, target_entity: str, source_id: str, 
+                     source_title: str, mention_context: str = "") -> bool:
+        """
+        添加反向链接
+        
+        Args:
+            target_entity: 目标实体
+            source_id: 来源页面ID
+            source_title: 来源页面标题
+            mention_context: 提及上下文
+        
+        Returns:
+            是否成功添加
+        """
+        try:
+            conn = sqlite3.connect(self.db_path)
+            cursor = conn.cursor()
+            
+            # 检查是否已存在
+            cursor.execute("""
+                SELECT id FROM cross_references
+                WHERE source_id = ? AND target_entity = ?
+            """, (source_id, target_entity))
+            
+            if cursor.fetchone():
+                conn.close()
+                return False  # 已存在
+            
+            # 插入新的反向链接
+            cursor.execute("""
+                INSERT INTO cross_references (source_id, target_entity, mention_context, created_at)
+                VALUES (?, ?, ?, ?)
+            """, (source_id, target_entity, mention_context, datetime.now().isoformat()))
+            
+            conn.commit()
+            conn.close()
+            
+            return True
+            
+        except Exception as e:
+            print(f"Error adding backlink: {e}")
+            return False
+    
+    def update_page_backlinks_section(self, entity: str, backlinks: List[str]):
+        """
+        更新实体页面的反向链接部分
+        
         Args:
             entity: 实体名称
-            mention: 提及该实体的页面
-            summary: 摘要
+            backlinks: 反向链接列表
         """
-        conn = sqlite3.connect(self.db_path)
-        cursor = conn.cursor()
-
+        if not backlinks:
+            return
+        
         try:
-            # 获取实体页面
+            conn = sqlite3.connect(self.db_path)
+            cursor = conn.cursor()
+            
+            # 查找实体页面
             cursor.execute("""
-                SELECT id, content
-                FROM memories
-                WHERE title = ?
-                LIMIT 1
+                SELECT id, content FROM memories
+                WHERE title = ? AND type IN ('entity', 'person', 'company')
             """, (entity,))
-
+            
             row = cursor.fetchone()
             if not row:
-                logger.warning(f"⚠️ Entity page not found: {entity}")
+                conn.close()
                 return
-
-            entity_id, content = row
-
-            # 检查是否已经存在反向链接
-            backlink_pattern = f"Referenced in \\[{mention['title']}\\]"
-            if re.search(backlink_pattern, content):
-                logger.debug(f"🔗 Backlink already exists: {mention['title']}")
-                return
-
-            # 添加反向链接
-            backlink = f"\n\n- Referenced in [{mention['title']}] (#{mention['id']}) -- {summary}"
-
-            # 更新内容
-            updated_content = content + backlink
-
+            
+            page_id = row[0]
+            content = row[1] or ""
+            
+            # 构建反向链接部分
+            backlinks_section = "\n\n## References\n\n"
+            for backlink in backlinks:
+                backlinks_section += f"- Referenced in [[{backlink}]]\n"
+            
+            # 追加到内容
+            if "## References" not in content:
+                new_content = content + backlinks_section
+            else:
+                # 更新现有的 References 部分
+                new_content = content
+            
+            # 更新页面
             cursor.execute("""
                 UPDATE memories
-                SET content = ?,
-                    updated_at = datetime('now')
+                SET content = ?, updated_at = ?
                 WHERE id = ?
-            """, (updated_content, entity_id))
-
+            """, (new_content, datetime.now().isoformat(), page_id))
+            
             conn.commit()
-
-            logger.info(f"✅ Added backlink to '{entity}' from '{mention['title']}'")
-
-        finally:
             conn.close()
-
-    def update_entity_page(self, entity: str, new_info: Dict[str, Any]):
-        """更新实体页面并添加反向链接
-
+            
+        except Exception as e:
+            print(f"Error updating page backlinks section: {e}")
+    
+    def get_backlinks_for_entity(self, entity: str) -> List[Dict[str, Any]]:
+        """
+        获取实体的所有反向链接
+        
         Args:
             entity: 实体名称
-            new_info: 新信息
+        
+        Returns:
+            反向链接列表
         """
-        logger.info(f"🔄 Updating entity page: {entity}")
-
-        # 1. 更新页面
-        self._update_page(entity, new_info)
-
-        # 2. 找到所有提及此实体的其他页面
-        mentions = self.find_mentions(entity)
-
-        # 3. 添加反向链接
-        for mention in mentions:
-            # 跳过自己
-            if mention["title"] == entity:
-                continue
-
-            # 生成摘要
-            summary = self._generate_summary(mention)
-
-            # 添加反向链接
-            self.add_backlink(entity, mention, summary)
-
-        logger.info(f"✅ Entity page '{entity}' updated with {len(mentions)} backlinks")
-
-    def _update_page(self, entity: str, new_info: Dict[str, Any]):
-        """更新页面内容
-
-        Args:
-            entity: 实体名称
-            new_info: 新信息
-        """
-        conn = sqlite3.connect(self.db_path)
-        cursor = conn.cursor()
-
+        backlinks = []
+        
         try:
-            # 检查页面是否存在
+            conn = sqlite3.connect(self.db_path)
+            cursor = conn.cursor()
+            
             cursor.execute("""
-                SELECT id, content
-                FROM memories
-                WHERE title = ?
-                LIMIT 1
+                SELECT cr.source_id, cr.mention_context, cr.created_at,
+                       m.title, m.type
+                FROM cross_references cr
+                LEFT JOIN memories m ON cr.source_id = m.id
+                WHERE cr.target_entity = ?
+                ORDER BY cr.created_at DESC
             """, (entity,))
-
-            row = cursor.fetchone()
-
-            if row:
-                # 更新现有页面
-                entity_id, content = row
-
-                # 添加新信息到Timeline
-                timeline_entry = self._format_timeline_entry(new_info)
-
-                # 检查是否已经有Timeline部分
-                if "## Timeline" in content:
-                    # 追加到Timeline
-                    updated_content = content + "\n" + timeline_entry
-                else:
-                    # 添加Timeline部分
-                    updated_content = content + "\n\n## Timeline\n" + timeline_entry
-
-                cursor.execute("""
-                    UPDATE memories
-                    SET content = ?,
-                        updated_at = datetime('now')
-                    WHERE id = ?
-                """, (updated_content, entity_id))
-
-            else:
-                # 创建新页面
-                content = self._create_entity_page(entity, new_info)
-
-                cursor.execute("""
-                    INSERT INTO memories (type, title, content, category, tags, importance, created_at, updated_at)
-                    VALUES (?, ?, ?, ?, ?, ?, datetime('now'), datetime('now'))
-                """, (
-                    "entity",
-                    entity,
-                    content,
-                    new_info.get("category", "general"),
-                    json.dumps(new_info.get("tags", [])),
-                    new_info.get("importance", 5)
-                ))
-
-            conn.commit()
-
-        finally:
+            
+            for row in cursor.fetchall():
+                backlinks.append({
+                    "source_id": row[0],
+                    "context": row[1],
+                    "created_at": row[2],
+                    "source_title": row[3],
+                    "source_type": row[4]
+                })
+            
             conn.close()
-
-    def _format_timeline_entry(self, info: Dict[str, Any]) -> str:
-        """格式化Timeline条目
-
-        Args:
-            info: 信息字典
-
-        Returns:
-            格式化的Timeline条目
+            
+        except Exception as e:
+            print(f"Error getting backlinks: {e}")
+        
+        return backlinks
+    
+    def scan_all_and_build_cross_references(self) -> Dict[str, Any]:
         """
-        date = info.get("date", "Unknown")
-        event = info.get("event", "No event")
-        source = info.get("source", "Unknown")
-
-        return f"- **{date}** | {event} [来源: {source}]"
-
-    def _create_entity_page(self, entity: str, info: Dict[str, Any]) -> str:
-        """创建实体页面
-
-        Args:
-            entity: 实体名称
-            info: 信息字典
-
+        扫描所有记忆并构建交叉引用
+        
         Returns:
-            页面内容
+            构建结果统计
         """
-        return f"""# {entity}
-
-## Executive Summary
-{info.get("summary", "No summary available")}
-
-## State
-{info.get("state", "No state information")}
-
-## What They Believe
-{info.get("beliefs", "No beliefs information")}
-
-## What They're Building
-{info.get("building", "No building information")}
-
-## Assessment
-{info.get("assessment", "No assessment")}
-
-## Trajectory
-{info.get("trajectory", "No trajectory information")}
-
-## Relationship
-{info.get("relationship", "No relationship information")}
-
-## Contact
-{info.get("contact", "No contact information")}
-
-## Timeline
-{self._format_timeline_entry(info)}
-"""
-
-    def _generate_summary(self, mention: Dict[str, Any]) -> str:
-        """生成摘要
-
-        Args:
-            mention: 提及信息
-
-        Returns:
-            摘要文本
-        """
-        # 简单实现：使用前100个字符
-        content = mention.get("content", "")
-        summary = content[:100] + "..." if len(content) > 100 else content
-        return summary
-
-    def fix_broken_references(self):
-        """修复损坏的引用"""
-        logger.info("🔧 Fixing broken references...")
-
-        conn = sqlite3.connect(self.db_path)
-        cursor = conn.cursor()
-
+        stats = {
+            "pages_scanned": 0,
+            "cross_references_added": 0,
+            "entities_found": set()
+        }
+        
         try:
-            # 获取所有记忆
+            conn = sqlite3.connect(self.db_path)
+            cursor = conn.cursor()
+            
+            # 获取所有实体页面
             cursor.execute("""
-                SELECT id, title, content
-                FROM memories
+                SELECT title FROM memories
+                WHERE type IN ('entity', 'person', 'company', 'concept')
             """)
-
-            all_memories = cursor.fetchall()
-
-            # 检查每个记忆的引用
-            for memory_id, title, content in all_memories:
-                # 提取所有引用
-                references = self._extract_references(content)
-
-                # 检查每个引用是否有效
-                for ref in references:
-                    if not self._reference_exists(ref):
-                        logger.warning(f"⚠️ Broken reference found: {ref} in '{title}'")
-                        # TODO: 修复或删除无效引用
-
-            logger.info("✅ Broken references checked")
-
-        finally:
+            
+            entities = [row[0] for row in cursor.fetchall()]
             conn.close()
-
-    def _extract_references(self, content: str) -> List[str]:
-        """从内容中提取引用
-
-        Args:
-            content: 内容
-
-        Returns:
-            引用列表
-        """
-        # 简单实现：提取所有[xxx]格式的引用
-        pattern = r'\[([^\]]+)\]'
-        matches = re.findall(pattern, content)
-        return matches
-
-    def _reference_exists(self, ref: str) -> bool:
-        """检查引用是否存在
-
-        Args:
-            ref: 引用
-
-        Returns:
-            是否存在
-        """
-        conn = sqlite3.connect(self.db_path)
-        cursor = conn.cursor()
-
-        try:
-            cursor.execute("""
-                SELECT COUNT(*)
-                FROM memories
-                WHERE title = ?
-            """, (ref,))
-
-            count = cursor.fetchone()[0]
-            return count > 0
-
-        finally:
-            conn.close()
-
+            
+            # 为每个实体构建交叉引用
+            for entity in entities:
+                stats["entities_found"].add(entity)
+                result = self.update_entity_page(entity, "")
+                stats["cross_references_added"] += result["backlinks_added"]
+                stats["pages_scanned"] += 1
+            
+            stats["entities_found"] = len(stats["entities_found"])
+            
+        except Exception as e:
+            stats["error"] = str(e)
+        
+        return stats
+    
     def generate_cross_reference_report(self) -> str:
-        """生成交叉引用报告
-
-        Returns:
-            报告内容
-        """
-        logger.info("📝 Generating cross-reference report...")
-
-        conn = sqlite3.connect(self.db_path)
-        cursor = conn.cursor()
-
+        """生成交叉引用报告"""
+        report = "# Cross-Reference Report\n\n"
+        report += f"Generated: {datetime.now().isoformat()}\n\n"
+        
         try:
-            # 获取统计信息
-            cursor.execute("SELECT COUNT(*) FROM memories")
-            total_memories = cursor.fetchone()[0]
-
-            # 获取有反向链接的记忆
+            conn = sqlite3.connect(self.db_path)
+            cursor = conn.cursor()
+            
+            # 统计信息
+            cursor.execute("SELECT COUNT(DISTINCT target_entity) FROM cross_references")
+            unique_entities = cursor.fetchone()[0]
+            
+            cursor.execute("SELECT COUNT(*) FROM cross_references")
+            total_refs = cursor.fetchone()[0]
+            
+            report += "## Statistics\n\n"
+            report += f"- Unique entities referenced: {unique_entities}\n"
+            report += f"- Total cross-references: {total_refs}\n\n"
+            
+            # 最常被引用的实体
             cursor.execute("""
-                SELECT COUNT(*)
-                FROM memories
-                WHERE content LIKE '%Referenced in%'
+                SELECT target_entity, COUNT(*) as ref_count
+                FROM cross_references
+                GROUP BY target_entity
+                ORDER BY ref_count DESC
+                LIMIT 20
             """)
-            memories_with_backlinks = cursor.fetchone()[0]
-
-            report = f"""# Cross-Reference Report
-
-## 📊 统计信息
-
-- 总记忆数: {total_memories}
-- 有反向链接的记忆: {memories_with_backlinks}
-- 反向链接覆盖率: {memories_with_backlinks / total_memories * 100:.1f}%
-
-## 🔗 引用完整性
-
-- 损坏的引用: 0
-- 修复的引用: 0
-
-## 📋 待处理
-
-- 丰富化实体: 0
-- 添加反向链接: 0
-
----
-
-*生成时间: {datetime.now().isoformat()}*
-*版本: v1.0*
-"""
-
-            logger.info("✅ Cross-reference report generated")
-            return report
-
-        finally:
+            
+            report += "## Most Referenced Entities\n\n"
+            for row in cursor.fetchall():
+                report += f"- [[{row[0]}]]: {row[1]} references\n"
+            
             conn.close()
+            
+        except Exception as e:
+            report += f"\n**Error:** {e}\n"
+        
+        return report
 
 
 def main():
     """主函数"""
     import argparse
-
-    parser = argparse.ArgumentParser(description="Erbing Cross-Reference - 交叉引用系统")
-    parser.add_argument(
-        "--db-path",
-        type=str,
-        default=None,
-        help="SQLite数据库路径"
-    )
-    parser.add_argument(
-        "--fix",
-        action="store_true",
-        help="修复损坏的引用"
-    )
-    parser.add_argument(
-        "--report",
-        action="store_true",
-        help="生成交叉引用报告"
-    )
-
+    
+    parser = argparse.ArgumentParser(description="Cross-Reference Back-Links System")
+    parser.add_argument("--build", action="store_true", help="Build all cross-references")
+    parser.add_argument("--entity", type=str, help="Get backlinks for specific entity")
+    parser.add_argument("--report", action="store_true", help="Generate cross-reference report")
+    parser.add_argument("--update", type=str, help="Update entity page with new info")
+    
     args = parser.parse_args()
-
-    # 创建交叉引用实例
-    cross_ref = ErbingCrossReference(db_path=args.db_path)
-
-    # 执行操作
-    if args.fix:
-        cross_ref.fix_broken_references()
+    
+    engine = CrossReferenceEngine()
+    
+    if args.build:
+        print("🔨 Building all cross-references...")
+        stats = engine.scan_all_and_build_cross_references()
+        print(f"✅ Done: {stats}")
+    
+    elif args.entity:
+        print(f"📖 Getting backlinks for: {args.entity}")
+        backlinks = engine.get_backlinks_for_entity(args.entity)
+        print(f"Found {len(backlinks)} backlinks:")
+        for bl in backlinks:
+            print(f"  - [[{bl['source_title']}]] ({bl['created_at']})")
+    
     elif args.report:
-        report = cross_ref.generate_cross_reference_report()
+        report = engine.generate_cross_reference_report()
         print(report)
+    
+    elif args.update:
+        print(f"✏️ Updating entity: {args.update}")
+        result = engine.update_entity_page(args.update, "")
+        print(f"✅ Added {result['backlinks_added']} backlinks")
+    
     else:
-        logger.info("No action specified. Use --fix or --report")
+        parser.print_help()
 
 
 if __name__ == "__main__":
