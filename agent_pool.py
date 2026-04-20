@@ -111,9 +111,12 @@ class AgentPool:
                     tools = []
                     metadata = {}
 
+                # 使用字符串 ID
+                agent_id = str(agent_data.get('id', ''))
+
                 # 创建智能体池条目
                 entry = AgentPoolEntry(
-                    agent_id=agent_data.get('id', ''),
+                    agent_id=agent_id,
                     agent_name=agent_data.get('name', ''),
                     category=agent_data.get('category', ''),
                     description=agent_data.get('description', ''),
@@ -123,7 +126,7 @@ class AgentPool:
                     vibe=agent_data.get('vibe', 'professional'),
                     full_content=agent_data.get('full_content', ''),
                     priority=0,
-                    usage=AgentUsage(agent_id=agent_data.get('id', '')),
+                    usage=AgentUsage(agent_id=agent_id),
                     metadata=metadata,
                 )
 
