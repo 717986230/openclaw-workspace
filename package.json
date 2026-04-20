@@ -1,0 +1,15 @@
+{
+  "name": "erbing-workspace",
+  "version": "1.0.0",
+  "description": "Erbing workspace - neural network integration (brain.js + synaptic)",
+  "main": "lib/brain_integration.js",
+  "scripts": {
+    "train": "node lib/train.js",
+    "demo": "node lib/demo.js",
+    "test": "node lib/demo.js all"
+  },
+  "dependencies": {
+    "brain.js": "1.6.1",
+    "synaptic": "1.1.4"
+  }
+}
