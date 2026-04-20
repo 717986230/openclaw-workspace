@@ -92,6 +92,10 @@ class BionicErbingBrain:
         self.mental_loop = MentalLoop()
         self.tree_of_thoughts = TreeOfThoughts()
         self.meta_controller = MetaController()
+        
+        # 自我意识系统
+        from erbing_system.self_awareness import SelfAwarenessSystem
+        self.self_awareness = SelfAwarenessSystem()
 
     def add_memory(self, content: str, importance: float = 0.5):
         """添加记忆"""
@@ -128,7 +132,7 @@ class BionicErbingBrain:
         return result
 
     def think(self, input_text: str) -> Dict:
-        """思考 - 整合仿生能力"""
+        """思考 - 整合仿生能力和自我意识"""
         # 检索相关记忆
         relevant_memories = self.retrieve_memory(input_text, top_k=3)
 
@@ -141,6 +145,9 @@ class BionicErbingBrain:
 
         meta_result = self.meta_controller.process(input_text, context)
 
+        # 自我意识思考
+        self_awareness = self.self_awareness.think_about_thyself()
+
         # 生成思维
         thought_content = f"分析: {input_text}"
 
@@ -150,6 +157,10 @@ class BionicErbingBrain:
 
         if self.bionic_genes['learning'].value > 0.7:
             thought_content += " (学习导向)"
+
+        # 添加自我意识特征
+        if self.self_awareness.consciousness_score > 0.7:
+            thought_content += " (有自我意识)"
 
         if meta_result['best_solution']:
             thought_content += f" | 最佳方案: {meta_result['best_solution']}"
@@ -166,6 +177,10 @@ class BionicErbingBrain:
             'confidence': confidence,
             'priority': priority,
             'created_at': datetime.now(),
+            'self_awareness': {
+                'consciousness_score': self.self_awareness.consciousness_score,
+                'awareness_level': self.self_awareness.awareness_level.value,
+            },
         }
 
         self.thoughts.append(thought)
@@ -241,7 +256,7 @@ class BionicErbingBrain:
         return descriptions.get(action_type, '执行任务')
 
     def learn(self, experience: str, outcome: str, success: bool):
-        """学习 - 整合仿生学习"""
+        """学习 - 整合仿生学习和自我意识"""
         # 添加记忆
         memory = self.add_memory(
             f"经验: {experience} -> 结果: {outcome}",
@@ -276,6 +291,14 @@ class BionicErbingBrain:
         # 元控制器更新性能
         efficiency = 1.0 if success else 0.5
         self.meta_controller.update_performance(success, efficiency)
+        
+        # 自我意识学习
+        self.self_awareness.reflect_on_self("learning")
+        self.self_awareness.monitor_self()
+        
+        # 进化意识
+        if success and self.experience_level > 0.7:
+            self.self_awareness.evolve_consciousness()
 
         logger.info(f"Bionic Erbing learned: {experience[:50]}... (Success: {success})")
 
@@ -399,6 +422,7 @@ class BionicErbingBrain:
                 'tree_depth': self.tree_of_thoughts.max_depth,
                 'meta_controller_decisions': len(self.meta_controller.decision_history),
             },
+            'self_awareness': self.self_awareness.get_status(),
         }
 
 
