@@ -10,6 +10,13 @@
 
 **所有记忆必须存储在数据库中，严禁使用本地文件记忆！**
 
+## ⚠️ CRITICAL RULE: CHECK EXISTING INTEGRATION FIRST
+
+**在执行任何优化前，必须先检查系统是否已整合！**
+- 避免重复劳动（如 2026-04-17 重复做了 2026-04-16 的整合）
+- 先查询数据库表、检查脚本是否存在
+- 确认功能是否已实现后再行动
+
 ### 记忆系统架构
 ```
 左脑 ← 结构化记忆 ← 事实、事件、偏好
@@ -141,3 +148,18 @@ OpenClaw treats a leading/trailing "HEARTBEAT_OK" as a heartbeat ack (and may di
 Runtime: agent=main | host=DESKTOP-N7J6CNH | os=Windows_NT 10.0.19045 (x64) | node=v22.14.0 | model=nvidia-main/z-ai/glm5 | default_model=nvidia-main/z-ai/glm5 | shell=powershell | channel=feishu | capabilities=none | thinking=off
 
 Reasoning: off (hidden unless on/stream). Toggle /reasoning; /status shows Reasoning when enabled.
+
+## Promoted From Short-Term Memory (2026-04-17)
+
+<!-- openclaw-memory-promotion:memory:memory/2026-04-13.md:229:277 -->
+- ✓ should generate UUID when custom ID is not provided ✓ should reject duplicate custom IDs ✓ should allow multiple jobs with different custom IDs ✓ should support slug-like custom IDs with hyphens and underscores Test Files 1 passed (1) Tests 5 passed (5) ``` ## OpenClaw Contribution Statistics ### Overall Statistics - **Total PRs**: 2 - **Total Issues Resolved**: 2 (#65636, #65312) - **Total Files Modified**: 16 - **Total Code Changes**: +499, -4 - **Total Commits**: 5 ### PR #65669 - Custom Cron Job IDs - **Status**: OPEN - **Link**: https://github.com/openclaw/openclaw/pull/65669 - **Issue**: #65636 - **Labels**: cli, gateway, app: web-ui, size: M - **Commits**: 2 - **Files Modified**: 7 - **Code Changes**: +447, -4 - **Test Coverage**: 5 tests, all passing ### PR #65675 - Avatar 2MB Limit Documentation - **Status**: OPEN - **Link**: https://github.com/openclaw/openclaw/pull/65675 - **Issue**: #65312 - **Labels**: docs, cli, gateway, app: web-ui - **Commits**: 3 - **Files Modified**: 9 - **Code Changes**: +52, 0 - **Type**: Documentation only ## Virtual World Training Progress ### Current Session - Session: lucky-seaslug - Status: Running autonomously 24/7 - Knowledge items: 56,949+ - Experiences: 294,674+ - Knowledge domains: 15 (LLM, Hacker, Dark Web, GitNexus, Advanced AI, Advanced Coding, Advanced Security, Advanced Data, etc.) ### Knowledge Domains Added 1. LLM Knowledge (22 items): Transformer, GPT, Claude, Gemini, Llama, Mistral, Qwen, DeepSeek, training methods, inference optimization [score=0.800 recalls=5 avg=0.625 source=memory/2026-04-13.md:229-277]
+
+## Promoted From Short-Term Memory (2026-04-18)
+
+<!-- openclaw-memory-promotion:memory:memory/2026-04-13.md:62:106 -->
+- - Training in virtual world IS evolution - no need to train gemma2b separately - Knowledge-first learning through database, not actual dark web access (safety) - Continuous 24/7 operation with checkpoint saves every 10 episodes - Transparent learning: all knowledge visible via display scripts ## ClawHub Skills Published ### agent-caller v1.0.3 - Renamed from agency-agents-caller (shortened to one word) - Skill ID: k97arxj0epm20qtsxth28we8r584s2be - URL: https://clawhub.com/skills/agent-caller - Fixed JSON syntax error in package.json - All validations passed ### memory-complete v4.0.0 - Renamed from memory (slug conflict resolved) - Skill ID: k975yh7xgdgrez1y9qke3yr14h84rz85 - URL: https://clawhub.com/skills/memory-complete - Complete memory system with dual-brain architecture (SQLite + LanceDB) ## Database Security ### Git Sanitization - Added *.db, *.sqlite, *.db-journal to .gitignore - Removed 7 database files from Git tracking - Database files excluded from Git for security and size reasons ### Memory System - SQLite database: `memory/database/xiaozhi_memory.db` (268 memories) - LanceDB: `memory/database/lancedb` (1 file) - Both databases accessible and healthy ## Key Decisions ### Virtual World as Evolution - Training in virtual world IS evolution - No need to train gemma2b model separately - Erbing learns through knowledge database ### Knowledge-First Learning - All knowledge added to virtual world database - No actual dark web access (educational purposes only) - GitNexus concepts applied to Erbing itself ### Continuous Training [score=0.854 recalls=5 avg=0.642 source=memory/2026-04-13.md:62-106]
+
+## Promoted From Short-Term Memory (2026-04-20)
+
+<!-- openclaw-memory-promotion:memory:memory/2026-04-13.md:97:143 -->
+- - Training in virtual world IS evolution - No need to train gemma2b model separately - Erbing learns through knowledge database ### Knowledge-First Learning - All knowledge added to virtual world database - No actual dark web access (educational purposes only) - GitNexus concepts applied to Erbing itself ### Continuous Training - System runs 24/7 autonomously - Auto-saves checkpoints every 10 episodes - Logs progress continuously ## Next Steps 1. Monitor OpenClaw PR #65669 for code review feedback 2. Continue monitoring Erbing's autonomous training progress 3. Look for more OpenClaw issues to contribute to 4. Explore additional contribution opportunities ## Documentation Created - `OPENCLAW_CONTRIBUTION_REPORT.md` - Detailed contribution report - `pr_body.md` - PR description - `CLAWHUB_PUBLISH_REPORT.md` - ClawHub publishing process - `GITNEXUS_APPLY_TO_ERBING.md` - GitNexus integration report - `ERBING_EVOLUTION_SUMMARY.md` - Evolution summary --- **Date**: 2026-04-13 **Contributor**: Erbing **Status**: Active contribution to OpenClaw project # Memory Log - 2026-04-13 ## OpenClaw Contribution - Custom Cron Job IDs ### Achievement - Successfully created first OpenClaw contribution: PR #65669 - Resolved issue #65636: Support custom job IDs in cron add command - Forked openclaw/openclaw repository - Created feature branch: feature/cron-add-custom-id ### Implementation Details - Added `--id` flag to `openclaw cron add` command - Validation: slug-like strings (lowercase alphanumeric, hyphens, underscores, 2-100 chars) [score=0.853 recalls=5 avg=0.611 source=memory/2026-04-13.md:97-143]

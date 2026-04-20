@@ -17,6 +17,7 @@ import MetaTrader5 as mt5
 import pandas as pd
 import numpy as np
 from concurrent.futures import ThreadPoolExecutor, as_completed
+from config import MT5_CONFIG, ORDER_CONFIG, SYMBOLS_CONFIG
 
 # 配置日志
 logging.basicConfig(
@@ -28,6 +29,16 @@ logging.basicConfig(
     ]
 )
 logger = logging.getLogger(__name__)
+
+TIMEFRAME_MAP = {
+    'M1': mt5.TIMEFRAME_M1,
+    'M5': mt5.TIMEFRAME_M5,
+    'M15': mt5.TIMEFRAME_M15,
+    'M30': mt5.TIMEFRAME_M30,
+    'H1': mt5.TIMEFRAME_H1,
+    'H4': mt5.TIMEFRAME_H4,
+    'D1': mt5.TIMEFRAME_D1,
+}
 
 
 class SignalType(Enum):
@@ -97,7 +108,12 @@ class MT5DataCollector:
     def connect(self) -> bool:
         """连接到 MT5"""
         try:
-            if not mt5.initialize():
+            if not mt5.initialize(
+                path=MT5_CONFIG.get('path'),
+                login=MT5_CONFIG.get('login'),
+                password=MT5_CONFIG.get('password'),
+                server=MT5_CONFIG.get('server'),
+            ):
                 logger.error(f"MT5 初始化失败: {mt5.last_error()}")
                 return False
 
@@ -488,6 +504,12 @@ class OrderExecutor:
         """初始化订单执行器"""
         self.order_timeout = 30  # 订单超时时间（秒）
 
+        self.order_timeout = ORDER_CONFIG.get('timeout', self.order_timeout)
+        self.dry_run = bool(ORDER_CONFIG.get('dry_run', True))
+        self.slippage = ORDER_CONFIG.get('slippage', 20)
+        self.magic_number = ORDER_CONFIG.get('magic_number', 123456)
+        self.comment = ORDER_CONFIG.get('comment', 'MT5 system')
+
     def execute_order(self, signal: TradingSignal, order_type: OrderType = OrderType.MARKET) -> Optional[Dict]:
         """执行订单"""
         try:
@@ -508,16 +530,36 @@ class OrderExecutor:
                 "price": price,
                 "sl": signal.stop_loss,
                 "tp": signal.take_profit,
-                "deviation": 20,
-                "magic": 123456,
+                "deviation": self.slippage,
+                "magic": self.magic_number,
                 "comment": f"MT5 顶配系统 - {signal.reason}",
                 "type_time": mt5.ORDER_TIME_GTC,
                 "type_filling": mt5.ORDER_FILLING_IOC,
             }
 
             # 发送订单
+            if self.dry_run:
+                logger.info(f"DRY RUN: would close position: {request}")
+                return True
+
             result = mt5.order_send(request)
 
+            if self.dry_run:
+                logger.info(f"DRY RUN: would send order: {request}")
+                return {
+                    'ticket': 'DRY-RUN',
+                    'symbol': signal.symbol,
+                    'type': signal.signal_type.value,
+                    'volume': signal.position_size,
+                    'price': price,
+                    'sl': signal.stop_loss,
+                    'tp': signal.take_profit,
+                    'time': datetime.now(),
+                    'dry_run': True,
+                    'request': request,
+                }
+
+            result = mt5.order_send(request)
             if result.retcode != mt5.TRADE_RETCODE_DONE:
                 logger.error(f"订单执行失败: {result.retcode} - {result.comment}")
                 return None
@@ -563,8 +605,8 @@ class OrderExecutor:
                 "type": trade_type,
                 "position": ticket,
                 "price": price,
-                "deviation": 20,
-                "magic": 123456,
+                "deviation": self.slippage,
+                "magic": self.magic_number,
                 "comment": "MT5 顶配系统 - 平仓",
                 "type_time": mt5.ORDER_TIME_GTC,
                 "type_filling": mt5.ORDER_FILLING_IOC,
@@ -584,6 +626,140 @@ class OrderExecutor:
             return False
 
 
+class SafeOrderExecutor:
+    """Order executor with an explicit dry-run guard."""
+
+    def __init__(self):
+        self.order_timeout = ORDER_CONFIG.get('timeout', 30)
+        self.dry_run = bool(ORDER_CONFIG.get('dry_run', True))
+        self.slippage = ORDER_CONFIG.get('slippage', 20)
+        self.magic_number = ORDER_CONFIG.get('magic_number', 123456)
+        self.comment = ORDER_CONFIG.get('comment', 'MT5 system')
+
+    def execute_order(self, signal: TradingSignal, order_type: OrderType = OrderType.MARKET) -> Optional[Dict]:
+        try:
+            tick = mt5.symbol_info_tick(signal.symbol)
+            if tick is None:
+                logger.error(f"No tick data for {signal.symbol}")
+                return None
+
+            if signal.signal_type == SignalType.BUY:
+                trade_type = mt5.ORDER_TYPE_BUY
+                price = tick.ask
+            else:
+                trade_type = mt5.ORDER_TYPE_SELL
+                price = tick.bid
+
+            if price <= 0:
+                logger.warning(f"Skip {signal.symbol}: invalid trade price {price}")
+                return None
+
+            if signal.position_size <= 0:
+                logger.warning(f"Skip {signal.symbol}: invalid position size {signal.position_size}")
+                return None
+
+            request = {
+                "action": mt5.TRADE_ACTION_DEAL,
+                "symbol": signal.symbol,
+                "volume": signal.position_size,
+                "type": trade_type,
+                "price": price,
+                "sl": signal.stop_loss,
+                "tp": signal.take_profit,
+                "deviation": self.slippage,
+                "magic": self.magic_number,
+                "comment": f"{self.comment} - {signal.reason}",
+                "type_time": mt5.ORDER_TIME_GTC,
+                "type_filling": mt5.ORDER_FILLING_IOC,
+            }
+
+            if self.dry_run:
+                logger.info(f"DRY RUN: would send order: {request}")
+                return {
+                    'ticket': 'DRY-RUN',
+                    'symbol': signal.symbol,
+                    'type': signal.signal_type.value,
+                    'volume': signal.position_size,
+                    'price': price,
+                    'sl': signal.stop_loss,
+                    'tp': signal.take_profit,
+                    'time': datetime.now(),
+                    'dry_run': True,
+                    'request': request,
+                }
+
+            result = mt5.order_send(request)
+            if result.retcode != mt5.TRADE_RETCODE_DONE:
+                logger.error(f"Order failed: {result.retcode} - {result.comment}")
+                return None
+
+            logger.info(f"Order sent: {signal.symbol} {signal.signal_type.value} @ {price}")
+            return {
+                'ticket': result.order,
+                'symbol': signal.symbol,
+                'type': signal.signal_type.value,
+                'volume': signal.position_size,
+                'price': price,
+                'sl': signal.stop_loss,
+                'tp': signal.take_profit,
+                'time': datetime.now()
+            }
+
+        except Exception as e:
+            logger.error(f"Order exception: {e}")
+            return None
+
+    def close_position(self, ticket: int) -> bool:
+        try:
+            position = mt5.positions_get(ticket=ticket)
+            if not position:
+                logger.error(f"Position not found: {ticket}")
+                return False
+
+            pos = position[0]
+            tick = mt5.symbol_info_tick(pos.symbol)
+            if tick is None:
+                logger.error(f"No tick data for {pos.symbol}")
+                return False
+
+            if pos.type == mt5.POSITION_TYPE_BUY:
+                trade_type = mt5.ORDER_TYPE_SELL
+                price = tick.bid
+            else:
+                trade_type = mt5.ORDER_TYPE_BUY
+                price = tick.ask
+
+            request = {
+                "action": mt5.TRADE_ACTION_DEAL,
+                "symbol": pos.symbol,
+                "volume": pos.volume,
+                "type": trade_type,
+                "position": ticket,
+                "price": price,
+                "deviation": self.slippage,
+                "magic": self.magic_number,
+                "comment": f"{self.comment} - close",
+                "type_time": mt5.ORDER_TIME_GTC,
+                "type_filling": mt5.ORDER_FILLING_IOC,
+            }
+
+            if self.dry_run:
+                logger.info(f"DRY RUN: would close position: {request}")
+                return True
+
+            result = mt5.order_send(request)
+            if result.retcode != mt5.TRADE_RETCODE_DONE:
+                logger.error(f"Close failed: {result.retcode} - {result.comment}")
+                return False
+
+            logger.info(f"Position closed: {ticket}")
+            return True
+
+        except Exception as e:
+            logger.error(f"Close exception: {e}")
+            return False
+
+
 class MT5TopTierSystem:
     """MT5 顶配盯盘系统"""
 
@@ -596,7 +772,8 @@ class MT5TopTierSystem:
         self.data_collector = MT5DataCollector()
         self.signal_generator = SignalGenerator(risk_metrics)
         self.risk_manager = RiskManager(risk_metrics)
-        self.order_executor = OrderExecutor()
+        self.order_executor = SafeOrderExecutor()
+        self.timeframes = SYMBOLS_CONFIG.get('timeframes', {})
 
         # 系统状态
         self.running = False
@@ -647,7 +824,9 @@ class MT5TopTierSystem:
                 for symbol in self.symbols:
                     try:
                         # 获取历史数据
-                        df = self.data_collector.get_rates(symbol, mt5.TIMEFRAME_H1, 100)
+                        timeframe_name = self.timeframes.get(symbol, 'H1')
+                        timeframe = TIMEFRAME_MAP.get(timeframe_name, mt5.TIMEFRAME_H1)
+                        df = self.data_collector.get_rates(symbol, timeframe, 100)
                         if df.empty:
                             continue
 

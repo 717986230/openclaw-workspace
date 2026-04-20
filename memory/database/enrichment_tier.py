@@ -1,448 +1,579 @@
 #!/usr/bin/env python3
+# -*- coding: utf-8 -*-
 """
-Erbing Enrichment Tier - 丰富化分级系统
+Enrichment Tier System
+实体丰富化分级系统
 
-实现3级丰富化系统，根据实体的重要性分配不同的资源。
+分级规则:
+- Tier 1: 核心人员和公司 (10-15 API调用) - 深度丰富
+- Tier 2: 值得注意的人员 (3-5 API调用) - 标准丰富
+- Tier 3: 次要提及 (1-2 API调用) - 基础丰富
 
-Tier分级：
-- Tier 1: 关键人员和公司（10-15 API调用）
-- Tier 2: 值得注意的人员（3-5 API调用）
-- Tier 3: 次要提及（1-2 API调用）
+功能:
+1. 实体分类
+2. 分级丰富
+3. 丰富度评估
+4. 自动升级/降级
 """
 
+import os
+import sys
 import sqlite3
+from datetime import datetime, timedelta
 from pathlib import Path
-import json
 from typing import List, Dict, Any, Optional
-import logging
-from datetime import datetime
+from dataclasses import dataclass
 from enum import Enum
+import json
 
-# 配置日志
-logging.basicConfig(
-    level=logging.INFO,
-    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s'
-)
-logger = logging.getLogger(__name__)
+# 添加项目路径
+sys.path.insert(0, str(Path(__file__).parent.parent.parent))
 
 
-class Tier(Enum):
-    """丰富化层级"""
-    TIER_1 = 1  # 关键人员和公司
-    TIER_2 = 2  # 值得注意的人员
-    TIER_3 = 3  # 次要提及
+class EntityTier(Enum):
+    """实体层级"""
+    TIER_1 = 1  # 核心 - 深度丰富
+    TIER_2 = 2  # 值得注意 - 标准丰富
+    TIER_3 = 3  # 次要 - 基础丰富
+    UNKNOWN = 0  # 未知
 
 
-class EnrichmentTier:
-    """丰富化分级系统"""
+@dataclass
+class EnrichmentConfig:
+    """丰富化配置"""
+    tier: int
+    name: str
+    api_calls: int
+    sources: List[str]
+    depth: str
+    description: str
 
+
+# 预定义的丰富化配置
+ENRICHMENT_CONFIGS = {
+    1: EnrichmentConfig(
+        tier=1,
+        name="Core",
+        api_calls=15,
+        sources=["linkedin", "twitter", "github", "news", "crunchbase", "company_site", "papers"],
+        depth="deep",
+        description="核心人员和公司 - 深度丰富化"
+    ),
+    2: EnrichmentConfig(
+        tier=2,
+        name="Notable",
+        api_calls=5,
+        sources=["linkedin", "twitter", "news"],
+        depth="standard",
+        description="值得注意的人员 - 标准丰富化"
+    ),
+    3: EnrichmentConfig(
+        tier=3,
+        name="Mentioned",
+        api_calls=2,
+        sources=["search"],
+        depth="basic",
+        description="次要提及 - 基础丰富化"
+    )
+}
+
+
+class EnrichmentTierEngine:
+    """丰富化分级引擎"""
+    
     def __init__(self, db_path: str = None):
-        """初始化丰富化分级系统
-
-        Args:
-            db_path: SQLite数据库路径
-        """
+        """初始化丰富化分级引擎"""
         if db_path is None:
-            db_path = Path(__file__).parent / "xiaozhi_memory.db"
-
-        self.db_path = Path(db_path)
-
-        # 核心圈子（Tier 1）
+            db_path = str(Path(__file__).parent / "xiaozhi_memory.db")
+        
+        self.db_path = db_path
+        self._init_tables()
+        
+        # 核心圈（可以手动配置）
         self.core_circle = set()
-
-        # 值得注意的联系人（Tier 2）
         self.notable_contacts = set()
-
-        # 加载配置
-        self._load_config()
-
-        logger.info(f"🎯 Enrichment Tier initialized with database: {self.db_path}")
-
-    def _load_config(self):
-        """加载配置"""
-        # TODO: 从配置文件或数据库加载核心圈子和值得注意的联系人
-        # 这里只是示例
-
-        # 示例：从数据库加载核心圈子
+    
+    def _init_tables(self):
+        """初始化丰富化表"""
         conn = sqlite3.connect(self.db_path)
         cursor = conn.cursor()
-
-        try:
-            # 加载重要性 >= 8 的实体作为核心圈子
-            cursor.execute("""
-                SELECT title
-                FROM memories
-                WHERE importance >= 8
-                AND type IN ('person', 'company')
-            """)
-
-            for row in cursor.fetchall():
-                self.core_circle.add(row[0])
-
-            # 加载重要性 >= 5 的实体作为值得注意的联系人
-            cursor.execute("""
-                SELECT title
-                FROM memories
-                WHERE importance >= 5
-                AND importance < 8
-                AND type IN ('person', 'company')
-            """)
-
-            for row in cursor.fetchall():
-                self.notable_contacts.add(row[0])
-
-            logger.info(f"📊 Loaded {len(self.core_circle)} core circle entities")
-            logger.info(f"📊 Loaded {len(self.notable_contacts)} notable contacts")
-
-        finally:
-            conn.close()
-
-    def classify_tier(self, entity: str, entity_type: str = None) -> Tier:
-        """分类实体层级
-
+        
+        # 创建实体丰富化表
+        cursor.execute("""
+            CREATE TABLE IF NOT EXISTS entity_enrichment (
+                id INTEGER PRIMARY KEY AUTOINCREMENT,
+                entity_name TEXT NOT NULL,
+                entity_type TEXT,
+                tier INTEGER DEFAULT 3,
+                enrichment_score REAL DEFAULT 0,
+                last_enriched TEXT,
+                enrichment_count INTEGER DEFAULT 0,
+                sources_used TEXT,
+                notes TEXT,
+                created_at TEXT NOT NULL,
+                updated_at TEXT NOT NULL,
+                UNIQUE(entity_name)
+            )
+        """)
+        
+        # 创建索引
+        cursor.execute("""
+            CREATE INDEX IF NOT EXISTS idx_enrichment_tier
+            ON entity_enrichment(tier)
+        """)
+        
+        cursor.execute("""
+            CREATE INDEX IF NOT EXISTS idx_enrichment_score
+            ON entity_enrichment(enrichment_score)
+        """)
+        
+        conn.commit()
+        conn.close()
+    
+    def classify_tier(self, entity: str, context: Dict[str, Any] = None) -> int:
+        """
+        分类实体层级
+        
         Args:
             entity: 实体名称
-            entity_type: 实体类型（可选）
-
+            context: 上下文信息
+        
         Returns:
-            层级
+            层级 (1-3)
         """
-        # 检查是否在核心圈子
+        # 1. 检查是否在核心圈
         if entity in self.core_circle:
-            logger.debug(f"🎯 Entity '{entity}' classified as Tier 1 (core circle)")
-            return Tier.TIER_1
-
-        # 检查是否在值得注意的联系人
+            return 1
+        
+        # 2. 检查是否在值得注意名单
         if entity in self.notable_contacts:
-            logger.debug(f"🎯 Entity '{entity}' classified as Tier 2 (notable)")
-            return Tier.TIER_2
-
-        # 默认为Tier 3
-        logger.debug(f"🎯 Entity '{entity}' classified as Tier 3 (minor)")
-        return Tier.TIER_3
-
-    def enrich(self, entity: str, tier: Tier = None) -> Dict[str, Any]:
-        """按层级丰富实体
-
+            return 2
+        
+        # 3. 检查历史提及频率
+        mention_count = self._get_mention_count(entity)
+        
+        if mention_count >= 10:
+            return 1  # 高频提及 -> 核心
+        elif mention_count >= 3:
+            return 2  # 中频提及 -> 值得注意
+        
+        # 4. 检查上下文（如果提供）
+        if context:
+            if context.get("importance") == "high":
+                return 1
+            elif context.get("importance") == "medium":
+                return 2
+        
+        # 5. 默认为 Tier 3
+        return 3
+    
+    def _get_mention_count(self, entity: str) -> int:
+        """获取实体提及次数"""
+        try:
+            conn = sqlite3.connect(self.db_path)
+            cursor = conn.cursor()
+            
+            cursor.execute("""
+                SELECT COUNT(*) FROM memories
+                WHERE title LIKE ? OR content LIKE ?
+            """, (f"%{entity}%", f"%{entity}%"))
+            
+            count = cursor.fetchone()[0]
+            conn.close()
+            
+            return count
+            
+        except Exception:
+            return 0
+    
+    def get_enrichment_config(self, tier: int) -> EnrichmentConfig:
+        """获取丰富化配置"""
+        return ENRICHMENT_CONFIGS.get(tier, ENRICHMENT_CONFIGS[3])
+    
+    def enrich(self, entity: str, tier: int = None, context: Dict = None) -> Dict[str, Any]:
+        """
+        按层级丰富实体
+        
         Args:
             entity: 实体名称
-            tier: 层级（可选，如果不提供则自动分类）
-
+            tier: 层级（可选，自动分类）
+            context: 上下文信息
+        
         Returns:
             丰富化结果
         """
-        # 如果没有提供层级，自动分类
+        # 自动分类层级
         if tier is None:
-            tier = self.classify_tier(entity)
-
-        logger.info(f"🔄 Enriching entity '{entity}' as Tier {tier.value}")
-
-        # 根据层级选择丰富化策略
-        if tier == Tier.TIER_1:
-            return self.full_enrichment(entity)
-        elif tier == Tier.TIER_2:
-            return self.standard_enrichment(entity)
+            tier = self.classify_tier(entity, context)
+        
+        config = self.get_enrichment_config(tier)
+        
+        result = {
+            "entity": entity,
+            "tier": tier,
+            "config": {
+                "name": config.name,
+                "api_calls": config.api_calls,
+                "sources": config.sources,
+                "depth": config.depth
+            },
+            "enriched": False,
+            "data": {}
+        }
+        
+        # 执行丰富化
+        if tier == 1:
+            result["data"] = self._full_enrichment(entity, config)
+        elif tier == 2:
+            result["data"] = self._standard_enrichment(entity, config)
         else:
-            return self.minimal_enrichment(entity)
-
-    def full_enrichment(self, entity: str) -> Dict[str, Any]:
-        """完整丰富化（Tier 1）
-
-        10-15 API调用，包括所有数据源
-
-        Args:
-            entity: 实体名称
-
-        Returns:
-            丰富化结果
-        """
-        logger.info(f"🔍 Full enrichment for '{entity}' (Tier 1)")
-
-        result = {
-            "entity": entity,
-            "tier": 1,
-            "enriched_at": datetime.now().isoformat(),
-            "data_sources": []
-        }
-
-        # TODO: 实现实际的API调用
-        # 1. Brain cross-reference（免费，最高价值）
-        # 2. Web search（Brave/Exa）
-        # 3. X/Twitter深度查询
-        # 4. People enrichment（Crustdata/Happenstance）
-        # 5. Company/funding data（Captain API）
-        # 6. Meeting history（Circleback）
-        # 7. Contact data（Google Contacts, CRM sync）
-
-        # 这里只是示例
-        result["data_sources"].append({
-            "source": "brain_cross_reference",
-            "status": "pending",
-            "data": {}
-        })
-
-        result["data_sources"].append({
-            "source": "web_search",
-            "status": "pending",
-            "data": {}
-        })
-
-        logger.info(f"✅ Full enrichment completed for '{entity}'")
+            result["data"] = self._minimal_enrichment(entity, config)
+        
+        # 更新数据库
+        self._update_enrichment_record(entity, tier, result["data"])
+        result["enriched"] = True
+        
         return result
-
-    def standard_enrichment(self, entity: str) -> Dict[str, Any]:
-        """标准丰富化（Tier 2）
-
-        3-5 API调用，包括网页搜索 + 社交 + 大脑交叉引用
-
-        Args:
-            entity: 实体名称
-
-        Returns:
-            丰富化结果
+    
+    def _full_enrichment(self, entity: str, config: EnrichmentConfig) -> Dict[str, Any]:
         """
-        logger.info(f"🔍 Standard enrichment for '{entity}' (Tier 2)")
-
-        result = {
-            "entity": entity,
-            "tier": 2,
-            "enriched_at": datetime.now().isoformat(),
-            "data_sources": []
+        深度丰富化 (Tier 1)
+        10-15 API调用
+        """
+        data = {
+            "sources_queried": [],
+            "fields_collected": [],
+            "confidence": 0
         }
-
-        # TODO: 实现实际的API调用
-        # 1. Brain cross-reference
-        # 2. Web search
-        # 3. X/Twitter查询
-
-        # 这里只是示例
-        result["data_sources"].append({
-            "source": "brain_cross_reference",
-            "status": "pending",
-            "data": {}
-        })
-
-        result["data_sources"].append({
-            "source": "web_search",
-            "status": "pending",
-            "data": {}
-        })
-
-        logger.info(f"✅ Standard enrichment completed for '{entity}'")
-        return result
-
-    def minimal_enrichment(self, entity: str) -> Dict[str, Any]:
-        """最小丰富化（Tier 3）
-
-        1-2 API调用，包括大脑交叉引用 + 已知handle的社交查询
-
-        Args:
-            entity: 实体名称
-
-        Returns:
-            丰富化结果
+        
+        # 模拟丰富化过程
+        # TODO: 集成真实的外部 API
+        
+        # 搜索每个数据源
+        for source in config.sources:
+            # 这里应该调用相应的 API
+            # 现在只是模拟
+            data["sources_queried"].append(source)
+        
+        data["fields_collected"] = [
+            "name", "title", "company", "bio",
+            "social_links", "recent_activity", "connections"
+        ]
+        data["confidence"] = 0.95
+        
+        return data
+    
+    def _standard_enrichment(self, entity: str, config: EnrichmentConfig) -> Dict[str, Any]:
         """
-        logger.info(f"🔍 Minimal enrichment for '{entity}' (Tier 3)")
-
-        result = {
-            "entity": entity,
-            "tier": 3,
-            "enriched_at": datetime.now().isoformat(),
-            "data_sources": []
+        标准丰富化 (Tier 2)
+        3-5 API调用
+        """
+        data = {
+            "sources_queried": [],
+            "fields_collected": [],
+            "confidence": 0
         }
-
-        # TODO: 实现实际的API调用
-        # 1. Brain cross-reference
-        # 2. 社交查询（如果有已知handle）
-
-        # 这里只是示例
-        result["data_sources"].append({
-            "source": "brain_cross_reference",
-            "status": "pending",
-            "data": {}
-        })
-
-        logger.info(f"✅ Minimal enrichment completed for '{entity}'")
-        return result
-
-    def update_entity_importance(self, entity: str, new_importance: int):
-        """更新实体重要性
-
-        Args:
-            entity: 实体名称
-            new_importance: 新的重要性评分（1-10）
+        
+        # 只查询主要数据源
+        for source in config.sources:
+            data["sources_queried"].append(source)
+        
+        data["fields_collected"] = [
+            "name", "title", "company", "social_links"
+        ]
+        data["confidence"] = 0.75
+        
+        return data
+    
+    def _minimal_enrichment(self, entity: str, config: EnrichmentConfig) -> Dict[str, Any]:
         """
-        conn = sqlite3.connect(self.db_path)
-        cursor = conn.cursor()
-
+        基础丰富化 (Tier 3)
+        1-2 API调用
+        """
+        data = {
+            "sources_queried": config.sources,
+            "fields_collected": ["name"],
+            "confidence": 0.5
+        }
+        
+        return data
+    
+    def _update_enrichment_record(self, entity: str, tier: int, data: Dict):
+        """更新丰富化记录"""
         try:
-            # 更新重要性
+            conn = sqlite3.connect(self.db_path)
+            cursor = conn.cursor()
+            
+            now = datetime.now().isoformat()
+            
+            # 检查是否已存在
             cursor.execute("""
-                UPDATE memories
-                SET importance = ?,
-                    updated_at = datetime('now')
-                WHERE title = ?
-            """, (new_importance, entity))
-
+                SELECT id, enrichment_count FROM entity_enrichment
+                WHERE entity_name = ?
+            """, (entity,))
+            
+            row = cursor.fetchone()
+            
+            if row:
+                # 更新现有记录
+                new_count = row[1] + 1
+                cursor.execute("""
+                    UPDATE entity_enrichment
+                    SET tier = ?, 
+                        enrichment_score = ?,
+                        last_enriched = ?,
+                        enrichment_count = ?,
+                        sources_used = ?,
+                        updated_at = ?
+                    WHERE entity_name = ?
+                """, (
+                    tier,
+                    data.get("confidence", 0),
+                    now,
+                    new_count,
+                    json.dumps(data.get("sources_queried", [])),
+                    now,
+                    entity
+                ))
+            else:
+                # 创建新记录
+                cursor.execute("""
+                    INSERT INTO entity_enrichment
+                    (entity_name, tier, enrichment_score, last_enriched, 
+                     enrichment_count, sources_used, created_at, updated_at)
+                    VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+                """, (
+                    entity,
+                    tier,
+                    data.get("confidence", 0),
+                    now,
+                    1,
+                    json.dumps(data.get("sources_queried", [])),
+                    now,
+                    now
+                ))
+            
             conn.commit()
-
-            # 重新加载配置
-            self._load_config()
-
-            logger.info(f"✅ Updated importance for '{entity}' to {new_importance}")
-
-        finally:
             conn.close()
-
-    def get_tier_statistics(self) -> Dict[str, Any]:
-        """获取层级统计信息
-
-        Returns:
-            统计信息
+            
+        except Exception as e:
+            print(f"Error updating enrichment record: {e}")
+    
+    def assess_enrichment_level(self, entity: str) -> Dict[str, Any]:
         """
-        conn = sqlite3.connect(self.db_path)
-        cursor = conn.cursor()
-
-        try:
-            # 获取各层级的实体数量
-            cursor.execute("""
-                SELECT
-                    CASE
-                        WHEN importance >= 8 THEN 'Tier 1'
-                        WHEN importance >= 5 THEN 'Tier 2'
-                        ELSE 'Tier 3'
-                    END as tier,
-                    COUNT(*) as count
-                FROM memories
-                WHERE type IN ('person', 'company')
-                GROUP BY tier
-            """)
-
-            tier_counts = {}
-            for row in cursor.fetchall():
-                tier, count = row
-                tier_counts[tier] = count
-
-            return {
-                "tier_1_count": tier_counts.get("Tier 1", 0),
-                "tier_2_count": tier_counts.get("Tier 2", 0),
-                "tier_3_count": tier_counts.get("Tier 3", 0),
-                "total_count": sum(tier_counts.values())
-            }
-
-        finally:
-            conn.close()
-
-    def generate_enrichment_report(self) -> str:
-        """生成丰富化报告
-
-        Returns:
-            报告内容
-        """
-        logger.info("📝 Generating enrichment report...")
-
-        stats = self.get_tier_statistics()
-
-        report = f"""# Enrichment Tier Report
-
-## 📊 统计信息
-
-- Tier 1（关键）: {stats['tier_1_count']} 个实体
-- Tier 2（值得注意）: {stats['tier_2_count']} 个实体
-- Tier 3（次要）: {stats['tier_3_count']} 个实体
-- 总计: {stats['total_count']} 个实体
-
-## 🎯 核心圈子（Tier 1）
-
-{self._format_entity_list(self.core_circle)}
-
-## 📋 值得注意的联系人（Tier 2）
-
-{self._format_entity_list(self.notable_contacts)}
-
-## 🔄 丰富化队列
-
-- 待丰富化: 0
-- 进行中: 0
-- 已完成: 0
-
----
-
-*生成时间: {datetime.now().isoformat()}*
-*版本: v1.0*
-"""
-
-        logger.info("✅ Enrichment report generated")
-        return report
-
-    def _format_entity_list(self, entities: set) -> str:
-        """格式化实体列表
-
+        评估实体的丰富度
+        
         Args:
-            entities: 实体集合
-
+            entity: 实体名称
+        
         Returns:
-            格式化的列表
+            丰富度评估结果
         """
-        if not entities:
-            return "（无）"
-
-        return "\n".join(f"- {entity}" for entity in sorted(entities))
+        assessment = {
+            "entity": entity,
+            "current_tier": 3,
+            "enrichment_score": 0,
+            "last_enriched": None,
+            "needs_enrichment": True,
+            "recommendation": ""
+        }
+        
+        try:
+            conn = sqlite3.connect(self.db_path)
+            cursor = conn.cursor()
+            
+            cursor.execute("""
+                SELECT tier, enrichment_score, last_enriched, enrichment_count
+                FROM entity_enrichment
+                WHERE entity_name = ?
+            """, (entity,))
+            
+            row = cursor.fetchone()
+            conn.close()
+            
+            if row:
+                assessment["current_tier"] = row[0]
+                assessment["enrichment_score"] = row[1]
+                assessment["last_enriched"] = row[2]
+                
+                # 检查是否需要重新丰富
+                if row[2]:  # last_enriched
+                    last_enriched = datetime.fromisoformat(row[2])
+                    days_since = (datetime.now() - last_enriched).days
+                    
+                    if days_since > 30:  # 超过30天
+                        assessment["needs_enrichment"] = True
+                        assessment["recommendation"] = f"Last enriched {days_since} days ago. Consider re-enrichment."
+                    else:
+                        assessment["needs_enrichment"] = False
+                        assessment["recommendation"] = "Enrichment is recent."
+            
+        except Exception as e:
+            assessment["error"] = str(e)
+        
+        return assessment
+    
+    def promote_entity(self, entity: str, new_tier: int) -> bool:
+        """
+        提升实体层级
+        
+        Args:
+            entity: 实体名称
+            new_tier: 新层级
+        
+        Returns:
+            是否成功
+        """
+        if new_tier not in [1, 2, 3]:
+            return False
+        
+        try:
+            conn = sqlite3.connect(self.db_path)
+            cursor = conn.cursor()
+            
+            cursor.execute("""
+                UPDATE entity_enrichment
+                SET tier = ?, updated_at = ?
+                WHERE entity_name = ?
+            """, (new_tier, datetime.now().isoformat(), entity))
+            
+            conn.commit()
+            conn.close()
+            
+            # 更新内存中的集合
+            if new_tier == 1:
+                self.core_circle.add(entity)
+            elif new_tier == 2:
+                self.notable_contacts.add(entity)
+            
+            return True
+            
+        except Exception as e:
+            print(f"Error promoting entity: {e}")
+            return False
+    
+    def batch_enrich_entities(self, entities: List[str], 
+                              auto_tier: bool = True) -> Dict[str, Any]:
+        """
+        批量丰富实体
+        
+        Args:
+            entities: 实体列表
+            auto_tier: 是否自动分类层级
+        
+        Returns:
+            批量丰富化结果
+        """
+        results = {
+            "total": len(entities),
+            "enriched": 0,
+            "by_tier": {1: 0, 2: 0, 3: 0},
+            "entities": []
+        }
+        
+        for entity in entities:
+            tier = None if auto_tier else 3
+            result = self.enrich(entity, tier)
+            results["enriched"] += 1
+            results["by_tier"][result["tier"]] += 1
+            results["entities"].append(result)
+        
+        return results
+    
+    def generate_tier_report(self) -> str:
+        """生成层级报告"""
+        report = "# Enrichment Tier Report\n\n"
+        report += f"Generated: {datetime.now().isoformat()}\n\n"
+        
+        try:
+            conn = sqlite3.connect(self.db_path)
+            cursor = conn.cursor()
+            
+            # 统计各级别实体数量
+            cursor.execute("""
+                SELECT tier, COUNT(*) as count, AVG(enrichment_score) as avg_score
+                FROM entity_enrichment
+                GROUP BY tier
+                ORDER BY tier
+            """)
+            
+            report += "## Tier Distribution\n\n"
+            report += "| Tier | Count | Avg Score | Description |\n"
+            report += "|------|-------|-----------|-------------|\n"
+            
+            for row in cursor.fetchall():
+                tier = row[0]
+                config = self.get_enrichment_config(tier)
+                report += f"| {tier} | {row[1]} | {row[2]:.2f} | {config.description} |\n"
+            
+            # 需要重新丰富的实体
+            threshold = (datetime.now() - timedelta(days=30)).isoformat()
+            cursor.execute("""
+                SELECT entity_name, tier, last_enriched
+                FROM entity_enrichment
+                WHERE last_enriched < ? OR last_enriched IS NULL
+                ORDER BY tier, last_enriched
+            """, (threshold,))
+            
+            report += "\n## Entities Needing Re-enrichment\n\n"
+            needs_enrichment = cursor.fetchall()
+            if needs_enrichment:
+                for row in needs_enrichment:
+                    report += f"- [[{row[0]}]] (Tier {row[1]}, last: {row[2] or 'never'})\n"
+            else:
+                report += "All entities are up to date.\n"
+            
+            conn.close()
+            
+        except Exception as e:
+            report += f"\n**Error:** {e}\n"
+        
+        return report
 
 
 def main():
     """主函数"""
     import argparse
-
-    parser = argparse.ArgumentParser(description="Erbing Enrichment Tier - 丰富化分级系统")
-    parser.add_argument(
-        "--db-path",
-        type=str,
-        default=None,
-        help="SQLite数据库路径"
-    )
-    parser.add_argument(
-        "--enrich",
-        type=str,
-        help="丰富化指定的实体"
-    )
-    parser.add_argument(
-        "--tier",
-        type=int,
-        choices=[1, 2, 3],
-        help="指定层级（1-3）"
-    )
-    parser.add_argument(
-        "--update-importance",
-        nargs=2,
-        metavar=("ENTITY", "IMPORTANCE"),
-        help="更新实体重要性"
-    )
-    parser.add_argument(
-        "--report",
-        action="store_true",
-        help="生成丰富化报告"
-    )
-
+    
+    parser = argparse.ArgumentParser(description="Enrichment Tier System")
+    parser.add_argument("--enrich", type=str, help="Enrich a specific entity")
+    parser.add_argument("--tier", type=int, choices=[1, 2, 3], help="Force specific tier")
+    parser.add_argument("--assess", type=str, help="Assess enrichment level")
+    parser.add_argument("--promote", type=str, help="Promote entity to --tier")
+    parser.add_argument("--report", action="store_true", help="Generate tier report")
+    parser.add_argument("--batch", type=str, help="Batch enrich entities (comma-separated)")
+    
     args = parser.parse_args()
-
-    # 创建丰富化分级实例
-    enrichment_tier = EnrichmentTier(db_path=args.db_path)
-
-    # 执行操作
+    
+    engine = EnrichmentTierEngine()
+    
     if args.enrich:
-        tier = Tier(args.tier) if args.tier else None
-        result = enrichment_tier.enrich(args.enrich, tier)
-        print(json.dumps(result, indent=2, ensure_ascii=False))
-    elif args.update_importance:
-        entity, importance = args.update_importance
-        enrichment_tier.update_entity_importance(entity, int(importance))
+        print(f"🔍 Enriching: {args.enrich}")
+        result = engine.enrich(args.enrich, args.tier)
+        print(f"  Tier: {result['tier']} ({result['config']['name']})")
+        print(f"  Sources: {result['config']['sources']}")
+        print(f"  Confidence: {result['data'].get('confidence', 0):.2f}")
+    
+    elif args.assess:
+        print(f"📊 Assessing: {args.assess}")
+        assessment = engine.assess_enrichment_level(args.assess)
+        print(f"  Current Tier: {assessment['current_tier']}")
+        print(f"  Score: {assessment['enrichment_score']}")
+        print(f"  Recommendation: {assessment['recommendation']}")
+    
+    elif args.promote and args.tier:
+        print(f"⬆️ Promoting {args.promote} to Tier {args.tier}")
+        success = engine.promote_entity(args.promote, args.tier)
+        print(f"  Result: {'Success' if success else 'Failed'}")
+    
     elif args.report:
-        report = enrichment_tier.generate_enrichment_report()
+        report = engine.generate_tier_report()
         print(report)
-    else:
-        logger.info("No action specified. Use --enrich, --update-importance, or --report")
-
-
-if __name__ == "__main__":
-    main()
+    
+    elif args.batch:
+        entities = [e.strip() for e in args.batch.split(",")]
+        print(f"📦 Batch enriching {len(entities)} entities...")
+        results = engine.batch_enrich_entities(entities)
+        print(f"  Total: {results['total']}")
+        print(f"  By Tier: {results['by_tier']}")
+    

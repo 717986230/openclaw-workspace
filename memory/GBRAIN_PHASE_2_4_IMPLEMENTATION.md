@@ -1,110 +1,93 @@
-# GBrain Phase 2-4 实施计划
+﻿# GBrain Phase 2-4 瀹炴柦璁″垝
 
-**开始时间**: 2026-04-11
-**目标**: 完成 GBrain 核心功能的完整实现
-
+**寮€濮嬫椂闂?*: 2026-04-11
+**鐩爣**: 瀹屾垚 GBrain 鏍稿績鍔熻兘鐨勫畬鏁村疄鐜?
 ---
 
-## Phase 2: 增强功能
+## Phase 2: 澧炲己鍔熻兘
 
-### 2.1 Dream Cycle（夜间维护）
+### 2.1 Dream Cycle锛堝闂寸淮鎶わ級
 
-**目标**: 实现夜间自动维护任务
+**鐩爣**: 瀹炵幇澶滈棿鑷姩缁存姢浠诲姟
 
-**实现步骤**:
-1. 创建 `scripts/dream_cycle.py`
-2. 实现以下功能：
-   - 扫描今天的所有对话
-   - 丰富缺失的实体
-   - 修复损坏的引用
-   - 巩固记忆
-   - 生成 DREAMS.md
+**瀹炵幇姝ラ**:
+1. 鍒涘缓 `scripts/dream_cycle.py`
+2. 瀹炵幇浠ヤ笅鍔熻兘锛?   - 鎵弿浠婂ぉ鐨勬墍鏈夊璇?   - 涓板瘜缂哄け鐨勫疄浣?   - 淇鎹熷潖鐨勫紩鐢?   - 宸╁浐璁板繂
+   - 鐢熸垚 DREAMS.md
 
-**代码结构**:
+**浠ｇ爜缁撴瀯**:
 ```python
 class ErbingDreamCycle:
-    """梦境循环 - 夜间自动维护"""
+    """姊﹀寰幆 - 澶滈棿鑷姩缁存姢"""
 
     def run_dream_cycle(self):
-        """夜间运行"""
-        # 1. 扫描今天的所有对话
-        today_conversations = self.get_today_conversations()
+        """澶滈棿杩愯"""
+        # 1. 鎵弿浠婂ぉ鐨勬墍鏈夊璇?        today_conversations = self.get_today_conversations()
 
-        # 2. 丰富缺失的实体
-        for conv in today_conversations:
+        # 2. 涓板瘜缂哄け鐨勫疄浣?        for conv in today_conversations:
             entities = self.detect_entities(conv)
             for entity in entities:
                 if not self.memory.has_rich_page(entity):
                     self.enrich_in_background(entity)
 
-        # 3. 修复损坏的引用
-        self.fix_broken_citations()
+        # 3. 淇鎹熷潖鐨勫紩鐢?        self.fix_broken_citations()
 
-        # 4. 巩固记忆
+        # 4. 宸╁浐璁板繂
         self.consolidate_memories()
 
-        # 5. 生成 DREAMS.md
+        # 5. 鐢熸垚 DREAMS.md
         self.generate_dream_report()
 ```
 
-### 2.2 Cross-Reference Back-Links（交叉引用）
+### 2.2 Cross-Reference Back-Links锛堜氦鍙夊紩鐢級
 
-**目标**: 实现铁律 - 每个实体页面必须链接到所有引用它的其他页面
+**鐩爣**: 瀹炵幇閾佸緥 - 姣忎釜瀹炰綋椤甸潰蹇呴』閾炬帴鍒版墍鏈夊紩鐢ㄥ畠鐨勫叾浠栭〉闈?
+**瀹炵幇姝ラ**:
+1. 鍒涘缓 `memory/database/cross_reference.py`
+2. 瀹炵幇鍙嶅悜閾炬帴鍔熻兘
+3. 鍦ㄦ瘡娆℃洿鏂板疄浣撻〉闈㈡椂鑷姩娣诲姞鍙嶅悜閾炬帴
 
-**实现步骤**:
-1. 创建 `memory/database/cross_reference.py`
-2. 实现反向链接功能
-3. 在每次更新实体页面时自动添加反向链接
-
-**代码结构**:
+**浠ｇ爜缁撴瀯**:
 ```python
 def update_entity_page(entity, new_info):
-    """更新实体页面"""
+    """鏇存柊瀹炰綋椤甸潰"""
 
-    # 更新页面
+    # 鏇存柊椤甸潰
     page = erbing.get(entity)
     page.timeline.append(new_info)
 
-    # 找到所有提及此实体的其他页面
-    mentions = erbing.find_mentions(entity)
+    # 鎵惧埌鎵€鏈夋彁鍙婃瀹炰綋鐨勫叾浠栭〉闈?    mentions = erbing.find_mentions(entity)
 
-    # 添加反向链接
+    # 娣诲姞鍙嶅悜閾炬帴
     for mention in mentions:
         mention.add_backlink(
             f"- Referenced in [{mention.title}]({mention.path}) -- {new_info.summary}"
         )
 ```
 
-### 2.3 Enrichment Tier（丰富化分级）
+### 2.3 Enrichment Tier锛堜赴瀵屽寲鍒嗙骇锛?
+**鐩爣**: 瀹炵幇3绾т赴瀵屽寲绯荤粺
 
-**目标**: 实现3级丰富化系统
-
-**实现步骤**:
-1. 创建 `memory/database/enrichment_tier.py`
-2. 实现Tier分级系统：
-   - Tier 1: 关键人员和公司（10-15 API调用）
-   - Tier 2: 值得注意的人员（3-5 API调用）
-   - Tier 3: 次要提及（1-2 API调用）
-
-**代码结构**:
+**瀹炵幇姝ラ**:
+1. 鍒涘缓 `memory/database/enrichment_tier.py`
+2. 瀹炵幇Tier鍒嗙骇绯荤粺锛?   - Tier 1: 鍏抽敭浜哄憳鍜屽叕鍙革紙10-15 API璋冪敤锛?   - Tier 2: 鍊煎緱娉ㄦ剰鐨勪汉鍛橈紙3-5 API璋冪敤锛?   - Tier 3: 娆¤鎻愬強锛?-2 API璋冪敤锛?
+**浠ｇ爜缁撴瀯**:
 ```python
 class EnrichmentTier:
-    """丰富化分级系统"""
+    """涓板瘜鍖栧垎绾х郴缁?""
 
     def classify_tier(self, entity):
-        """分类实体层级"""
-        # Tier 1: 关键人员和公司
-        if entity in self.core_circle:
+        """鍒嗙被瀹炰綋灞傜骇"""
+        # Tier 1: 鍏抽敭浜哄憳鍜屽叕鍙?        if entity in self.core_circle:
             return 1
-        # Tier 2: 值得注意的人员
-        elif entity in self.notable_contacts:
+        # Tier 2: 鍊煎緱娉ㄦ剰鐨勪汉鍛?        elif entity in self.notable_contacts:
             return 2
-        # Tier 3: 次要提及
+        # Tier 3: 娆¤鎻愬強
         else:
             return 3
 
     def enrich(self, entity, tier):
-        """按层级丰富"""
+        """鎸夊眰绾т赴瀵?""
         if tier == 1:
             return self.full_enrichment(entity)
         elif tier == 2:
@@ -115,145 +98,128 @@ class EnrichmentTier:
 
 ---
 
-## Phase 3: 查询优化
+## Phase 3: 鏌ヨ浼樺寲
 
-### 3.1 Brain-First Lookup Protocol（大脑优先查找）
+### 3.1 Brain-First Lookup Protocol锛堝ぇ鑴戜紭鍏堟煡鎵撅級
 
-**目标**: 在调用任何外部API之前，先检查大脑
+**鐩爣**: 鍦ㄨ皟鐢ㄤ换浣曞閮ˋPI涔嬪墠锛屽厛妫€鏌ュぇ鑴?
+**瀹炵幇姝ラ**:
+1. 鍒涘缓 `memory/database/brain_first_lookup.py`
+2. 瀹炵幇澶ц剳浼樺厛鏌ユ壘鍗忚
 
-**实现步骤**:
-1. 创建 `memory/database/brain_first_lookup.py`
-2. 实现大脑优先查找协议
-
-**代码结构**:
+**浠ｇ爜缁撴瀯**:
 ```python
 def research_entity(name):
-    """研究实体 - 大脑优先"""
+    """鐮旂┒瀹炰綋 - 澶ц剳浼樺厛"""
 
-    # 1. gbrain search（关键词匹配）
-    results = erbing.search(name, strategy="keyword")
+    # 1. gbrain search锛堝叧閿瘝鍖归厤锛?    results = erbing.search(name, strategy="keyword")
 
-    # 2. gbrain query（混合搜索）
+    # 2. gbrain query锛堟贩鍚堟悳绱級
     results = erbing.search(f"what do we know about {name}", strategy="balanced")
 
-    # 3. gbrain get（直接读取）
+    # 3. gbrain get锛堢洿鎺ヨ鍙栵級
     if results:
         page = erbing.get(slug)
 
-    # 4. 外部API仅作为后备
-    if not results or page.is_thin():
+    # 4. 澶栭儴API浠呬綔涓哄悗澶?    if not results or page.is_thin():
         results = external_api_search(name)
 
     return results
 ```
 
-### 3.2 混合搜索优化
+### 3.2 娣峰悎鎼滅储浼樺寲
 
-**目标**: 优化四策略检索系统
+**鐩爣**: 浼樺寲鍥涚瓥鐣ユ绱㈢郴缁?
+**瀹炵幇姝ラ**:
+1. 浼樺寲 `memory/database/retrieval_strategies.py`
+2. 瀹炵幇RRF铻嶅悎
+3. 瀹炵幇Cross-Encoder閲嶆帓搴?
+### 3.3 鎬ц兘浼樺寲
 
-**实现步骤**:
-1. 优化 `memory/database/retrieval_strategies.py`
-2. 实现RRF融合
-3. 实现Cross-Encoder重排序
+**鐩爣**: 浼樺寲鏌ヨ鎬ц兘
 
-### 3.3 性能优化
-
-**目标**: 优化查询性能
-
-**实现步骤**:
-1. 添加缓存层
-2. 优化数据库查询
-3. 实现批量操作
+**瀹炵幇姝ラ**:
+1. 娣诲姞缂撳瓨灞?2. 浼樺寲鏁版嵁搴撴煡璇?3. 瀹炵幇鎵归噺鎿嶄綔
 
 ---
 
-## Phase 4: 高级功能
+## Phase 4: 楂樼骇鍔熻兘
 
-### 4.1 完整的Enrichment Pipeline（7步协议）
+### 4.1 瀹屾暣鐨凟nrichment Pipeline锛?姝ュ崗璁級
 
-**目标**: 实现完整的7步丰富化流程
+**鐩爣**: 瀹炵幇瀹屾暣鐨?姝ヤ赴瀵屽寲娴佺▼
 
-**实现步骤**:
-1. 创建 `memory/database/enrichment_pipeline.py`
-2. 实现以下步骤：
-   - Step 1: 识别实体
-   - Step 2: 检查大脑状态
-   - Step 3: 从来源提取信号
-   - Step 4: 数据源查询
-   - Step 5: 保存原始数据
-   - Step 6: 写入大脑
-   - Step 7: 交叉引用
+**瀹炵幇姝ラ**:
+1. 鍒涘缓 `memory/database/enrichment_pipeline.py`
+2. 瀹炵幇浠ヤ笅姝ラ锛?   - Step 1: 璇嗗埆瀹炰綋
+   - Step 2: 妫€鏌ュぇ鑴戠姸鎬?   - Step 3: 浠庢潵婧愭彁鍙栦俊鍙?   - Step 4: 鏁版嵁婧愭煡璇?   - Step 5: 淇濆瓨鍘熷鏁版嵁
+   - Step 6: 鍐欏叆澶ц剳
+   - Step 7: 浜ゅ弶寮曠敤
 
-**代码结构**:
+**浠ｇ爜缁撴瀯**:
 ```python
 class EnrichmentPipeline:
-    """7步丰富化流程"""
+    """7姝ヤ赴瀵屽寲娴佺▼"""
 
     def run(self, entity):
-        """运行完整流程"""
+        """杩愯瀹屾暣娴佺▼"""
 
-        # Step 1: 识别实体
+        # Step 1: 璇嗗埆瀹炰綋
         entity_info = self.identify_entity(entity)
 
-        # Step 2: 检查大脑状态
-        page = self.check_brain_state(entity)
+        # Step 2: 妫€鏌ュぇ鑴戠姸鎬?        page = self.check_brain_state(entity)
 
-        # Step 3: 从来源提取信号
-        signals = self.extract_signals(entity_info)
+        # Step 3: 浠庢潵婧愭彁鍙栦俊鍙?        signals = self.extract_signals(entity_info)
 
-        # Step 4: 数据源查询
-        data = self.query_data_sources(entity, signals)
+        # Step 4: 鏁版嵁婧愭煡璇?        data = self.query_data_sources(entity, signals)
 
-        # Step 5: 保存原始数据
+        # Step 5: 淇濆瓨鍘熷鏁版嵁
         self.save_raw_data(entity, data)
 
-        # Step 6: 写入大脑
+        # Step 6: 鍐欏叆澶ц剳
         self.write_to_brain(entity, data, page)
 
-        # Step 7: 交叉引用
+        # Step 7: 浜ゅ弶寮曠敤
         self.cross_reference(entity, data)
 ```
 
-### 4.2 高级功能
+### 4.2 楂樼骇鍔熻兘
 
-**目标**: 实现高级功能
+**鐩爣**: 瀹炵幇楂樼骇鍔熻兘
 
-**实现步骤**:
-1. 实体关系图
-2. 概念聚类
-3. 原创想法索引
+**瀹炵幇姝ラ**:
+1. 瀹炰綋鍏崇郴鍥?2. 姒傚康鑱氱被
+3. 鍘熷垱鎯虫硶绱㈠紩
 
-### 4.3 生产部署
+### 4.3 鐢熶骇閮ㄧ讲
 
-**目标**: 生产环境部署
+**鐩爣**: 鐢熶骇鐜閮ㄧ讲
 
-**实现步骤**:
-1. 配置管理
-2. 监控和日志
-3. 错误处理
-4. 性能监控
+**瀹炵幇姝ラ**:
+1. 閰嶇疆绠＄悊
+2. 鐩戞帶鍜屾棩蹇?3. 閿欒澶勭悊
+4. 鎬ц兘鐩戞帶
 
 ---
 
-## 实施时间表
-
-| Phase | 任务 | 预计时间 | 状态 |
+## 瀹炴柦鏃堕棿琛?
+| Phase | 浠诲姟 | 棰勮鏃堕棿 | 鐘舵€?|
 |-------|------|---------|------|
-| Phase 1 | 核心模式 | 已完成 | ✅ |
-| Phase 2 | 增强功能 | 2-3天 | 🚧 |
-| Phase 3 | 查询优化 | 2-3天 | 📋 |
-| Phase 4 | 高级功能 | 3-5天 | 📋 |
+| Phase 1 | 鏍稿績妯″紡 | 宸插畬鎴?| 鉁?|
+| Phase 2 | 澧炲己鍔熻兘 | 宸插畬鎴?| 鉁?|
+| Phase 3 | 鏌ヨ浼樺寲 | 2-3澶?| 馃搵 |
+| Phase 4 | 楂樼骇鍔熻兘 | 3-5澶?| 馃搵 |
 
 ---
 
-## 下一步行动
-
-1. ✅ 创建 Phase 2-4 实施计划文档
-2. 🚧 开始实施 Phase 2.1 Dream Cycle
-3. 📋 实施 Phase 2.2 Cross-Reference
-4. 📋 实施 Phase 2.3 Enrichment Tier
+## 涓嬩竴姝ヨ鍔?
+1. 鉁?鍒涘缓 Phase 2-4 瀹炴柦璁″垝鏂囨。
+2. 馃毀 寮€濮嬪疄鏂?Phase 2.1 Dream Cycle
+3. 馃搵 瀹炴柦 Phase 2.2 Cross-Reference
+4. 馃搵 瀹炴柦 Phase 2.3 Enrichment Tier
 
 ---
 
-*创建时间: 2026-04-11*
-*版本: v1.0*
+*鍒涘缓鏃堕棿: 2026-04-11*
+*鐗堟湰: v1.0*
+

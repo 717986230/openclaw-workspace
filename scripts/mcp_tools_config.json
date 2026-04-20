@@ -1,0 +1,164 @@
+{
+  "mcpTools": {
+    "read": {
+      "description": "读取记忆内容",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "query": {
+            "type": "string",
+            "description": "搜索关键词"
+          },
+          "limit": {
+            "type": "integer",
+            "default": 10,
+            "description": "返回数量"
+          },
+          "type": {
+            "type": "string",
+            "enum": [
+              "all",
+              "event",
+              "learning",
+              "improvement"
+            ],
+            "description": "记忆类型"
+          }
+        }
+      },
+      "handler": "memory_search"
+    },
+    "add": {
+      "description": "添加新记忆",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "string",
+            "enum": [
+              "event",
+              "learning",
+              "improvement"
+            ],
+            "required": true
+          },
+          "title": {
+            "type": "string",
+            "required": true
+          },
+          "content": {
+            "type": "string",
+            "required": true
+          },
+          "category": {
+            "type": "string"
+          },
+          "tags": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "importance": {
+            "type": "integer",
+            "default": 5
+          }
+        }
+      },
+      "handler": "memory_add"
+    },
+    "status": {
+      "description": "获取记忆系统状态",
+      "parameters": {
+        "type": "object",
+        "properties": {}
+      },
+      "handler": "memory_status"
+    },
+    "diary": {
+      "description": "写入 Agent 日记",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "date": {
+            "type": "string",
+            "format": "date",
+            "required": true
+          },
+          "summary": {
+            "type": "string"
+          },
+          "aaak_entry": {
+            "type": "string"
+          },
+          "learnings": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "decisions": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "handler": "diary_write"
+    },
+    "evolution": {
+      "description": "查看进化日志",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "limit": {
+            "type": "integer",
+            "default": 10
+          },
+          "evolution_type": {
+            "type": "string"
+          }
+        }
+      },
+      "handler": "evolution_log"
+    },
+    "tool_register": {
+      "description": "注册新工具",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "tool_name": {
+            "type": "string",
+            "required": true
+          },
+          "tool_type": {
+            "type": "string",
+            "enum": [
+              "builtin",
+              "mcp",
+              "http",
+              "cli"
+            ]
+          },
+          "endpoint": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "capabilities": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "handler": "tool_register"
+    }
+  },
+  "version": "1.0.0",
+  "created_at": "2026-04-17T10:05:49.327298",
+  "description": "记忆系统 MCP Server 工具配置"
+}

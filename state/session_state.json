@@ -1,0 +1,15 @@
+[
+  {
+    "timestamp": "2026-04-16T11:52:26.044261",
+    "session_id": "test_session_123",
+    "duration_ms": 60000,
+    "total_tokens": 1000,
+    "total_cost_usd": 0.01,
+    "tools_used": [
+      "exec",
+      "read",
+      "write"
+    ],
+    "errors": []
+  }
+]

@@ -1,0 +1,56 @@
+﻿{
+  "description": "OpenClaw Hooks Configuration - Event-driven automation framework",
+  "version": "1.0",
+  "hooks": {
+    "PreToolUse": {
+      "enabled": true,
+      "description": "Triggered before any tool is executed. Useful for security checks, validation, or logging.",
+      "handlers": [
+        {
+          "script": "scripts/pre_tool_use.py",
+          "description": "Security checks for tool usage"
+        }
+      ]
+    },
+    "PostToolUse": {
+      "enabled": true,
+      "description": "Triggered after a tool has completed. Useful for cleanup, analytics, or triggering follow-up actions.",
+      "handlers": [
+        {
+          "script": "scripts/post_tool_use.py",
+          "description": "Log tool usage for analytics"
+        }
+      ]
+    },
+    "OnSessionStart": {
+      "enabled": true,
+      "description": "Triggered when a new session begins. Useful for loading context or initializing state.",
+      "handlers": [
+        {
+          "script": "scripts/on_session_start.py",
+          "description": "Load context and initialize session state"
+        }
+      ]
+    },
+    "OnSessionEnd": {
+      "enabled": true,
+      "description": "Triggered when a session ends. Useful for saving state, generating summaries, or cleaning up resources.",
+      "handlers": [
+        {
+          "script": "scripts/on_session_end.py",
+          "description": "Save session state and generate summary"
+        }
+      ]
+    },
+    "OnError": {
+      "enabled": true,
+      "description": "Triggered when an error occurs. Useful for error logging, recovery, or alerting.",
+      "handlers": [
+        {
+          "script": "scripts/on_error.py",
+          "description": "Log errors and suggest recovery actions"
+        }
+      ]
+    }
+  }
+}

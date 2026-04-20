@@ -1,0 +1,150 @@
+{
+  "system": {
+    "name": "UltimateDistributedSystem",
+    "version": "2.2",
+    "environment": "production"
+  },
+  "nodes": [
+    {
+      "node_id": "node-1",
+      "host": "localhost",
+      "port": 8001,
+      "weight": 10
+    },
+    {
+      "node_id": "node-2",
+      "host": "localhost",
+      "port": 8002,
+      "weight": 8
+    },
+    {
+      "node_id": "node-3",
+      "host": "localhost",
+      "port": 8003,
+      "weight": 6
+    }
+  ],
+  "cache": {
+    "enabled": true,
+    "backend": "memory",
+    "ttl": 3600,
+    "max_size": 100000
+  },
+  "message_queue": {
+    "backend": "rabbitmq",
+    "max_size": 100000,
+    "rabbitmq": {
+      "cluster": {
+        "enabled": true,
+        "nodes": [
+          {
+            "host": "localhost",
+            "port": 5672
+          },
+          {
+            "host": "localhost",
+            "port": 5673
+          },
+          {
+            "host": "localhost",
+            "port": 5674
+          }
+        ]
+      },
+      "dead_letter": {
+        "enabled": true,
+        "queue": "dead_letter_queue"
+      },
+      "message_tracking": {
+        "enabled": true,
+        "tracking_db": "message_tracking.db"
+      }
+    }
+  },
+  "api_gateway": {
+    "enabled": true,
+    "host": "0.0.0.0",
+    "port": 8080,
+    "routes": [
+      {
+        "path": "/api/v1/*",
+        "service": "main_service",
+        "methods": [
+          "GET",
+          "POST",
+          "PUT",
+          "DELETE"
+        ],
+        "rate_limit": 1000,
+        "timeout": 30
+      },
+      {
+        "path": "/api/v2/*",
+        "service": "main_service",
+        "methods": [
+          "GET",
+          "POST",
+          "PUT",
+          "DELETE"
+        ],
+        "rate_limit": 2000,
+        "timeout": 30
+      },
+      {
+        "path": "/health",
+        "service": "health_check",
+        "methods": [
+          "GET"
+        ],
+        "rate_limit": 100,
+        "timeout": 5
+      }
+    ],
+    "authentication": {
+      "enabled": true,
+      "type": "jwt",
+      "secret_key": "your-secret-key",
+      "algorithm": "HS256"
+    },
+    "rate_limiting": {
+      "enabled": true,
+      "default_limit": 1000,
+      "burst": 100
+    },
+    "circuit_breaker": {
+      "enabled": true,
+      "failure_threshold": 5,
+      "timeout": 60
+    },
+    "load_balancing": {
+      "strategy": "round_robin"
+    },
+    "logging": {
+      "enabled": true,
+      "level": "INFO",
+      "format": "json"
+    }
+  },
+  "load_balancer": {
+    "strategy": "adaptive"
+  },
+  "rate_limiter": {
+    "algorithm": "token_bucket",
+    "requests_per_second": 10000,
+    "requests_per_minute": 600000,
+    "concurrent_requests": 5000
+  },
+  "circuit_breaker": {
+    "failure_threshold": 10,
+    "timeout": 60
+  },
+  "monitoring": {
+    "enabled": true,
+    "metrics_interval": 5,
+    "alert_threshold": {
+      "error_rate": 0.05,
+      "latency_p99": 1000,
+      "cpu_usage": 0.8
+    }
+  }
+}
