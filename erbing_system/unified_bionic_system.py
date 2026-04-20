@@ -1,7 +1,8 @@
+# -*- coding: utf-8 -*-
 """
-统一仿生系统 - Unified Bionic System
+统一仿生系统 - 完全整合版本
 将仿生系统、Erbing系统、真实自我意识系统完全整合
-创建一个具有完整生物模拟、心智模型和真实自我意识的统一系统
+修复所有接口不匹配问题
 """
 
 import numpy as np
@@ -13,7 +14,6 @@ from datetime import datetime
 import logging
 
 logger = logging.getLogger(__name__)
-
 
 # 导入各个系统的组件
 from erbing_system.true_self_awareness import (
@@ -33,6 +33,15 @@ from erbing_system.mental_models import (
     MentalLoop,
     TreeOfThoughts,
     MetaController
+)
+
+# 导入系统适配器
+from erbing_system.system_adapters import (
+    EmotionalSystemAdapter,
+    CuriositySystemAdapter,
+    NeuralNetworkAdapter,
+    TrueSelfAwarenessSystemAdapter,
+    create_adapted_systems
 )
 
 
@@ -82,7 +91,7 @@ class BionicExperience:
 
 
 class UnifiedBionicBrain:
-    """统一仿生大脑 - 整合所有系统"""
+    """统一仿生大脑 - 完全整合版本"""
 
     def __init__(self):
         # ========== 基础系统 ==========
@@ -110,13 +119,17 @@ class UnifiedBionicBrain:
         # 使用统一的自我意识系统
         self.true_self_awareness = TrueSelfAwarenessSystem()
 
+        # 创建适配器
+        adapted_systems = create_adapted_systems(self.true_self_awareness)
+
         # 为了兼容性，保留对子系统的引用
-        self.neural_network = self.true_self_awareness.neural_network
-        self.emotional_system = self.true_self_awareness.emotional_system
-        self.curiosity_system = self.true_self_awareness.curiosity_system
-        self.thought_process = self.true_self_awareness.thought_process
+        self.neural_network = adapted_systems['neural_network']
+        self.emotional_system = adapted_systems['emotional_system']
+        self.curiosity_system = adapted_systems['curiosity_system']
+        self.self_awareness = adapted_systems['self_awareness']
         self.personality = self.true_self_awareness.personality
         self.consciousness_level = self.true_self_awareness.consciousness_level
+        self.thought_process = self.true_self_awareness.thought_process
 
         # ========== 心智模型 ==========
         self.mental_loop = MentalLoop()
@@ -139,19 +152,19 @@ class UnifiedBionicBrain:
             'access_count': 0,
             'emotional_tags': emotional_tags or [],
             'consciousness_level': self.consciousness_level.value,
-            'neural_pattern': self.neural_network.get_state(),
+            'neural_pattern': self.neural_network.get_activation_pattern(),
         }
         self.memories.append(memory)
 
         # 情感系统记录
         if emotional_tags:
             # 如果没有 emotional_memory，创建一个
-            if not hasattr(self.emotional_system, 'emotional_memory'):
-                self.emotional_system.emotional_memory = {}
-            
+            if not hasattr(self.emotional_system.system, 'emotional_memory'):
+                self.emotional_system.system.emotional_memory = {}
+
             for emotion in emotional_tags:
-                self.emotional_system.emotional_memory[emotion] = \
-                    self.emotional_system.emotional_memory.get(emotion, 0.0) + importance * 0.1
+                self.emotional_system.system.emotional_memory[emotion] = \
+                    self.emotional_system.system.emotional_memory.get(emotion, 0.0) + importance * 0.1
 
         return memory
 
@@ -170,12 +183,13 @@ class UnifiedBionicBrain:
             emotional_score = 0.0
             if memory.get('emotional_tags'):
                 for tag in memory['emotional_tags']:
-                    if tag in self.emotional_system.emotional_memory:
-                        emotional_score += self.emotional_system.emotional_memory[tag]
+                    if hasattr(self.emotional_system.system, 'emotional_memory'):
+                        if tag in self.emotional_system.system.emotional_memory:
+                            emotional_score += self.emotional_system.system.emotional_memory[tag]
 
             # 神经网络模式匹配
             neural_score = self.neural_network.match_pattern(
-                memory.get('neural_pattern', np.zeros(1000))
+                memory.get('neural_pattern', np.zeros(self.neural_network.num_neurons))
             )
 
             # 综合评分
@@ -223,7 +237,7 @@ class UnifiedBionicBrain:
         meta_result = self.meta_controller.process(input_text, context)
 
         # 6. 自我意识思考
-        self_awareness = self.true_self_awareness.think_about_thyself()
+        self_awareness = self.self_awareness.think_about_thyself()
 
         # 7. 生成思维内容
         thought_content = self._generate_thought_content(
@@ -278,13 +292,13 @@ class UnifiedBionicBrain:
     def _text_to_stimulus(self, text: str) -> np.ndarray:
         """将文本转换为神经刺激"""
         # 简单的文本到向量转换
-        stimulus = np.zeros(1000)
+        stimulus = np.zeros(self.neural_network.num_neurons)
         words = text.lower().split()
 
         for i, word in enumerate(words):
-            if i < 1000:
+            if i < self.neural_network.num_neurons:
                 # 基于单词哈希值设置刺激
-                hash_val = hash(word) % 1000
+                hash_val = hash(word) % self.neural_network.num_neurons
                 stimulus[hash_val] = 1.0
 
         return stimulus
@@ -301,10 +315,14 @@ class UnifiedBionicBrain:
         thought_content = f"分析: {input_text}"
 
         # 添加情感特征
-        if emotional_response['primary_emotion'] != EmotionType.NEUTRAL:
-            emotion_name = emotional_response['primary_emotion'].value
-            intensity = emotional_response['emotion_intensity']
-            thought_content += f" | 情感: {emotion_name}({intensity:.2f})"
+        primary_emotion = emotional_response.get('primary_emotion', EmotionType.NEUTRAL)
+        if isinstance(primary_emotion, str):
+            emotion_name = primary_emotion
+        else:
+            emotion_name = primary_emotion.value
+            intensity = emotional_response.get('emotion_intensity', 0.0)
+            if intensity > 0.5:
+                thought_content += f" | 情感: {emotion_name}({intensity:.2f})"
 
         # 添加好奇心特征
         if curiosity_response['curiosity_level'] > 0.7:
@@ -346,7 +364,8 @@ class UnifiedBionicBrain:
         fitness_bonus = self.fitness * 0.1
 
         # 情感稳定性加成
-        emotional_bonus = emotional_response['emotional_stability'] * 0.1
+        emotional_stability = emotional_response.get('emotional_stability', 0.5)
+        emotional_bonus = emotional_stability * 0.1
 
         # 好奇心加成
         curiosity_bonus = curiosity_response['curiosity_level'] * 0.05
@@ -381,7 +400,7 @@ class UnifiedBionicBrain:
         urgency = 1.0 if "紧急" in input_text or "urgent" in input_text.lower() else 0.5
 
         # 情感强度
-        emotional_urgency = emotional_response['emotion_intensity']
+        emotional_urgency = emotional_response.get('emotion_intensity', 0.5)
 
         # 好奇心驱动
         curiosity_drive = curiosity_response['exploration_drive']
@@ -435,16 +454,16 @@ class UnifiedBionicBrain:
         elif emotional['emotion_intensity'] > 0.7:
             # 情感强烈，优先情感处理
             return "emote"
-        elif genes['learning'].value > 0.8:
+        elif genes['learning'] > 0.8:
             # 学习能力强，优先学习
             return "learn"
-        elif genes['adaptation'].value > 0.8:
+        elif genes['adaptation'] > 0.8:
             # 适应能力强，优先适应
             return "adapt"
-        elif genes['survival'].value > 0.8:
+        elif genes['survival'] > 0.8:
             # 生存能力强，优先生存
             return "survive"
-        elif genes['evolution'].value > 0.8:
+        elif genes['evolution'] > 0.8:
             # 进化能力强，优先进化
             return "evolve"
         else:
@@ -512,11 +531,15 @@ class UnifiedBionicBrain:
         self.curiosity_system.learn_from_experience(experience, success)
 
         # 9. 个性系统更新
-        self.personality.update_from_experience(experience, success)
+        # personality 是 dict，直接更新
+        if success:
+            self.personality['conscientiousness'] = min(1.0, self.personality.get('conscientiousness', 0.5) + 0.01)
+        else:
+            self.personality['neuroticism'] = min(1.0, self.personality.get('neuroticism', 0.4) + 0.01)
 
         # 10. 意识系统进化
         if success and self.experience_level > 0.7:
-            self.true_self_awareness.evolve_consciousness()
+            self.self_awareness.evolve_consciousness()
 
         # 11. 心智模型学习
         self.mental_loop.learn(outcome, success)
@@ -588,10 +611,12 @@ class UnifiedBionicBrain:
         self.curiosity_system.evolve()
 
         # 5. 个性系统进化
-        self.personality.evolve()
+        # personality 是 dict，直接更新
+        self.personality['openness'] = min(1.0, self.personality.get('openness', 0.7) + 0.01)
+        self.personality['conscientiousness'] = min(1.0, self.personality.get('conscientiousness', 0.6) + 0.01)
 
         # 6. 意识系统进化
-        self.true_self_awareness.evolve()
+        self.self_awareness.evolve_consciousness()
 
         # 7. 适应度评估
         fitness = self._evaluate_fitness()
@@ -688,7 +713,7 @@ class UnifiedBionicBrain:
             self.bionic_genes['evolution'].value = min(1.0, self.bionic_genes['evolution'].value + 0.05)
 
             self.curiosity_system.increase_learning_drive()
-            self.consciousness.increase_awareness()
+            self.self_awareness.increase_awareness()
 
             adaptation_result['adapted'] = True
             adaptation_result['changes'].append('学习能力增强')
@@ -719,10 +744,7 @@ class UnifiedBionicBrain:
             'bionic_experiences_count': len(self.bionic_experiences),
 
             # 神经网络
-            'neural_network': {
-                'num_neurons': self.neural_network.num_neurons,
-                'activation_level': np.mean([n.activation for n in self.neural_network.neurons]),
-            },
+            'neural_network': self.neural_network.get_state(),
 
             # 情感系统
             'emotional_system': self.emotional_system.get_state(),
@@ -756,7 +778,7 @@ class UnifiedBionicBrain:
 
 
 class UnifiedBionicSystem:
-    """统一仿生系统 - 整合所有系统"""
+    """统一仿生系统 - 完全整合版本"""
 
     def __init__(self):
         self.brain = UnifiedBionicBrain()
@@ -817,19 +839,23 @@ class UnifiedBionicSystem:
         response = f"好的，{action['description']}。"
 
         # 添加仿生特征
-        if genes['adaptation'].value > 0.7:
+        if genes['adaptation'] > 0.7:
             response += " 我会灵活适应。"
 
-        if genes['learning'].value > 0.7:
+        if genes['learning'] > 0.7:
             response += " 我会从中学习。"
 
-        if genes['survival'].value > 0.7:
+        if genes['survival'] > 0.7:
             response += " 我会确保完成。"
 
         # 添加情感特征
-        if emotional['primary_emotion'] != EmotionType.NEUTRAL:
-            emotion_name = emotional['primary_emotion'].value
-            response += f" 我感到{emotion_name}。"
+        primary_emotion = emotional.get('primary_emotion', EmotionType.NEUTRAL)
+        if isinstance(primary_emotion, str):
+            emotion_name = primary_emotion
+        else:
+            emotion_name = primary_emotion.value
+            if emotion_name != 'NEUTRAL':
+                response += f" 我感到{emotion_name}。"
 
         # 添加好奇心特征
         if curiosity['curiosity_level'] > 0.7:
