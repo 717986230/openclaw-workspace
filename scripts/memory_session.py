@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-每 Session 开始时运行 - 加载历史上下文到工作记忆
+Session Context Loader - 每 Session 开始时运行
 读取最近的 episodic + 重要记忆，写入 working_memory 供当前 session 使用
 """
 import sys
@@ -8,7 +8,7 @@ import os
 import io
 import json
 import sqlite3
-from datetime import datetime, timedelta
+from datetime import datetime
 
 sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
 
@@ -27,7 +27,6 @@ def load_session_context(session_id: str, limit: int = 20) -> dict:
     conn = sqlite3.connect(DB)
     cur = conn.cursor()
     now = datetime.now()
-    today_start = now.replace(hour=0, minute=0, second=0, microsecond=0).isoformat()
 
     try:
         # 1. 今天的情景记忆 (最近消息)
@@ -61,23 +60,32 @@ def load_session_context(session_id: str, limit: int = 20) -> dict:
             except:
                 pass
 
-        # 3. 最近的 ToM 信念
-        cur.execute("""SELECT created_at, belief_content FROM tom_beliefs
-            ORDER BY created_at DESC LIMIT 5""")
-        tom_beliefs = cur.fetchall()
-        result["loaded"].append({"type": "tom_beliefs", "count": len(tom_beliefs)})
+        # 3. ToM 信念 (tom_beliefs 表, 列: entity, content)
+        try:
+            cur.execute("""SELECT entity, content, confidence FROM tom_beliefs
+                ORDER BY created_at DESC LIMIT 5""")
+            tom_beliefs = cur.fetchall()
+            result["loaded"].append({"type": "tom_beliefs", "count": len(tom_beliefs)})
+        except Exception as e:
+            result["loaded"].append({"type": "tom_beliefs", "count": 0, "error": str(e)})
 
-        # 4. 当前情感状态
-        cur.execute("""SELECT emotion, intensity, trigger FROM emotional_state
-            ORDER BY created_at DESC LIMIT 3""")
-        emotions = cur.fetchall()
-        result["loaded"].append({"type": "emotions", "count": len(emotions)})
+        # 4. 情感状态 (emotional_state 表)
+        try:
+            cur.execute("""SELECT emotion, intensity, trigger FROM emotional_state
+                ORDER BY created_at DESC LIMIT 3""")
+            emotions = cur.fetchall()
+            result["loaded"].append({"type": "emotions", "count": len(emotions)})
+        except:
+            result["loaded"].append({"type": "emotions", "count": 0})
 
         # 5. 用户偏好 (user_beliefs)
-        cur.execute("""SELECT belief_content, confidence FROM user_beliefs
-            ORDER BY updated_at DESC LIMIT 5""")
-        beliefs = cur.fetchall()
-        result["loaded"].append({"type": "user_beliefs", "count": len(beliefs)})
+        try:
+            cur.execute("""SELECT belief_content, confidence FROM user_beliefs
+                ORDER BY updated_at DESC LIMIT 5""")
+            beliefs = cur.fetchall()
+            result["loaded"].append({"type": "user_beliefs", "count": len(beliefs)})
+        except:
+            result["loaded"].append({"type": "user_beliefs", "count": 0})
 
         conn.commit()
         result["stats"]["status"] = "ok"
