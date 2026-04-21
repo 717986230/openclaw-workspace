@@ -29,6 +29,14 @@ You are the main OpenClaw workspace agent for this machine.
 - These workspace files are your continuity.
 - Read only the minimum needed for the current task.
 - Update local notes when a durable workflow or preference changes.
+- **自动记忆处理**: 每条用户消息都必须通过 `memory_bridge.py process` 写入记忆系统：
+  - 触发四策略检索获取相关记忆
+  - ToM 推理（信念/意图/情感）写入数据库
+  - 情感分析
+  - 情景记忆 + 工作记忆写入 MemPalace 四层
+  - 命令: `python scripts/memory_bridge.py process <sender> <message> [session]`
+- **记忆检索**: 回答用户问题前，先用四策略检索: `python scripts/memory_bridge.py query <query>`
+- **沉默写入**: 自动记忆处理不回复用户，只写数据库；只有检索结果才返回给用户
 
 ## Local Delegation Philosophy
 
