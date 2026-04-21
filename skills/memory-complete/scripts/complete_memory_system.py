@@ -18,7 +18,14 @@ from memory_palace import MemPalace
 from tom_engine import ToMEngine
 from emotional_analyzer import EmotionalAnalyzer
 from enhanced_retrieval import EnhancedRetrieval
-from ollama_embedding import OllamaEmbedding
+
+# 优先使用 LM Studio（替代 Ollama）
+try:
+    from lm_studio_embedding import LMStudioEmbedding as LocalEmbedding
+    DEFAULT_EMBEDDER = 'lmstudio'
+except ImportError:
+    from ollama_embedding import OllamaEmbedding as LocalEmbedding
+    DEFAULT_EMBEDDER = 'ollama'
 
 class CompleteMemorySystem:
     """完整记忆系统 - 统一入口"""
@@ -45,12 +52,21 @@ class CompleteMemorySystem:
         self.emotional = EmotionalAnalyzer()
         self.enhanced = EnhancedRetrieval(db_path)
 
-        # 初始化Ollama（可选）
-        self.ollama = None
-        if self.config.get('use_ollama', False):
-            ollama_model = self.config.get('ollama_model', 'nomic-embed-text')
-            ollama_url = self.config.get('ollama_url', 'http://localhost:11434')
-            self.ollama = OllamaEmbedding(model=ollama_model, base_url=ollama_url)
+        # 初始化本地嵌入（LM Studio 优先，Ollama 备选）
+        self.embedder = None
+        if self.config.get('use_embedder', True):
+            embedder_type = self.config.get('embedder_type', DEFAULT_EMBEDDER)
+            embedder_model = self.config.get('embedder_model', 'nomic-embed-text')
+            
+            if embedder_type == 'lmstudio':
+                embedder_url = self.config.get('lmstudio_url', 'http://localhost:1234/v1')
+                self.embedder = LocalEmbedding(model=embedder_model, base_url=embedder_url)
+                print(f"Using LM Studio embedder: {embedder_model}")
+            else:
+                # Ollama fallback
+                ollama_url = self.config.get('ollama_url', 'http://localhost:11434')
+                self.embedder = LocalEmbedding(model=embedder_model, base_url=ollama_url)
+                print(f"Using Ollama embedder: {embedder_model}")
 
     def initialize(self) -> bool:
         """初始化所有子系统"""
