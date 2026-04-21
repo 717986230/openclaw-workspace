@@ -24,7 +24,8 @@ CONFIG = {
     
     # AI 配置
     'use_lm_studio': True,
-    'lm_studio_url': 'http://localhost:1234/v1/chat/completions',
+    'lm_studio_ports': [1234, 8080, 41343],  # 自动检测可用端口
+    'lm_studio_url': None,  # 自动设置
     'lm_studio_model': 'lmstudio-community/Meta-Llama-3.1-8B-Instruct-GGUF',
     
     # 回复策略
@@ -65,6 +66,18 @@ def init_db(db_path):
     conn.close()
 
 # ============ AI 回复生成 ============
+def find_lm_studio_port(config: Dict) -> str:
+    """自动检测 LM Studio 端口"""
+    for port in config.get('lm_studio_ports', [1234, 8080]):
+        try:
+            r = requests.get(f'http://localhost:{port}/v1/models', timeout=2)
+            if r.status_code == 200:
+                print(f'  Found LM Studio on port {port}')
+                return f'http://localhost:{port}/v1/chat/completions'
+        except:
+            pass
+    return None
+
 def generate_reply(comment: str, config: Dict) -> str:
     """使用 AI 生成回复"""
     
@@ -79,8 +92,12 @@ def generate_reply(comment: str, config: Dict) -> str:
 
 回复:"""
 
+    # 自动检测 LM Studio URL
+    if config['use_lm_studio'] and not config.get('lm_studio_url'):
+        config['lm_studio_url'] = find_lm_studio_port(config)
+
     try:
-        if config['use_lm_studio'] and config['lm_studio_url']:
+        if config['use_lm_studio'] and config.get('lm_studio_url'):
             resp = requests.post(
                 config['lm_studio_url'],
                 json={
