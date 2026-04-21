@@ -1,0 +1,19 @@
+{
+  "todo": {
+    "autoTrack": true,
+    "showProgress": true,
+    "archiveOnComplete": true,
+    "maxActiveTasks": 10
+  },
+  "ask": {
+    "timeout": 300000,
+    "defaultConfirm": false,
+    "rememberChoice": false
+  },
+  "worktree": {
+    "enabled": true,
+    "branchPrefix": "task/",
+    "cleanupOnMerge": true,
+    "maxWorktrees": 5
+  }
+}

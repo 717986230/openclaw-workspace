@@ -1,0 +1,12 @@
+Clone Results - 10 repos
+============================================================
+[1/10] prediction-market-backtest: FAILED - Cloning into 'C:/Users/Administrator/.openclaw/workspace/polymarket-tools\predic
+[2/10] tauric-research: FAILED - Cloning into 'C:/Users/Administrator/.openclaw/workspace/polymarket-tools\tauric
+[3/10] sentiment-analysis: FAILED - Cloning into 'C:/Users/Administrator/.openclaw/workspace/polymarket-tools\sentim
+[4/10] polymarket-helper: FAILED - Cloning into 'C:/Users/Administrator/.openclaw/workspace/polymarket-tools\polyma
+[5/10] firecrawl: ERROR - Command '['git', 'clone', 'https://github.com/firecrawl/firecrawl', 'C:/Users/Ad
+[6/10] pydantic-ai: ERROR - Command '['git', 'clone', 'https://github.com/pydantic/pydantic-ai', 'C:/Users/A
+[7/10] n8n: ERROR - Command '['git', 'clone', 'https://github.com/n8n-io/n8n', 'C:/Users/Administrat
+[8/10] tavily-mcp: ERROR - Command '['git', 'clone', 'https://github.com/tavily-ai/tavily-mcp', 'C:/Users/A
+[9/10] wallet-analyzer: FAILED - Cloning into 'C:/Users/Administrator/.openclaw/workspace/polymarket-tools\wallet
+[10/10] binance-predictor: FAILED - Cloning into 'C:/Users/Administrator/.openclaw/workspace/polymarket-tools\binanc

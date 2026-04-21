@@ -1,0 +1,100 @@
+Title: 看不懂的SOL on X: "给兄弟们分享，10个可用于Polymarket交易的免费GitHub开源项目
+ 
+全部免费，可帮你实现交易自动化
+ 
+1. 预测市场回测框架：https://t.co/86ElgI7GvL
+基于Polymarket与Kalshi真实历史数据，回测交易策略
+
+2. 多智能体交易框架：https://t.co/KuNglGbKoD
+快速搭建完整的AI交易系统
+
+3. https://t.co/nZGJC5s8Yi" / X
+
+URL Source: https://x.com/dtdt666/status/2042524166491107665
+
+Published Time: Sat, 11 Apr 2026 01:23:57 GMT
+
+Markdown Content:
+Don’t miss what’s happening
+
+People on X are the first to know.
+
+[Log in](https://x.com/login)
+
+[Sign up](https://x.com/i/flow/signup)
+
+## [](https://x.com/)
+
+## Post
+
+## Conversation
+
+[看不懂的SOL](https://x.com/DtDt666)
+
+[@DtDt666](https://x.com/DtDt666)
+
+给兄弟们分享，10个可用于Polymarket交易的免费GitHub开源项目 全部免费，可帮你实现交易自动化 1.预测市场回测框架：[github.com/evan-kolberg/p](https://t.co/rjpHoYcgBW) 基于Polymarket与Kalshi真实历史数据，回测交易策略 2.多智能体交易框架：[github.com/TauricResearch](https://t.co/jLMuYIgqEU) 快速搭建完整的AI交易系统 3.近30天舆情研究工具：[github.com/mvanhorn/last3](https://t.co/Z4kBi4PFHC) 自动分析过去30天新闻、社交动态与预测市场数据 4.Polymarket辅助交易工具：[github.com/FiatFiorino/po](https://t.co/bPtw3nwcgb) 提供市场趋势指标，辅助判断行情方向 5.网页数据清洗工具：[github.com/firecrawl/fire](https://t.co/54ddbqsjj0) 将任意网页转换为干净可用的结构化数据 6.生产级AI智能体框架：[github.com/pydantic/pydan](https://t.co/Mt84xpaGAb) 用于搭建可上线运行的交易机器人 7.工作流自动化平台：[github.com/n8n-io/n8n](https://t.co/cJIGGM6lPo) 用于新闻分析、信息筛选与自动化流程搭建 8.Tavily MCP服务端：[github.com/tavily-ai/tavi](https://t.co/mQPSLqD8Av) 内置专业检索能力的AI搜索服务（原文链接补全） 9.钱包数据采集与分析器：[github.com/txbabaxyz/coll](https://t.co/kuUfMtULYy) 抓取任意钱包的完整交易历史并进行分析 10.币安数据采集与预测工具：[github.com/txbabaxyz/mlmo](https://t.co/ke2UoBOWTp) 预测市场走势，计算资产合理估值 全部安全，并且完全免费兄弟们
+
+[![Image 1: Image](https://pbs.twimg.com/media/HFiA5RjakAI5Agp?format=png&name=360x360)](https://x.com/DtDt666/status/2042524166491107665/photo/1)
+
+[![Image 2: Image](https://pbs.twimg.com/media/HFiA5GaakAI-s1s?format=png&name=360x360)](https://x.com/DtDt666/status/2042524166491107665/photo/2)
+
+[![Image 3: Image](https://pbs.twimg.com/media/HFiA5K0bwAAsb6C?format=png&name=360x360)](https://x.com/DtDt666/status/2042524166491107665/photo/3)
+
+[![Image 4: Image](https://pbs.twimg.com/media/HFiA5QpakAINzQV?format=png&name=360x360)](https://x.com/DtDt666/status/2042524166491107665/photo/4)
+
+[8:44 AM · Apr 10, 2026](https://x.com/DtDt666/status/2042524166491107665)
+
+[28.4K Views](https://x.com/DtDt666/status/2042524166491107665/analytics)
+
+## New to X?
+
+Sign up now to get your own personalized timeline!
+
+[Create account](https://x.com/i/flow/signup)
+
+By signing up, you agree to the [Terms of Service](https://x.com/tos) and [Privacy Policy](https://x.com/privacy), including [Cookie Use.](https://help.x.com/rules-and-policies/twitter-cookies)
+
+## Trending now
+
+## What’s happening
+
+Science · Trending
+
+Artemis II
+
+Science · Trending
+
+#NASA
+
+Politics · Trending
+
+Swalwell
+
+Entertainment · Trending
+
+#DragRace
+
+[Show more](https://x.com/explore/tabs/for-you)
+
+[Terms of Service](https://x.com/tos)
+
+|
+
+[Privacy Policy](https://x.com/privacy)
+
+|
+
+[Cookie Policy](https://support.x.com/articles/20170514)
+
+|
+
+[Accessibility](https://help.x.com/resources/accessibility)
+
+|
+
+[Ads info](https://business.x.com/en/help/troubleshooting/how-twitter-ads-work.html?ref=web-twc-ao-gbl-adsinfo&utm_source=twc&utm_medium=web&utm_campaign=ao&utm_content=adsinfo)
+
+|
+
+© 2026 X Corp.
