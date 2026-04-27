@@ -1,8 +1,14 @@
 # OpenClaw Token Optimizer
 
-**Reduce OpenClaw token usage and API costs by 50-80%**
+**Reduce OpenClaw token usage and API costs by 50-80%.**
 
-An OpenClaw skill for smart model routing, lazy context loading, optimized heartbeats, budget tracking, and native OpenClaw 2026.2.15 features (session pruning, bootstrap size limits, cache TTL alignment).
+OpenClaw Token Optimizer is a focused OpenClaw skill for **smart model routing, lazy context loading, cache-aware heartbeat tuning, and token budget tracking**.
+
+It is designed for people running:
+- long OpenClaw sessions
+- large workspaces
+- cost-sensitive agent workflows
+- multi-model OpenClaw setups
 
 [![ClawHub](https://img.shields.io/badge/ClawHub-openclaw--token--optimizer-blue)](https://clawhub.ai/Asif2BD/openclaw-token-optimizer)
 [![Version](https://img.shields.io/badge/version-1.4.2-green)](https://github.com/Asif2BD/OpenClaw-Token-Optimizer/blob/main/CHANGELOG.md)
@@ -11,20 +17,39 @@ An OpenClaw skill for smart model routing, lazy context loading, optimized heart
 
 ---
 
-## 🚀 Installation
+## Why people care
 
-### Option 1: ClawHub (recommended)
+Most OpenClaw cost problems come from a mix of:
+- loading too much context
+- using expensive models for simple tasks
+- missing cache windows and paying the rewrite cost again
+- not tracking budget until it is already too late
+
+This skill helps fix that with practical local-first tooling.
+
+### What you get
+
+- **Smart model routing** for simple vs complex tasks
+- **Lazy context loading** so small tasks do not pull in your whole workspace
+- **Cache TTL heartbeat alignment** to reduce avoidable cache rewrites
+- **Budget tracking** to keep OpenClaw usage visible
+- **Native OpenClaw 2026.2.15 config patches** for session pruning and bootstrap size limits
+
+---
+
+## 30-second quick start
+
+### Install from ClawHub
 ```bash
 clawhub install Asif2BD/openclaw-token-optimizer
 ```
 
-Or browse to: [clawhub.ai/Asif2BD/openclaw-token-optimizer](https://clawhub.ai/Asif2BD/openclaw-token-optimizer)
-
-### Option 2: Manual (GitHub)
+### Or install manually
 ```bash
 git clone https://github.com/Asif2BD/OpenClaw-Token-Optimizer.git \
   ~/.openclaw/skills/openclaw-token-optimizer
 ```
+
 Then add to `openclaw.json`:
 ```json
 {
@@ -36,51 +61,59 @@ Then add to `openclaw.json`:
 }
 ```
 
-### One-line install prompt for your agent
-> "Install the OpenClaw Token Optimizer skill from https://clawhub.ai/Asif2BD/openclaw-token-optimizer — or if ClawHub isn't available, clone https://github.com/Asif2BD/OpenClaw-Token-Optimizer and add the path to skills.load.extraDirs in openclaw.json"
-
----
-
-## ✨ What's New in v1.4.x (OpenClaw 2026.2.15)
-
-Three **native config patches** that work today with zero external dependencies:
-
-### Session Pruning
-Auto-trim old tool results when the Anthropic cache TTL expires — reduces cache re-write costs.
-```json
-{ "agents": { "defaults": { "contextPruning": { "mode": "cache-ttl", "ttl": "5m" } } } }
-```
-
-### Bootstrap Size Limits
-Cap workspace file injection into the system prompt (20-40% reduction for large workspaces).
-```json
-{ "agents": { "defaults": { "bootstrapMaxChars": 10000, "bootstrapTotalMaxChars": 15000 } } }
-```
-
-### Cache Retention for Opus
-Amortize cache write costs on long Opus sessions.
-```json
-{ "agents": { "defaults": { "models": { "anthropic/claude-opus-4-5": { "params": { "cacheRetention": "long" } } } } } }
-```
-
-### Cache TTL Heartbeat Alignment
-Keep the Anthropic 1h prompt cache warm — avoid the re-write penalty.
+### Try the biggest win first
 ```bash
-python3 scripts/heartbeat_optimizer.py cache-ttl
-# → recommended_interval: 55min (3300s)
+python3 scripts/context_optimizer.py recommend "build a login page"
+# → Load only the files you need instead of the whole workspace
+```
+
+### Then route by task complexity
+```bash
+python3 scripts/model_router.py "design a microservices architecture"
+# → Complex task → Opus
+
+python3 scripts/model_router.py "thanks!"
+# → Simple ack → Sonnet (cheapest available)
+```
+
+### Check your budget
+```bash
+python3 scripts/token_tracker.py check
 ```
 
 ---
 
-## 🛠️ Quick Start
+## At a glance
 
-**1. Context optimization (biggest win):**
+| Problem | What this skill does |
+|---|---|
+| Too much context loaded | Recommends minimal files to load |
+| Expensive model overuse | Routes simple tasks to cheaper models |
+| Cache rewrite penalties | Aligns heartbeat to cache TTL windows |
+| No budget visibility | Tracks token and cost usage |
+
+---
+
+## Expected savings
+
+| Strategy | Context | Model | Monthly (100K tok/day) | Savings |
+|---|---|---|---|---|
+| Baseline (no optimization) | 50K | Sonnet | $9.00 | 0% |
+| Context optimization only | 10K | Sonnet | $5.40 | 40% |
+| Model routing only | 50K | Mixed | $5.40 | 40% |
+| **Both (this skill)** | **10K** | **Mixed** | **$2.70** | **70%** |
+
+---
+
+## Best commands to demo
+
+### 1. Context optimization
 ```bash
 python3 scripts/context_optimizer.py recommend "hi, how are you?"
 # → Load only 2 files, skip everything else → ~80% savings
 ```
 
-**2. Model routing:**
+### 2. Model routing
 ```bash
 python3 scripts/model_router.py "design a microservices architecture"
 # → Complex task → Opus
@@ -88,29 +121,53 @@ python3 scripts/model_router.py "thanks!"
 # → Simple ack → Sonnet (cheapest available)
 ```
 
-**3. Optimized heartbeat:**
+### 3. Optimized heartbeat
 ```bash
 cp assets/HEARTBEAT.template.md ~/.openclaw/workspace/HEARTBEAT.md
 python3 scripts/heartbeat_optimizer.py plan
 ```
 
-**4. Token budget check:**
+### 4. Cache TTL alignment
+```bash
+python3 scripts/heartbeat_optimizer.py cache-ttl
+# → recommended_interval: 55min (3300s)
+```
+
+### 5. Token budget check
 ```bash
 python3 scripts/token_tracker.py check
 ```
 
-**5. Cache TTL alignment:**
-```bash
-python3 scripts/heartbeat_optimizer.py cache-ttl
-# Set heartbeat to 55min to keep Anthropic 1h cache warm
+---
+
+## What's new in v1.4.x (OpenClaw 2026.2.15)
+
+Three **native config patches** that work today with zero external dependencies:
+
+### Session pruning
+Auto-trim old tool results when the Anthropic cache TTL expires — reduces cache re-write costs.
+```json
+{ "agents": { "defaults": { "contextPruning": { "mode": "cache-ttl", "ttl": "5m" } } } }
+```
+
+### Bootstrap size limits
+Cap workspace file injection into the system prompt (20-40% reduction for large workspaces).
+```json
+{ "agents": { "defaults": { "bootstrapMaxChars": 10000, "bootstrapTotalMaxChars": 15000 } } } }
+```
+
+### Cache retention for Opus
+Amortize cache write costs on long Opus sessions.
+```json
+{ "agents": { "defaults": { "models": { "anthropic/claude-opus-4-5": { "params": { "cacheRetention": "long" } } } } } }
 ```
 
 ---
 
-## 🔍 Native OpenClaw Diagnostics (2026.2.15+)
+## Native OpenClaw diagnostics (2026.2.15+)
 
-```
-/context list    → per-file token breakdown (use before applying bootstrap limits)
+```text
+/context list    → per-file token breakdown
 /context detail  → full system prompt breakdown
 /usage tokens    → append token count to every reply
 /usage cost      → cumulative cost summary
@@ -118,9 +175,9 @@ python3 scripts/heartbeat_optimizer.py cache-ttl
 
 ---
 
-## 📁 Skill Structure
+## Skill structure
 
-```
+```text
 openclaw-token-optimizer/
 ├── SKILL.md                    ← Skill definition (loaded by OpenClaw)
 ├── SECURITY.md                 ← Full security audit + provenance
@@ -143,18 +200,7 @@ openclaw-token-optimizer/
 
 ---
 
-## 📊 Expected Savings
-
-| Strategy | Context | Model | Monthly (100K tok/day) | Savings |
-|---|---|---|---|---|
-| Baseline (no optimization) | 50K | Sonnet | $9.00 | 0% |
-| Context optimization only | 10K | Sonnet | $5.40 | 40% |
-| Model routing only | 50K | Mixed | $5.40 | 40% |
-| **Both (this skill)** | **10K** | **Mixed** | **$2.70** | **70%** |
-
----
-
-## 🔒 Security
+## Security
 
 All scripts are **local-only** — no network calls, no subprocess spawning, no system modifications. See [SECURITY.md](SECURITY.md) for full per-script audit.
 
@@ -171,7 +217,7 @@ grep -r "urllib\|requests\|socket\|subprocess\|curl\|wget" scripts/
 
 ---
 
-## 📜 Changelog
+## Changelog
 
 See [CHANGELOG.md](CHANGELOG.md) for full version history.
 
@@ -183,7 +229,7 @@ See [CHANGELOG.md](CHANGELOG.md) for full version history.
 
 ---
 
-## 🔗 Links
+## Links
 
 - **ClawHub:** https://clawhub.ai/Asif2BD/openclaw-token-optimizer
 - **GitHub:** https://github.com/Asif2BD/OpenClaw-Token-Optimizer
