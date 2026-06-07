@@ -1,0 +1,14 @@
+{
+  "demo-self-improving": {
+    "created": "2026-06-07T23:37:31.608095",
+    "improvements": [
+      {
+        "timestamp": "2026-06-07T23:37:31.608098",
+        "action": "created",
+        "details": "Category: learning, Template: basic"
+      }
+    ],
+    "usage_count": 1,
+    "last_used": "2026-06-07T23:37:45.420872"
+  }
+}

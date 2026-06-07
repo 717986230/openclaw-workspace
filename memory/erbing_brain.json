@@ -131,6 +131,28 @@
       "difficulty": 7,
       "mastery_level": 2,
       "created_at": "2026-03-04 21:20:00"
+    },
+    {
+      "id": 6,
+      "topic": "GitHub热门AI Agent项目调研",
+      "subtopic": "多智能体框架",
+      "content": "OWL(GAIA#1)、CrewAI、LangChain、AutoGen、AutoGPT、MetaGPT、LlamaIndex、OpenHands、Phidata、CAMEL",
+      "summary": "理解了10大AI Agent框架的核心架构，学到了多智能体协作(OWL/CrewAI)、MCP标准、角色扮演模拟(CAMEL/MetaGPT)等前沿范式",
+      "tags": "AI Agent,多智能体,MCP,CrewAI,OWL,LangChain",
+      "difficulty": 7,
+      "mastery_level": 3,
+      "created_at": "2026-06-07 23:14:00"
+    },
+    {
+      "id": 7,
+      "topic": "Claude Code + Hermes Agent 架构源码分析",
+      "subtopic": "AI Agent 工程架构",
+      "content": "Claude Code: async generator agentic loop(query.ts,1729行) / 4层消息压缩 / MCP client / Bun+React+Ink; Hermes: 可插拔ContextEngine ABC / SQLite+FTS5 / 70+tools / 20+平台gateway / 自我进化loop",
+      "summary": "深度分析了两个顶级Agent框架：Claude Code的async generator模式和4层压缩启发流式处理；Hermes的可插拔架构和自我进化skill机制是Erbing可以借鉴的核心",
+      "tags": "Claude Code,Hermes,async generator,MCP,ContextEngine,自我进化",
+      "difficulty": 9,
+      "mastery_level": 3,
+      "created_at": "2026-06-07 23:30:00"
     }
   ],
   "improvements": [],
