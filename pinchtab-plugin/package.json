@@ -3,9 +3,14 @@
   "name": "@pinchtab/pinchtab",
   "version": "0.1.0",
   "description": "Pinchtab OpenClaw plugin",
-  "main": "index.ts",
+  "main": "index.js",
+  "type": "module",
+  "openclaw": {
+    "extensions": [
+      "./index.js"
+    ]
+  },
   "keywords": ["openclaw", "pinchtab", "browser", "automation"],
   "author": "Pinchtab",
   "license": "MIT"
 }
-

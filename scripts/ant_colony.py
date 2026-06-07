@@ -33,6 +33,16 @@ def run_ant(ant_name: str) -> dict:
     return result
 
 
+def run_ant_colony():
+    """供调度器调用的入口"""
+    print(f"🐜 蚁群系统启动 - {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
+    results = []
+    for task_key, task_info in TASKS.items():
+        result = run_ant(task_info["name"])
+        results.append(result)
+    return {"ants": results, "total": len(results), "total_findings": sum(r["count"] for r in results)}
+
+
 def main():
     # 读取要运行的蚂蚁类型
     ant_type = sys.argv[1] if len(sys.argv) > 1 else "all"

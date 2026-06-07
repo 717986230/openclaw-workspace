@@ -1,51 +1,10 @@
 {
   "version": 1,
   "skills": {
-<<<<<<< HEAD
-    "find-skills": {
-      "version": "0.1.0",
-      "installedAt": 1773847681178
-=======
-    "openclaw-token-optimizer": {
-      "version": "3.0.0",
-      "installedAt": 1772274494690
-    },
-    "agents-skill-security-audit": {
-      "version": "0.1.0",
-      "installedAt": 1772274913880
-    },
-    "lancedb-memory": {
-      "version": "1.0.0",
-      "installedAt": 1772422518503
-    },
-    "agent-directory": {
-      "version": "1.2.0",
-      "installedAt": 1772465461857
-    },
-    "ai-agent-helper": {
-      "version": "1.0.0",
-      "installedAt": 1772496519933
-    },
-    "multi-agent-roles": {
-      "version": "1.0.0",
-      "installedAt": 1772496549035
-    },
-    "codex-skill": {
-      "version": "1.0.0",
-      "installedAt": 1772517681950
-    },
-    "binance-pro": {
-      "version": "1.0.0",
-      "installedAt": 1772530097395
-    },
-    "tiangong-notebooklm-cli": {
-      "version": "0.1.1",
-      "installedAt": 1772556693904
-    },
-    "office": {
-      "version": "1.0.0",
-      "installedAt": 1772557445996
->>>>>>> fc249fbb8674766795c7a28067322c1e74ecf46a
+    "honcho": {
+      "version": "1.0.4",
+      "installedAt": 1780788463675,
+      "registry": "https://clawhub.ai"
     }
   }
 }

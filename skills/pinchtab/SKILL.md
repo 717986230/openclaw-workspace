@@ -1,3 +1,7 @@
+---
+name: pinchtab
+description: Use Pinchtab to control a browser through the unified pinchtab tool for navigation, snapshots, clicks, typing, readable text extraction, screenshots, JavaScript evaluation, PDF export, and tab management.
+---
 
 # Pinchtab 技能
 
@@ -123,4 +127,3 @@ pinchtab(action="text")
 
 - 官方文档：https://pinchtab.com/docs
 - GitHub：https://github.com/pinchtab/pinchtab
-
