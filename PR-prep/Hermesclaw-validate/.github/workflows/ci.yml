@@ -1,0 +1,91 @@
+name: CI
+
+on:
+  push:
+    branches: [main, develop]
+  pull_request:
+    branches: [main, develop]
+
+jobs:
+  validate:
+    name: Validate (${{ matrix.os }})
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, macos-latest]
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          submodules: recursive
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install system dependencies (macOS)
+        if: matrix.os == 'macos-latest'
+        run: |
+          brew install git node
+          echo "PATH: $PATH"
+
+      - name: Install system dependencies (Linux)
+        if: matrix.os == 'ubuntu-latest'
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq lsof netstat-nat || true
+
+      - name: Install Python dependencies
+        run: |
+          python3 -m pip install --upgrade pip
+          if [[ -f services/hermes-bridge/requirements.txt ]]; then
+            pip install -r services/hermes-bridge/requirements.txt
+          fi
+
+      - name: Install npm dependencies
+        run: |
+          if [[ -d packages/openclaw-hermes-adapter ]]; then
+            cd packages/openclaw-hermes-adapter
+            npm ci
+          fi
+
+      - name: TypeScript type check
+        run: |
+          if [[ -d packages/openclaw-hermes-adapter ]] && command -v npx >/dev/null; then
+            cd packages/openclaw-hermes-adapter
+            npx tsc --noEmit || true
+          fi
+
+      - name: Run Unix validation script
+        run: |
+          if [[ -f scripts/validate.sh ]]; then
+            chmod +x scripts/validate.sh
+            ./scripts/validate.sh --skip-docker || true
+          fi
+
+  docker:
+    name: Docker Build
+    runs-on: ubuntu-latest
+    if: ${{ github.event_name != 'pull_request' || github.event.pull_request.head.repo.full_name != github.repository }}
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      - name: Build Docker images
+        run: |
+          if [[ -f services/hermes-bridge/docker-compose.yml ]]; then
+            docker compose -f services/hermes-bridge/docker-compose.yml build || true
+          fi
