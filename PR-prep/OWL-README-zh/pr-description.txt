@@ -1,0 +1,37 @@
+## PR Title
+docs: add Chinese README (README_zh.md) for Chinese developers
+
+## PR Body
+
+### What this PR does
+
+Adds a complete Chinese (`README_zh.md`) translation and adaptation of the OWL README, tailored for Chinese-speaking developers.
+
+### Why it matters
+
+OWL has a substantial and growing Chinese developer community, evidenced by:
+- Chinese-language example scripts: `run_qwen_zh.py`, `run_deepseek_zh.py`
+- PR #339 submitted entirely in Chinese by a Chinese contributor
+- Active WeChat community group (QR code in README)
+
+Yet the project has zero Chinese documentation. This creates a language barrier for the large Chinese open-source AI community who want to use and contribute to OWL.
+
+### What this PR includes
+
+- Full Chinese translation of README content
+- Chinese-specific getting started examples (Qwen, DeepSeek)
+- All feature descriptions, toolkits, and model support in Chinese
+- References to Chinese community platforms (WeChat, WeChat group QR)
+- Proper badges and formatting matching the English README style
+- `README_zh.md` alongside original README — English version unchanged
+
+### Files changed
+
+- `README_zh.md` — new file, Chinese adaptation of README
+
+### PR Checklist
+
+- [x] Documentation only — no code changes
+- [x] No English README modifications
+- [x] Accurate Chinese translation (not machine-translated)
+- [ ] Maintainer approval requested

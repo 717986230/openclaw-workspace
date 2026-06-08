@@ -1,0 +1,40 @@
+## PR Title
+feat(toolkits): add robust exception handling to core toolkits
+
+## PR Body
+
+### What this PR does
+
+Adds robust, consistent error handling to OWL's core toolkits (FileWriteToolkit, TerminalToolkit, BrowserToolkit), extending the pattern established in [PR #107](https://github.com/camel-ai/OWL/pull/107) (GAIA result.json exception handling).
+
+### Why it matters
+
+OWL agents execute real-world operations — file writes, terminal commands, browser navigation. When these fail, crashes are unhelpful. This PR ensures:
+
+1. **Failures are descriptive** — structured error messages with context
+2. **No data corruption** — atomic writes with rollback on FileWriteToolkit
+3. **Security protection** — command injection prevention on TerminalToolkit
+4. **Consistent API** — all toolkits report errors the same way via `ErrorHandlingMixin`
+
+### Key changes
+
+- **New file** `owl/toolkits/_error_handling.py`: Base `ErrorHandlingMixin` class + `with_error_handling` decorator
+- **FileWriteToolkit**: Atomic writes via temp file + `os.replace()`; rollback on failure
+- **TerminalToolkit**: `shlex.split` validation + timeout + dangerous command blocking
+- **BrowserToolkit**: URL pre-validation before navigation
+- **New exception types**: `CommandExecutionError`, `NavigationError`, `FileOperationError`
+
+### Testing
+
+New test file `tests/toolkits/test_error_handling.py`:
+- `test_file_write_atomic_on_failure` — verify existing file unchanged on error
+- `test_terminal_timeout` — verify timeout raises `CommandExecutionError`
+- `test_command_injection_blocked` — verify dangerous commands are rejected
+
+### PR Checklist
+
+- [x] Backward compatible — no API changes to existing method signatures
+- [x] No new dependencies — uses only Python stdlib
+- [x] Follows existing OWL patterns (extending PR #107's approach)
+- [ ] Tests pass locally
+- [ ] Maintainer approval requested
