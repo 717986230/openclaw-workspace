@@ -63,5 +63,17 @@
     "collector": 19,
     "researcher": 19,
     "status": "ok"
+  },
+  {
+    "time": "2026-06-08T21:03:37.950299",
+    "collector": 22,
+    "researcher": 22,
+    "status": "ok"
+  },
+  {
+    "time": "2026-06-09T09:03:05.757873",
+    "collector": 19,
+    "researcher": 19,
+    "status": "ok"
   }
 ]
