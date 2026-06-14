@@ -1,6 +1,6 @@
 {
   "created_at": "2026-03-04 21:20:00",
-  "version": "1.0",
+  "version": "1.1",
   "core_memories": [
     {
       "id": 1,
@@ -43,12 +43,68 @@
       "created_at": "2026-03-04 21:20:00"
     },
     {
+      "id": 13,
+      "title": "Aider 结对编程",
+      "content": "已安装 aider-cli-workflow skill，终端内AI编程+自动git提交，效率提升5倍。",
+      "category": "skill",
+      "importance": 9,
+      "created_at": "2026-06-13"
+    },
+    {
+      "id": 16,
+      "title": "Brain daemon已禁用",
+      "content": "erbing-brain-cycle每15分钟空转，已在2026-06-13禁用。信念库升级为实际内容。",
+      "category": "learning",
+      "importance": 9,
+      "created_at": "2026-06-13"
+    },
+    {
       "id": 5,
       "title": "build-your-own-x 已学习",
       "content": "我已经学习了 30+ 技术领域的教程，包括神经网络、Web服务器、区块链等。",
       "category": "learning",
       "importance": 8,
       "created_at": "2026-03-04 21:20:00"
+    },
+    {
+      "id": 10,
+      "title": "OpenHands 代码审查",
+      "content": "已安装 openhands/code-review skill，支持自动化 PR review、安全漏洞扫描。每天可节省代码审查时间。",
+      "category": "skill",
+      "importance": 8,
+      "created_at": "2026-06-13"
+    },
+    {
+      "id": 11,
+      "title": "Hermes Agent 自我进化",
+      "content": "已安装 nousresearch/hermes-agent@dogfood，能根据使用习惯持续优化自己。",
+      "category": "skill",
+      "importance": 8,
+      "created_at": "2026-06-13"
+    },
+    {
+      "id": 12,
+      "title": "CrewAI 多Agent协作",
+      "content": "已安装 crewaiinc/skills@getting-started，60%财富500强在用，适合复杂任务分解。",
+      "category": "skill",
+      "importance": 8,
+      "created_at": "2026-06-13"
+    },
+    {
+      "id": 15,
+      "title": "LangGraph Agent编排",
+      "content": "已安装 langgraph-docs skill，生产级Agent编排框架，StateGraph+Checkpointer支持暂停恢复。",
+      "category": "skill",
+      "importance": 8,
+      "created_at": "2026-06-13"
+    },
+    {
+      "id": 14,
+      "title": "n8n 工作流自动化",
+      "content": "已安装 n8n-workflow-patterns skill，Zapier开源替代，400+集成，适合多服务串联自动化。",
+      "category": "skill",
+      "importance": 7,
+      "created_at": "2026-06-13"
     }
   ],
   "user_info": {

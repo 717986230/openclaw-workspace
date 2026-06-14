@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "skills": {
+    "agent-email-inbox": {
+      "source": "resend/resend-skills",
+      "sourceType": "github",
+      "skillPath": "skills/agent-email-inbox/SKILL.md",
+      "computedHash": "25ffa798578026fcfdc5bdbe5b10ec2d2cd1784f8a94344c0ac055f3a82b57d4"
+    },
+    "code-review": {
+      "source": "openhands/skills",
+      "sourceType": "github",
+      "skillPath": "skills/code-review/SKILL.md",
+      "computedHash": "2bb3760ee51ce2cf5e8d72bdfb369e49c7f1c3a81de260f17d2f44abff21f686"
+    },
+    "create-mcp-servers": {
+      "source": "glittercowboy/taches-cc-resources",
+      "sourceType": "github",
+      "skillPath": "skills/create-mcp-servers/SKILL.md",
+      "computedHash": "48e4effc4c11dd1d51f6dd547e82c84697964b1802cef55d4d57e602d46512b0"
+    },
+    "dogfood": {
+      "source": "nousresearch/hermes-agent",
+      "sourceType": "github",
+      "skillPath": "skills/dogfood/SKILL.md",
+      "computedHash": "7e102bfc074eec099b9e9b1b5db2c3695ef784463d0d4bee9f7b1ad9bd42b835"
+    },
+    "video-use": {
+      "source": "browser-use/video-use",
+      "sourceType": "github",
+      "skillPath": "SKILL.md",
+      "computedHash": "83f4c3636a80d4c69db8a80ed04fa3d05bbb65cd0a5879a0684e16322cd92637"
+    }
+  }
+}

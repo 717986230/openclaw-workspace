@@ -1,7 +1,66 @@
 {
-  "unknown": {
-    "count": 46,
-    "success_rate": 0.9997263125265989,
-    "first_seen": "2026-06-08T23:49:06.150776"
+  "meta": {
+    "updated": "2026-06-13T23:40:00",
+    "note": "2026-06-13 全量优化后的信念库重建"
+  },
+  "skills_installed_20260613": {
+    "count": 7,
+    "items": [
+      "openhands/code-review",
+      "hermes-agent/dogfood",
+      "crewai/getting-started",
+      "aider-cli-workflow",
+      "n8n-workflow-patterns",
+      "langgraph-docs",
+      "n8n-mcp-tools-expert"
+    ],
+    "source": "Twitter @NFTCPS 10个AI项目推荐"
+  },
+  "brain_daemon": {
+    "status": "disabled_20260613",
+    "reason": "空转2月无进化，消耗token，禁用节省资源",
+    "cron_id": "faa31f3d-5140-42a7-91de-c57761d63429"
+  },
+  "model_strategy": {
+    "primary": "minimax-m2.7",
+    "fallback_chain": [
+      "kimi-k2.6",
+      "nemotron-super-120b"
+    ],
+    "mechanism": "auto-fallback-on-failure",
+    "pending_task_2": "closed_20260613"
+  },
+  "capabilities": {
+    "agentic_coding": [
+      "openhands/code-review",
+      "aider-cli-workflow"
+    ],
+    "multi_agent": [
+      "crewai/getting-started",
+      "hermes-agent/dogfood"
+    ],
+    "workflow_automation": [
+      "n8n-workflow-patterns",
+      "n8n-mcp-tools-expert"
+    ],
+    "agent_orchestration": [
+      "langgraph-docs"
+    ]
+  },
+  "learned_20260613": [
+    "brain daemon每15分钟空转消耗资源，应该按需触发而非固定循环",
+    "信念库需要定期从learnings提取更新，否则永远停留在占位符",
+    "模型fallback机制已能覆盖双模型切换需求，pending task可关闭",
+    "n8n有7个skill包，n8n-workflow-patterns最热(7.5K installs)",
+    "langgraph human-in-the-loop模式适合需要暂停确认的工作流",
+    "openhands code-review已安装，可用于代码提交前自动化检查",
+    "crewai多agent协作适合复杂任务分解"
+  ],
+  "system_health": {
+    "uptime_days": 5,
+    "disk_free_gb": 355,
+    "skills_total": 123,
+    "skills_eligible": 82,
+    "sessions_active": 25
   }
 }
