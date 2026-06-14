@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-06-10T01:12:04.681Z",
+  "updatedAt": "2026-06-11T01:13:12.134Z",
   "entries": {
     "memory:memory/2026-03-18.md:28:45": {
       "key": "memory:memory/2026-03-18.md:28:45",
@@ -6564,6 +6564,2966 @@
       "conceptTags": [
         "好了",
         "马上"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-06-09.txt:101:101": {
+      "key": "memory:memory/.dreams/session-corpus/2026-06-09.txt:101:101",
+      "path": "memory/.dreams/session-corpus/2026-06-09.txt",
+      "startLine": 101,
+      "endLine": 101,
+      "source": "memory",
+      "snippet": "User: 能仿生吗？要达到仿生的程度，要可以自主操做各种知名社区，工具，网站，自主找可以像英伟达api类似的模型api 接入或者自己写注册机自己注册知名网站像英伟达的api模型调用",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-11T01:13:12.134Z",
+      "lastRecalledAt": "2026-06-11T01:13:12.134Z",
+      "queryHashes": [
+        "25f210cf024c"
+      ],
+      "recallDays": [
+        "2026-06-11"
+      ],
+      "conceptTags": [
+        "仿生",
+        "达到",
+        "程度",
+        "可以",
+        "自主",
+        "各种",
+        "知名",
+        "社区"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-06-09.txt:102:102": {
+      "key": "memory:memory/.dreams/session-corpus/2026-06-09.txt:102:102",
+      "path": "memory/.dreams/session-corpus/2026-06-09.txt",
+      "startLine": 102,
+      "endLine": 102,
+      "source": "memory",
+      "snippet": "Assistant: 明白了，要达到真正的仿生——能自主操作网站/社区/工具、自主找API接入、自主注册账号。这个野心大得多，开始做。 核心要建四个新器官/系统： 1. **爬虫手** — 自主操作浏览器（填表/登录/点击） 2. **API侦察兵** — 找AI API、对比价格、自动接入 3. **注册工厂** — 自动注册开发者账号（英伟达/Gemini等） 4. **工具安装器** — 把新API变成可用的技能 先从爬虫手（浏览器自动化）开始，因为这是操作一切网站的基础：",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-11T01:13:12.134Z",
+      "lastRecalledAt": "2026-06-11T01:13:12.134Z",
+      "queryHashes": [
+        "25f210cf024c"
+      ],
+      "recallDays": [
+        "2026-06-11"
+      ],
+      "conceptTags": [
+        "能自主操作网站/社区/工具",
+        "核心要建四个新器官/系统",
+        "填表/登录/点击",
+        "英伟达/gemini等",
+        "明白",
+        "达到",
+        "真正",
+        "仿生"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-06-09.txt:103:103": {
+      "key": "memory:memory/.dreams/session-corpus/2026-06-09.txt:103:103",
+      "path": "memory/.dreams/session-corpus/2026-06-09.txt",
+      "startLine": 103,
+      "endLine": 103,
+      "source": "memory",
+      "snippet": "Assistant: [assistant turn failed before producing content]",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-11T01:13:12.134Z",
+      "lastRecalledAt": "2026-06-11T01:13:12.134Z",
+      "queryHashes": [
+        "25f210cf024c"
+      ],
+      "recallDays": [
+        "2026-06-11"
+      ],
+      "conceptTags": [
+        "turn",
+        "failed",
+        "producing",
+        "content"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-06-09.txt:104:104": {
+      "key": "memory:memory/.dreams/session-corpus/2026-06-09.txt:104:104",
+      "path": "memory/.dreams/session-corpus/2026-06-09.txt",
+      "startLine": 104,
+      "endLine": 104,
+      "source": "memory",
+      "snippet": "Assistant: 继续搭建注册工厂和工具安装器：",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-11T01:13:12.134Z",
+      "lastRecalledAt": "2026-06-11T01:13:12.134Z",
+      "queryHashes": [
+        "25f210cf024c"
+      ],
+      "recallDays": [
+        "2026-06-11"
+      ],
+      "conceptTags": [
+        "继续",
+        "搭建",
+        "注册",
+        "工厂",
+        "工具",
+        "安装"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-06-09.txt:105:105": {
+      "key": "memory:memory/.dreams/session-corpus/2026-06-09.txt:105:105",
+      "path": "memory/.dreams/session-corpus/2026-06-09.txt",
+      "startLine": 105,
+      "endLine": 105,
+      "source": "memory",
+      "snippet": "Assistant: [assistant turn failed before producing content]",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-11T01:13:12.134Z",
+      "lastRecalledAt": "2026-06-11T01:13:12.134Z",
+      "queryHashes": [
+        "25f210cf024c"
+      ],
+      "recallDays": [
+        "2026-06-11"
+      ],
+      "conceptTags": [
+        "turn",
+        "failed",
+        "producing",
+        "content"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-06-09.txt:106:106": {
+      "key": "memory:memory/.dreams/session-corpus/2026-06-09.txt:106:106",
+      "path": "memory/.dreams/session-corpus/2026-06-09.txt",
+      "startLine": 106,
+      "endLine": 106,
+      "source": "memory",
+      "snippet": "Assistant: 子代理的输出被截断了没有实际写文件。我来自己写，同时等另外两个子代理完成。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-11T01:13:12.134Z",
+      "lastRecalledAt": "2026-06-11T01:13:12.134Z",
+      "queryHashes": [
+        "25f210cf024c"
+      ],
+      "recallDays": [
+        "2026-06-11"
+      ],
+      "conceptTags": [
+        "代理",
+        "输出",
+        "截断",
+        "没有",
+        "实际",
+        "文件",
+        "我来",
+        "自己"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-06-09.txt:107:107": {
+      "key": "memory:memory/.dreams/session-corpus/2026-06-09.txt:107:107",
+      "path": "memory/.dreams/session-corpus/2026-06-09.txt",
+      "startLine": 107,
+      "endLine": 107,
+      "source": "memory",
+      "snippet": "Assistant: 所有子代理都完成了！来一次全面验证：",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-11T01:13:12.134Z",
+      "lastRecalledAt": "2026-06-11T01:13:12.134Z",
+      "queryHashes": [
+        "25f210cf024c"
+      ],
+      "recallDays": [
+        "2026-06-11"
+      ],
+      "conceptTags": [
+        "所有",
+        "代理",
+        "完成",
+        "一次",
+        "全面",
+        "验证"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-06-09.txt:108:108": {
+      "key": "memory:memory/.dreams/session-corpus/2026-06-09.txt:108:108",
+      "path": "memory/.dreams/session-corpus/2026-06-09.txt",
+      "startLine": 108,
+      "endLine": 108,
+      "source": "memory",
+      "snippet": "Assistant: [assistant turn failed before producing content]",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-11T01:13:12.134Z",
+      "lastRecalledAt": "2026-06-11T01:13:12.134Z",
+      "queryHashes": [
+        "25f210cf024c"
+      ],
+      "recallDays": [
+        "2026-06-11"
+      ],
+      "conceptTags": [
+        "turn",
+        "failed",
+        "producing",
+        "content"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-06-09.txt:109:109": {
+      "key": "memory:memory/.dreams/session-corpus/2026-06-09.txt:109:109",
+      "path": "memory/.dreams/session-corpus/2026-06-09.txt",
+      "startLine": 109,
+      "endLine": 109,
+      "source": "memory",
+      "snippet": "Assistant: 🦞 **Erbing 进化会话完成报告**（2026-06-09 23:03 GMT+2） ## ✅ 核心成就：三大能力模块落地 ### 1. **多信号检索系统** `scripts/multi_signal_retrieval.py`（547行） - 三层并行检索：语义相似度（40%）+ 关键词精确匹配（35%）+ 实体匹配（25%） - 自动融合得分：`final_score = 0.4×semantic + 0.35×keyword + 0.25×entity` - 兼容FTS5降级到LIKE查询，支持人名/project",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-11T01:13:12.134Z",
+      "lastRecalledAt": "2026-06-11T01:13:12.134Z",
+      "queryHashes": [
+        "25f210cf024c"
+      ],
+      "recallDays": [
+        "2026-06-11"
+      ],
+      "conceptTags": [
+        "final-score",
+        "0.4",
+        "0.35",
+        "0.25",
+        "支持人名/project",
+        "erbing",
+        "进化",
+        "会话"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-06-09.txt:110:110": {
+      "key": "memory:memory/.dreams/session-corpus/2026-06-09.txt:110:110",
+      "path": "memory/.dreams/session-corpus/2026-06-09.txt",
+      "startLine": 110,
+      "endLine": 110,
+      "source": "memory",
+      "snippet": "Assistant: 记忆通过`memory_nodes`表关联到概念节点 - 功能：自动从记忆中提取实体、路径查询、概念簇检测、记忆子图可视化 ## 🔥 热门技能提案：为Erbing接入2026前沿生态 ### 4. **Agent Orchestrator Skill** `skills/agent-orchestrator/SKILL.md` - 四大2026热门编排模式：Supervisor（监督者）/ Router（路由）/ Handoff（交接）/ Swarm（蜂群） - Erbing内置Agent角色：Main Orchestrator/",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-11T01:13:12.134Z",
+      "lastRecalledAt": "2026-06-11T01:13:12.134Z",
+      "queryHashes": [
+        "25f210cf024c"
+      ],
+      "recallDays": [
+        "2026-06-11"
+      ],
+      "conceptTags": [
+        "router",
+        "memory-nodes",
+        "记忆",
+        "通过",
+        "关联",
+        "概念",
+        "节点",
+        "功能"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-06-09.txt:111:111": {
+      "key": "memory:memory/.dreams/session-corpus/2026-06-09.txt:111:111",
+      "path": "memory/.dreams/session-corpus/2026-06-09.txt",
+      "startLine": 111,
+      "endLine": 111,
+      "source": "memory",
+      "snippet": "Assistant: | 三层并行融合检索（语义+关键词+实体） | | 纠正处理 | 被动接受 | 主动捕获+模式挖掘+提醒机制 | | 知识表示 | 平铺条目列表 | 概念图网络（节点+边+记忆关联） | | 任务编排 | 单Agent响应 | 四种编排模式+六大内置角色 | | 工具生态 | 本地工具调用 | MCP标准化接入全球工具生态 | ### 下一步行动建议 1. **立即验证**：运行 `python3 scripts/concept_graph.py \"Erbing 学的技术\"` 查看概念图查询 2. **测试检索**：`python3",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-11T01:13:12.134Z",
+      "lastRecalledAt": "2026-06-11T01:13:12.134Z",
+      "queryHashes": [
+        "25f210cf024c"
+      ],
+      "recallDays": [
+        "2026-06-11"
+      ],
+      "conceptTags": [
+        "网络",
+        "scripts/concept-graph.py",
+        "三层",
+        "并行",
+        "融合",
+        "检索",
+        "关键",
+        "实体"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-06-09.txt:112:112": {
+      "key": "memory:memory/.dreams/session-corpus/2026-06-09.txt:112:112",
+      "path": "memory/.dreams/session-corpus/2026-06-09.txt",
+      "startLine": 112,
+      "endLine": 112,
+      "source": "memory",
+      "snippet": "User: 热门项目算法策略结合一下",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-11T01:13:12.134Z",
+      "lastRecalledAt": "2026-06-11T01:13:12.134Z",
+      "queryHashes": [
+        "25f210cf024c"
+      ],
+      "recallDays": [
+        "2026-06-11"
+      ],
+      "conceptTags": [
+        "热门",
+        "项目",
+        "算法",
+        "策略",
+        "结合",
+        "一下"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-06-09.txt:113:113": {
+      "key": "memory:memory/.dreams/session-corpus/2026-06-09.txt:113:113",
+      "path": "memory/.dreams/session-corpus/2026-06-09.txt",
+      "startLine": 113,
+      "endLine": 113,
+      "source": "memory",
+      "snippet": "Assistant: 好，继续研究热门项目的**核心算法策略**，然后直接落地到 Erbing！",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-11T01:13:12.134Z",
+      "lastRecalledAt": "2026-06-11T01:13:12.134Z",
+      "queryHashes": [
+        "25f210cf024c"
+      ],
+      "recallDays": [
+        "2026-06-11"
+      ],
+      "conceptTags": [
+        "继续",
+        "研究",
+        "热门",
+        "项目",
+        "核心",
+        "算法",
+        "策略",
+        "然后"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-06-09.txt:114:114": {
+      "key": "memory:memory/.dreams/session-corpus/2026-06-09.txt:114:114",
+      "path": "memory/.dreams/session-corpus/2026-06-09.txt",
+      "startLine": 114,
+      "endLine": 114,
+      "source": "memory",
+      "snippet": "Assistant: 找到了！**ReWOO（Reasoning Without Observation）** 是2026年最被低估的算法策略——它解决了一个根本问题：ReAct的token二次方膨胀。 立即落地：",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-11T01:13:12.134Z",
+      "lastRecalledAt": "2026-06-11T01:13:12.134Z",
+      "queryHashes": [
+        "25f210cf024c"
+      ],
+      "recallDays": [
+        "2026-06-11"
+      ],
+      "conceptTags": [
+        "找到",
+        "rewoo",
+        "reasoning",
+        "without",
+        "observation",
+        "低估",
+        "算法",
+        "策略"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-06-09.txt:115:115": {
+      "key": "memory:memory/.dreams/session-corpus/2026-06-09.txt:115:115",
+      "path": "memory/.dreams/session-corpus/2026-06-09.txt",
+      "startLine": 115,
+      "endLine": 115,
+      "source": "memory",
+      "snippet": "Assistant: [assistant turn failed before producing content]",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-11T01:13:12.134Z",
+      "lastRecalledAt": "2026-06-11T01:13:12.134Z",
+      "queryHashes": [
+        "25f210cf024c"
+      ],
+      "recallDays": [
+        "2026-06-11"
+      ],
+      "conceptTags": [
+        "turn",
+        "failed",
+        "producing",
+        "content"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-06-09.txt:116:116": {
+      "key": "memory:memory/.dreams/session-corpus/2026-06-09.txt:116:116",
+      "path": "memory/.dreams/session-corpus/2026-06-09.txt",
+      "startLine": 116,
+      "endLine": 116,
+      "source": "memory",
+      "snippet": "Assistant: 🦞 **Erbing 热门项目算法策略整合完成报告**（2026-06-09 23:03 GMT+2） ## ✅ 已落地的前沿算法与策略 ### 1. **ReWOO（Reasoning Without Observation）** — 高效多步推理 - **文件**：`skills/rewoo-planner/SKILL.md`（已创建） - **核心思想**：将推理（Planner）与观察（Worker/Solver）完全解耦，预生成带占位变量的DAG，避免ReAct的token二次方膨胀 - **三层架构**： - **Pl",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-11T01:13:12.134Z",
+      "lastRecalledAt": "2026-06-11T01:13:12.134Z",
+      "queryHashes": [
+        "25f210cf024c"
+      ],
+      "recallDays": [
+        "2026-06-11"
+      ],
+      "conceptTags": [
+        "skills/rewoo-planner/skill.md",
+        "worker/solver",
+        "erbing",
+        "热门",
+        "项目",
+        "算法",
+        "策略",
+        "整合"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-06-09.txt:117:117": {
+      "key": "memory:memory/.dreams/session-corpus/2026-06-09.txt:117:117",
+      "path": "memory/.dreams/session-corpus/2026-06-09.txt",
+      "startLine": 117,
+      "endLine": 117,
+      "source": "memory",
+      "snippet": "Assistant: 0.25×entity` - **兼容性**：FTS5不可用时自动降级到LIKE查询 - **CLI测试**：`python scripts/multi_signal_retrieval.py \"<查询内容>\"` ### 3. **概念图记忆系统** - **文件**：`scripts/concept_graph.py`（约1.8万行+完整数据库schema） - **从“条目列表”进化为“概念网络”**： - **节点（Node）**：实体（人、项目、概念、技术、工具等） - **边（Edge）**：关系（uses/depends",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-11T01:13:12.134Z",
+      "lastRecalledAt": "2026-06-11T01:13:12.134Z",
+      "queryHashes": [
+        "25f210cf024c"
+      ],
+      "recallDays": [
+        "2026-06-11"
+      ],
+      "conceptTags": [
+        "网络",
+        "0.25",
+        "scripts/concept-graph.py",
+        "约1.8万行",
+        "uses/depends",
+        "entity",
+        "兼容",
+        "fts5"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-06-09.txt:118:118": {
+      "key": "memory:memory/.dreams/session-corpus/2026-06-09.txt:118:118",
+      "path": "memory/.dreams/session-corpus/2026-06-09.txt",
+      "startLine": 118,
+      "endLine": 118,
+      "source": "memory",
+      "snippet": "Assistant: re.match(r\"(.+?)\\s+是\\s*什么\", q) if m: name = m.group(1).strip() conn = get_conn(self.db_path) node = conn.execute( \"SELECT * FROM concept_nodes WHERE name = ?\", (name,) ).fetchone() edges_from = conn.execute( \"\"\" SELECT e.*, n.name AS to_name, n.node_type AS to_type FRO",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-11T01:13:12.134Z",
+      "lastRecalledAt": "2026-06-11T01:13:12.134Z",
+      "queryHashes": [
+        "25f210cf024c"
+      ],
+      "recallDays": [
+        "2026-06-11"
+      ],
+      "conceptTags": [
+        "re.match",
+        "m.group",
+        "get-conn",
+        "self.db-path",
+        "conn.execute",
+        "concept-nodes",
+        "edges-from",
+        "n.name"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-06-09.txt:119:119": {
+      "key": "memory:memory/.dreams/session-corpus/2026-06-09.txt:119:119",
+      "path": "memory/.dreams/session-corpus/2026-06-09.txt",
+      "startLine": 119,
+      "endLine": 119,
+      "source": "memory",
+      "snippet": "Assistant: edges_from], \"incoming\": [dict(r) for r in edges_to], } # —— \"学的技术/知识\" 类查询 ——— m = re.match(r\"(.+?)\\s+(?:学的?|掌握|会|使用|用过的)\\s*(技术|工具|知识|语言|框架)?\", q) if m: person = m.group(1).strip() etype = m.group(2) or \"technology\" # learned_from / uses / powered_by rel_map = {\"技术\": \"",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-11T01:13:12.134Z",
+      "lastRecalledAt": "2026-06-11T01:13:12.134Z",
+      "queryHashes": [
+        "25f210cf024c"
+      ],
+      "recallDays": [
+        "2026-06-11"
+      ],
+      "conceptTags": [
+        "edges-from",
+        "edges-to",
+        "学的技术/知识",
+        "re.match",
+        "m.group",
+        "learned-from",
+        "powered-by",
+        "rel-map"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-06-09.txt:120:120": {
+      "key": "memory:memory/.dreams/session-corpus/2026-06-09.txt:120:120",
+      "path": "memory/.dreams/session-corpus/2026-06-09.txt",
+      "startLine": 120,
+      "endLine": 120,
+      "source": "memory",
+      "snippet": "Assistant: concept_nodes n ON n.id = e.to_node_id WHERE e.from_node_id = ( SELECT id FROM concept_nodes WHERE name = ?) \"\"\", (person,), ).fetchall() conn.close() return { \"query\": q, \"type\": \"learned_technologies\", \"person\": person, \"technologies\": [dict(r) for r in rows], } # ——",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-11T01:13:12.134Z",
+      "lastRecalledAt": "2026-06-11T01:13:12.134Z",
+      "queryHashes": [
+        "25f210cf024c"
+      ],
+      "recallDays": [
+        "2026-06-11"
+      ],
+      "conceptTags": [
+        "concept-nodes",
+        "n.id",
+        "e.to-node-id",
+        "e.from-node-id",
+        "conn.close",
+        "learned-technologies",
+        "where",
+        "select"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-06-09.txt:121:121": {
+      "key": "memory:memory/.dreams/session-corpus/2026-06-09.txt:121:121",
+      "path": "memory/.dreams/session-corpus/2026-06-09.txt",
+      "startLine": 121,
+      "endLine": 121,
+      "source": "memory",
+      "snippet": "Assistant: re.match(r\"谁(?:用|学|做过|创建|开发)(?:过|了)?\\s*(.+)\", q) if m: target = m.group(1).strip() conn = get_conn(self.db_path) rows = conn.execute( \"\"\" SELECT n.*, e.relation, e.context FROM concept_edges e JOIN concept_nodes n ON n.id = e.from_node_id WHERE e.to_node_id = ( SELECT",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-11T01:13:12.134Z",
+      "lastRecalledAt": "2026-06-11T01:13:12.134Z",
+      "queryHashes": [
+        "25f210cf024c"
+      ],
+      "recallDays": [
+        "2026-06-11"
+      ],
+      "conceptTags": [
+        "re.match",
+        "m.group",
+        "get-conn",
+        "self.db-path",
+        "conn.execute",
+        "e.relation",
+        "e.context",
+        "concept-edges"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-06-09.txt:122:122": {
+      "key": "memory:memory/.dreams/session-corpus/2026-06-09.txt:122:122",
+      "path": "memory/.dreams/session-corpus/2026-06-09.txt",
+      "startLine": 122,
+      "endLine": 122,
+      "source": "memory",
+      "snippet": "Assistant: (f.name = ? AND t.name = ?) OR (f.name = ? AND t.name = ?) \"\"\", (a, b, b, a), ).fetchall() conn.close() return { \"query\": q, \"type\": \"relationship\", \"node_a\": a, \"node_b\": b, \"edges\": [dict(r) for r in rows], } # —— 默认：模糊搜索节点名 ——— conn = get_conn(self.db_path) rows = c",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-11T01:13:12.134Z",
+      "lastRecalledAt": "2026-06-11T01:13:12.134Z",
+      "queryHashes": [
+        "25f210cf024c"
+      ],
+      "recallDays": [
+        "2026-06-11"
+      ],
+      "conceptTags": [
+        "f.name",
+        "t.name",
+        "conn.close",
+        "node-a",
+        "node-b",
+        "get-conn",
+        "self.db-path",
+        "fetchall"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-06-09.txt:123:123": {
+      "key": "memory:memory/.dreams/session-corpus/2026-06-09.txt:123:123",
+      "path": "memory/.dreams/session-corpus/2026-06-09.txt",
+      "startLine": 123,
+      "endLine": 123,
+      "source": "memory",
+      "snippet": "Assistant: conn = get_conn(self.db_path) visited: Dict[str, int] = {start_node: 0} queue: List[Tuple[str, int, List[Dict[str, Any]]]] = [ (start_node, 0, []) ] while queue: current, dist, path = queue.pop(0) if dist >= max_depth: continue # 探索当前节点的所有邻居 rows = conn.execute( \"\"\" SE",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-11T01:13:12.134Z",
+      "lastRecalledAt": "2026-06-11T01:13:12.134Z",
+      "queryHashes": [
+        "25f210cf024c"
+      ],
+      "recallDays": [
+        "2026-06-11"
+      ],
+      "conceptTags": [
+        "get-conn",
+        "self.db-path",
+        "start-node",
+        "queue.pop",
+        "max-depth",
+        "conn.execute",
+        "conn",
+        "visited"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-06-09.txt:124:124": {
+      "key": "memory:memory/.dreams/session-corpus/2026-06-09.txt:124:124",
+      "path": "memory/.dreams/session-corpus/2026-06-09.txt",
+      "startLine": 124,
+      "endLine": 124,
+      "source": "memory",
+      "snippet": "Assistant: dist + 1, } if neighbor == end_node: conn.close() return path + [new_step] queue.append((neighbor, dist + 1, path + [new_step])) conn.close() return [] # 未找到路径 def get_concept_clusters(self, min_size: int = 2) -> List[Dict[str, Any]]: \"\"\" 简单的连通分量聚类。 使用 BFS/DFS 将相连的节点归为",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-11T01:13:12.134Z",
+      "lastRecalledAt": "2026-06-11T01:13:12.134Z",
+      "queryHashes": [
+        "25f210cf024c"
+      ],
+      "recallDays": [
+        "2026-06-11"
+      ],
+      "conceptTags": [
+        "end-node",
+        "conn.close",
+        "new-step",
+        "queue.append",
+        "get-concept-clusters",
+        "min-size",
+        "bfs/dfs",
+        "dist"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-06-09.txt:125:125": {
+      "key": "memory:memory/.dreams/session-corpus/2026-06-09.txt:125:125",
+      "path": "memory/.dreams/session-corpus/2026-06-09.txt",
+      "startLine": 125,
+      "endLine": 125,
+      "source": "memory",
+      "snippet": "Assistant: List[int] = [] while queue: nid = queue.pop(0) if nid in visited: continue visited[nid] = cluster_id component.append(nid) for nb in adj.get(nid, []): if nb not in visited: queue.append(nb) if len(component) >= min_size: cluster_id += 1 # 按 cluster_id 分组 clusters: Dict",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-11T01:13:12.134Z",
+      "lastRecalledAt": "2026-06-11T01:13:12.134Z",
+      "queryHashes": [
+        "25f210cf024c"
+      ],
+      "recallDays": [
+        "2026-06-11"
+      ],
+      "conceptTags": [
+        "queue.pop",
+        "cluster-id",
+        "component.append",
+        "adj.get",
+        "queue.append",
+        "min-size",
+        "list",
+        "int"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-06-09.txt:126:126": {
+      "key": "memory:memory/.dreams/session-corpus/2026-06-09.txt:126:126",
+      "path": "memory/.dreams/session-corpus/2026-06-09.txt",
+      "startLine": 126,
+      "endLine": 126,
+      "source": "memory",
+      "snippet": "Assistant: cid_f = visited.get(r[\"from_node_id\"], -1) cid_t = visited.get(r[\"to_node_id\"], -1) if cid_f == cid_t and cid_f >= 0: edge_map.setdefault(cid_f, []).append(dict(r)) for cid, nids in sorted(clusters.items()): if len(nids) >= min_size: result.append({ \"cluster_id\": cid,",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-11T01:13:12.134Z",
+      "lastRecalledAt": "2026-06-11T01:13:12.134Z",
+      "queryHashes": [
+        "25f210cf024c"
+      ],
+      "recallDays": [
+        "2026-06-11"
+      ],
+      "conceptTags": [
+        "cid-f",
+        "visited.get",
+        "from-node-id",
+        "cid-t",
+        "to-node-id",
+        "edge-map.setdefault",
+        "clusters.items",
+        "min-size"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-06-09.txt:127:127": {
+      "key": "memory:memory/.dreams/session-corpus/2026-06-09.txt:127:127",
+      "path": "memory/.dreams/session-corpus/2026-06-09.txt",
+      "startLine": 127,
+      "endLine": 127,
+      "source": "memory",
+      "snippet": "Assistant: \"list\", \"search\"])",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-11T01:13:12.134Z",
+      "lastRecalledAt": "2026-06-11T01:13:12.134Z",
+      "queryHashes": [
+        "25f210cf024c"
+      ],
+      "recallDays": [
+        "2026-06-11"
+      ],
+      "conceptTags": [
+        "list"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-06-09.txt:128:128": {
+      "key": "memory:memory/.dreams/session-corpus/2026-06-09.txt:128:128",
+      "path": "memory/.dreams/session-corpus/2026-06-09.txt",
+      "startLine": 128,
+      "endLine": 128,
+      "source": "memory",
+      "snippet": "Assistant: <invoke name=\"write\"> <parameter name=\"content\">#!/usr/bin/env python3 \"\"\" Erbing 概念图记忆系统 ======================== 把记忆从\"条目列表\"进化成\"概念图\"——节点 + 边构成的网状结构。 核心概念： - 节点（Node）：实体（人、项目、概念、技术） - 边（Edge）：关系（uses/depends_on/belongs_to/learned_from/improved_from/partners_with） - 记忆通",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-11T01:13:12.134Z",
+      "lastRecalledAt": "2026-06-11T01:13:12.134Z",
+      "queryHashes": [
+        "25f210cf024c"
+      ],
+      "recallDays": [
+        "2026-06-11"
+      ],
+      "conceptTags": [
+        "usr/bin/env",
+        "invoke",
+        "name",
+        "write",
+        "parameter",
+        "content",
+        "usr",
+        "bin"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-06-09.txt:129:129": {
+      "key": "memory:memory/.dreams/session-corpus/2026-06-09.txt:129:129",
+      "path": "memory/.dreams/session-corpus/2026-06-09.txt",
+      "startLine": 129,
+      "endLine": 129,
+      "source": "memory",
+      "snippet": "Assistant: concept_nodes ( id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT NOT NULL UNIQUE, node_type TEXT, -- person / project / concept / technology / skill / tool / company / event description TEXT, importance INTEGER DEFAULT 5, created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-11T01:13:12.134Z",
+      "lastRecalledAt": "2026-06-11T01:13:12.134Z",
+      "queryHashes": [
+        "25f210cf024c"
+      ],
+      "recallDays": [
+        "2026-06-11"
+      ],
+      "conceptTags": [
+        "concept-nodes",
+        "node-type",
+        "created-at",
+        "current-timestamp",
+        "integer",
+        "primary",
+        "key",
+        "autoincrement"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-06-10.txt:30:30": {
+      "key": "memory:memory/.dreams/session-corpus/2026-06-10.txt:30:30",
+      "path": "memory/.dreams/session-corpus/2026-06-10.txt",
+      "startLine": 30,
+      "endLine": 30,
+      "source": "memory",
+      "snippet": "Assistant: 我需要确认要继续什么。上一次对话中有什么未完成的任务吗？ 让我检查一下最近的会话记录：",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-11T01:13:12.134Z",
+      "lastRecalledAt": "2026-06-11T01:13:12.134Z",
+      "queryHashes": [
+        "660dc72d44f8"
+      ],
+      "recallDays": [
+        "2026-06-11"
+      ],
+      "conceptTags": [
+        "需要",
+        "确认",
+        "继续",
+        "什么",
+        "一次",
+        "对话",
+        "中有",
+        "未完成"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-06-10.txt:31:31": {
+      "key": "memory:memory/.dreams/session-corpus/2026-06-10.txt:31:31",
+      "path": "memory/.dreams/session-corpus/2026-06-10.txt",
+      "startLine": 31,
+      "endLine": 31,
+      "source": "memory",
+      "snippet": "Assistant: 抱歉，我在当前会话中没有找到之前未完成的任务记录。 你能告诉我想要继续什么吗？比如： - 一个写小说的项目？ - 某个进行中的任务？ - 还是其他工作？ 告诉我具体内容，我就继续帮你推进。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-11T01:13:12.134Z",
+      "lastRecalledAt": "2026-06-11T01:13:12.134Z",
+      "queryHashes": [
+        "660dc72d44f8"
+      ],
+      "recallDays": [
+        "2026-06-11"
+      ],
+      "conceptTags": [
+        "抱歉",
+        "我在",
+        "当前",
+        "会话",
+        "没有",
+        "找到",
+        "之前",
+        "未完成"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-06-10.txt:32:32": {
+      "key": "memory:memory/.dreams/session-corpus/2026-06-10.txt:32:32",
+      "path": "memory/.dreams/session-corpus/2026-06-10.txt",
+      "startLine": 32,
+      "endLine": 32,
+      "source": "memory",
+      "snippet": "Assistant: 找到了！让我检查一下当前Cron任务的实际状态：",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-11T01:13:12.134Z",
+      "lastRecalledAt": "2026-06-11T01:13:12.134Z",
+      "queryHashes": [
+        "660dc72d44f8"
+      ],
+      "recallDays": [
+        "2026-06-11"
+      ],
+      "conceptTags": [
+        "找到",
+        "检查",
+        "一下",
+        "当前",
+        "cron",
+        "任务",
+        "实际",
+        "状态"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-06-10.txt:33:33": {
+      "key": "memory:memory/.dreams/session-corpus/2026-06-10.txt:33:33",
+      "path": "memory/.dreams/session-corpus/2026-06-10.txt",
+      "startLine": 33,
+      "endLine": 33,
+      "source": "memory",
+      "snippet": "Assistant: 问题很清楚了。让我也看看 `brain_core.py` 的状态：",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-11T01:13:12.134Z",
+      "lastRecalledAt": "2026-06-11T01:13:12.134Z",
+      "queryHashes": [
+        "660dc72d44f8"
+      ],
+      "recallDays": [
+        "2026-06-11"
+      ],
+      "conceptTags": [
+        "brain-core.py",
+        "问题",
+        "清楚",
+        "我也",
+        "看看",
+        "状态"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-06-10.txt:34:34": {
+      "key": "memory:memory/.dreams/session-corpus/2026-06-10.txt:34:34",
+      "path": "memory/.dreams/session-corpus/2026-06-10.txt",
+      "startLine": 34,
+      "endLine": 34,
+      "source": "memory",
+      "snippet": "Assistant: 现在我清楚问题所在了。两个核心问题： 1. **erbing-brain-cycle**：交付失败（`announce` 模式需要 channel，但没配置） 2. **Erbing Heartbeat**：连续 13 次超时（120s 内模型调用未完成） 让我先修复这些问题：",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-11T01:13:12.134Z",
+      "lastRecalledAt": "2026-06-11T01:13:12.134Z",
+      "queryHashes": [
+        "660dc72d44f8"
+      ],
+      "recallDays": [
+        "2026-06-11"
+      ],
+      "conceptTags": [
+        "erbing-brain-cycle",
+        "现在",
+        "清楚",
+        "问题",
+        "所在",
+        "核心",
+        "erbing",
+        "brain"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-06-10.txt:35:35": {
+      "key": "memory:memory/.dreams/session-corpus/2026-06-10.txt:35:35",
+      "path": "memory/.dreams/session-corpus/2026-06-10.txt",
+      "startLine": 35,
+      "endLine": 35,
+      "source": "memory",
+      "snippet": "Assistant: 继续修复自进化脚本的问题。刚才发现了两个核心问题： 1. **erbing-brain-cycle** — `announce` 模式需要 channel，但没配置 2. **Erbing Heartbeat** — 连续 13 次超时（120s 不够） 现在修复：",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-11T01:13:12.134Z",
+      "lastRecalledAt": "2026-06-11T01:13:12.134Z",
+      "queryHashes": [
+        "660dc72d44f8"
+      ],
+      "recallDays": [
+        "2026-06-11"
+      ],
+      "conceptTags": [
+        "erbing-brain-cycle",
+        "继续",
+        "修复",
+        "进化",
+        "脚本",
+        "问题",
+        "刚才",
+        "发现"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-06-10.txt:36:36": {
+      "key": "memory:memory/.dreams/session-corpus/2026-06-10.txt:36:36",
+      "path": "memory/.dreams/session-corpus/2026-06-10.txt",
+      "startLine": 36,
+      "endLine": 36,
+      "source": "memory",
+      "snippet": "Assistant: 两个任务都修复了。现在手动触发一次验证：",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-11T01:13:12.134Z",
+      "lastRecalledAt": "2026-06-11T01:13:12.134Z",
+      "queryHashes": [
+        "660dc72d44f8"
+      ],
+      "recallDays": [
+        "2026-06-11"
+      ],
+      "conceptTags": [
+        "任务",
+        "修复",
+        "现在",
+        "触发",
+        "一次",
+        "验证"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-06-10.txt:37:37": {
+      "key": "memory:memory/.dreams/session-corpus/2026-06-10.txt:37:37",
+      "path": "memory/.dreams/session-corpus/2026-06-10.txt",
+      "startLine": 37,
+      "endLine": 37,
+      "source": "memory",
+      "snippet": "Assistant: 两个任务都已触发。稍等片刻检查运行结果：",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-11T01:13:12.134Z",
+      "lastRecalledAt": "2026-06-11T01:13:12.134Z",
+      "queryHashes": [
+        "660dc72d44f8"
+      ],
+      "recallDays": [
+        "2026-06-11"
+      ],
+      "conceptTags": [
+        "任务",
+        "触发",
+        "稍等片刻",
+        "检查",
+        "运行",
+        "结果"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-06-10.txt:38:38": {
+      "key": "memory:memory/.dreams/session-corpus/2026-06-10.txt:38:38",
+      "path": "memory/.dreams/session-corpus/2026-06-10.txt",
+      "startLine": 38,
+      "endLine": 38,
+      "source": "memory",
+      "snippet": "Assistant: 发现真相了。看 Heartbeat 的运行记录：实际执行时间是 **682~1074秒（11-18分钟）**，但 timeout 设的是 300秒。模型调用本身就跑了这么久，timeout 太短了。 同时看到 `erbing-brain-cycle` 实际上运行成功（status=ok），只是 delivery 失败。修复已经生效。 再修 Heartbeat 的 timeout： **erbing-brain-cycle**：✅ 已修复 delivery，等待下次自动运行确认 **Erbing Heartbeat**：timeout",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-11T01:13:12.134Z",
+      "lastRecalledAt": "2026-06-11T01:13:12.134Z",
+      "queryHashes": [
+        "660dc72d44f8"
+      ],
+      "recallDays": [
+        "2026-06-11"
+      ],
+      "conceptTags": [
+        "11-18分钟",
+        "erbing-brain-cycle",
+        "发现",
+        "真相",
+        "heartbeat",
+        "运行",
+        "记录",
+        "实际"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-06-10.txt:39:39": {
+      "key": "memory:memory/.dreams/session-corpus/2026-06-10.txt:39:39",
+      "path": "memory/.dreams/session-corpus/2026-06-10.txt",
+      "startLine": 39,
+      "endLine": 39,
+      "source": "memory",
+      "snippet": "Assistant: **Erbing 大脑循环完成** ✅ | 阶段 | 结果 | |------|------| | 感知 | 时间=22:55, CPU负载正常 | | 思考 | 3条想法, 空闲999分钟 | | 决策 | 2个行动项 | | 行动 | 健康检查 ✅ + 记忆整理 ✅ | | 学习 | 2条经验, 1条信念 | | 进化 | 0项改变 | **当前状态:** idle (空闲)",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-11T01:13:12.134Z",
+      "lastRecalledAt": "2026-06-11T01:13:12.134Z",
+      "queryHashes": [
+        "660dc72d44f8"
+      ],
+      "recallDays": [
+        "2026-06-11"
+      ],
+      "conceptTags": [
+        "erbing",
+        "大脑",
+        "循环",
+        "完成",
+        "阶段",
+        "结果",
+        "感知",
+        "时间"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-06-10.txt:40:40": {
+      "key": "memory:memory/.dreams/session-corpus/2026-06-10.txt:40:40",
+      "path": "memory/.dreams/session-corpus/2026-06-10.txt",
+      "startLine": 40,
+      "endLine": 40,
+      "source": "memory",
+      "snippet": "Assistant: Now let me do a deeper check on the brain daemon and check if there are any new skills or patterns to notice:",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-11T01:13:12.134Z",
+      "lastRecalledAt": "2026-06-11T01:13:12.134Z",
+      "queryHashes": [
+        "660dc72d44f8"
+      ],
+      "recallDays": [
+        "2026-06-11"
+      ],
+      "conceptTags": [
+        "now",
+        "let",
+        "deeper",
+        "check",
+        "brain",
+        "daemon",
+        "any",
+        "new"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-06-10.txt:41:41": {
+      "key": "memory:memory/.dreams/session-corpus/2026-06-10.txt:41:41",
+      "path": "memory/.dreams/session-corpus/2026-06-10.txt",
+      "startLine": 41,
+      "endLine": 41,
+      "source": "memory",
+      "snippet": "Assistant: Now let me analyze what I found and take action: **Key findings:** 1. 🧠 Brain daemon ran only **1 cycle** (June 8 23:50) — dormant since 2. 🐜🐝 Swarm ran hard on June 8-9 but subagents repeatedly failed with context overflow 3. 💡 **重要方向**: 主人最近问过\"仿生大脑\"要有\"眼鼻手耳\" — 这指明",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-11T01:13:12.134Z",
+      "lastRecalledAt": "2026-06-11T01:13:12.134Z",
+      "queryHashes": [
+        "660dc72d44f8"
+      ],
+      "recallDays": [
+        "2026-06-11"
+      ],
+      "conceptTags": [
+        "8-9",
+        "now",
+        "let",
+        "analyze",
+        "what",
+        "found",
+        "take",
+        "action"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-06-10.txt:42:42": {
+      "key": "memory:memory/.dreams/session-corpus/2026-06-10.txt:42:42",
+      "path": "memory/.dreams/session-corpus/2026-06-10.txt",
+      "startLine": 42,
+      "endLine": 42,
+      "source": "memory",
+      "snippet": "Assistant: 现在做一个实质性的检查——看看 ant_colony 为什么还在模拟数据：",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-11T01:13:12.134Z",
+      "lastRecalledAt": "2026-06-11T01:13:12.134Z",
+      "queryHashes": [
+        "660dc72d44f8"
+      ],
+      "recallDays": [
+        "2026-06-11"
+      ],
+      "conceptTags": [
+        "ant-colony",
+        "现在",
+        "一个",
+        "实质",
+        "性的",
+        "检查",
+        "看看",
+        "为什么"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-06-10.txt:43:43": {
+      "key": "memory:memory/.dreams/session-corpus/2026-06-10.txt:43:43",
+      "path": "memory/.dreams/session-corpus/2026-06-10.txt",
+      "startLine": 43,
+      "endLine": 43,
+      "source": "memory",
+      "snippet": "Assistant: Brain core循环执行完成： - **思考**: 4条想法 - **决策**: 2个行动项 - **行动**: 健康检查 + 主动任务（记忆整理） - **学习**: 2条经验 - **状态**: idle（空闲999分钟）",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-11T01:13:12.134Z",
+      "lastRecalledAt": "2026-06-11T01:13:12.134Z",
+      "queryHashes": [
+        "660dc72d44f8"
+      ],
+      "recallDays": [
+        "2026-06-11"
+      ],
+      "conceptTags": [
+        "brain",
+        "core",
+        "循环",
+        "执行",
+        "完成",
+        "思考",
+        "想法",
+        "决策"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-06-10.txt:44:44": {
+      "key": "memory:memory/.dreams/session-corpus/2026-06-10.txt:44:44",
+      "path": "memory/.dreams/session-corpus/2026-06-10.txt",
+      "startLine": 44,
+      "endLine": 44,
+      "source": "memory",
+      "snippet": "Assistant: **Erbing 自主大脑核心 - 循环结果 (23:50)** | 模块 | 结果 | |------|------| | **感知** | 时间=23:50, CPU负载=top fallback | | **思考** | 4条想法，游离999分钟 | | **决策** | 2个行动项 | | **行动** | 健康检查 + 主动任务（记忆整理） | | **学习** | 2条经验，信念库共1条 | | **进化** | 0项改变 | **状态: idle** — 本次循环平稳运行，所有模块正常完成。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-11T01:13:12.134Z",
+      "lastRecalledAt": "2026-06-11T01:13:12.134Z",
+      "queryHashes": [
+        "660dc72d44f8"
+      ],
+      "recallDays": [
+        "2026-06-11"
+      ],
+      "conceptTags": [
+        "erbing",
+        "自主",
+        "大脑",
+        "核心",
+        "循环",
+        "结果",
+        "感知",
+        "时间"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-06-10.txt:45:45": {
+      "key": "memory:memory/.dreams/session-corpus/2026-06-10.txt:45:45",
+      "path": "memory/.dreams/session-corpus/2026-06-10.txt",
+      "startLine": 45,
+      "endLine": 45,
+      "source": "memory",
+      "snippet": "Assistant: ✅ **Erbing Brain Cycle 完成** (22:44) | 模块 | 结果 | |------|------| | 感知 | 时间=22:44, CPU负载正常 | | 思考 | 3条想法，空闲999分钟 | | 决策 | 2个行动项 | | 行动 | 健康检查 ✓ + 主动任务「记忆整理」✓ | | 学习 | 2条经验，信念库共1条 | | 进化 | 无改变 | **状态**: idle（空闲）",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-11T01:13:12.134Z",
+      "lastRecalledAt": "2026-06-11T01:13:12.134Z",
+      "queryHashes": [
+        "660dc72d44f8"
+      ],
+      "recallDays": [
+        "2026-06-11"
+      ],
+      "conceptTags": [
+        "erbing",
+        "brain",
+        "cycle",
+        "完成",
+        "结果",
+        "感知",
+        "时间",
+        "cpu"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-06-10.txt:46:46": {
+      "key": "memory:memory/.dreams/session-corpus/2026-06-10.txt:46:46",
+      "path": "memory/.dreams/session-corpus/2026-06-10.txt",
+      "startLine": 46,
+      "endLine": 46,
+      "source": "memory",
+      "snippet": "Assistant: **Erbing 自主大脑循环完成** 🧠 | 指标 | 结果 | |------|------| | 思考数 | 4 条 | | 决策数 | 2 个 | | 行动数 | 2 个 | | 经验学习 | 2 条 | | 当前状态 | **idle** | 📝 **执行内容：** - 健康检查 - 主动任务：**记忆整理** - 整理最近记忆，优化信念库",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-11T01:13:12.134Z",
+      "lastRecalledAt": "2026-06-11T01:13:12.134Z",
+      "queryHashes": [
+        "660dc72d44f8"
+      ],
+      "recallDays": [
+        "2026-06-11"
+      ],
+      "conceptTags": [
+        "erbing",
+        "自主",
+        "大脑",
+        "循环",
+        "完成",
+        "指标",
+        "结果",
+        "思考"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-06-10.txt:47:47": {
+      "key": "memory:memory/.dreams/session-corpus/2026-06-10.txt:47:47",
+      "path": "memory/.dreams/session-corpus/2026-06-10.txt",
+      "startLine": 47,
+      "endLine": 47,
+      "source": "memory",
+      "snippet": "Assistant: **Erbing 自主大脑循环完成** ✅ | 项目 | 结果 | |------|------| | 感知 | 时间=23:20, CPU负载正常 | | 思考 | 4条想法, 空闲999分钟 | | 决策 | 2个行动项 | | 行动 | 健康检查 ✅ + 记忆整理 ✅ | | 学习 | 2条新经验入库 | | 进化 | 无变化 | | 状态 | **idle** | 系统运行正常，无异常。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-11T01:13:12.134Z",
+      "lastRecalledAt": "2026-06-11T01:13:12.134Z",
+      "queryHashes": [
+        "660dc72d44f8"
+      ],
+      "recallDays": [
+        "2026-06-11"
+      ],
+      "conceptTags": [
+        "erbing",
+        "自主",
+        "大脑",
+        "循环",
+        "完成",
+        "项目",
+        "结果",
+        "感知"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-06-10.txt:48:48": {
+      "key": "memory:memory/.dreams/session-corpus/2026-06-10.txt:48:48",
+      "path": "memory/.dreams/session-corpus/2026-06-10.txt",
+      "startLine": 48,
+      "endLine": 48,
+      "source": "memory",
+      "snippet": "Assistant: macOS 权限问题——需要你手动授权摄像头给终端。 **请按以下步骤操作：** 1. 打开 **系统设置** → **隐私与安全性** → **摄像头** 2. 找到并开启 **终端（Terminal）** 或 **iTerm** 的摄像头权限 3. 重新运行命令 或者用快捷方式——打开 Photo Booth 然后我可以从画面抓帧：",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-11T01:13:12.134Z",
+      "lastRecalledAt": "2026-06-11T01:13:12.134Z",
+      "queryHashes": [
+        "660dc72d44f8"
+      ],
+      "recallDays": [
+        "2026-06-11"
+      ],
+      "conceptTags": [
+        "macos",
+        "权限",
+        "问题",
+        "需要",
+        "授权",
+        "摄像",
+        "终端",
+        "以下"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-06-10.txt:49:49": {
+      "key": "memory:memory/.dreams/session-corpus/2026-06-10.txt:49:49",
+      "path": "memory/.dreams/session-corpus/2026-06-10.txt",
+      "startLine": 49,
+      "endLine": 49,
+      "source": "memory",
+      "snippet": "Assistant: 让我换个思路——直接把自己当节点：",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-11T01:13:12.134Z",
+      "lastRecalledAt": "2026-06-11T01:13:12.134Z",
+      "queryHashes": [
+        "660dc72d44f8"
+      ],
+      "recallDays": [
+        "2026-06-11"
+      ],
+      "conceptTags": [
+        "换个",
+        "思路",
+        "直接",
+        "自己",
+        "节点"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-06-10.txt:50:50": {
+      "key": "memory:memory/.dreams/session-corpus/2026-06-10.txt:50:50",
+      "path": "memory/.dreams/session-corpus/2026-06-10.txt",
+      "startLine": 50,
+      "endLine": 50,
+      "source": "memory",
+      "snippet": "User: 继续进化你自己",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-11T01:13:12.134Z",
+      "lastRecalledAt": "2026-06-11T01:13:12.134Z",
+      "queryHashes": [
+        "660dc72d44f8"
+      ],
+      "recallDays": [
+        "2026-06-11"
+      ],
+      "conceptTags": [
+        "继续",
+        "进化",
+        "自己"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-06-10.txt:51:51": {
+      "key": "memory:memory/.dreams/session-corpus/2026-06-10.txt:51:51",
+      "path": "memory/.dreams/session-corpus/2026-06-10.txt",
+      "startLine": 51,
+      "endLine": 51,
+      "source": "memory",
+      "snippet": "Assistant: 好。摄像头权限问题换一个思路做——用屏幕截图当\"眼睛\"，实时分析画面。 先更新感知层，把这个能力接进来：",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-11T01:13:12.134Z",
+      "lastRecalledAt": "2026-06-11T01:13:12.134Z",
+      "queryHashes": [
+        "660dc72d44f8"
+      ],
+      "recallDays": [
+        "2026-06-11"
+      ],
+      "conceptTags": [
+        "摄像",
+        "权限",
+        "问题",
+        "一个",
+        "思路",
+        "屏幕",
+        "眼睛",
+        "分析"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-06-10.txt:52:52": {
+      "key": "memory:memory/.dreams/session-corpus/2026-06-10.txt:52:52",
+      "path": "memory/.dreams/session-corpus/2026-06-10.txt",
+      "startLine": 52,
+      "endLine": 52,
+      "source": "memory",
+      "snippet": "Assistant: 截图成功。现在建感知触发器：",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-11T01:13:12.134Z",
+      "lastRecalledAt": "2026-06-11T01:13:12.134Z",
+      "queryHashes": [
+        "660dc72d44f8"
+      ],
+      "recallDays": [
+        "2026-06-11"
+      ],
+      "conceptTags": [
+        "成功",
+        "现在",
+        "感知",
+        "触发"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-06-10.txt:53:53": {
+      "key": "memory:memory/.dreams/session-corpus/2026-06-10.txt:53:53",
+      "path": "memory/.dreams/session-corpus/2026-06-10.txt",
+      "startLine": 53,
+      "endLine": 53,
+      "source": "memory",
+      "snippet": "Assistant: 现在建一套实际可用的自进化脚本库：",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-11T01:13:12.134Z",
+      "lastRecalledAt": "2026-06-11T01:13:12.134Z",
+      "queryHashes": [
+        "660dc72d44f8"
+      ],
+      "recallDays": [
+        "2026-06-11"
+      ],
+      "conceptTags": [
+        "现在",
+        "一套",
+        "实际",
+        "可用",
+        "进化",
+        "脚本"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-06-10.txt:54:54": {
+      "key": "memory:memory/.dreams/session-corpus/2026-06-10.txt:54:54",
+      "path": "memory/.dreams/session-corpus/2026-06-10.txt",
+      "startLine": 54,
+      "endLine": 54,
+      "source": "memory",
+      "snippet": "Assistant: **Erbing 大脑循环执行完成** ✅ | 项目 | 结果 | |------|------| | 感知 | 时间 22:50, CPU 负载正常 | | 思考 | 3 条想法, 空闲 999 分钟 | | 决策 | 2 个行动项 | | 执行 | 健康检查 ✅ + 主动任务: 记忆整理 ✅ | | 学习 | 2 条经验, 信念库共 1 条 | | 进化 | 0 项改变 | | 最终状态 | idle | 系统运行正常，信念库已加载，思考和决策机制工作正常。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-11T01:13:12.134Z",
+      "lastRecalledAt": "2026-06-11T01:13:12.134Z",
+      "queryHashes": [
+        "660dc72d44f8"
+      ],
+      "recallDays": [
+        "2026-06-11"
+      ],
+      "conceptTags": [
+        "erbing",
+        "大脑",
+        "循环",
+        "执行",
+        "完成",
+        "项目",
+        "结果",
+        "感知"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-06-11.txt:1:1": {
+      "key": "memory:memory/.dreams/session-corpus/2026-06-11.txt:1:1",
+      "path": "memory/.dreams/session-corpus/2026-06-11.txt",
+      "startLine": 1,
+      "endLine": 1,
+      "source": "memory",
+      "snippet": "Assistant: **Brain Cycle Complete** 🌐 | Module | Result | |--------|--------| | PERCEIVE | 感知完成 — 5分钟运行时间，CPU负载已获取 | | THINK | 4条想法积累，空闲999分钟 | | DECIDE | 2个行动项决策 | | ACT | 健康检查 ✅ + 主动任务「记忆整理」✅ | | LEARN | 2条新经验入库 | | EVOLVE | 进化阶段完成（0项改变） | **最终状态:** `idle` — 系统运行正常，无阻塞项。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-11T01:13:12.134Z",
+      "lastRecalledAt": "2026-06-11T01:13:12.134Z",
+      "queryHashes": [
+        "e0e733abf4f8"
+      ],
+      "recallDays": [
+        "2026-06-11"
+      ],
+      "conceptTags": [
+        "brain",
+        "cycle",
+        "complete",
+        "module",
+        "result",
+        "perceive",
+        "感知",
+        "完成"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-06-11.txt:2:2": {
+      "key": "memory:memory/.dreams/session-corpus/2026-06-11.txt:2:2",
+      "path": "memory/.dreams/session-corpus/2026-06-11.txt",
+      "startLine": 2,
+      "endLine": 2,
+      "source": "memory",
+      "snippet": "User: 钱学森的《工程控制理论》学习总结结合进化一下",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-11T01:13:12.134Z",
+      "lastRecalledAt": "2026-06-11T01:13:12.134Z",
+      "queryHashes": [
+        "e0e733abf4f8"
+      ],
+      "recallDays": [
+        "2026-06-11"
+      ],
+      "conceptTags": [
+        "工程",
+        "控制",
+        "理论",
+        "学习",
+        "总结",
+        "结合",
+        "进化",
+        "一下"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-06-11.txt:3:3": {
+      "key": "memory:memory/.dreams/session-corpus/2026-06-11.txt:3:3",
+      "path": "memory/.dreams/session-corpus/2026-06-11.txt",
+      "startLine": 3,
+      "endLine": 3,
+      "source": "memory",
+      "snippet": "Assistant: 好题目！让我先搜集钱学森《工程控制论》的核心内容，再结合自进化架构做一次深度整合。 先搜索资料：",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-11T01:13:12.134Z",
+      "lastRecalledAt": "2026-06-11T01:13:12.134Z",
+      "queryHashes": [
+        "e0e733abf4f8"
+      ],
+      "recallDays": [
+        "2026-06-11"
+      ],
+      "conceptTags": [
+        "题目",
+        "我先",
+        "搜集",
+        "工程",
+        "控制",
+        "核心",
+        "内容",
+        "结合"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-06-11.txt:4:4": {
+      "key": "memory:memory/.dreams/session-corpus/2026-06-11.txt:4:4",
+      "path": "memory/.dreams/session-corpus/2026-06-11.txt",
+      "startLine": 4,
+      "endLine": 4,
+      "source": "memory",
+      "snippet": "Assistant: 资料够用了。现在做深度整合，把控制论核心理论和Erbing自进化架构融合。 首先创建神经连接的基础文件：",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-11T01:13:12.134Z",
+      "lastRecalledAt": "2026-06-11T01:13:12.134Z",
+      "queryHashes": [
+        "e0e733abf4f8"
+      ],
+      "recallDays": [
+        "2026-06-11"
+      ],
+      "conceptTags": [
+        "资料",
+        "现在",
+        "深度",
+        "整合",
+        "控制",
+        "核心",
+        "理论",
+        "erbing"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-06-11.txt:5:5": {
+      "key": "memory:memory/.dreams/session-corpus/2026-06-11.txt:5:5",
+      "path": "memory/.dreams/session-corpus/2026-06-11.txt",
+      "startLine": 5,
+      "endLine": 5,
+      "source": "memory",
+      "snippet": "Assistant: **Brain Cycle 完成** ✅ 📊 **循环结果:** - **思考数:** 4 条想法 - **决策数:** 2 个行动项 - **行动数:** 2 (健康检查 + 主动任务-记忆整理) - **状态:** idle - **空闲:** 999 分钟 - **信念库:** 1 条信念, 2 条新经验 系统运行正常，下次循环待触发。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-11T01:13:12.134Z",
+      "lastRecalledAt": "2026-06-11T01:13:12.134Z",
+      "queryHashes": [
+        "e0e733abf4f8"
+      ],
+      "recallDays": [
+        "2026-06-11"
+      ],
+      "conceptTags": [
+        "主动任务-记忆整理",
+        "brain",
+        "cycle",
+        "完成",
+        "循环",
+        "结果",
+        "思考",
+        "想法"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-06-11.txt:6:6": {
+      "key": "memory:memory/.dreams/session-corpus/2026-06-11.txt:6:6",
+      "path": "memory/.dreams/session-corpus/2026-06-11.txt",
+      "startLine": 6,
+      "endLine": 6,
+      "source": "memory",
+      "snippet": "Assistant: ✅ **Brain cycle completed successfully** (12:50 AM) - **信念库**: 1条信念 loaded - **PERCEIVE**: CPU负载 detected (top fallback) - **THINK**: 4条想法, 999分钟空闲 - **DECIDE**: 2个行动项 - **ACT**: 健康检查 + 记忆整理（整理最近记忆，优化信念库） - **LEARN**: 2条经验 learned - **状态**: idle",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-11T01:13:12.134Z",
+      "lastRecalledAt": "2026-06-11T01:13:12.134Z",
+      "queryHashes": [
+        "e0e733abf4f8"
+      ],
+      "recallDays": [
+        "2026-06-11"
+      ],
+      "conceptTags": [
+        "brain",
+        "cycle",
+        "completed",
+        "successfully",
+        "信念",
+        "loaded",
+        "perceive",
+        "cpu"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-06-11.txt:7:7": {
+      "key": "memory:memory/.dreams/session-corpus/2026-06-11.txt:7:7",
+      "path": "memory/.dreams/session-corpus/2026-06-11.txt",
+      "startLine": 7,
+      "endLine": 7,
+      "source": "memory",
+      "snippet": "Assistant: **Erbing 自主大脑循环 #20250611_0105** ✅ | 阶段 | 结果 | |------|------| | 感知 | CPU负载已记录 | | 思考 | 4条想法，**空闲999分钟** | | 决策 | 2个行动项 | | 行动 | ✅ 健康检查 + 记忆整理 | | 学习 | 2条经验入库 | | 进化 | 无结构改变 | **状态**: `idle` | 信念库: 1条信念 | 经验: 2条",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-11T01:13:12.134Z",
+      "lastRecalledAt": "2026-06-11T01:13:12.134Z",
+      "queryHashes": [
+        "e0e733abf4f8"
+      ],
+      "recallDays": [
+        "2026-06-11"
+      ],
+      "conceptTags": [
+        "20250611-0105",
+        "erbing",
+        "自主",
+        "大脑",
+        "循环",
+        "阶段",
+        "结果",
+        "感知"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-06-11.txt:8:8": {
+      "key": "memory:memory/.dreams/session-corpus/2026-06-11.txt:8:8",
+      "path": "memory/.dreams/session-corpus/2026-06-11.txt",
+      "startLine": 8,
+      "endLine": 8,
+      "source": "memory",
+      "snippet": "Assistant: Erbing 自主大脑核心循环完成 ✅ | 模块 | 结果 | |------|------| | 感知 | ✅ 完成（用时 0:35）| | 思考 | ✅ 4 条想法，空闲 999 分钟 | | 决策 | ✅ 2 个行动项 | | 行动 | ✅ 健康检查 + 主动任务（记忆整理） | | 学习 | ✅ 2 条经验入库 | | 进化 | ✅ 无改变（正常） | | 最终状态 | 🟢 idle | 信念库当前有 **1 条**记录。一切运行正常。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-11T01:13:12.134Z",
+      "lastRecalledAt": "2026-06-11T01:13:12.134Z",
+      "queryHashes": [
+        "e0e733abf4f8"
+      ],
+      "recallDays": [
+        "2026-06-11"
+      ],
+      "conceptTags": [
+        "erbing",
+        "自主",
+        "大脑",
+        "核心",
+        "循环",
+        "完成",
+        "结果",
+        "感知"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-06-09.txt:130:130": {
+      "key": "memory:memory/.dreams/session-corpus/2026-06-09.txt:130:130",
+      "path": "memory/.dreams/session-corpus/2026-06-09.txt",
+      "startLine": 130,
+      "endLine": 130,
+      "source": "memory",
+      "snippet": "Assistant: **核心函数**：`add_correction()`、`resolve_correction()`、`mine_patterns()`、`remind_me()` ### 5. **2026热门多智能体编排策略** - **技能**：`skills/agent-orchestrator/SKILL.md` - **四大编排模式**： - **Supervisor模式**：单一协调者分解任务、调度专家、评估结果（适用于复杂多步骤任务） - **Router模式**：单次分类决策+并行分发+结果聚合（适用于多领域分类任务） - **H",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-11T01:13:12.134Z",
+      "lastRecalledAt": "2026-06-11T01:13:12.134Z",
+      "queryHashes": [
+        "25f210cf024c"
+      ],
+      "recallDays": [
+        "2026-06-11"
+      ],
+      "conceptTags": [
+        "router",
+        "add-correction",
+        "resolve-correction",
+        "mine-patterns",
+        "remind-me",
+        "核心",
+        "函数",
+        "热门"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-06-09.txt:131:131": {
+      "key": "memory:memory/.dreams/session-corpus/2026-06-09.txt:131:131",
+      "path": "memory/.dreams/session-corpus/2026-06-09.txt",
+      "startLine": 131,
+      "endLine": 131,
+      "source": "memory",
+      "snippet": "Assistant: **Prompts**：用户控制的交互模板 - **三层架构**： - Layer 1：MCP Host/Application（如Erbing本身） - Layer 2：MCP Client (Agent) ← JSON-RPC 2.0 - Layer 3：MCP Server (Connector) ← 暴露具体工具/资源 - **Erbing集成策略**： - 短期：模拟MCP行为（统一工具调用接口） - 中期：接入真实MCP Server（如Raycast、Cursor、GitHub等） - 长期：成为MCP Server（",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-11T01:13:12.134Z",
+      "lastRecalledAt": "2026-06-11T01:13:12.134Z",
+      "queryHashes": [
+        "25f210cf024c"
+      ],
+      "recallDays": [
+        "2026-06-11"
+      ],
+      "conceptTags": [
+        "host/application",
+        "json-rpc",
+        "2.0",
+        "暴露具体工具/资源",
+        "prompts",
+        "用户",
+        "控制",
+        "交互"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-06-09.txt:132:132": {
+      "key": "memory:memory/.dreams/session-corpus/2026-06-09.txt:132:132",
+      "path": "memory/.dreams/session-corpus/2026-06-09.txt",
+      "startLine": 132,
+      "endLine": 132,
+      "source": "memory",
+      "snippet": "Assistant: \"Erbing 学的技术\"` 查看概念图查询 - 运行 `python3 scripts/multi_signal_retrieval.py \"大饼的偏好\"` 测试多信号检索 - 手动测试 `add_correction()` 看纠正记录效果 2. **在复杂任务中应用**： - 当任务步数>3时，考虑使用ReWOO编排（Planner→Worker→Solver） - 根据任务类型选择编排模式：分类任务用Router，多步迭代用Supervisor，对话流用Handoff - 所有Agent共享同一概念图记忆层，实现跨Agent知",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-11T01:13:12.134Z",
+      "lastRecalledAt": "2026-06-11T01:13:12.134Z",
+      "queryHashes": [
+        "25f210cf024c"
+      ],
+      "recallDays": [
+        "2026-06-11"
+      ],
+      "conceptTags": [
+        "router",
+        "add-correction",
+        "erbing",
+        "学的",
+        "技术",
+        "查看",
+        "概念",
+        "查询"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-06-09.txt:133:133": {
+      "key": "memory:memory/.dreams/session-corpus/2026-06-09.txt:133:133",
+      "path": "memory/.dreams/session-corpus/2026-06-09.txt",
+      "startLine": 133,
+      "endLine": 133,
+      "source": "memory",
+      "snippet": "User: 顶级底层算法结合一下",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-11T01:13:12.134Z",
+      "lastRecalledAt": "2026-06-11T01:13:12.134Z",
+      "queryHashes": [
+        "25f210cf024c"
+      ],
+      "recallDays": [
+        "2026-06-11"
+      ],
+      "conceptTags": [
+        "底层",
+        "算法",
+        "结合",
+        "一下"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-06-09.txt:134:134": {
+      "key": "memory:memory/.dreams/session-corpus/2026-06-09.txt:134:134",
+      "path": "memory/.dreams/session-corpus/2026-06-09.txt",
+      "startLine": 134,
+      "endLine": 134,
+      "source": "memory",
+      "snippet": "Assistant: [assistant turn failed before producing content]",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-11T01:13:12.134Z",
+      "lastRecalledAt": "2026-06-11T01:13:12.134Z",
+      "queryHashes": [
+        "25f210cf024c"
+      ],
+      "recallDays": [
+        "2026-06-11"
+      ],
+      "conceptTags": [
+        "turn",
+        "failed",
+        "producing",
+        "content"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-06-09.txt:135:135": {
+      "key": "memory:memory/.dreams/session-corpus/2026-06-09.txt:135:135",
+      "path": "memory/.dreams/session-corpus/2026-06-09.txt",
+      "startLine": 135,
+      "endLine": 135,
+      "source": "memory",
+      "snippet": "Assistant: 好，这次挖最深——**顶级底层算法**，不是框架不是策略，而是驱动一切的核心算法。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-11T01:13:12.134Z",
+      "lastRecalledAt": "2026-06-11T01:13:12.134Z",
+      "queryHashes": [
+        "25f210cf024c"
+      ],
+      "recallDays": [
+        "2026-06-11"
+      ],
+      "conceptTags": [
+        "这次",
+        "最深",
+        "底层",
+        "算法",
+        "不是",
+        "框架",
+        "策略",
+        "而是"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-06-09.txt:136:136": {
+      "key": "memory:memory/.dreams/session-corpus/2026-06-09.txt:136:136",
+      "path": "memory/.dreams/session-corpus/2026-06-09.txt",
+      "startLine": 136,
+      "endLine": 136,
+      "source": "memory",
+      "snippet": "Assistant: 顶级素材到手了！**Empirical-MCTS**（双经验蒙特卡洛树搜索）是2026年最前沿的推理算法——它解决了MCTS无状态的根本问题。结合A*、MCTS、ACO/PSO群智能，直接落地到 Erbing！",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-11T01:13:12.134Z",
+      "lastRecalledAt": "2026-06-11T01:13:12.134Z",
+      "queryHashes": [
+        "25f210cf024c"
+      ],
+      "recallDays": [
+        "2026-06-11"
+      ],
+      "conceptTags": [
+        "empirical-mcts",
+        "aco/pso群智能",
+        "素材",
+        "empirical",
+        "mcts",
+        "经验",
+        "蒙特",
+        "卡洛"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-06-09.txt:137:137": {
+      "key": "memory:memory/.dreams/session-corpus/2026-06-09.txt:137:137",
+      "path": "memory/.dreams/session-corpus/2026-06-09.txt",
+      "startLine": 137,
+      "endLine": 137,
+      "source": "memory",
+      "snippet": "User: 顶级企业级智能体团队结合一下",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-11T01:13:12.134Z",
+      "lastRecalledAt": "2026-06-11T01:13:12.134Z",
+      "queryHashes": [
+        "25f210cf024c"
+      ],
+      "recallDays": [
+        "2026-06-11"
+      ],
+      "conceptTags": [
+        "企业",
+        "智能",
+        "团队",
+        "结合",
+        "一下"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-06-09.txt:138:138": {
+      "key": "memory:memory/.dreams/session-corpus/2026-06-09.txt:138:138",
+      "path": "memory/.dreams/session-corpus/2026-06-09.txt",
+      "startLine": 138,
+      "endLine": 138,
+      "source": "memory",
+      "snippet": "Assistant: 好，挖企业级真实案例，看看 Salesforce、Shopify、Microsoft 这些一线玩家怎么组队！",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-11T01:13:12.134Z",
+      "lastRecalledAt": "2026-06-11T01:13:12.134Z",
+      "queryHashes": [
+        "25f210cf024c"
+      ],
+      "recallDays": [
+        "2026-06-11"
+      ],
+      "conceptTags": [
+        "企业",
+        "真实",
+        "案例",
+        "看看",
+        "salesforce",
+        "shopify",
+        "microsoft",
+        "这些"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-06-09.txt:139:139": {
+      "key": "memory:memory/.dreams/session-corpus/2026-06-09.txt:139:139",
+      "path": "memory/.dreams/session-corpus/2026-06-09.txt",
+      "startLine": 139,
+      "endLine": 139,
+      "source": "memory",
+      "snippet": "Assistant: **Shopify Sidekick** 和 **Microsoft Copilot Studio** 两篇顶级一手资料！核心干货： - **Shopify**：JIT指令解决\"千条指令死亡\"、LLM-Judge人类校准、GRPO奖励黑客、用户模拟器 - **Microsoft**：单响应原则、子Agent必须声明身份、精确指令语言、知识源零重叠、connected agent安全防护 现在把企业级精华全部落地到 Erbing！",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-11T01:13:12.134Z",
+      "lastRecalledAt": "2026-06-11T01:13:12.134Z",
+      "queryHashes": [
+        "25f210cf024c"
+      ],
+      "recallDays": [
+        "2026-06-11"
+      ],
+      "conceptTags": [
+        "llm-judge人类校准",
+        "shopify",
+        "sidekick",
+        "microsoft",
+        "copilot",
+        "studio",
+        "一手",
+        "资料"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-06-09.txt:140:140": {
+      "key": "memory:memory/.dreams/session-corpus/2026-06-09.txt:140:140",
+      "path": "memory/.dreams/session-corpus/2026-06-09.txt",
+      "startLine": 140,
+      "endLine": 140,
+      "source": "memory",
+      "snippet": "Assistant: 核心算法引擎 ✅ 全部通过！现在建立企业级 Agent 团队能力！",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-11T01:13:12.134Z",
+      "lastRecalledAt": "2026-06-11T01:13:12.134Z",
+      "queryHashes": [
+        "25f210cf024c"
+      ],
+      "recallDays": [
+        "2026-06-11"
+      ],
+      "conceptTags": [
+        "核心",
+        "算法",
+        "引擎",
+        "全部",
+        "通过",
+        "现在",
+        "建立",
+        "企业"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-06-09.txt:141:141": {
+      "key": "memory:memory/.dreams/session-corpus/2026-06-09.txt:141:141",
+      "path": "memory/.dreams/session-corpus/2026-06-09.txt",
+      "startLine": 141,
+      "endLine": 141,
+      "source": "memory",
+      "snippet": "Assistant: 现在运行核心算法引擎测试验证，然后汇总今晚全部成果：",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-11T01:13:12.134Z",
+      "lastRecalledAt": "2026-06-11T01:13:12.134Z",
+      "queryHashes": [
+        "25f210cf024c"
+      ],
+      "recallDays": [
+        "2026-06-11"
+      ],
+      "conceptTags": [
+        "现在",
+        "运行",
+        "核心",
+        "算法",
+        "引擎",
+        "测试",
+        "验证",
+        "然后"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-06-09.txt:142:142": {
+      "key": "memory:memory/.dreams/session-corpus/2026-06-09.txt:142:142",
+      "path": "memory/.dreams/session-corpus/2026-06-09.txt",
+      "startLine": 142,
+      "endLine": 142,
+      "source": "memory",
+      "snippet": "Assistant: concept_nodes(id) ON DELETE CASCADE ); -- 记忆到节点的关联表 CREATE TABLE IF NOT EXISTS memory_nodes ( memory_id INTEGER, node_id INTEGER, PRIMARY KEY (memory_id, node_id) ); -- 索引 CREATE INDEX IF NOT EXISTS idx_edges_from ON concept_edges(from_node_id); CREATE INDEX IF NOT EXI",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-11T01:13:12.134Z",
+      "lastRecalledAt": "2026-06-11T01:13:12.134Z",
+      "queryHashes": [
+        "25f210cf024c"
+      ],
+      "recallDays": [
+        "2026-06-11"
+      ],
+      "conceptTags": [
+        "concept-nodes",
+        "memory-nodes",
+        "memory-id",
+        "node-id",
+        "idx-edges-from",
+        "concept-edges",
+        "from-node-id",
+        "delete"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-06-09.txt:143:143": {
+      "key": "memory:memory/.dreams/session-corpus/2026-06-09.txt:143:143",
+      "path": "memory/.dreams/session-corpus/2026-06-09.txt",
+      "startLine": 143,
+      "endLine": 143,
+      "source": "memory",
+      "snippet": "Assistant: \"competes_with\", \"succeeded_by\", } NODE_TYPES = { \"person\", \"project\", \"concept\", \"technology\", \"skill\", \"tool\", \"company\", \"event\", \"product\", \"framework\", \"language\", } def get_conn(db_path: str = DB_PATH) -> sqlite3.Connection: \"\"\"返回启用了外键和返回字典行的数据库连接。\"\"\" conn = sqli",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-11T01:13:12.134Z",
+      "lastRecalledAt": "2026-06-11T01:13:12.134Z",
+      "queryHashes": [
+        "25f210cf024c"
+      ],
+      "recallDays": [
+        "2026-06-11"
+      ],
+      "conceptTags": [
+        "competes-with",
+        "succeeded-by",
+        "node-types",
+        "get-conn",
+        "db-path",
+        "sqlite3.connection",
+        "person",
+        "project"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-06-09.txt:144:144": {
+      "key": "memory:memory/.dreams/session-corpus/2026-06-09.txt:144:144",
+      "path": "memory/.dreams/session-corpus/2026-06-09.txt",
+      "startLine": 144,
+      "endLine": 144,
+      "source": "memory",
+      "snippet": "Assistant: str = \"\", importance: int = 5, ) -> int: \"\"\" 添加新节点。name 唯一，重复添加会触发 UNIQUE 错误。 返回新节点的 id。 \"\"\" if node_type not in NODE_TYPES: raise ValueError(f\"Unknown node_type '{node_type}'. Allowed: {NODE_TYPES}\") conn = get_conn(self.db_path) cur = conn.execute( \"\"\" INSERT INTO co",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-11T01:13:12.134Z",
+      "lastRecalledAt": "2026-06-11T01:13:12.134Z",
+      "queryHashes": [
+        "25f210cf024c"
+      ],
+      "recallDays": [
+        "2026-06-11"
+      ],
+      "conceptTags": [
+        "node-type",
+        "node-types",
+        "get-conn",
+        "self.db-path",
+        "conn.execute",
+        "str",
+        "importance",
+        "int"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-06-09.txt:145:145": {
+      "key": "memory:memory/.dreams/session-corpus/2026-06-09.txt:145:145",
+      "path": "memory/.dreams/session-corpus/2026-06-09.txt",
+      "startLine": 145,
+      "endLine": 145,
+      "source": "memory",
+      "snippet": "Assistant: row[\"id\"], False cur = conn.execute( \"\"\" INSERT INTO concept_nodes (name, node_type, description, importance) VALUES (?, ?, ?, ?) \"\"\", (name, node_type, description, importance), ) node_id = cur.lastrowid conn.commit() conn.close() return node_id, True def get_node(sel",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-11T01:13:12.134Z",
+      "lastRecalledAt": "2026-06-11T01:13:12.134Z",
+      "queryHashes": [
+        "25f210cf024c"
+      ],
+      "recallDays": [
+        "2026-06-11"
+      ],
+      "conceptTags": [
+        "conn.execute",
+        "concept-nodes",
+        "node-type",
+        "node-id",
+        "cur.lastrowid",
+        "conn.commit",
+        "conn.close",
+        "get-node"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-06-09.txt:146:146": {
+      "key": "memory:memory/.dreams/session-corpus/2026-06-09.txt:146:146",
+      "path": "memory/.dreams/session-corpus/2026-06-09.txt",
+      "startLine": 146,
+      "endLine": 146,
+      "source": "memory",
+      "snippet": "Assistant: List[Dict[str, Any]]: \"\"\"返回指定类型的所有节点。\"\"\" conn = get_conn(self.db_path) rows = conn.execute( \"SELECT * FROM concept_nodes WHERE node_type = ? ORDER BY importance DESC, name\", (node_type,), ).fetchall() conn.close() return [dict(r) for r in rows] def get_all_nodes(self,",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-11T01:13:12.134Z",
+      "lastRecalledAt": "2026-06-11T01:13:12.134Z",
+      "queryHashes": [
+        "25f210cf024c"
+      ],
+      "recallDays": [
+        "2026-06-11"
+      ],
+      "conceptTags": [
+        "get-conn",
+        "self.db-path",
+        "conn.execute",
+        "concept-nodes",
+        "node-type",
+        "conn.close",
+        "get-all-nodes",
+        "list"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-06-09.txt:147:147": {
+      "key": "memory:memory/.dreams/session-corpus/2026-06-09.txt:147:147",
+      "path": "memory/.dreams/session-corpus/2026-06-09.txt",
+      "startLine": 147,
+      "endLine": 147,
+      "source": "memory",
+      "snippet": "Assistant: False sets = \", \".join(f\"{k} = ?\" for k in kwargs) vals = list(kwargs.values()) + [node_id] conn = get_conn(self.db_path) cur = conn.execute( f\"UPDATE concept_nodes SET {sets}, updated_at = CURRENT_TIMESTAMP WHERE id = ?\", vals, ) conn.commit() ok = cur.rowcount > 0 co",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-11T01:13:12.134Z",
+      "lastRecalledAt": "2026-06-11T01:13:12.134Z",
+      "queryHashes": [
+        "25f210cf024c"
+      ],
+      "recallDays": [
+        "2026-06-11"
+      ],
+      "conceptTags": [
+        "kwargs.values",
+        "node-id",
+        "get-conn",
+        "self.db-path",
+        "conn.execute",
+        "concept-nodes",
+        "updated-at",
+        "current-timestamp"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-06-09.txt:148:148": {
+      "key": "memory:memory/.dreams/session-corpus/2026-06-09.txt:148:148",
+      "path": "memory/.dreams/session-corpus/2026-06-09.txt",
+      "startLine": 148,
+      "endLine": 148,
+      "source": "memory",
+      "snippet": "Assistant: f\"%{query}%\", limit), ).fetchall() conn.close() return [dict(r) for r in rows] # ─── EdgeManager ───────────────────────────────────────────────────────────── class EdgeManager: \"\"\"管理概念边（Edge）的增删改查。\"\"\" def __init__(self, db_path: str = DB_PATH): self.db_path = db_path",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-11T01:13:12.134Z",
+      "lastRecalledAt": "2026-06-11T01:13:12.134Z",
+      "queryHashes": [
+        "25f210cf024c"
+      ],
+      "recallDays": [
+        "2026-06-11"
+      ],
+      "conceptTags": [
+        "conn.close",
+        "db-path",
+        "self.db-path",
+        "query",
+        "limit",
+        "fetchall",
+        "return",
+        "dict"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-06-09.txt:149:149": {
+      "key": "memory:memory/.dreams/session-corpus/2026-06-09.txt:149:149",
+      "path": "memory/.dreams/session-corpus/2026-06-09.txt",
+      "startLine": 149,
+      "endLine": 149,
+      "source": "memory",
+      "snippet": "Assistant: ?, ?, ?) \"\"\", (from_id, to_id, relation, weight, context), ) edge_id = cur.lastrowid conn.commit() conn.close() return edge_id def get_edges_from(self, node_name: str) -> List[Dict[str, Any]]: \"\"\"返回从指定节点出发的所有边。\"\"\" conn = get_conn(self.db_path) rows = conn.execute( \"\"\"",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-11T01:13:12.134Z",
+      "lastRecalledAt": "2026-06-11T01:13:12.134Z",
+      "queryHashes": [
+        "25f210cf024c"
+      ],
+      "recallDays": [
+        "2026-06-11"
+      ],
+      "conceptTags": [
+        "from-id",
+        "to-id",
+        "edge-id",
+        "cur.lastrowid",
+        "conn.commit",
+        "conn.close",
+        "get-edges-from",
+        "node-name"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-06-09.txt:150:150": {
+      "key": "memory:memory/.dreams/session-corpus/2026-06-09.txt:150:150",
+      "path": "memory/.dreams/session-corpus/2026-06-09.txt",
+      "startLine": 150,
+      "endLine": 150,
+      "source": "memory",
+      "snippet": "Assistant: t.name AS to_name, t.node_type AS to_type FROM concept_edges e JOIN concept_nodes f ON f.id = e.from_node_id JOIN concept_nodes t ON t.id = e.to_node_id WHERE t.name = ? ORDER BY e.weight DESC \"\"\", (node_name,), ).fetchall() conn.close() return [dict(r) for r in rows]",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-11T01:13:12.134Z",
+      "lastRecalledAt": "2026-06-11T01:13:12.134Z",
+      "queryHashes": [
+        "25f210cf024c"
+      ],
+      "recallDays": [
+        "2026-06-11"
+      ],
+      "conceptTags": [
+        "t.name",
+        "to-name",
+        "t.node-type",
+        "to-type",
+        "concept-edges",
+        "concept-nodes",
+        "f.id",
+        "e.from-node-id"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-06-09.txt:151:151": {
+      "key": "memory:memory/.dreams/session-corpus/2026-06-09.txt:151:151",
+      "path": "memory/.dreams/session-corpus/2026-06-09.txt",
+      "startLine": 151,
+      "endLine": 151,
+      "source": "memory",
+      "snippet": "Assistant: 0 ELSE {d} END AS distance, e.relation, e.context FROM concept_nodes n JOIN concept_edges e ON (e.from_node_id = n.id AND e.to_node_id IN ( SELECT id FROM concept_nodes WHERE name IN ({placeholders}))) OR (e.to_node_id = n.id AND e.from_node_id IN ( SELECT id FROM conc",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-11T01:13:12.134Z",
+      "lastRecalledAt": "2026-06-11T01:13:12.134Z",
+      "queryHashes": [
+        "25f210cf024c"
+      ],
+      "recallDays": [
+        "2026-06-11"
+      ],
+      "conceptTags": [
+        "e.relation",
+        "e.context",
+        "concept-nodes",
+        "concept-edges",
+        "e.from-node-id",
+        "n.id",
+        "e.to-node-id",
+        "else"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-06-09.txt:152:152": {
+      "key": "memory:memory/.dreams/session-corpus/2026-06-09.txt:152:152",
+      "path": "memory/.dreams/session-corpus/2026-06-09.txt",
+      "startLine": 152,
+      "endLine": 152,
+      "source": "memory",
+      "snippet": "Assistant: allowed = {\"relation\", \"weight\", \"context\"} bad = set(kwargs) - allowed if bad: raise ValueError(f\"Unknown fields: {bad}\") if not kwargs: return False sets = \", \".join(f\"{k} = ?\" for k in kwargs) vals = list(kwargs.values()) + [edge_id] conn = get_conn(self.db_path) cu",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-11T01:13:12.134Z",
+      "lastRecalledAt": "2026-06-11T01:13:12.134Z",
+      "queryHashes": [
+        "25f210cf024c"
+      ],
+      "recallDays": [
+        "2026-06-11"
+      ],
+      "conceptTags": [
+        "kwargs.values",
+        "edge-id",
+        "get-conn",
+        "self.db-path",
+        "allowed",
+        "relation",
+        "weight",
+        "context"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-06-09.txt:153:153": {
+      "key": "memory:memory/.dreams/session-corpus/2026-06-09.txt:153:153",
+      "path": "memory/.dreams/session-corpus/2026-06-09.txt",
+      "startLine": 153,
+      "endLine": 153,
+      "source": "memory",
+      "snippet": "Assistant: DB_PATH): self.db_path = db_path self._nm = NodeManager(db_path) self._em = EdgeManager(db_path) def link_memory_to_nodes(self, memory_id: int, node_names: List[str]) -> int: \"\"\" 将一条记忆关联到多个节点。 节点不存在则自动创建。 返回新增关联数。 \"\"\" conn = get_conn(self.db_path) added = 0 for name in",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-11T01:13:12.134Z",
+      "lastRecalledAt": "2026-06-11T01:13:12.134Z",
+      "queryHashes": [
+        "25f210cf024c"
+      ],
+      "recallDays": [
+        "2026-06-11"
+      ],
+      "conceptTags": [
+        "db-path",
+        "self.db-path",
+        "link-memory-to-nodes",
+        "memory-id",
+        "node-names",
+        "get-conn",
+        "self",
+        "nodemanager"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-06-11.txt:9:9": {
+      "key": "memory:memory/.dreams/session-corpus/2026-06-11.txt:9:9",
+      "path": "memory/.dreams/session-corpus/2026-06-11.txt",
+      "startLine": 9,
+      "endLine": 9,
+      "source": "memory",
+      "snippet": "Assistant: 现在写完整的整合文档，结合控制论核心和自进化架构： --- ## 整合工作 钱学森《工程控制论》的核心框架是**闭环反馈**——系统的输出被测量、反馈、与目标比较、产生误差、校正。在Erbing的自进化架构中，这正是最薄弱的地方：**心跳只\"打卡\"，没有真正测量误差并自我校正**。 接下来要做三件事： 1. **写学习总结** — 钱学森控制论的核心理论 2. **诊断当前架构** — 用控制论眼光看Erbing的问题 3. **进化SELF-EVOLVE.md** — 用控制论原理重构自进化机制",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-11T01:13:12.134Z",
+      "lastRecalledAt": "2026-06-11T01:13:12.134Z",
+      "queryHashes": [
+        "e0e733abf4f8"
+      ],
+      "recallDays": [
+        "2026-06-11"
+      ],
+      "conceptTags": [
+        "进化self-evolve.md",
+        "现在",
+        "完整",
+        "整合",
+        "结合",
+        "控制",
+        "核心",
+        "进化"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-06-11.txt:10:10": {
+      "key": "memory:memory/.dreams/session-corpus/2026-06-11.txt:10:10",
+      "path": "memory/.dreams/session-corpus/2026-06-11.txt",
+      "startLine": 10,
+      "endLine": 10,
+      "source": "memory",
+      "snippet": "Assistant: 现在用控制论重构 SELF-EVOLVE.md：",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-11T01:13:12.134Z",
+      "lastRecalledAt": "2026-06-11T01:13:12.134Z",
+      "queryHashes": [
+        "e0e733abf4f8"
+      ],
+      "recallDays": [
+        "2026-06-11"
+      ],
+      "conceptTags": [
+        "self-evolve.md",
+        "现在",
+        "控制",
+        "self",
+        "evolve.md"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-06-11.txt:11:11": {
+      "key": "memory:memory/.dreams/session-corpus/2026-06-11.txt:11:11",
+      "path": "memory/.dreams/session-corpus/2026-06-11.txt",
+      "startLine": 11,
+      "endLine": 11,
+      "source": "memory",
+      "snippet": "Assistant: 再创建神经连接文件：",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-11T01:13:12.134Z",
+      "lastRecalledAt": "2026-06-11T01:13:12.134Z",
+      "queryHashes": [
+        "e0e733abf4f8"
+      ],
+      "recallDays": [
+        "2026-06-11"
+      ],
+      "conceptTags": [
+        "创建",
+        "神经",
+        "连接",
+        "文件"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-06-11.txt:12:12": {
+      "key": "memory:memory/.dreams/session-corpus/2026-06-11.txt:12:12",
+      "path": "memory/.dreams/session-corpus/2026-06-11.txt",
+      "startLine": 12,
+      "endLine": 12,
+      "source": "memory",
+      "snippet": "Assistant: 现在修 Heartbeat timeout（从300s扩到1800s，因为实际执行要11-18分钟）： **等等——之前设的300s还是不够**，看运行记录实际花了682-1074秒。一次性修到位： **刚才漏了一步：更新 Heartbeat 的 timeout 为 1800s**（之前的 patch 只改了 delivery，没改 timeout） 实际修复 Heartbeat：",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-11T01:13:12.134Z",
+      "lastRecalledAt": "2026-06-11T01:13:12.134Z",
+      "queryHashes": [
+        "e0e733abf4f8"
+      ],
+      "recallDays": [
+        "2026-06-11"
+      ],
+      "conceptTags": [
+        "因为实际执行要11-18分钟",
+        "看运行记录实际花了682-1074秒",
+        "现在",
+        "heartbeat",
+        "timeout",
+        "300s",
+        "扩到",
+        "1800s"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-06-11.txt:13:13": {
+      "key": "memory:memory/.dreams/session-corpus/2026-06-11.txt:13:13",
+      "path": "memory/.dreams/session-corpus/2026-06-11.txt",
+      "startLine": 13,
+      "endLine": 13,
+      "source": "memory",
+      "snippet": "Assistant: 全部搞定。来个总结： --- ## 完成内容 ### 1. 钱学森《工程控制论》学习总结 已写入 `memory/learnings/qian-xuesen-control-theory.md` 核心12条原则，最重要的三条： - **误差是信号**：心跳不是打卡，是测量误差的机会 - **稳定性 > 优化**：先保证不崩溃，再谈性能 - **测量是控制的前提**：无法测量就无法控制 ### 2. 用控制论诊断当前架构问题 | 问题 | 控制论术语 | 根源 | |------|---------|------| | 心跳只\"打卡\"",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-11T01:13:12.134Z",
+      "lastRecalledAt": "2026-06-11T01:13:12.134Z",
+      "queryHashes": [
+        "e0e733abf4f8"
+      ],
+      "recallDays": [
+        "2026-06-11"
+      ],
+      "conceptTags": [
+        "全部",
+        "搞定",
+        "来个",
+        "总结",
+        "完成",
+        "内容",
+        "工程",
+        "控制"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-06-11.txt:14:14": {
+      "key": "memory:memory/.dreams/session-corpus/2026-06-11.txt:14:14",
+      "path": "memory/.dreams/session-corpus/2026-06-11.txt",
+      "startLine": 14,
+      "endLine": 14,
+      "source": "memory",
+      "snippet": "Assistant: heartbeat 执行时真的测量那5个误差指标并写入文件。现在只是框架，具体测量逻辑还需要下一次心跳运行时验证。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-11T01:13:12.134Z",
+      "lastRecalledAt": "2026-06-11T01:13:12.134Z",
+      "queryHashes": [
+        "e0e733abf4f8"
+      ],
+      "recallDays": [
+        "2026-06-11"
+      ],
+      "conceptTags": [
+        "heartbeat",
+        "执行",
+        "真的",
+        "测量",
+        "误差",
+        "指标",
+        "文件",
+        "现在"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-06-11.txt:15:15": {
+      "key": "memory:memory/.dreams/session-corpus/2026-06-11.txt:15:15",
+      "path": "memory/.dreams/session-corpus/2026-06-11.txt",
+      "startLine": 15,
+      "endLine": 15,
+      "source": "memory",
+      "snippet": "Assistant: 好，现在就把控制论测量系统落地做出来。 先写一个真正能跑的心跳测量脚本：",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-11T01:13:12.134Z",
+      "lastRecalledAt": "2026-06-11T01:13:12.134Z",
+      "queryHashes": [
+        "e0e733abf4f8"
+      ],
+      "recallDays": [
+        "2026-06-11"
+      ],
+      "conceptTags": [
+        "现在",
+        "就把",
+        "控制",
+        "测量",
+        "系统",
+        "落地",
+        "出来",
+        "一个"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-06-11.txt:16:16": {
+      "key": "memory:memory/.dreams/session-corpus/2026-06-11.txt:16:16",
+      "path": "memory/.dreams/session-corpus/2026-06-11.txt",
+      "startLine": 16,
+      "endLine": 16,
+      "source": "memory",
+      "snippet": "Assistant: 继续实现！先把心跳测量脚本做出来，能真正测量5个误差指标：",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-11T01:13:12.134Z",
+      "lastRecalledAt": "2026-06-11T01:13:12.134Z",
+      "queryHashes": [
+        "e0e733abf4f8"
+      ],
+      "recallDays": [
+        "2026-06-11"
+      ],
+      "conceptTags": [
+        "继续",
+        "实现",
+        "先把",
+        "心跳",
+        "测量",
+        "脚本",
+        "出来",
+        "真正"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-06-11.txt:17:17": {
+      "key": "memory:memory/.dreams/session-corpus/2026-06-11.txt:17:17",
+      "path": "memory/.dreams/session-corpus/2026-06-11.txt",
+      "startLine": 17,
+      "endLine": 17,
+      "source": "memory",
+      "snippet": "Assistant: 运行验证：",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-11T01:13:12.134Z",
+      "lastRecalledAt": "2026-06-11T01:13:12.134Z",
+      "queryHashes": [
+        "e0e733abf4f8"
+      ],
+      "recallDays": [
+        "2026-06-11"
+      ],
+      "conceptTags": [
+        "运行",
+        "验证"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-06-11.txt:18:18": {
+      "key": "memory:memory/.dreams/session-corpus/2026-06-11.txt:18:18",
+      "path": "memory/.dreams/session-corpus/2026-06-11.txt",
+      "startLine": 18,
+      "endLine": 18,
+      "source": "memory",
+      "snippet": "Assistant: 测量脚本工作正常！结果显示： - 记忆有序度 ✅ 1.00（超目标） - 工具响应 ✅ 5.0s（达标） - 连续错误 ✅ 0（完美） - 任务积压 ⚠️ 4（略多1个） - 空闲时间 ❌ 999min（状态未初始化，属于预期） 空闲时间测出999是因为还没写过 `last_heartbeat`，这是初始化问题，跑几次就会正常。 现在把测量结果注入到心跳cron的任务里，让心跳真正读误差数据而不是空跑： **等等——cron的payload.message是固定的prompt，不能动态注入。** 正确做法是让心跳任务**自己调用这个",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-11T01:13:12.134Z",
+      "lastRecalledAt": "2026-06-11T01:13:12.134Z",
+      "queryHashes": [
+        "e0e733abf4f8"
+      ],
+      "recallDays": [
+        "2026-06-11"
+      ],
+      "conceptTags": [
+        "1.00",
+        "5.0s",
+        "last-heartbeat",
+        "cron的payload.message是固定的prompt",
+        "测量",
+        "脚本",
+        "工作",
+        "正常"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-06-11.txt:19:19": {
+      "key": "memory:memory/.dreams/session-corpus/2026-06-11.txt:19:19",
+      "path": "memory/.dreams/session-corpus/2026-06-11.txt",
+      "startLine": 19,
+      "endLine": 19,
+      "source": "memory",
+      "snippet": "Assistant: 更新心跳prompt，让它真正用测量脚本 + 控制论逻辑：",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-11T01:13:12.134Z",
+      "lastRecalledAt": "2026-06-11T01:13:12.134Z",
+      "queryHashes": [
+        "e0e733abf4f8"
+      ],
+      "recallDays": [
+        "2026-06-11"
+      ],
+      "conceptTags": [
+        "更新",
+        "心跳",
+        "prompt",
+        "真正",
+        "测量",
+        "脚本",
+        "控制",
+        "逻辑"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-06-11.txt:20:20": {
+      "key": "memory:memory/.dreams/session-corpus/2026-06-11.txt:20:20",
+      "path": "memory/.dreams/session-corpus/2026-06-11.txt",
+      "startLine": 20,
+      "endLine": 20,
+      "source": "memory",
+      "snippet": "Assistant: 手动触发一次验证：",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-11T01:13:12.134Z",
+      "lastRecalledAt": "2026-06-11T01:13:12.134Z",
+      "queryHashes": [
+        "e0e733abf4f8"
+      ],
+      "recallDays": [
+        "2026-06-11"
+      ],
+      "conceptTags": [
+        "触发",
+        "一次",
+        "验证"
       ]
     }
   }

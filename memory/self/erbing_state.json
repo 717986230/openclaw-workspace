@@ -1,0 +1,23 @@
+{
+  "last_heartbeat": "2026-06-14T00:03:01.182310",
+  "memory_order": 0.3,
+  "tool_response": 5.0,
+  "consecutive_errors": 0,
+  "task_backlog": 3,
+  "idle_minutes": 598,
+  "error_vector": {
+    "memory_order": 0.6000000000000001,
+    "tool_response": 0.0,
+    "consecutive_errors": 0,
+    "task_backlog": 0,
+    "idle_time": 478
+  },
+  "error_magnitude": 478.0003765688893,
+  "error_level": "大",
+  "error_history": [
+    478.0003765688893
+  ],
+  "oscillating": false,
+  "stability": "新数据",
+  "action_taken": "强干预+通知标记"
+}
