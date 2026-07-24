@@ -135,7 +135,7 @@ Token strategy: use "text" for reading (~800 tokens), "snapshot" with filter=int
         },
         required: ["action"],
       },
-      async handler(params) {
+      async execute(_toolCallId, params) {
         const cfg = getConfig(api);
         const action = params.action;
 
