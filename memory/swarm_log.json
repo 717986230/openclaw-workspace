@@ -1,16 +1,5 @@
 [
   {
-    "time": "2026-03-25T01:58:20.001665",
-    "collector": 0,
-    "researcher": 0
-  },
-  {
-    "time": "2026-06-07T00:59:03.661155",
-    "collector": 0,
-    "researcher": 0,
-    "status": "partial"
-  },
-  {
     "time": "2026-06-07T00:59:15.844606",
     "collector": 0,
     "researcher": 0,
@@ -134,6 +123,60 @@
     "time": "2026-06-14T02:01:07.860762",
     "collector": 19,
     "researcher": 19,
+    "status": "ok"
+  },
+  {
+    "time": "2026-06-14T09:13:38.180025",
+    "collector": 19,
+    "researcher": 19,
+    "status": "ok"
+  },
+  {
+    "time": "2026-06-14T21:40:07.122856",
+    "collector": 16,
+    "researcher": 16,
+    "status": "ok"
+  },
+  {
+    "time": "2026-06-15T09:20:03.700606",
+    "collector": 19,
+    "researcher": 19,
+    "status": "ok"
+  },
+  {
+    "time": "2026-06-15T22:18:07.707833",
+    "collector": 16,
+    "researcher": 16,
+    "status": "ok"
+  },
+  {
+    "time": "2026-06-16T09:03:05.248438",
+    "collector": 19,
+    "researcher": 19,
+    "status": "ok"
+  },
+  {
+    "time": "2026-06-16T21:27:54.740927",
+    "collector": 19,
+    "researcher": 19,
+    "status": "partial"
+  },
+  {
+    "time": "2026-06-17T09:53:40.530390",
+    "collector": 16,
+    "researcher": 16,
+    "status": "ok"
+  },
+  {
+    "time": "2026-06-17T21:32:19.335313",
+    "collector": 19,
+    "researcher": 19,
+    "status": "ok"
+  },
+  {
+    "time": "2026-07-15T12:21:59.806209",
+    "collector": 25,
+    "researcher": 25,
     "status": "ok"
   }
 ]
