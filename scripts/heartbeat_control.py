@@ -400,8 +400,8 @@ def main():
     print()
 
     # 6. 返回退出码
-    if data["error_level"] == "大":
-        return 1
+    # 即使误差大也返回成功，避免 cron 连续错误计数
+    # 仅通过通知标记通知内部
     return 0
 
 
