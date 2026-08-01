@@ -1,14 +1,14 @@
 {
-  "timestamp": "2026-07-29T16:10:08.937826",
-  "reason": "大误差: ['memory_order', 'idle_time']",
-  "error_magnitude": 1.1661903789690602,
+  "timestamp": "2026-08-01T00:12:33.196456",
+  "reason": "大误差: ['memory_order']",
+  "error_magnitude": 0.6000000000000001,
   "error_level": "大",
   "error_vector": {
     "memory_order": 0.6000000000000001,
     "tool_response": 0.0,
     "consecutive_errors": 0,
     "task_backlog": 0,
-    "idle_time": 1
+    "idle_time": 0
   },
   "processed": false
 }
