@@ -1,11 +1,5 @@
 [
   {
-    "time": "2026-06-10T09:03:08.463385",
-    "collector": 19,
-    "researcher": 19,
-    "status": "ok"
-  },
-  {
     "time": "2026-06-10T22:03:49.960491",
     "collector": 16,
     "researcher": 16,
@@ -177,6 +171,12 @@
     "time": "2026-08-06T03:28:19.239135",
     "collector": 19,
     "researcher": 19,
+    "status": "ok"
+  },
+  {
+    "time": "2026-08-10T02:00:39.274475",
+    "collector": 25,
+    "researcher": 25,
     "status": "ok"
   }
 ]
