@@ -1,21 +1,21 @@
 {
-  "last_heartbeat": "2026-08-09T23:17:22.458075",
+  "last_heartbeat": "2026-08-12T00:03:49.400219",
   "memory_order": 0.3,
   "tool_response": 5.0,
-  "consecutive_errors": 3,
+  "consecutive_errors": 13,
   "task_backlog": 3,
-  "idle_minutes": 304,
+  "idle_minutes": 2383,
   "error_vector": {
     "memory_order": 0.6000000000000001,
     "tool_response": 0.0,
-    "consecutive_errors": 3,
+    "consecutive_errors": 13,
     "task_backlog": 0,
-    "idle_time": 184
+    "idle_time": 2263
   },
-  "error_magnitude": 184.02543302489468,
+  "error_magnitude": 2263.037419045474,
   "error_level": "大",
   "error_history": [
-    184.02543302489468
+    2263.037419045474
   ],
   "oscillating": false,
   "stability": "新数据",
