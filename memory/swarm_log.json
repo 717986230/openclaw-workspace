@@ -1,17 +1,5 @@
 [
   {
-    "time": "2026-06-10T22:03:49.960491",
-    "collector": 16,
-    "researcher": 16,
-    "status": "ok"
-  },
-  {
-    "time": "2026-06-11T09:08:30.224795",
-    "collector": 19,
-    "researcher": 19,
-    "status": "ok"
-  },
-  {
     "time": "2026-06-11T21:48:18.313014",
     "collector": 16,
     "researcher": 16,
@@ -175,6 +163,18 @@
   },
   {
     "time": "2026-08-10T02:00:39.274475",
+    "collector": 25,
+    "researcher": 25,
+    "status": "ok"
+  },
+  {
+    "time": "2026-08-11T02:09:55.721045",
+    "collector": 18,
+    "researcher": 18,
+    "status": "ok"
+  },
+  {
+    "time": "2026-08-12T03:17:00.484793",
     "collector": 25,
     "researcher": 25,
     "status": "ok"
