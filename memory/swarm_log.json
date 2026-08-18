@@ -1,29 +1,5 @@
 [
   {
-    "time": "2026-06-11T21:48:18.313014",
-    "collector": 16,
-    "researcher": 16,
-    "status": "ok"
-  },
-  {
-    "time": "2026-06-12T09:52:14.744100",
-    "collector": 16,
-    "researcher": 16,
-    "status": "ok"
-  },
-  {
-    "time": "2026-06-12T21:48:30.195715",
-    "collector": 16,
-    "researcher": 16,
-    "status": "ok"
-  },
-  {
-    "time": "2026-06-13T09:45:47.192374",
-    "collector": 19,
-    "researcher": 19,
-    "status": "ok"
-  },
-  {
     "time": "2026-06-13T21:46:02.599779",
     "collector": 16,
     "researcher": 16,
@@ -177,6 +153,30 @@
     "time": "2026-08-12T03:17:00.484793",
     "collector": 25,
     "researcher": 25,
+    "status": "ok"
+  },
+  {
+    "time": "2026-08-15T02:45:27.358612",
+    "collector": 25,
+    "researcher": 25,
+    "status": "ok"
+  },
+  {
+    "time": "2026-08-16T02:46:51.902917",
+    "collector": 25,
+    "researcher": 25,
+    "status": "ok"
+  },
+  {
+    "time": "2026-08-17T02:09:26.430144",
+    "collector": 25,
+    "researcher": 25,
+    "status": "ok"
+  },
+  {
+    "time": "2026-08-18T02:01:03.015690",
+    "collector": 22,
+    "researcher": 22,
     "status": "ok"
   }
 ]
