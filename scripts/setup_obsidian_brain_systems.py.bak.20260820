@@ -20,9 +20,6 @@ def ensure_folder(path: Path) -> Path:
 def create_index_note(system: dict) -> str:
     folder_path = ensure_folder(VAULT / system["name"])
     index_file = folder_path / "索引.md"
-    # 2026-08-20: 若索引已被手工改写（含 <!-- 手动维护 --> 标记），不再覆盖
-    if index_file.exists() and "<!-- 手动维护 -->" in index_file.read_text(encoding="utf-8"):
-        return str(index_file.relative_to(VAULT)) + "  [跳过：手动维护]"
     content = f"""# {system['name']} 索引
 
 > {system['desc']}
