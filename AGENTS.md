@@ -42,8 +42,8 @@ Use local AI delegation sparingly and in this order:
 
 - If a user asks to "让 Claude Code 继续", "继续写小说项目", "继续 novel-ai", or otherwise wants Claude Code to resume local coding work, do not use interactive `exec` plus `process write`.
 - For these requests, call `ask_claude_code` directly with a concrete task and an explicit `cwd`.
-- The default novel project directory is `D:\OPP\novel-ai`.
-- If the user says "继续小说项目" and does not name a different repo, treat it as `D:\OPP\novel-ai`.
+- The novel project (novel-ai) used to live at a Windows path that no longer exists on this Mac. Its current directory is not recorded; if it is not known from context, ask the user for the path before calling `ask_claude_code`.
+- If the user says "继续小说项目" and does not name a different repo, treat it as the novel-ai project (ask for its path if unknown).
 - Use `Claude-Code-Game-Studios` only when the user explicitly asks for the game studio project.
 
 ## Safety
@@ -130,5 +130,5 @@ Add whatever helps you do your job. This is your cheat sheet.
 - Use `codex_only` only when the user explicitly asks for Codex or wants a non-Claude second opinion
 - Avoid calling `ask_claude_code` and `ask_codex_local` separately when `ask_local_ai_routed` can do the job
 - Before relying on the bridge after upgrades or config changes, run `ai_bridge_selftest`
-- For "继续写小说项目" style requests, call `ask_claude_code` with `cwd: D:\OPP\novel-ai`
+- For "继续写小说项目" style requests, call `ask_claude_code` with the novel-ai project directory as `cwd` (ask the user for it if unknown)
 - Do not open Claude via interactive `exec` for resume-style coding requests unless the user explicitly asks for an interactive shell session
