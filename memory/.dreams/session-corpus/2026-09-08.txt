@@ -1,0 +1,1 @@
+[main/sessions/main/3435a6fa-5045-4f62-86dc-0e2324628c7a#L2] Assistant: I was interrupted by a gateway restart and couldn't safely resume the previous turn. Please send that last request again and I'll pick it up cleanly.
