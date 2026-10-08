@@ -21,3 +21,9 @@ node_modules/
 
 # MCP 配置里含有 token，不应公开
 .mcp.json
+
+# 密钥与本机配置备份（含 API key / token，不要提交）
+config-backup/
+.mcp.json
+**/auth-profiles.json
+**/models.json
