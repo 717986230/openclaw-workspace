@@ -3,8 +3,70 @@
   "skills": {
     "honcho": {
       "version": "1.0.4",
-      "installedAt": 1780788463675,
-      "registry": "https://clawhub.ai"
+      "registry": "https://clawhub.ai",
+      "installedAt": 1791463627171,
+      "artifact": {
+        "kind": "archive",
+        "sha256": "c0e180a5dcf597b18cf0ea6845728a2e17b9b0b99200cd9809f908de52eed092",
+        "integrity": "sha256-wOGApdz1l7GM8OpoRXKKLhe5sLmSAM2YCfkI3lLu0JI="
+      },
+      "skillFile": {
+        "path": "SKILL.md",
+        "sha256": "ac8cf8cbf9dd6dc4e68ca40278d38577ce6a2c31a764b6e1b4912d9095487a58"
+      },
+      "fileTreeSha256": "sha256:c78c5cd8363d69d8b214dfe68954bace1eb450d0c9e7b6f1566c9fe3887c6873",
+      "verification": {
+        "schema": "clawhub.skill.verify.v1",
+        "ok": false,
+        "decision": "fail",
+        "reasons": [
+          "security.status_not_clean"
+        ],
+        "card": {
+          "available": true,
+          "path": "skill-card.md",
+          "url": "https://wry-manatee-359.convex.site/api/v1/skills/honcho/card?ownerHandle=vvoruganti&version=1.0.4",
+          "sha256": "bbb64dcda6b927411e24fcf497682083be3eb876d8935d7907664c8c4631e3d4",
+          "size": 2340,
+          "contentType": "text/markdown; charset=utf-8"
+        },
+        "artifact": {
+          "sourceFingerprint": "c0df9ad0b1228a83386b22d0b08afa837423d6c35f55924b6b3ad6d81a488b71",
+          "bundleFingerprints": [
+            "2560a1b2398e6ec3e525bd3b4fc4a08fdf77058b17fcb9a63d4252f7f7f82f14",
+            "075d71b462be97b53fd0d187dbd1da9a28111bf6903f1e99e655eb4d24843211"
+          ],
+          "files": [
+            {
+              "path": "SKILL.md",
+              "size": 8370,
+              "sha256": "ac8cf8cbf9dd6dc4e68ca40278d38577ce6a2c31a764b6e1b4912d9095487a58",
+              "contentType": "text/markdown"
+            }
+          ]
+        },
+        "provenance": {
+          "source": "unavailable",
+          "reason": "No server-resolved GitHub import provenance is stored for this version."
+        },
+        "security": {
+          "status": "suspicious",
+          "passed": false,
+          "rawStatus": "suspicious",
+          "verdict": "suspicious",
+          "confidence": "high",
+          "summary": "This skill is transparent about sending memory files and ongoing workspace conversations to Honcho, but it asks users to install an unpinned third-party plugin that will persistently handle sensitive context across sessions.",
+          "model": null,
+          "checkedAt": 1789072729837,
+          "scannerReports": {
+            "aig": null,
+            "skillspector": null
+          }
+        },
+        "signature": {
+          "status": "unsigned"
+        }
+      }
     }
   }
 }

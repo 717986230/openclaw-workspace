@@ -2,6 +2,16 @@
   "version": 1,
   "registry": "https://clawhub.ai",
   "slug": "honcho",
-  "installedVersion": "1.0.4",
-  "installedAt": 1780788463675
+  "installedAt": 1791463627171,
+  "artifact": {
+    "kind": "archive",
+    "sha256": "c0e180a5dcf597b18cf0ea6845728a2e17b9b0b99200cd9809f908de52eed092",
+    "integrity": "sha256-wOGApdz1l7GM8OpoRXKKLhe5sLmSAM2YCfkI3lLu0JI="
+  },
+  "skillFile": {
+    "path": "SKILL.md",
+    "sha256": "ac8cf8cbf9dd6dc4e68ca40278d38577ce6a2c31a764b6e1b4912d9095487a58"
+  },
+  "fileTreeSha256": "sha256:c78c5cd8363d69d8b214dfe68954bace1eb450d0c9e7b6f1566c9fe3887c6873",
+  "installedVersion": "1.0.4"
 }
