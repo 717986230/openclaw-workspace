@@ -1,0 +1,81 @@
+{
+  "timestamp": "2026-04-01T10:56:50.749560",
+  "roles": {
+    "scout": {
+      "name": "侦查蜂",
+      "count": 1,
+      "capabilities": [
+        "explore",
+        "discover",
+        "report"
+      ],
+      "priority": 1
+    },
+    "employed": {
+      "name": "采蜜蜂",
+      "count": 4,
+      "capabilities": [
+        "analyze",
+        "extract",
+        "synthesize"
+      ],
+      "priority": 2
+    },
+    "onlooker": {
+      "name": "观察蜂",
+      "count": 3,
+      "capabilities": [
+        "evaluate",
+        "vote",
+        "quality_check"
+      ],
+      "priority": 3
+    }
+  },
+  "analysis_strategies": {
+    "deep_dive": {
+      "name": "深度挖掘",
+      "weight": 0.3729363636634849,
+      "steps": [
+        "read_full",
+        "extract_key_points",
+        "cross_reference",
+        "synthesize"
+      ]
+    },
+    "quick_scan": {
+      "name": "快速扫描",
+      "weight": 0.3077729555102302,
+      "steps": [
+        "scan_summary",
+        "identify_keywords",
+        "categorize"
+      ]
+    },
+    "comparative": {
+      "name": "对比分析",
+      "weight": 0.31929068082628487,
+      "steps": [
+        "collect_sources",
+        "compare_views",
+        "find_patterns",
+        "conclude"
+      ]
+    }
+  },
+  "decision_mechanisms": {
+    "voting": {
+      "threshold": 0.612,
+      "quorum": 0.5
+    },
+    "weighted": {
+      "expertise_weight": 0.7,
+      "confidence_weight": 0.3
+    },
+    "consensus": {
+      "min_agreement": 0.784,
+      "max_iterations": 3
+    }
+  },
+  "evolution_count": 1
+}
